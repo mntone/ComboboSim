@@ -4,6 +4,7 @@ const RESOURCELOADER_NAME = 'res'
 
 const RESOURCELOADER_INITIAL_STATE: ResourceLoaderState = {
 	state: 'loading',
+	resId: null,
 	res: null,
 }
 
