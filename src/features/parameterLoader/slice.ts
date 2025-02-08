@@ -5,7 +5,8 @@ import type { Character } from '@/common/types'
 import { createAppAsyncThunk } from '@/app/hooks'
 
 import { PARAMETERLOADER_INITIAL_STATE, PARAMETERLOADER_NAME } from './constants'
-import { mapKeysDeep, snakeToCamel } from './utils'
+import { snakeToCamel } from './utils/caseConversion'
+import mapKeysDeep from './utils/mapKeysDeep'
 
 const fetchParam = createAppAsyncThunk(`${PARAMETERLOADER_NAME}/fetch`, async function() {
 	const res = await fetch('/params/20241202/manon.json')
