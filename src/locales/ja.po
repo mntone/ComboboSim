@@ -1,0 +1,95 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2025-02-04 12:21+0900\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: ja\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/components/ResultView.tsx:63
+#: src/components/ResultView.tsx:71
+msgid "{0, plural, other {#} zero {None}}"
+msgstr "{0, plural, other {# 本}}"
+
+#: src/components/ResultView.tsx:55
+msgid "{0, plural, other {#} zero {Zero}}"
+msgstr "{0, plural, other {#}}"
+
+#: src/components/ComboList/constants.ts:44
+msgid "Actions"
+msgstr "操作"
+
+#: src/components/ComboList/constants.ts:32
+msgid "Combo Damage"
+msgstr "コンボダメージ"
+
+#: src/components/MoveForm.tsx:25
+msgid "Common Moves"
+msgstr "共通システム"
+
+#: src/components/ComboList/constants.ts:24
+msgid "Damage"
+msgstr "ダメージ"
+
+#: src/components/ComboList/constants.ts:28
+msgid "Damage Scale"
+msgstr "ダメージ倍率"
+
+#: src/components/ComboList/constants.ts:36
+msgid "Drive Guage"
+msgstr "ドライブゲージ"
+
+#: src/components/ResultView.tsx:61
+msgid "Drive Guage Increase"
+msgstr "ドライブゲージ増加量"
+
+#: src/components/ComboList/constants.ts:18
+msgid "Moves"
+msgstr "技名"
+
+#: src/components/ComboList/ComboTableView.tsx:127
+msgid "No moves found"
+msgstr "技がありません"
+
+#: src/components/MoveForm.tsx:20
+msgid "Normal Moves"
+msgstr "通常技"
+
+#: src/components/MoveForm.tsx:22
+msgid "Special Moves"
+msgstr "必殺技"
+
+#: src/components/ComboList/constants.ts:40
+msgid "Super Art Guage"
+msgstr "SAゲージ"
+
+#: src/components/ResultView.tsx:69
+msgid "Super Art Guage Increase"
+msgstr "SAゲージ増加量"
+
+#: src/components/MoveForm.tsx:23
+msgid "Super Arts"
+msgstr "スーパーアーツ"
+
+#: src/components/MoveForm.tsx:24
+msgid "Throws"
+msgstr "通常投げ"
+
+#: src/components/MoveForm.tsx:21
+msgid "Unique Attacks"
+msgstr "特殊技"
+
+#: src/components/ComboList/ComboTableView.tsx:82
+msgid "View Options"
+msgstr "表示オプション"
+
+#: src/components/ComboList/ComboTableView.tsx:86
+msgid "View Options for Combo Table"
+msgstr "コンボテーブル用の表示オプション"

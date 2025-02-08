@@ -1,0 +1,9 @@
+{
+	"extends": "./tsconfig.app.base",
+	"compilerOptions": {
+		"types": [
+			"vitest/globals"
+		],
+	},
+	"include": ["src/**/**.test.*"]
+}

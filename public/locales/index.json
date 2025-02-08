@@ -1,0 +1,44 @@
+[
+	{
+		"id": "capcom_en",
+		"lang": "en",
+		"name": "Capcom Style+",
+		"description": "Use extended Capcom style",
+		"example": "Standing Medium Punch→Drive Rush→Crouching Medium Punch→…"
+	},
+	{
+		"id": "capcom_ja",
+		"lang": "ja",
+		"name": "カプコン表記＋",
+		"description": "カプコン標準の書式を拡張したものを使用します",
+		"example": "立ち中P→ドライブラッシュ→しゃがみ中P→…"
+	},
+	{
+		"id": "abbr_en",
+		"lang": "en",
+		"name": "Abbreviation Style",
+		"description": "Use abbreviation style",
+		"example": "s.MP > DR > cr.MP > …"
+	},
+	{
+		"id": "abbr_ja",
+		"lang": "ja",
+		"name": "省略表記",
+		"description": "省略表記を使用します",
+		"example": "立中P＞ラッシュ＞屈中P＞…"
+	},
+	{
+		"id": "numpad_en",
+		"lang": "en",
+		"name": "Numpad Style",
+		"description": "Use numpad style",
+		"example": "5MP > DR > 2MP > …"
+	},
+	{
+		"id": "numpad_ja",
+		"lang": "ja",
+		"name": "テンキー表記",
+		"description": "テンキー配列を使用した数字表記を使用します",
+		"example": "5中P＞CDR＞2中P＞…"
+	}
+]

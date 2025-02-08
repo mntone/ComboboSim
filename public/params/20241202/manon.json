@@ -1,0 +1,1072 @@
+{
+	"id": "manon",
+	"names": {
+		"en": "Manon",
+		"ja": "マノン"
+	},
+	"use": [
+		"manon_medal"
+	],
+	"vitality": 10000,
+	"moves": [
+		{
+			"id": "manon.5LP",
+			"names": {
+				"ja": "ハジメ"
+			},
+			"category": "normal",
+			"input": "5LP",
+			"input_modern": "5L",
+			"damage": 300,
+			"proration": {
+				"initial": 0.8
+			},
+			"drive_hit": 250,
+			"drive_block": -500,
+			"drive_punish": -2000,
+			"superarts": 300
+		},
+		{
+			"id": "manon.5LK",
+			"names": {
+				"ja": "タンジュ"
+			},
+			"category": "normal",
+			"input": "5LK",
+			"input_modern": "Auto+5L",
+			"damage": 300,
+			"proration": {
+				"initial": 0.8
+			},
+			"drive_hit": 250,
+			"drive_block": -500,
+			"drive_punish": -2000,
+			"superarts": 300
+		},
+		{
+			"id": "manon.5MP",
+			"names": {
+				"ja": "ツリテ"
+			},
+			"category": "normal",
+			"input": "5MP",
+			"input_modern": "5M",
+			"damage": 600,
+			"drive_hit": 1500,
+			"drive_block": -3000,
+			"drive_punish": -4000,
+			"superarts": 500
+		},
+		{
+			"id": "manon.5MK",
+			"names": {
+				"ja": "ラ・シェーヌ"
+			},
+			"category": "normal",
+			"input": "5MK",
+			"input_modern": "Auto+5M",
+			"damage": 600,
+			"drive_hit": 1500,
+			"drive_block": -3000,
+			"drive_punish": -4000,
+			"superarts": 700
+		},
+		{
+			"id": "manon.5HP",
+			"names": {
+				"ja": "ランドリ"
+			},
+			"category": "normal",
+			"input": "5HP",
+			"input_modern": "5H",
+			"damage": 800,
+			"drive_hit": 3000,
+			"drive_block": -6000,
+			"drive_punish": -10000,
+			"superarts": 1000
+		},
+		{
+			"id": "manon.5HK",
+			"names": {
+				"ja": "ピエ・ドンジュ"
+			},
+			"category": "normal",
+			"input": "5HK",
+			"damage": 900,
+			"drive_hit": 3000,
+			"drive_block": -6000,
+			"drive_punish": -10000,
+			"superarts": 1000
+		},
+
+		{
+			"id": "manon.2LP",
+			"names": {
+				"ja": "ソデキリ"
+			},
+			"category": "normal",
+			"input": "2LP",
+			"damage": 300,
+			"proration": {
+				"initial": 0.8
+			},
+			"drive_hit": 250,
+			"drive_block": -500,
+			"drive_punish": -2000,
+			"superarts": 300
+		},
+		{
+			"id": "manon.2LK",
+			"names": {
+				"ja": "シーニュ・ナジェ"
+			},
+			"category": "normal",
+			"input": "2LK",
+			"input_modern": "Auto+2L",
+			"damage": 200,
+			"proration": {
+				"initial": 0.8
+			},
+			"drive_hit": 250,
+			"drive_block": -500,
+			"drive_punish": -2000,
+			"superarts": 300
+		},
+		{
+			"id": "manon.2MP",
+			"names": {
+				"ja": "ヒキテ"
+			},
+			"category": "normal",
+			"input": "2MP",
+			"damage": 600,
+			"drive_hit": 1500,
+			"drive_block": -3000,
+			"drive_punish": -4000,
+			"superarts": 500
+		},
+		{
+			"id": "manon.2MK",
+			"names": {
+				"ja": "ストゥニュー"
+			},
+			"category": "normal",
+			"input": "2MK",
+			"input_modern": "Auto+2M",
+			"damage": 600,
+			"drive_hit": 2000,
+			"drive_block": -4000,
+			"drive_punish": -6000,
+			"superarts": 700
+		},
+		{
+			"id": "manon.2HP",
+			"names": {
+				"ja": "ヴィクトワール・ポーム"
+			},
+			"category": "normal",
+			"input": "2HP",
+			"input_modern": "2H",
+			"damage": 600,
+			"drive_hit": 3000,
+			"drive_block": -6000,
+			"drive_punish": -10000,
+			"superarts": 1000
+		},
+		{
+			"id": "manon.2HK",
+			"names": {
+				"ja": "クロワゼ"
+			},
+			"category": "normal",
+			"input": "2HK",
+			"input_modern": "3HK",
+			"damage": 900,
+			"drive_hit": 3000,
+			"drive_block": -4000,
+			"drive_punish": -10000,
+			"superarts": 1000
+		},
+
+		{
+			"id": "manon.jLP",
+			"names": {
+				"ja": "シエル・クーデ"
+			},
+			"category": "normal",
+			"input": "jLP",
+			"damage": 300,
+			"drive_hit": 500,
+			"drive_block": -1500,
+			"drive_punish": -2000,
+			"superarts": 300
+		},
+		{
+			"id": "manon.jLK",
+			"names": {
+				"ja": "シエル・パッセ"
+			},
+			"category": "normal",
+			"input": "jLK",
+			"input_modern": "jL",
+			"damage": 300,
+			"drive_hit": 500,
+			"drive_block": -1500,
+			"drive_punish": -2000,
+			"superarts": 300
+		},
+		{
+			"id": "manon.jMP",
+			"names": {
+				"ja": "クロワゼ・ドゥヴァン"
+			},
+			"category": "normal",
+			"input": "jMP",
+			"damage": 700,
+			"drive_hit": 1000,
+			"drive_block": -2500,
+			"drive_punish": -4000,
+			"superarts": 500
+		},
+		{
+			"id": "manon.jMK",
+			"names": {
+				"ja": "アレグロ"
+			},
+			"category": "normal",
+			"input": "jMK",
+			"input_modern": "jM",
+			"damage": 500,
+			"drive_hit": 1000,
+			"drive_block": -2500,
+			"drive_punish": -4000,
+			"superarts": 500
+		},
+		{
+			"id": "manon.jHP",
+			"names": {
+				"ja": "グロワール・ポーム"
+			},
+			"category": "normal",
+			"input": "jHP",
+			"damage": 800,
+			"drive_hit": 2000,
+			"drive_block": -4000,
+			"drive_punish": -5000,
+			"superarts": 1000
+		},
+		{
+			"id": "manon.jHK",
+			"names": {
+				"ja": "カブリオール"
+			},
+			"category": "normal",
+			"input": "jHK",
+			"input_modern": "jH",
+			"damage": 800,
+			"drive_hit": 2000,
+			"drive_block": -4000,
+			"drive_punish": -5000,
+			"superarts": 1000
+		},
+
+		{
+			"id": "manon.4HP",
+			"names": {
+				"en": "Révérence",
+				"ja": "レベランス"
+			},
+			"category": "unique",
+			"input": "4HP",
+			"input_modern": "4HP",
+			"damage": 800,
+			"drive_hit": 2000,
+			"drive_block": -5000,
+			"drive_punish": -8000,
+			"superarts": 1000
+		},
+		{
+			"id": "manon.3HK",
+			"names": {
+				"en": "Tomoe Derrière",
+				"ja": "トモエ・デリエール"
+			},
+			"category": "unique",
+			"input": "3HK",
+			"damage": 1000,
+			"drive_hit": 3000,
+			"drive_block": -6000,
+			"drive_punish": -10000,
+			"superarts": 500
+		},
+		{
+			"id": "manon.5MPtoMK",
+			"names": {
+				"en": "À Terre",
+				"ja": "ア・テール"
+			},
+			"category": "unique",
+			"input": "5MP~MK",
+			"input_modern": "5MP~MK",
+			"damage": 500,
+			"drive_hit": 2500,
+			"drive_block": -2500,
+			"drive_punish": -4000,
+			"superarts": 700
+		},
+		{
+			"id": "manon.4MK",
+			"names": {
+				"en": "En Haut (1)",
+				"ja": "アン・オー（1段目）"
+			},
+			"category": "unique",
+			"input": "4MK",
+			"input_modern": "4MK",
+			"damage": 600,
+			"drive_hit": 2000,
+			"drive_block": -4000,
+			"drive_punish": -4000,
+			"superarts": 700
+		},
+		{
+			"id": "manon.4MKtoMK",
+			"names": {
+				"en": "En Haut (2)",
+				"ja": "アン・オー（2段目）"
+			},
+			"category": "unique",
+			"input": "4MK~MK",
+			"input_modern": "4MK~MK",
+			"damage": 500,
+			"drive_hit": 1000,
+			"drive_block": -2500,
+			"drive_punish": -4000,
+			"superarts": 700
+		},
+		{
+			"id": "manon.5HPtoHP",
+			"names": {
+				"en": "Temps Lié",
+				"ja": "タン・リエ"
+			},
+			"category": "unique",
+			"input": "5HP~HP",
+			"input_modern": "5HP~HP",
+			"damage": 600,
+			"drive_hit": 2000,
+			"drive_block": -5000,
+			"drive_punish": -7000,
+			"superarts": 1000
+		},
+		{
+			"id": "manon.2HPtoHP",
+			"names": {
+				"en": "Allongé",
+				"ja": "アロンジェ"
+			},
+			"category": "unique",
+			"input": "2HP~HP",
+			"input_modern": "2HP~HP",
+			"damage": 500,
+			"drive_hit": 4000,
+			"drive_block": -5000,
+			"drive_punish": -7000,
+			"superarts": 1000
+		},
+
+		{
+			"id": "manon.63214LP",
+			"names": {
+				"en": "L Manège Doré",
+				"ja": "弱 マネージュ・ドレ"
+			},
+			"category": "special",
+			"input": "63214LP",
+			"input_modern": "63214L",
+			"damage": 2000,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1.15,
+			"drive_hit": 5000,
+			"drive_block": 0,
+			"drive_punish": -10000,
+			"superarts": 3000,
+			"overrides": [
+				{
+					"type": "damage",
+					"extension": "manon_medal",
+					"values": [
+						2000,
+						2300,
+						2700,
+						3000,
+						3700
+					]
+				},
+				{
+					"type": "superarts",
+					"extension": "manon_medal",
+					"values": [
+						3000,
+						3000,
+						4000,
+						4000,
+						5000
+					]
+				}
+			]
+		},
+		{
+			"id": "manon.63214MP",
+			"names": {
+				"en": "M Manège Doré",
+				"ja": "中 マネージュ・ドレ"
+			},
+			"category": "special",
+			"input": "63214MP",
+			"input_modern": "63214M",
+			"damage": 2000,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1.15,
+			"drive_hit": 5000,
+			"drive_block": 0,
+			"drive_punish": -10000,
+			"superarts": 3000,
+			"overrides": [
+				{
+					"type": "damage",
+					"extension": "manon_medal",
+					"values": [
+						2000,
+						2300,
+						2700,
+						3000,
+						3700
+					]
+				},
+				{
+					"type": "superarts",
+					"extension": "manon_medal",
+					"values": [
+						3000,
+						3000,
+						4000,
+						4000,
+						5000
+					]
+				}
+			]
+		},
+		{
+			"id": "manon.63214HP",
+			"names": {
+				"en": "H Manège Doré",
+				"ja": "強 マネージュ・ドレ"
+			},
+			"category": "special",
+			"input": "63214HP",
+			"input_modern": "5SP",
+			"input_modern_alt": "63214H",
+			"damage": 2000,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1.15,
+			"drive_hit": 5000,
+			"drive_block": 0,
+			"drive_punish": -10000,
+			"superarts": 3000,
+			"overrides": [
+				{
+					"type": "damage",
+					"extension": "manon_medal",
+					"values": [
+						2000,
+						2300,
+						2700,
+						3000,
+						3700
+					]
+				},
+				{
+					"type": "superarts",
+					"extension": "manon_medal",
+					"values": [
+						3000,
+						3000,
+						4000,
+						4000,
+						5000
+					]
+				}
+			]
+		},
+		{
+			"id": "manon.63214PP",
+			"names": {
+				"en": "OD Manège Doré",
+				"ja": "OD マネージュ・ドレ"
+			},
+			"category": "special",
+			"input": "63214PP",
+			"input_modern": "Auto+5SP",
+			"input_modern_alt": "63214AA",
+			"damage": 2000,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1.15,
+			"drive_hit": 0,
+			"drive_block": 0,
+			"drive_punish": -10000,
+			"superarts": 3000,
+			"overrides": [
+				{
+					"type": "damage",
+					"extension": "manon_medal",
+					"values": [
+						2000,
+						2300,
+						2700,
+						3000,
+						3700
+					]
+				},
+				{
+					"type": "superarts",
+					"extension": "manon_medal",
+					"values": [
+						3000,
+						3000,
+						4000,
+						4000,
+						5000
+					]
+				}
+			]
+		},
+
+		{
+			"id": "manon.236LK",
+			"names": {
+				"en": "L Rond-point",
+				"ja": "弱 ロン・ポワン"
+			},
+			"category": "special",
+			"input": "236LK",
+			"input_modern": "236L",
+			"damage": [
+				400,
+				500
+			],
+			"drive_hit": 2000,
+			"drive_block": -4000,
+			"drive_punish": -4000,
+			"superarts": 1350
+		},
+		{
+			"id": "manon.236MK",
+			"names": {
+				"en": "M Rond-point",
+				"ja": "中 ロン・ポワン"
+			},
+			"category": "special",
+			"input": "236MK",
+			"input_modern": "6SP",
+			"input_modern_alt": "236M",
+			"damage": [
+				400,
+				600
+			],
+			"drive_hit": 2000,
+			"drive_block": -4000,
+			"drive_punish": -4000,
+			"superarts": 1350
+		},
+		{
+			"id": "manon.236HK",
+			"names": {
+				"en": "H Rond-point",
+				"ja": "強 ロン・ポワン"
+			},
+			"category": "special",
+			"input": "236HK",
+			"input_modern": "236H",
+			"damage": [
+				400,
+				400
+			],
+			"drive_hit": 2000,
+			"drive_block": -4000,
+			"drive_punish": -4000,
+			"superarts": 1350
+		},
+		{
+			"id": "manon.236KK",
+			"names": {
+				"en": "OD Rond-point",
+				"ja": "OD ロン・ポワン"
+			},
+			"category": "special",
+			"input": "236KK",
+			"input_modern": "Auto+6SP",
+			"input_modern_alt": "236AA",
+			"damage": [
+				500,
+				300
+			],
+			"drive_hit": 0,
+			"drive_block": -4000,
+			"drive_punish": -4000,
+			"superarts": 1350
+		},
+
+		{
+			"id": "manon.214LK",
+			"names": {
+				"en": "L Dégagé",
+				"ja": "弱 デガジェ"
+			},
+			"category": "special",
+			"input": "214LK",
+			"input_modern": "4SP",
+			"input_modern_alt": "214L",
+			"damage": [
+				300,
+				700
+			],
+			"drive_hit": 1500,
+			"drive_block": -4000,
+			"drive_punish": -8000,
+			"superarts": 800
+		},
+		{
+			"id": "manon.214MK",
+			"names": {
+				"en": "M Dégagé",
+				"ja": "中 デガジェ"
+			},
+			"category": "special",
+			"input": "214MK",
+			"input_modern": "214M",
+			"damage": [
+				400,
+				800
+			],
+			"drive_hit": 2000,
+			"drive_block": -5000,
+			"drive_punish": -8000,
+			"superarts": 800
+		},
+		{
+			"id": "manon.214HK",
+			"names": {
+				"en": "H Dégagé",
+				"ja": "強 デガジェ"
+			},
+			"category": "special",
+			"input": "214HK",
+			"input_modern": "214H",
+			"damage": 1000,
+			"drive_hit": 3000,
+			"drive_block": -4000,
+			"drive_punish": -5000,
+			"superarts": 800
+		},
+		{
+			"id": "manon.214KK",
+			"names": {
+				"en": "OD Dégagé",
+				"ja": "OD デガジェ"
+			},
+			"category": "special",
+			"input": "214KK",
+			"input_modern": "Auto+4SP",
+			"input_modern_alt": "214AA",
+			"damage": 800,
+			"proration": {
+				"initial": 0.8
+			},
+			"drive_hit": 0,
+			"drive_block": -4000,
+			"drive_punish": -5000,
+			"superarts": 800
+		},
+
+		{
+			"id": "manon.236LP",
+			"names": {
+				"en": "L Renversé",
+				"ja": "弱 ランヴェルセ"
+			},
+			"category": "special",
+			"input": "236LP",
+			"input_modern": "2SP",
+			"damage": [
+				50,
+				1300
+			],
+			"drive_hit": 2000,
+			"drive_block": -2000,
+			"drive_punish": -8000,
+			"superarts": 2150,
+			"overrides": [
+				{
+					"type": "damage[1]",
+					"extension": "manon_medal",
+					"values": [
+						1300,
+						1450,
+						1600,
+						1800,
+						1950
+					]
+				},
+				{
+					"type": "superarts",
+					"extension": "manon_medal",
+					"values": [
+						2150,
+						2150,
+						3150,
+						3150,
+						4150
+					]
+				}
+			]
+		},
+		{
+			"id": "manon.236MP",
+			"names": {
+				"en": "M Renversé",
+				"ja": "中 ランヴェルセ"
+			},
+			"category": "special",
+			"input": "236MP",
+			"damage": [
+				100,
+				1300
+			],
+			"drive_hit": 2000,
+			"drive_block": -2000,
+			"drive_punish": -8000,
+			"superarts": 2150,
+			"overrides": [
+				{
+					"type": "damage[1]",
+					"extension": "manon_medal",
+					"values": [
+						1300,
+						1450,
+						1600,
+						1750,
+						1900
+					]
+				},
+				{
+					"type": "superarts",
+					"extension": "manon_medal",
+					"values": [
+						2150,
+						2150,
+						3150,
+						3150,
+						4150
+					]
+				}
+			]
+		},
+		{
+			"id": "manon.236HP",
+			"names": {
+				"en": "H Renversé",
+				"ja": "強 ランヴェルセ"
+			},
+			"category": "special",
+			"input": "236HP",
+			"damage": [
+				200,
+				1300
+			],
+			"drive_hit": 2000,
+			"drive_block": -2000,
+			"drive_punish": -8000,
+			"superarts": 2150,
+			"overrides": [
+				{
+					"type": "damage[1]",
+					"extension": "manon_medal",
+					"values": [
+						1300,
+						1450,
+						1600,
+						1750,
+						1900
+					]
+				},
+				{
+					"type": "superarts",
+					"extension": "manon_medal",
+					"values": [
+						2150,
+						2150,
+						3150,
+						3150,
+						4150
+					]
+				}
+			]
+		},
+		{
+			"id": "manon.236PP",
+			"names": {
+				"en": "OD Renversé",
+				"ja": "OD ランヴェルセ"
+			},
+			"category": "special",
+			"input": "236PP",
+			"input_modern": "Auto+2SP",
+			"damage": [
+				200,
+				1300
+			],
+			"drive_hit": 0,
+			"drive_block": -2000,
+			"drive_punish": -8000,
+			"superarts": 2150,
+			"overrides": [
+				{
+					"type": "damage[1]",
+					"extension": "manon_medal",
+					"values": [
+						1300,
+						1450,
+						1600,
+						1750,
+						1900
+					]
+				},
+				{
+					"type": "superarts",
+					"extension": "manon_medal",
+					"values": [
+						2150,
+						2150,
+						3150,
+						3150,
+						4150
+					]
+				}
+			]
+		},
+
+		{
+			"id": "manon.236PtoK",
+			"names": {
+				"en": "Grand Fouetté",
+				"ja": "グラン・フェッテ"
+			},
+			"category": "special",
+			"input": "236P~K",
+			"input_modern": "Auto+2SP~A",
+			"damage": 800,
+			"proration": {
+				"immediate": 10
+			},
+			"drive_hit": 2500,
+			"drive_block": -5000,
+			"drive_punish": -10000,
+			"superarts": 1150
+		},
+		{
+			"id": "manon.236PPtoK",
+			"names": {
+				"en": "OD Grand Fouetté",
+				"ja": "OD グラン・フェッテ"
+			},
+			"category": "special",
+			"input": "236PP~K",
+			"input_modern": "Auto+2SP~A",
+			"damage": 800,
+			"proration": {
+				"immediate": 10
+			},
+			"drive_hit": 2500,
+			"drive_block": -4000,
+			"drive_punish": -5000,
+			"superarts": 1150
+		},
+
+		{
+			"id": "manon.236236K",
+			"names": {
+				"en": "SA1 Arabesque",
+				"ja": "SA1 アラベスク"
+			},
+			"category": "superarts",
+			"input": "236236K",
+			"input_modern": "5SPH",
+			"input_modern_alt": "236236K",
+			"damage": 2000,
+			"damage_scale_min": 0.3,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1,
+			"drive_hit": 0,
+			"drive_block": -2500,
+			"drive_punish": 0,
+			"superarts": 0
+		},
+		{
+			"id": "manon.214214K",
+			"names": {
+				"en": "SA2 Étoile",
+				"ja": "SA2 エトワール"
+			},
+			"category": "superarts",
+			"input": "214214K",
+			"input_modern": "4SPH",
+			"input_modern_alt": "214214K",
+			"damage": [
+				450,
+				400,
+				500,
+				500,
+				950
+			],
+			"damage_scale_min": 0.4,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1,
+			"drive_hit": 0,
+			"drive_block": -1000,
+			"drive_punish": 0,
+			"superarts": 0
+		},
+		{
+			"id": "manon.236236P",
+			"names": {
+				"en": "SA3 Pas de Deux",
+				"ja": "SA3 パ・ド・ドゥ"
+			},
+			"category": "superarts",
+			"input": "236236P",
+			"input_modern": "4SPH",
+			"input_modern_alt": "236236P",
+			"damage": [
+				340,
+				340,
+				340,
+				340,
+				340,
+				340,
+				1960
+			],
+			"damage_scale_min": 0.5,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1,
+			"proration": {
+				"immediate": 5
+			},
+			"drive_hit": 0,
+			"drive_block": 0,
+			"drive_punish": 0,
+			"superarts": 0,
+			"overrides": [
+				{
+					"type": "damage[6]",
+					"extension": "manon_medal",
+					"values": [
+						1960,
+						2060,
+						2160,
+						2360,
+						2560
+					]
+				},
+				{
+					"type": "damage[6]",
+					"extension": "manon_medal",
+					"values": [
+						2460,
+						2560,
+						2660,
+						2860,
+						3060
+					],
+					"critical_arts": true
+				}
+			]
+		},
+
+		{
+			"id": "manon.LL",
+			"names": {
+				"en": "Ouchi Gari",
+				"ja": "オーウチガリ"
+			},
+			"category": "throws",
+			"input": "LL",
+			"input_modern": "LM",
+			"damage": 1200,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1.7,
+			"proration": {
+				"immediate": 20
+			},
+			"drive_hit": 2000,
+			"drive_block": 0,
+			"drive_punish": -10000,
+			"superarts": 2000,
+			"superarts_punish": 4000
+		},
+		{
+			"id": "manon.4LL",
+			"names": {
+				"en": "Uchi Mata",
+				"ja": "ウチマタ"
+			},
+			"category": "throws",
+			"input": "4LL",
+			"input_modern": "4LM",
+			"damage": 1200,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1.7,
+			"proration": {
+				"immediate": 20
+			},
+			"drive_hit": 2000,
+			"drive_block": 0,
+			"drive_punish": -10000,
+			"superarts": 2000,
+			"superarts_punish": 4000
+		},
+
+		{
+			"id": "manon.HH",
+			"names": {
+				"en": "Glissade",
+				"ja": "グリッサード"
+			},
+			"category": "common",
+			"input": "HH",
+			"input_modern": "DI",
+			"damage": 800,
+			"proration": {
+				"initial": 0.8
+			},
+			"drive_hit": 800,
+			"drive_block": -5000,
+			"drive_punish": -15000,
+			"superarts": 0
+		},
+		{
+			"id": "manon.656",
+			"category": "common",
+			"input": "656",
+			"input_modern": "656",
+			"damage": 0,
+			"proration": {
+				"scaling": 0.85
+			},
+			"drive_hit": 0,
+			"drive_block": 0,
+			"drive_punish": 0,
+			"superarts": 0
+		}
+	]
+}
