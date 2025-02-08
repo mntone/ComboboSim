@@ -40,6 +40,7 @@ export interface Move {
 	driveBlock: number
 	drivePunish: number
 	superarts: number
+	superartsPunish?: number
 	overrides?: MoveOverride[]
 }
 

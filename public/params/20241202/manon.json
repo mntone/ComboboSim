@@ -19,7 +19,7 @@
 			"input_modern": "5L",
 			"damage": 300,
 			"proration": {
-				"initial": 0.8
+				"initial": 20
 			},
 			"drive_hit": 250,
 			"drive_block": -500,
@@ -36,7 +36,7 @@
 			"input_modern": "Auto+5L",
 			"damage": 300,
 			"proration": {
-				"initial": 0.8
+				"initial": 20
 			},
 			"drive_hit": 250,
 			"drive_block": -500,
@@ -108,7 +108,7 @@
 			"input": "2LP",
 			"damage": 300,
 			"proration": {
-				"initial": 0.8
+				"initial": 20
 			},
 			"drive_hit": 250,
 			"drive_block": -500,
@@ -125,7 +125,7 @@
 			"input_modern": "Auto+2L",
 			"damage": 200,
 			"proration": {
-				"initial": 0.8
+				"initial": 20
 			},
 			"drive_hit": 250,
 			"drive_block": -500,
@@ -278,7 +278,7 @@
 			},
 			"category": "unique",
 			"input": "4HP",
-			"input_modern": "4HP",
+			"input_modern": "4H",
 			"damage": 800,
 			"drive_hit": 2000,
 			"drive_block": -5000,
@@ -307,7 +307,7 @@
 			},
 			"category": "unique",
 			"input": "5MP~MK",
-			"input_modern": "5MP~MK",
+			"input_modern": "5M~M",
 			"damage": 500,
 			"drive_hit": 2500,
 			"drive_block": -2500,
@@ -322,7 +322,7 @@
 			},
 			"category": "unique",
 			"input": "4MK",
-			"input_modern": "4MK",
+			"input_modern": "4M",
 			"damage": 600,
 			"drive_hit": 2000,
 			"drive_block": -4000,
@@ -337,7 +337,7 @@
 			},
 			"category": "unique",
 			"input": "4MK~MK",
-			"input_modern": "4MK~MK",
+			"input_modern": "4M~M",
 			"damage": 500,
 			"drive_hit": 1000,
 			"drive_block": -2500,
@@ -352,7 +352,7 @@
 			},
 			"category": "unique",
 			"input": "5HP~HP",
-			"input_modern": "5HP~HP",
+			"input_modern": "5H~H",
 			"damage": 600,
 			"drive_hit": 2000,
 			"drive_block": -5000,
@@ -367,7 +367,7 @@
 			},
 			"category": "unique",
 			"input": "2HP~HP",
-			"input_modern": "2HP~HP",
+			"input_modern": "2H~H",
 			"damage": 500,
 			"drive_hit": 4000,
 			"drive_block": -5000,
@@ -681,7 +681,7 @@
 			"input_modern_alt": "214AA",
 			"damage": 800,
 			"proration": {
-				"initial": 0.8
+				"initial": 20
 			},
 			"drive_hit": 0,
 			"drive_block": -4000,
@@ -1047,11 +1047,25 @@
 			"input_modern": "DI",
 			"damage": 800,
 			"proration": {
-				"initial": 0.8
+				"initial": 20
 			},
 			"drive_hit": 800,
 			"drive_block": -5000,
 			"drive_punish": -15000,
+			"superarts": 0
+		},
+		{
+			"id": "manon.656MM",
+			"category": "common",
+			"input": "656MM",
+			"input_modern": "656DP",
+			"damage": 0,
+			"proration": {
+				"scaling": 0.85
+			},
+			"drive_hit": 0,
+			"drive_block": 0,
+			"drive_punish": 0,
 			"superarts": 0
 		},
 		{
