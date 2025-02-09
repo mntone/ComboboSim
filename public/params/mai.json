@@ -1,0 +1,1435 @@
+{
+	"id": "mai",
+	"names": {
+		"en": "Mai",
+		"ja": "舞"
+	},
+	"vitality": 10000,
+	"moves": [
+		{
+			"id": "mai.5LP",
+			"names": {
+				"ja": "扇打"
+			},
+			"category": "normal",
+			"input": "5LP",
+			"input_modern": "Auto+5L~Auto+5L",
+			"damage": 300,
+			"proration": {
+				"initial": 0.8
+			},
+			"drive_hit": 250,
+			"drive_block": -500,
+			"drive_punish": -2000,
+			"superarts": 300
+		},
+		{
+			"id": "mai.5LK",
+			"names": {
+				"ja": "飛燕脚"
+			},
+			"category": "normal",
+			"input": "5LK",
+			"input_modern": "5L",
+			"damage": 300,
+			"proration": {
+				"initial": 0.8
+			},
+			"drive_hit": 250,
+			"drive_block": -500,
+			"drive_punish": -2000,
+			"superarts": 300
+		},
+		{
+			"id": "mai.5MP",
+			"names": {
+				"ja": "扇子突き"
+			},
+			"category": "normal",
+			"input": "5MP",
+			"damage": 600,
+			"drive_hit": 1500,
+			"drive_block": -3000,
+			"drive_punish": -4000,
+			"superarts": 600
+		},
+		{
+			"id": "mai.5MK",
+			"names": {
+				"ja": "舞蹴撃"
+			},
+			"category": "normal",
+			"input": "5MK",
+			"input_modern": "5M",
+			"damage": 700,
+			"drive_hit": 1500,
+			"drive_block": -3000,
+			"drive_punish": -4000,
+			"superarts": 700
+		},
+		{
+			"id": "mai.5HP",
+			"names": {
+				"ja": "大扇打"
+			},
+			"category": "normal",
+			"input": "5HP",
+			"input_modern": "Auto+5H",
+			"damage": 800,
+			"drive_hit": 3000,
+			"drive_block": -5000,
+			"drive_punish": -8000,
+			"superarts": 800
+		},
+		{
+			"id": "mai.5HK",
+			"names": {
+				"ja": "背面蹴り"
+			},
+			"category": "normal",
+			"input": "5HK",
+			"input_modern": "5H",
+			"damage": 900,
+			"proration": {
+				"initial": 0.8
+			},
+			"drive_hit": 4000,
+			"drive_block": -6000,
+			"drive_punish": -10000,
+			"superarts": 1000
+		},
+		{
+			"id": "mai.2LP",
+			"names": {
+				"ja": "龍尾髪"
+			},
+			"category": "normal",
+			"input": "2LP",
+			"input_modern": "2L",
+			"damage": 300,
+			"proration": {
+				"initial": 0.8
+			},
+			"drive_hit": 250,
+			"drive_block": -500,
+			"drive_punish": -2000,
+			"superarts": 300
+		},
+		{
+			"id": "mai.2LK",
+			"names": {
+				"ja": "摺り蹴り"
+			},
+			"category": "normal",
+			"input": "2LK",
+			"input_modern": "Auto+5L",
+			"damage": 200,
+			"proration": {
+				"initial": 0.8
+			},
+			"drive_hit": 250,
+			"drive_block": -500,
+			"drive_punish": -2000,
+			"superarts": 300
+		},
+		{
+			"id": "mai.2MP",
+			"names": {
+				"ja": "背面ひじ打ち"
+			},
+			"category": "normal",
+			"input": "2MP",
+			"input_modern": "Auto+5M",
+			"damage": 600,
+			"drive_hit": 1500,
+			"drive_block": -3000,
+			"drive_punish": -4000,
+			"superarts": 600
+		},
+		{
+			"id": "mai.2MK",
+			"names": {
+				"ja": "捌き蹴り"
+			},
+			"category": "normal",
+			"input": "2MK",
+			"input_modern": "2M",
+			"damage": 500,
+			"proration": {
+				"initial": 0.8
+			},
+			"drive_hit": 1000,
+			"drive_block": -2000,
+			"drive_punish": -4000,
+			"superarts": 500
+		},
+		{
+			"id": "mai.2HP",
+			"names": {
+				"ja": "回転扇打"
+			},
+			"category": "normal",
+			"input": "2HP",
+			"input_modern": "2H",
+			"damage": 800,
+			"drive_hit": 2000,
+			"drive_block": -5000,
+			"drive_punish": -8000,
+			"superarts": 1000
+		},
+		{
+			"id": "mai.2HK",
+			"names": {
+				"ja": "反り蹴り"
+			},
+			"category": "normal",
+			"input": "2HK",
+			"input_modern": "3HK",
+			"damage": 900,
+			"drive_hit": 3000,
+			"drive_block": -4000,
+			"drive_punish": -10000,
+			"superarts": 1000
+		},
+		{
+			"id": "mai.jLP",
+			"names": {
+				"ja": "翔扇打"
+			},
+			"category": "normal",
+			"input": "jLP",
+			"damage": 300,
+			"drive_hit": 500,
+			"drive_block": -1500,
+			"drive_punish": -2000,
+			"superarts": 300
+		},
+		{
+			"id": "mai.jLK",
+			"names": {
+				"ja": "翔脚"
+			},
+			"category": "normal",
+			"input": "jLK",
+			"input_modern": "jL",
+			"damage": 300,
+			"drive_hit": 500,
+			"drive_block": -1500,
+			"drive_punish": -2000,
+			"superarts": 300
+		},
+		{
+			"id": "mai.jMP",
+			"names": {
+				"ja": "天仰扇"
+			},
+			"category": "normal",
+			"input": "jMP",
+			"input_modern": "jM",
+			"damage": 600,
+			"drive_hit": 1000,
+			"drive_block": -2500,
+			"drive_punish": -4000,
+			"superarts": 500
+		},
+		{
+			"id": "mai.jMK",
+			"names": {
+				"ja": "前蹴り"
+			},
+			"category": "normal",
+			"input": "jMK",
+			"damage": 500,
+			"drive_hit": 1000,
+			"drive_block": -2500,
+			"drive_punish": -4000,
+			"superarts": 500
+		},
+		{
+			"id": "mai.jHP",
+			"names": {
+				"ja": "刃扇天翔刺し"
+			},
+			"category": "normal",
+			"input": "jHP",
+			"damage": 800,
+			"drive_hit": 2000,
+			"drive_block": -4000,
+			"drive_punish": -5000,
+			"superarts": 1000
+		},
+		{
+			"id": "mai.jHK",
+			"names": {
+				"ja": "隼蹴撃"
+			},
+			"category": "normal",
+			"input": "jHK",
+			"input_modern": "jH",
+			"damage": 800,
+			"drive_hit": 2000,
+			"drive_block": -4000,
+			"drive_punish": -5000,
+			"superarts": 1000
+		},
+
+		{
+			"id": "mai.6MP",
+			"names": {
+				"en": "Senkotsu Uchi",
+				"ja": "扇骨打ち"
+			},
+			"category": "unique",
+			"input": "6MP",
+			"input_modern": "6M",
+			"damage": 600,
+			"drive_hit": 1500,
+			"drive_block": -2500,
+			"drive_punish": -5000,
+			"superarts": 500
+		},
+		{
+			"id": "mai.5LKtoLK",
+			"names": {
+				"en": "Hien Ren Kyaku (2)",
+				"ja": "飛燕連脚（2段目）"
+			},
+			"category": "unique",
+			"input": "5LK~LK",
+			"input_modern": "5L~L",
+			"damage": 400,
+			"drive_hit": 250,
+			"drive_block": -500,
+			"drive_punish": -2000,
+			"superarts": 300
+		},
+		{
+			"id": "mai.5LKtoLKtoLK",
+			"names": {
+				"en": "Hien Ren Kyaku (3)",
+				"ja": "飛燕連脚（3段目）"
+			},
+			"category": "unique",
+			"input": "5LK~LK~LK",
+			"input_modern": "5L~L~L",
+			"damage": 500,
+			"drive_hit": 250,
+			"drive_block": -500,
+			"drive_punish": -2000,
+			"superarts": 300
+		},
+		{
+			"id": "mai.4HP",
+			"names": {
+				"en": "Hoshi Kujaku (1)",
+				"ja": "星孔雀（1段目）"
+			},
+			"category": "unique",
+			"input": "4HK",
+			"input_modern": "4H",
+			"damage": 800,
+			"drive_hit": 2000,
+			"drive_block": -5000,
+			"drive_punish": -10000,
+			"superarts": 1000
+		},
+		{
+			"id": "mai.4HKtoHK",
+			"names": {
+				"en": "Hoshi Kujaku (2)",
+				"ja": "星孔雀（2段目）"
+			},
+			"category": "unique",
+			"input": "4HK~HK",
+			"input_modern": "4H~H",
+			"damage": [600, 600],
+			"drive_hit": 2000,
+			"drive_block": -2500,
+			"drive_punish": -10000,
+			"superarts": 1000
+		},
+
+		{
+			"id": "mai.236LP",
+			"names": {
+				"en": "L Kachousen",
+				"ja": "弱 花蝶扇"
+			},
+			"category": "special",
+			"input": "236LP",
+			"input_modern": "236L",
+			"damage": 500,
+			"drive_hit": 1000,
+			"drive_block": -2500,
+			"drive_punish": -3000,
+			"superarts": 600
+		},
+		{
+			"id": "mai.236[LP]",
+			"names": {
+				"en": "L Kachousen (Charged)",
+				"ja": "弱 花蝶扇（ホールド）"
+			},
+			"category": "special",
+			"input": "236[LP]",
+			"input_modern": "236[L]",
+			"damage": [500, 200],
+			"drive_hit": 2000,
+			"drive_block": -3500,
+			"drive_punish": -3000,
+			"superarts": 900
+		},
+		{
+			"id": "mai.236LP.boosted",
+			"names": {
+				"en": "[Boosted] L Kachousen",
+				"ja": "[強化版] 弱 花蝶扇"
+			},
+			"category": "special",
+			"input": "236LP",
+			"input_modern": "236L",
+			"damage": [300, 300],
+			"drive_hit": 1000,
+			"drive_block": -2500,
+			"drive_punish": -3000,
+			"superarts": 600
+		},
+		{
+			"id": "mai.236[LP].boosted",
+			"names": {
+				"en": "[Boosted] L Kachousen (Charged)",
+				"ja": "[強化版] 弱 花蝶扇（ホールド）"
+			},
+			"category": "special",
+			"input": "236[LP]",
+			"input_modern": "236[L]",
+			"damage": [300, 300, 200],
+			"drive_hit": 2000,
+			"drive_block": -3500,
+			"drive_punish": -3000,
+			"superarts": 900
+		},
+		{
+			"id": "mai.236MP",
+			"names": {
+				"en": "M Kachousen",
+				"ja": "中 花蝶扇"
+			},
+			"category": "special",
+			"input": "236MP",
+			"input_modern": "236M",
+			"damage": 500,
+			"drive_hit": 1000,
+			"drive_block": -2500,
+			"drive_punish": -3000,
+			"superarts": 600
+		},
+		{
+			"id": "mai.236[MP]",
+			"names": {
+				"en": "M Kachousen (Charged)",
+				"ja": "中 花蝶扇（ホールド）"
+			},
+			"category": "special",
+			"input": "236[MP]",
+			"input_modern": "236[M]",
+			"damage": [500, 200],
+			"drive_hit": 2000,
+			"drive_block": -3500,
+			"drive_punish": -3000,
+			"superarts": 900
+		},
+		{
+			"id": "mai.236MP.boosted",
+			"names": {
+				"en": "[Boosted] M Kachousen",
+				"ja": "[強化版] 中 花蝶扇"
+			},
+			"category": "special",
+			"input": "236MP",
+			"input_modern": "236M",
+			"damage": [300, 300],
+			"drive_hit": 1000,
+			"drive_block": -2500,
+			"drive_punish": -3000,
+			"superarts": 600
+		},
+		{
+			"id": "mai.236[MP].boosted",
+			"names": {
+				"en": "[Boosted] M Kachousen (Charged)",
+				"ja": "[強化版] 中 花蝶扇（ホールド）"
+			},
+			"category": "special",
+			"input": "236[MP]",
+			"input_modern": "236[M]",
+			"damage": [300, 300, 200],
+			"drive_hit": 2000,
+			"drive_block": -3500,
+			"drive_punish": -3000,
+			"superarts": 900
+		},
+		{
+			"id": "mai.236HP",
+			"names": {
+				"en": "H Kachousen",
+				"ja": "強 花蝶扇"
+			},
+			"category": "special",
+			"input": "236HP",
+			"input_modern": "236H",
+			"damage": 500,
+			"drive_hit": 1000,
+			"drive_block": -2500,
+			"drive_punish": -3000,
+			"superarts": 600
+		},
+		{
+			"id": "mai.236[HP]",
+			"names": {
+				"en": "H Kachousen (Charged)",
+				"ja": "強 花蝶扇（ホールド）"
+			},
+			"category": "special",
+			"input": "236[HP]",
+			"input_modern": "236[H]",
+			"damage": [500, 200],
+			"drive_hit": 2000,
+			"drive_block": -3500,
+			"drive_punish": -3000,
+			"superarts": 900
+		},
+		{
+			"id": "mai.236HP.boosted",
+			"names": {
+				"en": "[Boosted] H Kachousen",
+				"ja": "[強化版] 強 花蝶扇"
+			},
+			"category": "special",
+			"input": "236HP",
+			"input_modern": "236H",
+			"damage": [300, 300],
+			"drive_hit": 1000,
+			"drive_block": -2500,
+			"drive_punish": -3000,
+			"superarts": 600
+		},
+		{
+			"id": "mai.236[HP].boosted",
+			"names": {
+				"en": "[Boosted] H Kachousen (Charged)",
+				"ja": "[強化版] 強 花蝶扇（ホールド）"
+			},
+			"category": "special",
+			"input": "236[HP]",
+			"input_modern": "236[H]",
+			"damage": [300, 300, 200],
+			"drive_hit": 2000,
+			"drive_block": -3500,
+			"drive_punish": -3000,
+			"superarts": 900
+		},
+		{
+			"id": "mai.236PP",
+			"names": {
+				"en": "OD Kachousen",
+				"ja": "OD 花蝶扇"
+			},
+			"category": "special",
+			"input": "236PP",
+			"input_modern": "Auto+SP",
+			"input_modern_alt": "236AA",
+			"damage": [500, 200],
+			"proration": {
+				"initial": 20,
+				"additional": 20
+			},
+			"drive_hit": 0,
+			"drive_block": -3500,
+			"drive_punish": -3000,
+			"superarts": 900
+		},
+		{
+			"id": "mai.236[PP]",
+			"names": {
+				"en": "OD Kachousen (Charged)",
+				"ja": "OD 花蝶扇（ホールド）"
+			},
+			"category": "special",
+			"input": "236[PP]",
+			"input_modern": "Auto+[SP]",
+			"input_modern_alt": "236[AA]",
+			"damage": [300, 300],
+			"drive_hit": 0,
+			"drive_block": -2000,
+			"drive_punish": -4000,
+			"superarts": 600
+		},
+		{
+			"id": "mai.236PP.boosted",
+			"names": {
+				"en": "[Boosted] OD Kachousen",
+				"ja": "[強化版] OD 花蝶扇"
+			},
+			"category": "special",
+			"input": "236PP",
+			"input_modern": "Auto+SP",
+			"input_modern_alt": "236AA",
+			"damage": [300, 300, 200],
+			"proration": {
+				"initial": 20,
+				"additional": 20
+			},
+			"drive_hit": 0,
+			"drive_block": -3500,
+			"drive_punish": -3000,
+			"superarts": 900
+		},
+		{
+			"id": "mai.236[PP].boosted",
+			"names": {
+				"en": "[Boosted] OD Kachousen (Charged)",
+				"ja": "[強化版] OD 花蝶扇（ホールド）"
+			},
+			"category": "special",
+			"input": "236[PP]",
+			"input_modern": "Auto+[SP]",
+			"input_modern_alt": "236[AA]",
+			"damage": [200, 200, 150, 150],
+			"drive_hit": 0,
+			"drive_block": -4000,
+			"drive_punish": -2000,
+			"superarts": 1200
+		},
+		{
+			"id": "mai.236[PP]to6P",
+			"names": {
+				"en": "Midare Kachousen",
+				"ja": "乱れ花蝶扇"
+			},
+			"category": "special",
+			"input": "236[PP]~6P",
+			"input_modern": "Auto+[SP]~6A",
+			"input_modern_alt": "236[AA]~6A",
+			"damage": [150, 150, 300],
+			"drive_hit": 0,
+			"drive_block": -2000,
+			"drive_punish": -2000,
+			"superarts": 300
+		},
+		{
+			"id": "mai.236[PP]to6P.boosted",
+			"names": {
+				"en": "[Boosted] Midare Kachousen",
+				"ja": "[強化版] 乱れ花蝶扇"
+			},
+			"category": "special",
+			"input": "236[PP]~6P",
+			"input_modern": "Auto+[SP]~6A",
+			"input_modern_alt": "236[AA]~6A",
+			"damage": [200, 200, 300, 300],
+			"drive_hit": 0,
+			"drive_block": -2000,
+			"drive_punish": -2000,
+			"superarts": 300
+		},
+		{
+			"id": "mai.623LK",
+			"names": {
+				"en": "L Hishou Ryuuenjin",
+				"ja": "弱 飛翔龍炎陣"
+			},
+			"category": "special",
+			"input": "623LK",
+			"input_modern": "6SP",
+			"input_modern_alt": "623L",
+			"damage": [400, 500],
+			"drive_hit": 2000,
+			"drive_block": -8000,
+			"drive_punish": -5000,
+			"superarts": 1000
+		},
+		{
+			"id": "mai.623LK.boosted",
+			"names": {
+				"en": "[Boosted] L Hishou Ryuuenjin",
+				"ja": "[強化版] 弱 飛翔龍炎陣"
+			},
+			"category": "special",
+			"input": "623LK",
+			"input_modern": "6SP",
+			"input_modern_alt": "623L",
+			"damage": [400, 300, 300],
+			"drive_hit": 2000,
+			"drive_block": -6000,
+			"drive_punish": -5000,
+			"superarts": 1000
+		},
+		{
+			"id": "mai.623MK",
+			"names": {
+				"en": "M Hishou Ryuuenjin",
+				"ja": "中 飛翔龍炎陣"
+			},
+			"category": "special",
+			"input": "623MK",
+			"input_modern": "623M",
+			"damage": [500, 600],
+			"drive_hit": 2000,
+			"drive_block": -8000,
+			"drive_punish": -5000,
+			"superarts": 1000
+		},
+		{
+			"id": "mai.623MK.boosted",
+			"names": {
+				"en": "[Boosted] M Hishou Ryuuenjin",
+				"ja": "[強化版] 中 飛翔龍炎陣"
+			},
+			"category": "special",
+			"input": "623MK",
+			"input_modern": "623M",
+			"damage": [500, 350, 350],
+			"drive_hit": 2000,
+			"drive_block": -6000,
+			"drive_punish": -5000,
+			"superarts": 1000
+		},
+		{
+			"id": "mai.623HK",
+			"names": {
+				"en": "H Hishou Ryuuenjin",
+				"ja": "強 飛翔龍炎陣"
+			},
+			"category": "special",
+			"input": "623HK",
+			"input_modern": "623H",
+			"damage": [600, 600],
+			"drive_hit": 2000,
+			"drive_block": -4000,
+			"drive_punish": -5000,
+			"superarts": 1000
+		},
+		{
+			"id": "mai.623HK.boosted",
+			"names": {
+				"en": "[Boosted] H Hishou Ryuuenjin",
+				"ja": "[強化版] 強 飛翔龍炎陣"
+			},
+			"category": "special",
+			"input": "623HK",
+			"input_modern": "623H",
+			"damage": [500, 400, 400],
+			"drive_hit": 2000,
+			"drive_block": -4000,
+			"drive_punish": -5000,
+			"superarts": 1000
+		},
+		{
+			"id": "mai.623KK",
+			"names": {
+				"en": "OD Hishou Ryuuenjin",
+				"ja": "OD 飛翔龍炎陣"
+			},
+			"category": "special",
+			"input": "623KK",
+			"input_modern": "Auto+6SP",
+			"input_modern_alt": "623AA",
+			"damage": [800, 800],
+			"drive_hit": 0,
+			"drive_block": -4000,
+			"drive_punish": 0,
+			"superarts": 1000
+		},
+		{
+			"id": "mai.623KK.boosted",
+			"names": {
+				"en": "[Boosted] OD Hishou Ryuuenjin",
+				"ja": "[強化版] OD 飛翔龍炎陣"
+			},
+			"category": "special",
+			"input": "623KK",
+			"input_modern": "Auto+6SP",
+			"input_modern_alt": "623AA",
+			"damage": [800, 500, 400],
+			"drive_hit": 0,
+			"drive_block": -3000,
+			"drive_punish": 0,
+			"superarts": 1000
+		},
+		{
+			"id": "mai.214LP",
+			"names": {
+				"en": "L Ryuuenbu",
+				"ja": "弱 龍炎舞"
+			},
+			"category": "special",
+			"input": "214LP",
+			"input_modern": "6SP",
+			"input_modern_alt": "214L",
+			"damage": 800,
+			"proration": {
+				"initial": 20,
+				"additional": 20
+			},
+			"drive_hit": 1000,
+			"drive_blocP": -2000,
+			"drive_punish": -2500,
+			"superarts": 600
+		},
+		{
+			"id": "mai.214LP.boosted",
+			"names": {
+				"en": "[Boosted] L Ryuuenbu",
+				"ja": "[強化版] 弱 龍炎舞"
+			},
+			"category": "special",
+			"input": "214LP",
+			"input_modern": "6SP",
+			"input_modern_alt": "214L",
+			"damage": 900,
+			"proration": {
+				"initial": 20,
+				"additional": 20
+			},
+			"drive_hit": 1000,
+			"drive_blocP": -2000,
+			"drive_punish": -2500,
+			"superarts": 600
+		},
+		{
+			"id": "mai.214MP",
+			"names": {
+				"en": "M Ryuuenbu",
+				"ja": "中 龍炎舞"
+			},
+			"category": "special",
+			"input": "214MP",
+			"input_modern": "214M",
+			"damage": [200, 800],
+			"drive_hit": 2000,
+			"drive_blocP": -4000,
+			"drive_punish": -5000,
+			"superarts": 1200
+		},
+		{
+			"id": "mai.214MP.boosted",
+			"names": {
+				"en": "[Boosted] M Ryuuenbu",
+				"ja": "[強化版] 中 龍炎舞"
+			},
+			"category": "special",
+			"input": "214MP",
+			"input_modern": "214M",
+			"damage": [200, 900],
+			"proration": {
+				"additional": 20
+			},
+			"drive_hit": 2000,
+			"drive_blocP": -4000,
+			"drive_punish": -5000,
+			"superarts": 1200
+		},
+		{
+			"id": "mai.214HP",
+			"names": {
+				"en": "H Ryuuenbu",
+				"ja": "強 龍炎舞"
+			},
+			"category": "special",
+			"input": "214HP",
+			"input_modern": "214H",
+			"damage": [200, 600],
+			"proration": {
+				"additional": 20
+			},
+			"drive_hit": 2000,
+			"drive_blocP": -4000,
+			"drive_punish": -5000,
+			"superarts": 1200
+		},
+		{
+			"id": "mai.214HP.boosted",
+			"names": {
+				"en": "[Boosted] H Ryuuenbu",
+				"ja": "[強化版] 強 龍炎舞"
+			},
+			"category": "special",
+			"input": "214HP",
+			"input_modern": "214H",
+			"damage": [200, 700],
+			"drive_hit": 2000,
+			"drive_blocP": -4000,
+			"drive_punish": -5000,
+			"superarts": 1200
+		},
+		{
+			"id": "mai.214PP",
+			"names": {
+				"en": "OD Ryuuenbu",
+				"ja": "OD 龍炎舞"
+			},
+			"category": "special",
+			"input": "214PP",
+			"input_modern": "Auto+6SP",
+			"input_modern_alt": "214AA",
+			"damage": [200, 400, 400],
+			"drive_hit": 0,
+			"drive_blocP": -4000,
+			"drive_punish": -5000,
+			"superarts": 1200
+		},
+		{
+			"id": "mai.214PP.boosted",
+			"names": {
+				"en": "[Boosted] OD Ryuuenbu",
+				"ja": "[強化版] OD 龍炎舞"
+			},
+			"category": "special",
+			"input": "214PP",
+			"input_modern": "Auto+6SP",
+			"input_modern_alt": "214AA",
+			"damage": [200, 450, 450],
+			"drive_hit": 0,
+			"drive_blocP": -4000,
+			"drive_punish": -5000,
+			"superarts": 1200
+		},
+		{
+			"id": "mai.236LK",
+			"names": {
+				"en": "L Hissatsu Shinobi Bachi",
+				"ja": "弱 必殺忍蜂"
+			},
+			"category": "special",
+			"input": "236LK",
+			"input_modern": "6SP",
+			"input_modern_alt": "236L",
+			"damage": [400, 400],
+			"drive_hit": 2000,
+			"drive_block": -5000,
+			"drive_punish": -5000,
+			"superarts": 1000
+		},
+		{
+			"id": "mai.236LK.boosted",
+			"names": {
+				"en": "[Boosted] L Hissatsu Shinobi Bachi",
+				"ja": "[強化版] 弱 必殺忍蜂"
+			},
+			"category": "special",
+			"input": "236LK",
+			"input_modern": "6SP",
+			"input_modern_alt": "236L",
+			"damage": [400, 500],
+			"drive_hit": 2000,
+			"drive_block": -5000,
+			"drive_punish": -5000,
+			"superarts": 1000
+		},
+		{
+			"id": "mai.236MK",
+			"names": {
+				"en": "M Hissatsu Shinobi Bachi",
+				"ja": "中 必殺忍蜂"
+			},
+			"category": "special",
+			"input": "236MK",
+			"damage": [450, 450],
+			"drive_hit": 2000,
+			"drive_block": -5000,
+			"drive_punish": -5000,
+			"superarts": 1000
+		},
+		{
+			"id": "mai.236MK.boosted",
+			"names": {
+				"en": "[Boosted] M Hissatsu Shinobi Bachi",
+				"ja": "[強化版] 中 必殺忍蜂"
+			},
+			"category": "special",
+			"input": "236MK",
+			"damage": [450, 550],
+			"drive_hit": 2000,
+			"drive_block": -5000,
+			"drive_punish": -5000,
+			"superarts": 1000
+		},
+		{
+			"id": "mai.236HK",
+			"names": {
+				"en": "H Hissatsu Shinobi Bachi",
+				"ja": "強 必殺忍蜂"
+			},
+			"category": "special",
+			"input": "236HK",
+			"damage": [500, 500],
+			"drive_hit": 2000,
+			"drive_block": -5000,
+			"drive_punish": -5000,
+			"superarts": 1000
+		},
+		{
+			"id": "mai.236HK.boosted",
+			"names": {
+				"en": "[Boosted] H Hissatsu Shinobi Bachi",
+				"ja": "[強化版] 強 必殺忍蜂"
+			},
+			"category": "special",
+			"input": "236HK",
+			"damage": [500, 600],
+			"drive_hit": 2000,
+			"drive_block": -5000,
+			"drive_punish": -5000,
+			"superarts": 1000
+		},
+		{
+			"id": "mai.236KK",
+			"names": {
+				"en": "OD Hissatsu Shinobi Bachi",
+				"ja": "OD 必殺忍蜂"
+			},
+			"category": "special",
+			"input": "236KK",
+			"input_modern": "Auto+6SP",
+			"input_modern_alt": "236AA",
+			"damage": [400, 400],
+			"proration": {
+				"additional": 20
+			},
+			"drive_hit": 0,
+			"drive_block": -4500,
+			"drive_punish": -5000,
+			"superarts": 1000
+		},
+		{
+			"id": "mai.236KK.boosted",
+			"names": {
+				"en": "[Boosted] OD Hissatsu Shinobi Bachi",
+				"ja": "[強化版] OD 必殺忍蜂"
+			},
+			"category": "special",
+			"input": "236KK",
+			"input_modern": "Auto+6SP",
+			"input_modern_alt": "236AA",
+			"damage": [400, 500],
+			"drive_hit": 0,
+			"drive_block": -4500,
+			"drive_punish": -5000,
+			"superarts": 1000
+		},
+		{
+			"id": "mai.214P.air",
+			"names": {
+				"en": "Musasabi no Mai",
+				"ja": "ムササビの舞"
+			},
+			"category": "special",
+			"input": "214P",
+			"input_modern": "jSP",
+			"damage": 1000,
+			"drive_hit": 2000,
+			"drive_blocP": -4000,
+			"drive_punish": -5000,
+			"superarts": 1000
+		},
+		{
+			"id": "mai.214P.air.boosted",
+			"names": {
+				"en": "[Boosted] Musasabi no Mai",
+				"ja": "[強化版] ムササビの舞"
+			},
+			"category": "special",
+			"input": "214P",
+			"input_modern": "jSP",
+			"damage": 1100,
+			"drive_hit": 2000,
+			"drive_blocP": -4000,
+			"drive_punish": -5000,
+			"superarts": 1000
+		},
+		{
+			"id": "mai.214PP.air",
+			"names": {
+				"en": "OD Musasabi no Mai",
+				"ja": "OD ムササビの舞"
+			},
+			"category": "special",
+			"input": "214PP",
+			"input_modern": "Auto+jSP",
+			"damage": 1200,
+			"proration": {
+				"initial": 30
+			},
+			"drive_hit": 0,
+			"drive_blocP": -4000,
+			"drive_punish": -5000,
+			"superarts": 1000
+		},
+		{
+			"id": "mai.214PP.air.boosted",
+			"names": {
+				"en": "[Boosted] OD Musasabi no Mai",
+				"ja": "[強化版] OD ムササビの舞"
+			},
+			"category": "special",
+			"input": "214PP",
+			"input_modern": "Auto+jSP",
+			"damage": 1300,
+			"proration": {
+				"initial": 30
+			},
+			"drive_hit": 0,
+			"drive_blocP": -4000,
+			"drive_punish": -5000,
+			"superarts": 1000
+		},
+
+		{
+			"id": "mai.236236P",
+			"names": {
+				"en": "SA1 Kagerou no Mai",
+				"ja": "SA1 陽炎の舞"
+			},
+			"category": "superarts",
+			"input": "236236P",
+			"input_modern": "5SPH",
+			"input_modern_alt": "236236P",
+			"damage": [
+				250,
+				250,
+				250,
+				250,
+				250,
+				250,
+				250,
+				250
+			],
+			"damage_scale_min": 0.3,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1,
+			"drive_hit": 0,
+			"drive_block": -2500,
+			"drive_punish": -5000,
+			"superarts": 0
+		},
+		{
+			"id": "mai.236236P.boosted",
+			"names": {
+				"en": "[Boosted] SA1 Kagerou no Mai",
+				"ja": "[強化版] SA1 陽炎の舞"
+			},
+			"category": "superarts",
+			"input": "236236P",
+			"input_modern": "5SPH",
+			"input_modern_alt": "236236P",
+			"damage": [
+				150,
+				150,
+				150,
+				150,
+				150,
+				150,
+				150,
+				150,
+				150,
+				150,
+				300,
+				500
+			],
+			"damage_scale_min": 0.3,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1,
+			"drive_hit": 0,
+			"drive_block": -2500,
+			"drive_punish": -5000,
+			"superarts": 0
+		},
+		{
+			"id": "mai.236236K",
+			"names": {
+				"en": "SA2 Chou Hissatsu Shinobi Bachi",
+				"ja": "SA2 超必殺忍蜂"
+			},
+			"category": "superarts",
+			"input": "236236K",
+			"input_modern": "4SPH",
+			"input_modern_alt": "236236K",
+			"damage": [
+				500,
+				500,
+				500,
+				500,
+				800
+			],
+			"damage_scale_min": 0.4,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1,
+			"proration": {
+				"initial": 40,
+				"additional": 20
+			},
+			"drive_hit": 0,
+			"drive_block": -5000,
+			"drive_punish": -10000,
+			"superarts": 0
+		},
+		{
+			"id": "mai.236236K.boosted",
+			"names": {
+				"en": "[Boosted] SA2 Chou Hissatsu Shinobi Bachi",
+				"ja": "[強化版] SA2 超必殺忍蜂"
+			},
+			"category": "superarts",
+			"input": "236236K",
+			"input_modern": "4SPH",
+			"input_modern_alt": "236236K",
+			"damage": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				800
+			],
+			"damage_scale_min": 0.4,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1,
+			"proration": {
+				"initial": 40,
+				"additional": 20
+			},
+			"drive_hit": 0,
+			"drive_block": -5000,
+			"drive_punish": -10000,
+			"superarts": 0
+		},
+		{
+			"id": "mai.236236K.air",
+			"names": {
+				"en": "SA2 Air Chou Hissatsu Shinobi Bachi",
+				"ja": "SA2 空中超必殺忍蜂"
+			},
+			"category": "superarts",
+			"input": "236236K",
+			"input_modern": "4SPH",
+			"input_modern_alt": "236236K",
+			"damage": [
+				500,
+				500,
+				500,
+				500,
+				800
+			],
+			"damage_scale_min": 0.4,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1,
+			"proration": {
+				"additional": 20
+			},
+			"drive_hit": 0,
+			"drive_block": -5000,
+			"drive_punish": -10000,
+			"superarts": 0
+		},
+		{
+			"id": "mai.236236K.air.boosted",
+			"names": {
+				"en": "[Boosted] SA2 Air Chou Hissatsu Shinobi Bachi",
+				"ja": "[強化版] SA2 空中超必殺忍蜂"
+			},
+			"category": "superarts",
+			"input": "236236K",
+			"input_modern": "4SPH",
+			"input_modern_alt": "236236K",
+			"damage": [
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				200,
+				800
+			],
+			"damage_scale_min": 0.4,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1,
+			"proration": {
+				"additional": 20
+			},
+			"drive_hit": 0,
+			"drive_block": -5000,
+			"drive_punish": -10000,
+			"superarts": 0
+		},
+		{
+			"id": "mai.214214P",
+			"names": {
+				"en": "SA3 Shiranui Ryuu: Enbu Ada Zakura",
+				"ja": "SA3 不知火流・炎舞仇桜"
+			},
+			"category": "superarts",
+			"input": "214214P",
+			"input_modern": "4SPH",
+			"input_modern_alt": "214214P",
+			"damage": [
+				500,
+				500,
+				500,
+				500,
+				500,
+				1500
+			],
+			"damage_scale_min": 0.5,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1,
+			"proration": {
+				"immediate_cancel": 10
+			},
+			"drive_hit": 0,
+			"drive_block": -7500,
+			"drive_punish": -15000,
+			"superarts": 0,
+			"overrides": [
+				{
+					"type": "damage",
+					"values": [
+						750,
+						750,
+						750,
+						750,
+						1500
+					],
+					"critical_arts": true
+				},
+				{
+					"type": "drive_block",
+					"values": -10000,
+					"critical_arts": true
+				},
+				{
+					"type": "drive_punish",
+					"values": -20000,
+					"critical_arts": true
+				}
+			]
+		},
+
+		{
+			"id": "mai.LL",
+			"names": {
+				"en": "Shiranui Gourin",
+				"ja": "不知火剛臨"
+			},
+			"category": "throws",
+			"input": "LL",
+			"input_modern": "LM",
+			"damage": 1200,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1.7,
+			"proration": {
+				"immediate": 20
+			},
+			"drive_hit": 2000,
+			"drive_block": 0,
+			"drive_punish": -10000,
+			"superarts": 2000,
+			"superarts_punish": 4000
+		},
+		{
+			"id": "mai.4LL",
+			"names": {
+				"en": "Fuusha Kuzushi",
+				"ja": "風車崩し"
+			},
+			"category": "throws",
+			"input": "4LL",
+			"input_modern": "4LM",
+			"damage": 1200,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1.7,
+			"proration": {
+				"immediate": 20
+			},
+			"drive_hit": 2000,
+			"drive_block": 0,
+			"drive_punish": -10000,
+			"superarts": 2000,
+			"superarts_punish": 4000
+		},
+		{
+			"id": "mai.jLL",
+			"names": {
+				"en": "Yume Zakura",
+				"ja": "夢桜"
+			},
+			"category": "throws",
+			"input": "jLL",
+			"input_modern": "jLM",
+			"damage": 1200,
+			"drive_hit": 2000,
+			"drive_block": 0,
+			"drive_punish": -10000,
+			"superarts": 2000,
+			"superarts_punish": 4000
+		},
+
+		{
+			"id": "mai.HH",
+			"names": {
+				"en": "Botan Ichige",
+				"ja": "牡丹一華"
+			},
+			"category": "common",
+			"input": "HH",
+			"input_modern": "DI",
+			"damage": 800,
+			"proration": {
+				"initial": 20
+			},
+			"drive_hit": 800,
+			"drive_block": -5000,
+			"drive_punish": -15000,
+			"superarts": 0
+		},
+		{
+			"id": "mai.656MM",
+			"category": "common",
+			"input": "656MM",
+			"input_modern": "656DP",
+			"damage": 0,
+			"proration": {
+				"scaling": 0.85
+			},
+			"drive_hit": 0,
+			"drive_block": 0,
+			"drive_punish": 0,
+			"superarts": 0
+		},
+		{
+			"id": "mai.656",
+			"category": "common",
+			"input": "656",
+			"input_modern": "656",
+			"damage": 0,
+			"proration": {
+				"scaling": 0.85
+			},
+			"drive_hit": 0,
+			"drive_block": 0,
+			"drive_punish": 0,
+			"superarts": 0
+		}
+	]
+}

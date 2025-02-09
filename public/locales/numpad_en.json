@@ -9,6 +9,7 @@
 	"cmd_44": "Back Dash",
 	"cmd_LL": "Fwd Throw",
 	"cmd_4LL": "Back Throw",
+	"cmd_jLL": "Air Throw",
 	"cmd_HH": "DI",
 	"cmd_MM": "DP",
 	"cmd_656MM": "DR",

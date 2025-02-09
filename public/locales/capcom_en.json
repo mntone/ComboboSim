@@ -9,6 +9,7 @@
 	"cmd_44": "Backward Dash",
 	"cmd_LL": "Forward Normal Throw",
 	"cmd_4LL": "Backward Normal Throw",
+	"cmd_jLL": "Air Normal Throw",
 	"cmd_MM": "Drive Parry",
 	"cmd_HH": "Drive Impact",
 	"cmd_656MM": "Parry Drive Rush",

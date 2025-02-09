@@ -10,7 +10,7 @@ import { TbPlus } from 'react-icons/tb'
 import { useAppDispatch, useAppSelector } from '@/app/hooks'
 import MoveName from '@/components/MoveLabel/MoveName'
 import { pushCombo } from '@/features/combo/slice'
-import { selectNormalizedMoves } from '@/features/parameterLoader/selectors'
+import { selectIsCharacterLoading, selectNormalizedMoves } from '@/features/parameterLoader/selectors'
 import { selectDynamicResource } from '@/features/resourceLoader/selectors'
 import { selectMoveNameDisplayModes } from '@/features/userSettings/selectors'
 
@@ -26,6 +26,9 @@ const categoryNames = {
 function MoveListBox() {
 	const { i18n: { locale }, t } = useLingui()
 	const dispatch = useAppDispatch()
+	const isLoading = useAppSelector(function(state) {
+		return selectIsCharacterLoading(state, state.combo.characterId)
+	})
 	const normalizedMoves = useAppSelector(function(state) {
 		return selectNormalizedMoves(state, state.combo.characterId)
 	})
@@ -90,7 +93,7 @@ function MoveListBox() {
 				onOpenChange={setIsOpen}
 			>
 				<PopoverTrigger>
-					<Button className='justify-start'>
+					<Button className='justify-start' isLoading={isLoading}>
 						{getCurrentMoveName(selectedMoveKeys)}
 					</Button>
 				</PopoverTrigger>
@@ -134,6 +137,7 @@ function MoveListBox() {
 
 			<Button
 				aria-label='Add Move'
+				isDisabled={typeof selectedMoveKeys.keys().next().value === 'undefined'}
 				isIconOnly
 				onPress={handleAddMove}
 			>

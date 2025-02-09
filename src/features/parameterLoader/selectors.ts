@@ -6,6 +6,14 @@ import type { RootState } from '@/app/store'
 
 import type { CharacterParameterState, MoveCategory, NormalizedMove } from './types'
 
+function selectCharacters(state: RootState) {
+	return state.param.characters
+}
+
+function selectCharactersById(state: RootState) {
+	return state.param.charactersById
+}
+
 function selectMovesById(moves: Move[]): ReadonlyMap<string, Move> {
 	return new Map(moves.map(function(move) {
 		return [move.id, move]
@@ -55,14 +63,28 @@ const selectNormalizedMoves = createSelector(
 	function(_: RootState, characterId: string | null): string | null {
 		return characterId
 	},
-	function(state: RootState) {
-		return state.param.characters
-	},
+	selectCharactersById,
 	function(characterId, params): NormalizedMove {
 		return getMovesByCategory(params, characterId)
 	},
 )
 
+const selectIsCharacterLoading = createSelector(
+	function(_: RootState, characterId: string | null): string | null {
+		return characterId
+	},
+	selectCharactersById,
+	function(characterId: string | null, params: { [key: string]: CharacterParameterState }): boolean {
+		if (characterId === null) {
+			return false
+		}
+		return params[characterId].state === 'loading'
+	},
+)
+
 export {
+	selectCharacters,
+	selectCharactersById,
 	selectNormalizedMoves,
+	selectIsCharacterLoading,
 }

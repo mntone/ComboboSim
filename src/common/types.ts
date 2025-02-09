@@ -4,8 +4,10 @@ export interface MoveNames {
 }
 
 export interface Proration {
+	additional?: number
 	initial?: number
 	immediate?: number
+	immediateCancel?: number
 	scaling?: number
 }
 
@@ -55,7 +57,7 @@ export type CharacterExtension =
 export interface Character {
 	id: string
 	names: CharacterNames
-	use: CharacterExtension[]
+	use?: CharacterExtension[]
 	vitality: number
 	moves: Move[]
 }

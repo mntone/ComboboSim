@@ -6,7 +6,7 @@ import type { CharacterParameterState, ParameterState } from './types'
 
 function initializeParameterState(): ParameterState {
 	const typedJson = indexJson as ParameterIndex
-	const characters = Object.fromEntries(typedJson.characters.map(function(character): [string, CharacterParameterState] {
+	const charactersById = Object.fromEntries(typedJson.characters.map(function(character): [string, CharacterParameterState] {
 		return [
 			character.id,
 			{
@@ -16,8 +16,10 @@ function initializeParameterState(): ParameterState {
 			},
 		]
 	}))
+	const characters = Object.values(charactersById)
 	return {
 		characters,
+		charactersById,
 	}
 }
 

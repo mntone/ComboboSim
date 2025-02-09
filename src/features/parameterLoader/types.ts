@@ -12,7 +12,8 @@ export interface CharacterParameterState extends CharacterSummary {
 }
 
 export interface ParameterState {
-	characters: { [key: string]: CharacterParameterState }
+	characters: CharacterParameterState[]
+	charactersById: { [key: string]: CharacterParameterState }
 }
 
 export interface MoveCategory {
