@@ -1,9 +1,10 @@
 import type { Combo } from '@/components/ComboList/types'
 
 export interface ProrationState {
-	readonly rush: boolean
-	readonly p1: number
-	readonly p2: number
+	special: boolean
+	rush: boolean
+	p1: number
+	p2: number
 }
 
 export interface ComboItem extends Combo {

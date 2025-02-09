@@ -3,34 +3,43 @@ import type { Move } from '@/common/types'
 import { INITIAL_PRORATION } from './constants'
 import type { ComboItem, ProrationState } from './types'
 
-function calcProration(prev: ProrationState, cur: Move): ProrationState {
-	let rush = prev.rush
-	let p2 = prev.p2
-	if (cur.input === '656') {
-		if (rush) {
-			return prev
-		}
-
-		rush = true
-		p2 *= cur.proration?.scaling ?? 0.85
-		return {
-			rush,
-			p1: prev.p1,
-			p2,
-		}
+function calcImmediate(state: ProrationState, move: Move, isFirst: boolean): number {
+	if (isFirst) {
+		return 0
+	} else if (move.proration?.immediateCancel && state.special) {
+		return move.proration.immediateCancel
+	} else if (move.proration?.immediate) {
+		return move.proration.immediate
+	} else {
+		return 0
 	}
+}
 
-	return {
-		rush,
-		p1: prev.p1 - 10,
-		p2,
+function patchProration(state: ProrationState, move: Move, isFirst: boolean): void {
+	if (move.input === '656' || move.input === '656MM') {
+		if (!state.rush) {
+			state.rush = true
+			state.p2 *= move.proration?.scaling ?? 0.85
+		}
+	} else {
+		state.special = move.category === 'special'
+
+		if (isFirst && move.proration?.initial) {
+			state.p1 -= move.proration.initial
+		} else if (move.proration?.additional) {
+			state.p1 -= move.proration.additional
+		} else {
+			state.p1 -= 10
+		}
 	}
 }
 
 function calcScale(state: ProrationState, moveItem: Move, isFirst: boolean = false): number {
-	const immediate = isFirst ? 0 : moveItem.proration?.immediate ?? 0
-	const scale = 0.01 * Math.floor(((state.p1 > 80 ? 100 : Math.max(10, state.p1)) - immediate) * state.p2)
-	return Math.max(moveItem.damageScaleMin ?? 0, scale)
+	const immediate = calcImmediate(state, moveItem, isFirst)
+	const baseScale = 0.01 * Math.floor(((state.p1 > 80 ? 100 : Math.max(10, state.p1)) - immediate) * state.p2)
+	const scale = Math.max(moveItem.damageScaleMin ?? 0, baseScale)
+	patchProration(state, moveItem, isFirst)
+	return scale
 }
 
 function calcDamage(cur: readonly number[] | number, scale: number): number {
@@ -47,7 +56,7 @@ function calcDamage(cur: readonly number[] | number, scale: number): number {
 
 function createComboItem(move: Move, prevItem?: ComboItem): ComboItem {
 	if (!prevItem) {
-		const proration = INITIAL_PRORATION
+		const proration = Object.assign({}, INITIAL_PRORATION)
 		const scale = calcScale(proration, move, true)
 		const damage = calcDamage(move.damage, scale)
 		const newItem: ComboItem = {
@@ -66,7 +75,7 @@ function createComboItem(move: Move, prevItem?: ComboItem): ComboItem {
 	}
 
 	const index = prevItem.index + 1
-	const proration = calcProration(prevItem.proration, move)
+	const proration = Object.assign({}, prevItem.proration)
 	const scale = calcScale(proration, move)
 	const damage = calcDamage(move.damage, scale)
 	const newItem: ComboItem = {

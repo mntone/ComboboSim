@@ -16,7 +16,7 @@
 			"input_modern": "Auto+5L~Auto+5L",
 			"damage": 300,
 			"proration": {
-				"initial": 0.8
+				"initial": 20
 			},
 			"drive_hit": 250,
 			"drive_block": -500,
@@ -33,7 +33,7 @@
 			"input_modern": "5L",
 			"damage": 300,
 			"proration": {
-				"initial": 0.8
+				"initial": 20
 			},
 			"drive_hit": 250,
 			"drive_block": -500,
@@ -91,7 +91,7 @@
 			"input_modern": "5H",
 			"damage": 900,
 			"proration": {
-				"initial": 0.8
+				"initial": 20
 			},
 			"drive_hit": 4000,
 			"drive_block": -6000,
@@ -108,7 +108,7 @@
 			"input_modern": "2L",
 			"damage": 300,
 			"proration": {
-				"initial": 0.8
+				"initial": 20
 			},
 			"drive_hit": 250,
 			"drive_block": -500,
@@ -125,7 +125,7 @@
 			"input_modern": "Auto+5L",
 			"damage": 200,
 			"proration": {
-				"initial": 0.8
+				"initial": 20
 			},
 			"drive_hit": 250,
 			"drive_block": -500,
@@ -156,7 +156,7 @@
 			"input_modern": "2M",
 			"damage": 500,
 			"proration": {
-				"initial": 0.8
+				"initial": 20
 			},
 			"drive_hit": 1000,
 			"drive_block": -2000,

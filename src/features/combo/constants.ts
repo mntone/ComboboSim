@@ -8,6 +8,7 @@ const COMBO_INITIAL_STATE: ComboState = {
 }
 
 const INITIAL_PRORATION: ProrationState = {
+	special: false,
 	rush: false,
 	p1: 100,
 	p2: 1,
