@@ -1,0 +1,18 @@
+{
+	"characters": [
+		{
+			"id": "mai",
+			"names": {
+				"en": "Mai",
+				"ja": "舞"
+			}
+		},
+		{
+			"id": "manon",
+			"names": {
+				"en": "Manon",
+				"ja": "マノン"
+			}
+		}
+	]
+}

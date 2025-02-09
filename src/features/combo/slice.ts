@@ -9,26 +9,38 @@ const comboSlice = createSlice({
 	name: COMBO_NAME,
 	initialState: COMBO_INITIAL_STATE,
 	reducers: {
-		push(state, action: PayloadAction<Move | undefined>) {
-			const move = action.payload
-			if (move) {
-				const prevItem = state.items.at(-1)
-				const newItem = createComboItem(move, prevItem)
-				state.items = [...state.items, newItem]
+		setCharacterId(state, action: PayloadAction<string>) {
+			const id = action.payload
+			if (id !== null) {
+				if (state.combos.length !== 0) {
+					state.combos = []
+				}
+				state.characterId = id
 			}
 		},
 
-		dropRight(state, action: PayloadAction<number>) {
+		pushCombo(state, action: PayloadAction<Move | undefined>) {
+			const move = action.payload
+			if (move) {
+				const prevItem = state.combos.at(-1)
+				const newItem = createComboItem(move, prevItem)
+				state.combos = [...state.combos, newItem]
+			}
+		},
+
+		dropComboRight(state, action: PayloadAction<number>) {
 			const index = action.payload
-			if (index >= 0 && index < state.items.length) {
-				state.items = state.items.slice(0, index)
+			if (index >= 0 && index < state.combos.length) {
+				state.combos = state.combos.slice(0, index)
 			}
 		},
 	},
 })
 
 export const {
-	push: pushCombo,
-	dropRight: dropComboRight,
+	setCharacterId,
+
+	pushCombo,
+	dropComboRight,
 } = comboSlice.actions
 export default comboSlice.reducer

@@ -4,13 +4,13 @@ import { Popover, PopoverContent, PopoverTrigger } from '@heroui/popover'
 import type { SharedSelection } from '@heroui/system'
 import { msg } from '@lingui/core/macro'
 import { useLingui } from '@lingui/react/macro'
-import { useCallback, useMemo, useState } from 'react'
+import { useCallback, useState } from 'react'
 import { TbPlus } from 'react-icons/tb'
 
 import { useAppDispatch, useAppSelector } from '@/app/hooks'
 import MoveName from '@/components/MoveLabel/MoveName'
 import { pushCombo } from '@/features/combo/slice'
-import { selectMoveItemsByCategory } from '@/features/parameterLoader/selectors'
+import { selectNormalizedMoves } from '@/features/parameterLoader/selectors'
 import { selectDynamicResource } from '@/features/resourceLoader/selectors'
 import { selectMoveNameDisplayModes } from '@/features/userSettings/selectors'
 
@@ -26,50 +26,33 @@ const categoryNames = {
 function MoveListBox() {
 	const { i18n: { locale }, t } = useLingui()
 	const dispatch = useAppDispatch()
-	const moveItemsByCategory = useAppSelector(selectMoveItemsByCategory)
+	const normalizedMoves = useAppSelector(function(state) {
+		return selectNormalizedMoves(state, state.combo.characterId)
+	})
 	const displayModes = useAppSelector(selectMoveNameDisplayModes)
 	const res = useAppSelector(selectDynamicResource)
 
 	const [selectedMoveKeys, setSelectedMoveKeys] = useState<Set<string>>(new Set([]))
 	const [isOpen, setIsOpen] = useState(false)
 
-	const moveItems = useMemo(function() {
-		return moveItemsByCategory.flatMap(function(cat) {
-			return cat.moves
-		})
-	}, [moveItemsByCategory.length])
-
-	const getMoveItemByKey = useCallback(function(key?: string) {
-		if (!key) {
-			return undefined
-		}
-
-		const targetMoveItem = moveItems.find(function(moveItem) {
-			return moveItem.id === key
-		})
-		return targetMoveItem
-	}, [moveItems])
-
 	const getCurrentMoveName = useCallback(function(keys: Set<string>) {
-		const key = keys.keys().next().value
-		if (!key) {
-			return <></>
+		const selectedKey = keys.keys().next().value
+		if (selectedKey) {
+			const targetMoveItem = normalizedMoves.movesById.get(selectedKey)
+			if (targetMoveItem) {
+				return (
+					<MoveName
+						displayModes={displayModes}
+						locale={locale}
+						move={targetMoveItem}
+						res={res}
+					/>
+				)
+			}
 		}
 
-		const targetMoveItem = getMoveItemByKey(key)
-		if (!targetMoveItem) {
-			return <></>
-		}
-
-		return (
-			<MoveName
-				displayModes={displayModes}
-				locale={locale}
-				move={targetMoveItem.data}
-				res={res}
-			/>
-		)
-	}, [locale, displayModes, res, getMoveItemByKey])
+		return <></>
+	}, [locale, displayModes, res, normalizedMoves.movesById])
 
 	const handleMoveChange = useCallback(function(keys: SharedSelection) {
 		if (import.meta.env.DEV && !(keys instanceof Set)) {
@@ -81,15 +64,15 @@ function MoveListBox() {
 	}, [setSelectedMoveKeys, setIsOpen])
 
 	const handleAddMove = useCallback(function() {
-		const selectedMoveKey = selectedMoveKeys.keys().next().value
-		if (selectedMoveKey) {
-			const targetMoveItem = getMoveItemByKey(selectedMoveKey)
+		const selectedKey = selectedMoveKeys.keys().next().value
+		if (selectedKey) {
+			const targetMoveItem = normalizedMoves.movesById.get(selectedKey)
 			if (targetMoveItem) {
 				setIsOpen(false)
-				dispatch(pushCombo(targetMoveItem.data))
+				dispatch(pushCombo(targetMoveItem))
 			}
 		}
-	}, [dispatch, selectedMoveKeys, getMoveItemByKey, setIsOpen])
+	}, [dispatch, selectedMoveKeys, normalizedMoves.movesById, setIsOpen])
 
 	return (
 		<ButtonGroup
@@ -117,7 +100,7 @@ function MoveListBox() {
 							base: 'p-0',
 							list: 'p-1 py-2 max-h-[32rem] overflow-y-auto',
 						}}
-						items={moveItemsByCategory}
+						items={normalizedMoves.movesByCategory}
 						selectedKeys={selectedMoveKeys}
 						selectionMode='single'
 						onSelectionChange={handleMoveChange}
@@ -137,7 +120,7 @@ function MoveListBox() {
 											<MoveName
 												displayModes={displayModes}
 												locale={locale}
-												move={moveItem.data}
+												move={moveItem}
 												res={res}
 											/>
 										</ListboxItem>

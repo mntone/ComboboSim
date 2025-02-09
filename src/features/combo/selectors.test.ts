@@ -1,6 +1,7 @@
 import * as mock from '@/mocks/mockData.test'
 
 import { selectResult } from './selectors'
+import type { ComboState } from './types'
 import { createComboItem } from './utils'
 
 test('should get the result of items in the array', () => {
@@ -10,12 +11,13 @@ test('should get the result of items in the array', () => {
 
 	const mockState = {
 		combo: {
-			items: [
+			characterId: null,
+			combos: [
 				comboItem1,
 				comboItem2,
 				comboItem3,
 			],
-		},
+		} satisfies ComboState,
 	}
 
 	const result = selectResult(mockState)
@@ -27,8 +29,9 @@ test('should get the result of items in the array', () => {
 test('should return 0 if the items is empty', () => {
 	const mockState = {
 		combo: {
-			items: [],
-		},
+			characterId: null,
+			combos: [],
+		} satisfies ComboState,
 	}
 
 	const result = selectResult(mockState)

@@ -3,11 +3,11 @@ import type { RootState } from '@/app/store'
 import type { ComboItem } from './types'
 
 function selectComboItems(state: Pick<RootState, 'combo'>): ComboItem[] {
-	return state.combo.items
+	return state.combo.combos
 }
 
 function selectResult(state: Pick<RootState, 'combo'>) {
-	const item = state.combo.items.at(-1)
+	const item = state.combo.combos.at(-1)
 	if (item) {
 		return {
 			comboDamage: item.comboDamage,

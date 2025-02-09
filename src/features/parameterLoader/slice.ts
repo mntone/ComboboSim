@@ -4,37 +4,53 @@ import type { Character } from '@/common/types'
 
 import { createAppAsyncThunk } from '@/app/hooks'
 
-import { PARAMETERLOADER_INITIAL_STATE, PARAMETERLOADER_NAME } from './constants'
+import { PARAMETERLOADER_NAME } from './constants'
+import { initializeParameterState } from './initializeParameterState'
 import { snakeToCamel } from './utils/caseConversion'
 import mapKeysDeep from './utils/mapKeysDeep'
 
-const fetchParam = createAppAsyncThunk(`${PARAMETERLOADER_NAME}/fetch`, async function() {
-	const res = await fetch('/params/20241202/manon.json')
-	if (!res.ok) {
-		throw new Error('Failed to fetch move')
-	}
+const fetchParam = createAppAsyncThunk(
+	`${PARAMETERLOADER_NAME}/fetch`,
+	async function(id: string, { signal }) {
+		const res = await fetch(`/params/${id}.json`, { signal })
+		if (!res.ok) {
+			throw new Error('Failed to fetch params')
+		}
 
-	const json = await res.json()
-	return mapKeysDeep(json, snakeToCamel) as Character
-})
+		const json = await res.json()
+		return mapKeysDeep(json, snakeToCamel) as Character
+	},
+	{
+		condition(id, { getState }) {
+			const { param: { characters } } = getState()
+			const fetchStatus = characters[id].state
+			return fetchStatus === 'ready'
+		},
+	},
+)
 
 const parameterLoaderSlice = createSlice({
 	name: PARAMETERLOADER_NAME,
-	initialState: PARAMETERLOADER_INITIAL_STATE,
+	initialState: initializeParameterState(),
 	reducers: {
 	},
 	extraReducers: function(builder) {
 		builder
-			.addCase(fetchParam.pending, function(state) {
-				state.state = 'loading'
+			.addCase(fetchParam.pending, function(state, action) {
+				const key = action.meta.arg
+				state.characters[key].state = 'loading'
 			})
 			.addCase(fetchParam.fulfilled, function(state, action) {
-				state.state = 'complete'
-				state.data = action.payload
+				const key = action.meta.arg
+				const targetState = state.characters[key]
+				targetState.state = 'complete'
+				targetState.param = action.payload
 			})
-			.addCase(fetchParam.rejected, function(state) {
-				state.state = 'failure'
-				state.data = null
+			.addCase(fetchParam.rejected, function(state, action) {
+				const key = action.meta.arg
+				const targetState = state.characters[key]
+				targetState.state = 'failure'
+				targetState.param = null
 			})
 	},
 })

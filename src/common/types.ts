@@ -59,3 +59,12 @@ export interface Character {
 	vitality: number
 	moves: Move[]
 }
+
+export interface CharacterSummary {
+	id: string
+	names: CharacterNames
+}
+
+export interface ParameterIndex {
+	characters: CharacterSummary[]
+}

@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 import ComboView from '@/features/combo/components/ComboView'
 import MoveListBox from '@/features/combo/components/MoveListBox'
 import ResultView from '@/features/combo/components/ResultView'
-import { fetchParam } from '@/features/parameterLoader/slice'
+import { setCharacterId } from '@/features/combo/slice'
 import { fetchResource } from '@/features/resourceLoader/slice'
 
 import { useAppDispatch } from './hooks'
@@ -24,7 +24,7 @@ function App() {
 	useEffect(function() {
 		dynamicActivate('ja')
 		dispatch(fetchResource('abbr_ja'))
-		dispatch(fetchParam())
+		dispatch(setCharacterId('manon'))
 	}, [])
 
 	return (

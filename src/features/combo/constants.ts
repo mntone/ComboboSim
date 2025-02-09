@@ -3,7 +3,8 @@ import type { ComboState, ProrationState } from './types'
 const COMBO_NAME = 'combo'
 
 const COMBO_INITIAL_STATE: ComboState = {
-	items: [],
+	characterId: null,
+	combos: [],
 }
 
 const INITIAL_PRORATION: ProrationState = {

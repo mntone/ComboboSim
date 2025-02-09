@@ -1,21 +1,27 @@
-import type { Character, Move, MoveCategoryType } from '@/common/types'
+import type { Character, CharacterSummary, Move, MoveCategoryType } from '@/common/types'
 
-export type MoveStateType =
+export type ParameterStateType =
+	| 'ready'
 	| 'loading'
 	| 'complete'
 	| 'failure'
 
-export interface CharacterState {
-	state: MoveStateType
-	data: Character | null
+export interface CharacterParameterState extends CharacterSummary {
+	state: ParameterStateType
+	param: Character | null
 }
 
-export interface MoveItem {
-	readonly id: string
-	readonly data: Move
+export interface ParameterState {
+	characters: { [key: string]: CharacterParameterState }
 }
 
-export interface CategoryItem {
+export interface MoveCategory {
 	readonly id: MoveCategoryType
-	readonly moves: MoveItem[]
+	readonly moves: readonly Move[]
+}
+
+export interface NormalizedMove {
+	readonly moves: readonly Move[]
+	readonly movesById: ReadonlyMap<string, Move>
+	readonly movesByCategory: MoveCategory[]
 }

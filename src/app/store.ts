@@ -5,12 +5,19 @@ import parameterLoaderSlice from '@/features/parameterLoader/slice'
 import resourceLoaderSlice from '@/features/resourceLoader/slice'
 import userSettingsSlice from '@/features/userSettings/slice'
 
+import characterIdChangeMiddleware from './middlewares/characterIdChangeMiddleware'
+
 const store = configureStore({
 	reducer: {
 		combo: comboSlice,
 		param: parameterLoaderSlice,
 		res: resourceLoaderSlice,
 		settings: userSettingsSlice,
+	},
+	middleware(getDefaultMiddleware) {
+		return getDefaultMiddleware().prepend(
+			characterIdChangeMiddleware.middleware,
+		)
 	},
 })
 

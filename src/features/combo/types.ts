@@ -12,5 +12,6 @@ export interface ComboItem extends Combo {
 }
 
 export interface ComboState {
-	items: ComboItem[]
+	characterId: string | null
+	combos: ComboItem[]
 }
