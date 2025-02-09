@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 import type { Character } from '@/common/types'
 
 import { createAppAsyncThunk } from '@/app/hooks'
+import fetchJson from '@/utils/fetchJson'
 
 import { PARAMETERLOADER_NAME } from './constants'
 import { initializeParameterState } from './initializeParameterState'
@@ -12,12 +13,7 @@ import mapKeysDeep from './utils/mapKeysDeep'
 const fetchParam = createAppAsyncThunk(
 	`${PARAMETERLOADER_NAME}/fetch`,
 	async function(id: string, { signal }) {
-		const res = await fetch(`/params/${id}.json`, { signal })
-		if (!res.ok) {
-			throw new Error('Failed to fetch params')
-		}
-
-		const json = await res.json()
+		const json = await fetchJson(`/params/${id}.json`, signal)
 		return mapKeysDeep(json, snakeToCamel) as Character
 	},
 	{

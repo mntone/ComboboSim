@@ -1,6 +1,7 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 
 import { createAppAsyncThunk } from '@/app/hooks'
+import fetchJson from '@/utils/fetchJson'
 
 import { RESOURCELOADER_INITIAL_STATE, RESOURCELOADER_NAME } from './constants'
 import type { DynamicResource } from './types'
@@ -8,11 +9,8 @@ import type { DynamicResource } from './types'
 const fetchResource = createAppAsyncThunk(
 	`${RESOURCELOADER_NAME}/fetch`,
 	async function(resId: string, { signal }) {
-		const res = await fetch(`/locales/${resId}.json`, { signal })
-		if (!res.ok) {
-			throw new Error('Failed to fetch resource')
-		}
-		return await res.json()
+		const json = await fetchJson(`/locales/${resId}.json`, signal)
+		return json
 	},
 	{
 		condition(resId, { getState }) {
