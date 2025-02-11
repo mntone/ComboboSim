@@ -15,16 +15,26 @@ export interface Combo {
 	superarts: number
 }
 
-export type ComboKeys = keyof Combo
+export type ComboTableColumnKey =
+	| keyof Omit<Combo, 'id'>
+	| 'name'
+	| 'actions'
 
-export interface ComboListProps extends MoveNameBaseProps {
-	items: Combo[]
-	onDelete?: (item: ReadonlyDeep<Combo>) => void
-}
-
-export interface ComboColumn {
-	readonly id: string
+export interface ComboTableColumn {
+	readonly id: ComboTableColumnKey
 	readonly name: MessageDescriptor
 	readonly align?: 'start'
 	readonly required?: true
+}
+
+export interface ComboListProps extends MoveNameBaseProps {
+	items: Combo[]
+
+	onDelete?: (item: ReadonlyDeep<Combo>) => void
+}
+
+export interface ComboTableViewProps extends ComboListProps {
+	defaultColumns?: ComboTableColumnKey[] | null
+
+	onColumnsChange?: (columns: Set<ComboTableColumnKey>) => void
 }

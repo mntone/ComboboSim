@@ -6,27 +6,35 @@ import { i18n } from '@lingui/core'
 import { msg } from '@lingui/core/macro'
 import { useLingui } from '@lingui/react/macro'
 import { useCallback, useMemo, useState, type JSX } from 'react'
-import { TbX } from 'react-icons/tb'
+import { TbChevronDown, TbList, TbX } from 'react-icons/tb'
 import type { ReadonlyDeep } from 'type-fest'
 
 import MoveName from '../MoveLabel/MoveName'
 
 import {
 	COMBOTABLE_COLUMNS,
-	COMBOTABLE_INITIAL_VISIBLE_COLUMN_KEYSET,
+	COMBOTABLE_DEFAULT_COLUMNS,
 	COMBOTABLE_OPTIONAL_COLUMNS,
 	guageFormat,
 	scaleFormat,
 } from './constants'
-import type { Combo, ComboListProps } from './types'
+import type { Combo, ComboTableColumnKey, ComboTableViewProps } from './types'
 
-function ComboTableView({ displayModes, items, locale, onDelete, res }: ReadonlyDeep<ComboListProps>) {
+function ComboTableView({
+	defaultColumns,
+	displayModes,
+	items,
+	locale,
+	onColumnsChange: onColumnChange,
+	onDelete,
+	res,
+}: ReadonlyDeep<ComboTableViewProps>) {
 	const { t } = useLingui()
-	const [selectedColumns, setSelectedColumns] = useState(COMBOTABLE_INITIAL_VISIBLE_COLUMN_KEYSET)
+	const [selectedColumns, setSelectedColumns] = useState(new Set(defaultColumns ?? COMBOTABLE_DEFAULT_COLUMNS))
 
 	const headerColumns = useMemo(function() {
 		return COMBOTABLE_COLUMNS.filter(function(col) {
-			return Array.from(selectedColumns).includes(col.id)
+			return col.required || Array.from(selectedColumns).includes(col.id)
 		})
 	}, [selectedColumns])
 
@@ -70,16 +78,28 @@ function ComboTableView({ displayModes, items, locale, onDelete, res }: Readonly
 			console.log('Expected Set<string>, but got invalid type.')
 		}
 
-		setSelectedColumns(keys as Set<string>)
-	}, [setSelectedColumns])
+		const columns = keys as Set<ComboTableColumnKey>
+		setSelectedColumns(columns)
+		onColumnChange?.call(null, columns)
+	}, [setSelectedColumns, onColumnChange])
 
 	const toolbar = useMemo(function() {
 		return (
 			<div className='flex flex-col gap-4'>
 				<Dropdown offset={4} placement='bottom-end'>
 					<DropdownTrigger>
-						<Button className='justify-start'>
-							{t(msg`View Options`)}
+						<Button
+							className='justify-between text-left'
+							endContent={(
+								<TbChevronDown className='justify-end' size={16} />
+							)}
+							startContent={(
+								<TbList size={16} />
+							)}
+						>
+							<div className='w-full'>
+								{t(msg`View Options`)}
+							</div>
 						</Button>
 					</DropdownTrigger>
 					<DropdownMenu

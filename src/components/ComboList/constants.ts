@@ -1,6 +1,6 @@
 import { msg } from '@lingui/core/macro'
 
-import type { ComboColumn } from './types'
+import type { ComboTableColumn, ComboTableColumnKey } from './types'
 
 export const scaleFormat: Intl.NumberFormatOptions = {
 	maximumFractionDigits: 0,
@@ -44,19 +44,15 @@ export const COMBOTABLE_COLUMNS = [
 		name: msg`Actions`,
 		required: true,
 	},
-] satisfies ComboColumn[]
+] satisfies ComboTableColumn[]
 
 export const COMBOTABLE_OPTIONAL_COLUMNS
 	= COMBOTABLE_COLUMNS.filter(function(col) {
 		return !col.required
 	})
 
-export const COMBOTABLE_INITIAL_VISIBLE_COLUMN_KEYS: string[] = [
-	'name',
+export const COMBOTABLE_DEFAULT_COLUMNS: ComboTableColumnKey[] = [
 	'comboDamage',
 	'drive',
 	'superarts',
-	'actions',
 ] as const
-
-export const COMBOTABLE_INITIAL_VISIBLE_COLUMN_KEYSET: Set<string> = new Set(COMBOTABLE_INITIAL_VISIBLE_COLUMN_KEYS)

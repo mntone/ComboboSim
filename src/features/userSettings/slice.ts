@@ -1,5 +1,6 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 
+import type { ComboTableColumnKey } from '@/components/ComboList'
 import type { MoveNameDisplayModes } from '@/components/MoveLabel/types'
 
 import { USERSETTINGS_INITIAL_STATE, USERSETTINGS_NAME } from './constants'
@@ -8,6 +9,10 @@ const userSettingsSlice = createSlice({
 	name: USERSETTINGS_NAME,
 	initialState: USERSETTINGS_INITIAL_STATE,
 	reducers: {
+		setComboTableColumns(state, action: PayloadAction<ComboTableColumnKey[] | null>) {
+			state.comboTableColumns = action.payload
+		},
+
 		setResourceId(state, action: PayloadAction<string>) {
 			state.resourceId = action.payload
 		},
@@ -27,6 +32,7 @@ const userSettingsSlice = createSlice({
 })
 
 export const {
+	setComboTableColumns,
 	setResourceId,
 	setMoveNameDisplayMode,
 	skipComboDeletionAlert,
