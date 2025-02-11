@@ -1,12 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-import type { Character } from '@/common/types'
-
 import { createAppAsyncThunk } from '@/app/hooks'
 import fetchJson from '@/utils/fetchJson'
 
 import { PARAMETERLOADER_NAME } from './constants'
 import { initializeParameterState } from './initializeParameterState'
+import { mapCharacter } from './mappers'
+import type { CharacterJson } from './types'
 import { snakeToCamel } from './utils/caseConversion'
 import mapKeysDeep from './utils/mapKeysDeep'
 
@@ -14,12 +14,14 @@ const fetchParam = createAppAsyncThunk(
 	`${PARAMETERLOADER_NAME}/fetch`,
 	async function(id: string, { signal }) {
 		const json = await fetchJson(`/params/${id}.json`, signal)
-		return mapKeysDeep(json, snakeToCamel) as Character
+		const camelJson = mapKeysDeep(json, snakeToCamel) as CharacterJson
+		const character = mapCharacter(camelJson)
+		return character
 	},
 	{
 		condition(id, { getState }) {
-			const { param: { charactersById: characters } } = getState()
-			const fetchStatus = characters[id].state
+			const { param: { charactersById } } = getState()
+			const fetchStatus = charactersById[id].state
 			return fetchStatus === 'ready'
 		},
 	},

@@ -3,14 +3,6 @@ export interface MoveNames {
 	ja: string
 }
 
-export interface Proration {
-	additional?: number
-	initial?: number
-	immediate?: number
-	immediateCancel?: number
-	scaling?: number
-}
-
 export type MoveCategoryType =
 	| 'normal'
 	| 'unique'
@@ -19,11 +11,20 @@ export type MoveCategoryType =
 	| 'throws'
 	| 'common'
 
-export interface MoveOverride {
-	type: string
-	extension?: string
-	values: number[]
-	criticalArts?: true
+export interface MoveValues {
+	damage: number[] | number
+	damageAdditional?: number
+	damageInitial?: number
+	damageImmediate?: number
+	damageImmediateCancel?: number
+	damageScaleMin?: number
+	damageScaleCounter?: number
+	damageScalePunish?: number
+	driveHit: number
+	driveBlock: number
+	drivePunish: number
+	superarts: number
+	superartsPunish?: number
 }
 
 export interface Move {
@@ -33,17 +34,7 @@ export interface Move {
 	input: string
 	inputModern?: string
 	inputModernAlt?: string
-	damage: number[] | number
-	damageScaleMin?: number
-	damageScaleCounter?: number
-	damageScalePunish?: number
-	proration?: Proration
-	driveHit: number
-	driveBlock: number
-	drivePunish: number
-	superarts: number
-	superartsPunish?: number
-	overrides?: MoveOverride[]
+	values: MoveValues[] | MoveValues
 }
 
 export interface CharacterNames {
@@ -51,13 +42,9 @@ export interface CharacterNames {
 	ja: string
 }
 
-export type CharacterExtension =
-	| 'manon_medal'
-
 export interface Character {
 	id: string
 	names: CharacterNames
-	use?: CharacterExtension[]
 	vitality: number
 	moves: Move[]
 }

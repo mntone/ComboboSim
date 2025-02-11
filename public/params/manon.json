@@ -18,9 +18,7 @@
 			"input": "5LP",
 			"input_modern": "5L",
 			"damage": 300,
-			"proration": {
-				"initial": 20
-			},
+			"damage_initial": 20,
 			"drive_hit": 250,
 			"drive_block": -500,
 			"drive_punish": -2000,
@@ -35,9 +33,7 @@
 			"input": "5LK",
 			"input_modern": "Auto+5L",
 			"damage": 300,
-			"proration": {
-				"initial": 20
-			},
+			"damage_initial": 20,
 			"drive_hit": 250,
 			"drive_block": -500,
 			"drive_punish": -2000,
@@ -107,9 +103,7 @@
 			"category": "normal",
 			"input": "2LP",
 			"damage": 300,
-			"proration": {
-				"initial": 20
-			},
+			"damage_initial": 20,
 			"drive_hit": 250,
 			"drive_block": -500,
 			"drive_punish": -2000,
@@ -124,9 +118,7 @@
 			"input": "2LK",
 			"input_modern": "Auto+2L",
 			"damage": 200,
-			"proration": {
-				"initial": 20
-			},
+			"damage_initial": 20,
 			"drive_hit": 250,
 			"drive_block": -500,
 			"drive_punish": -2000,
@@ -391,30 +383,23 @@
 			"drive_block": 0,
 			"drive_punish": -10000,
 			"superarts": 3000,
-			"overrides": [
-				{
-					"type": "damage",
-					"extension": "manon_medal",
-					"values": [
-						2000,
-						2300,
-						2700,
-						3000,
-						3700
-					]
+			"overrides": {
+				"MANON_MEDAL==2": {
+					"damage": 2300
 				},
-				{
-					"type": "superarts",
-					"extension": "manon_medal",
-					"values": [
-						3000,
-						3000,
-						4000,
-						4000,
-						5000
-					]
+				"MANON_MEDAL==3": {
+					"damage": 2700,
+					"superarts": 4000
+				},
+				"MANON_MEDAL==4": {
+					"damage": 3000,
+					"superarts": 4000
+				},
+				"MANON_MEDAL==5": {
+					"damage": 3700,
+					"superarts": 5000
 				}
-			]
+			}
 		},
 		{
 			"id": "manon.63214MP",
@@ -432,30 +417,23 @@
 			"drive_block": 0,
 			"drive_punish": -10000,
 			"superarts": 3000,
-			"overrides": [
-				{
-					"type": "damage",
-					"extension": "manon_medal",
-					"values": [
-						2000,
-						2300,
-						2700,
-						3000,
-						3700
-					]
+			"overrides": {
+				"MANON_MEDAL==2": {
+					"damage": 2300
 				},
-				{
-					"type": "superarts",
-					"extension": "manon_medal",
-					"values": [
-						3000,
-						3000,
-						4000,
-						4000,
-						5000
-					]
+				"MANON_MEDAL==3": {
+					"damage": 2700,
+					"superarts": 4000
+				},
+				"MANON_MEDAL==4": {
+					"damage": 3000,
+					"superarts": 4000
+				},
+				"MANON_MEDAL==5": {
+					"damage": 3700,
+					"superarts": 5000
 				}
-			]
+			}
 		},
 		{
 			"id": "manon.63214HP",
@@ -474,30 +452,23 @@
 			"drive_block": 0,
 			"drive_punish": -10000,
 			"superarts": 3000,
-			"overrides": [
-				{
-					"type": "damage",
-					"extension": "manon_medal",
-					"values": [
-						2000,
-						2300,
-						2700,
-						3000,
-						3700
-					]
+			"overrides": {
+				"MANON_MEDAL==2": {
+					"damage": 2300
 				},
-				{
-					"type": "superarts",
-					"extension": "manon_medal",
-					"values": [
-						3000,
-						3000,
-						4000,
-						4000,
-						5000
-					]
+				"MANON_MEDAL==3": {
+					"damage": 2700,
+					"superarts": 4000
+				},
+				"MANON_MEDAL==4": {
+					"damage": 3000,
+					"superarts": 4000
+				},
+				"MANON_MEDAL==5": {
+					"damage": 3700,
+					"superarts": 5000
 				}
-			]
+			}
 		},
 		{
 			"id": "manon.63214PP",
@@ -516,30 +487,23 @@
 			"drive_block": 0,
 			"drive_punish": -10000,
 			"superarts": 3000,
-			"overrides": [
-				{
-					"type": "damage",
-					"extension": "manon_medal",
-					"values": [
-						2000,
-						2300,
-						2700,
-						3000,
-						3700
-					]
+			"overrides": {
+				"MANON_MEDAL==2": {
+					"damage": 2300
 				},
-				{
-					"type": "superarts",
-					"extension": "manon_medal",
-					"values": [
-						3000,
-						3000,
-						4000,
-						4000,
-						5000
-					]
+				"MANON_MEDAL==3": {
+					"damage": 2700,
+					"superarts": 4000
+				},
+				"MANON_MEDAL==4": {
+					"damage": 3000,
+					"superarts": 4000
+				},
+				"MANON_MEDAL==5": {
+					"damage": 3700,
+					"superarts": 5000
 				}
-			]
+			}
 		},
 
 		{
@@ -680,9 +644,7 @@
 			"input_modern": "Auto+4SP",
 			"input_modern_alt": "214AA",
 			"damage": 800,
-			"proration": {
-				"initial": 20
-			},
+			"damage_initial": 20,
 			"drive_hit": 0,
 			"drive_block": -4000,
 			"drive_punish": -5000,
@@ -706,30 +668,23 @@
 			"drive_block": -2000,
 			"drive_punish": -8000,
 			"superarts": 2150,
-			"overrides": [
-				{
-					"type": "damage[1]",
-					"extension": "manon_medal",
-					"values": [
-						1300,
-						1450,
-						1600,
-						1800,
-						1950
-					]
+			"overrides": {
+				"MANON_MEDAL==2": {
+					"damage[1]": 1450
 				},
-				{
-					"type": "superarts",
-					"extension": "manon_medal",
-					"values": [
-						2150,
-						2150,
-						3150,
-						3150,
-						4150
-					]
+				"MANON_MEDAL==3": {
+					"damage[1]": 1600,
+					"superarts": 3150
+				},
+				"MANON_MEDAL==4": {
+					"damage[1]": 1750,
+					"superarts": 3150
+				},
+				"MANON_MEDAL==5": {
+					"damage[1]": 1900,
+					"superarts": 4150
 				}
-			]
+			}
 		},
 		{
 			"id": "manon.236MP",
@@ -747,30 +702,23 @@
 			"drive_block": -2000,
 			"drive_punish": -8000,
 			"superarts": 2150,
-			"overrides": [
-				{
-					"type": "damage[1]",
-					"extension": "manon_medal",
-					"values": [
-						1300,
-						1450,
-						1600,
-						1750,
-						1900
-					]
+			"overrides": {
+				"MANON_MEDAL==2": {
+					"damage[1]": 1450
 				},
-				{
-					"type": "superarts",
-					"extension": "manon_medal",
-					"values": [
-						2150,
-						2150,
-						3150,
-						3150,
-						4150
-					]
+				"MANON_MEDAL==3": {
+					"damage[1]": 1600,
+					"superarts": 3150
+				},
+				"MANON_MEDAL==4": {
+					"damage[1]": 1750,
+					"superarts": 3150
+				},
+				"MANON_MEDAL==5": {
+					"damage[1]": 1900,
+					"superarts": 4150
 				}
-			]
+			}
 		},
 		{
 			"id": "manon.236HP",
@@ -788,30 +736,23 @@
 			"drive_block": -2000,
 			"drive_punish": -8000,
 			"superarts": 2150,
-			"overrides": [
-				{
-					"type": "damage[1]",
-					"extension": "manon_medal",
-					"values": [
-						1300,
-						1450,
-						1600,
-						1750,
-						1900
-					]
+			"overrides": {
+				"MANON_MEDAL==2": {
+					"damage[1]": 1450
 				},
-				{
-					"type": "superarts",
-					"extension": "manon_medal",
-					"values": [
-						2150,
-						2150,
-						3150,
-						3150,
-						4150
-					]
+				"MANON_MEDAL==3": {
+					"damage[1]": 1600,
+					"superarts": 3150
+				},
+				"MANON_MEDAL==4": {
+					"damage[1]": 1750,
+					"superarts": 3150
+				},
+				"MANON_MEDAL==5": {
+					"damage[1]": 1900,
+					"superarts": 4150
 				}
-			]
+			}
 		},
 		{
 			"id": "manon.236PP",
@@ -830,30 +771,23 @@
 			"drive_block": -2000,
 			"drive_punish": -8000,
 			"superarts": 2150,
-			"overrides": [
-				{
-					"type": "damage[1]",
-					"extension": "manon_medal",
-					"values": [
-						1300,
-						1450,
-						1600,
-						1750,
-						1900
-					]
+			"overrides": {
+				"MANON_MEDAL==2": {
+					"damage[1]": 1450
 				},
-				{
-					"type": "superarts",
-					"extension": "manon_medal",
-					"values": [
-						2150,
-						2150,
-						3150,
-						3150,
-						4150
-					]
+				"MANON_MEDAL==3": {
+					"damage[1]": 1600,
+					"superarts": 3150
+				},
+				"MANON_MEDAL==4": {
+					"damage[1]": 1750,
+					"superarts": 3150
+				},
+				"MANON_MEDAL==5": {
+					"damage[1]": 1900,
+					"superarts": 4150
 				}
-			]
+			}
 		},
 
 		{
@@ -866,9 +800,7 @@
 			"input": "236P~K",
 			"input_modern": "Auto+2SP~A",
 			"damage": 800,
-			"proration": {
-				"immediate": 10
-			},
+			"damage_immediate": 10,
 			"drive_hit": 2500,
 			"drive_block": -5000,
 			"drive_punish": -10000,
@@ -884,9 +816,7 @@
 			"input": "236PP~K",
 			"input_modern": "Auto+2SP~A",
 			"damage": 800,
-			"proration": {
-				"immediate": 10
-			},
+			"damage_immediate": 10,
 			"drive_hit": 2500,
 			"drive_block": -4000,
 			"drive_punish": -5000,
@@ -956,41 +886,43 @@
 				340,
 				1960
 			],
+			"damage_immediate": 5,
 			"damage_scale_min": 0.5,
 			"damage_scale_counter": 1,
 			"damage_scale_punish": 1,
-			"proration": {
-				"immediate": 5
-			},
 			"drive_hit": 0,
 			"drive_block": 0,
 			"drive_punish": 0,
 			"superarts": 0,
-			"overrides": [
-				{
-					"type": "damage[6]",
-					"extension": "manon_medal",
-					"values": [
-						1960,
-						2060,
-						2160,
-						2360,
-						2560
-					]
+			"overrides": {
+				"MANON_MEDAL==2": {
+					"damage[6]": 2060
 				},
-				{
-					"type": "damage[6]",
-					"extension": "manon_medal",
-					"values": [
-						2460,
-						2560,
-						2660,
-						2860,
-						3060
-					],
-					"critical_arts": true
+				"MANON_MEDAL==3": {
+					"damage[6]": 2160
+				},
+				"MANON_MEDAL==4": {
+					"damage[6]": 2360
+				},
+				"MANON_MEDAL==5": {
+					"damage[6]": 2560
+				},
+				"CA": {
+					"damage[6]": 2460
+				},
+				"CA&&MANON_MEDAL==2": {
+					"damage[6]": 2560
+				},
+				"CA&&MANON_MEDAL==3": {
+					"damage[6]": 2660
+				},
+				"CA&&MANON_MEDAL==4": {
+					"damage[6]": 2860
+				},
+				"CA&&MANON_MEDAL==5": {
+					"damage[6]": 3060
 				}
-			]
+			}
 		},
 
 		{
@@ -1003,11 +935,9 @@
 			"input": "LL",
 			"input_modern": "LM",
 			"damage": 1200,
+			"damage_immediate": 20,
 			"damage_scale_counter": 1,
 			"damage_scale_punish": 1.7,
-			"proration": {
-				"immediate": 20
-			},
 			"drive_hit": 2000,
 			"drive_block": 0,
 			"drive_punish": -10000,
@@ -1024,11 +954,9 @@
 			"input": "4LL",
 			"input_modern": "4LM",
 			"damage": 1200,
+			"damage_immediate": 20,
 			"damage_scale_counter": 1,
 			"damage_scale_punish": 1.7,
-			"proration": {
-				"immediate": 20
-			},
 			"drive_hit": 2000,
 			"drive_block": 0,
 			"drive_punish": -10000,
@@ -1046,9 +974,7 @@
 			"input": "HH",
 			"input_modern": "DI",
 			"damage": 800,
-			"proration": {
-				"initial": 20
-			},
+			"damage_initial": 20,
 			"drive_hit": 800,
 			"drive_block": -5000,
 			"drive_punish": -15000,
@@ -1060,9 +986,6 @@
 			"input": "656MM",
 			"input_modern": "656DP",
 			"damage": 0,
-			"proration": {
-				"scaling": 0.85
-			},
 			"drive_hit": 0,
 			"drive_block": 0,
 			"drive_punish": 0,
@@ -1074,9 +997,6 @@
 			"input": "656",
 			"input_modern": "656",
 			"damage": 0,
-			"proration": {
-				"scaling": 0.85
-			},
 			"drive_hit": 0,
 			"drive_block": 0,
 			"drive_punish": 0,

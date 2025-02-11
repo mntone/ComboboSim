@@ -15,9 +15,7 @@
 			"input": "5LP",
 			"input_modern": "Auto+5L~Auto+5L",
 			"damage": 300,
-			"proration": {
-				"initial": 20
-			},
+			"damage_initial": 20,
 			"drive_hit": 250,
 			"drive_block": -500,
 			"drive_punish": -2000,
@@ -32,9 +30,7 @@
 			"input": "5LK",
 			"input_modern": "5L",
 			"damage": 300,
-			"proration": {
-				"initial": 20
-			},
+			"damage_initial": 20,
 			"drive_hit": 250,
 			"drive_block": -500,
 			"drive_punish": -2000,
@@ -90,9 +86,7 @@
 			"input": "5HK",
 			"input_modern": "5H",
 			"damage": 900,
-			"proration": {
-				"initial": 20
-			},
+			"damage_initial": 20,
 			"drive_hit": 4000,
 			"drive_block": -6000,
 			"drive_punish": -10000,
@@ -107,9 +101,7 @@
 			"input": "2LP",
 			"input_modern": "2L",
 			"damage": 300,
-			"proration": {
-				"initial": 20
-			},
+			"damage_initial": 20,
 			"drive_hit": 250,
 			"drive_block": -500,
 			"drive_punish": -2000,
@@ -124,9 +116,7 @@
 			"input": "2LK",
 			"input_modern": "Auto+5L",
 			"damage": 200,
-			"proration": {
-				"initial": 20
-			},
+			"damage_initial": 20,
 			"drive_hit": 250,
 			"drive_block": -500,
 			"drive_punish": -2000,
@@ -155,9 +145,7 @@
 			"input": "2MK",
 			"input_modern": "2M",
 			"damage": 500,
-			"proration": {
-				"initial": 20
-			},
+			"damage_initial": 20,
 			"drive_hit": 1000,
 			"drive_block": -2000,
 			"drive_punish": -4000,
@@ -540,10 +528,8 @@
 			"input_modern": "Auto+SP",
 			"input_modern_alt": "236AA",
 			"damage": [500, 200],
-			"proration": {
-				"initial": 20,
-				"additional": 20
-			},
+			"damage_additional": 20,
+			"damage_initial": 20,
 			"drive_hit": 0,
 			"drive_block": -3500,
 			"drive_punish": -3000,
@@ -576,10 +562,8 @@
 			"input_modern": "Auto+SP",
 			"input_modern_alt": "236AA",
 			"damage": [300, 300, 200],
-			"proration": {
-				"initial": 20,
-				"additional": 20
-			},
+			"damage_additional": 20,
+			"damage_initial": 20,
 			"drive_hit": 0,
 			"drive_block": -3500,
 			"drive_punish": -3000,
@@ -768,10 +752,8 @@
 			"input_modern": "6SP",
 			"input_modern_alt": "214L",
 			"damage": 800,
-			"proration": {
-				"initial": 20,
-				"additional": 20
-			},
+			"damage_additional": 20,
+			"damage_initial": 20,
 			"drive_hit": 1000,
 			"drive_blocP": -2000,
 			"drive_punish": -2500,
@@ -788,10 +770,8 @@
 			"input_modern": "6SP",
 			"input_modern_alt": "214L",
 			"damage": 900,
-			"proration": {
-				"initial": 20,
-				"additional": 20
-			},
+			"damage_additional": 20,
+			"damage_initial": 20,
 			"drive_hit": 1000,
 			"drive_blocP": -2000,
 			"drive_punish": -2500,
@@ -822,9 +802,7 @@
 			"input": "214MP",
 			"input_modern": "214M",
 			"damage": [200, 900],
-			"proration": {
-				"additional": 20
-			},
+			"damage_additional": 20,
 			"drive_hit": 2000,
 			"drive_blocP": -4000,
 			"drive_punish": -5000,
@@ -840,9 +818,7 @@
 			"input": "214HP",
 			"input_modern": "214H",
 			"damage": [200, 600],
-			"proration": {
-				"additional": 20
-			},
+			"damage_additional": 20,
 			"drive_hit": 2000,
 			"drive_blocP": -4000,
 			"drive_punish": -5000,
@@ -994,9 +970,7 @@
 			"input_modern": "Auto+6SP",
 			"input_modern_alt": "236AA",
 			"damage": [400, 400],
-			"proration": {
-				"additional": 20
-			},
+			"damage_additional": 20,
 			"drive_hit": 0,
 			"drive_block": -4500,
 			"drive_punish": -5000,
@@ -1058,9 +1032,7 @@
 			"input": "214PP",
 			"input_modern": "Auto+jSP",
 			"damage": 1200,
-			"proration": {
-				"initial": 30
-			},
+			"damage_initial": 30,
 			"drive_hit": 0,
 			"drive_blocP": -4000,
 			"drive_punish": -5000,
@@ -1076,9 +1048,7 @@
 			"input": "214PP",
 			"input_modern": "Auto+jSP",
 			"damage": 1300,
-			"proration": {
-				"initial": 30
-			},
+			"damage_initial": 30,
 			"drive_hit": 0,
 			"drive_blocP": -4000,
 			"drive_punish": -5000,
@@ -1165,10 +1135,8 @@
 			"damage_scale_min": 0.4,
 			"damage_scale_counter": 1,
 			"damage_scale_punish": 1,
-			"proration": {
-				"initial": 40,
-				"additional": 20
-			},
+			"damage_additional": 20,
+			"damage_initial": 40,
 			"drive_hit": 0,
 			"drive_block": -5000,
 			"drive_punish": -10000,
@@ -1201,10 +1169,8 @@
 			"damage_scale_min": 0.4,
 			"damage_scale_counter": 1,
 			"damage_scale_punish": 1,
-			"proration": {
-				"initial": 40,
-				"additional": 20
-			},
+			"damage_additional": 20,
+			"damage_initial": 40,
 			"drive_hit": 0,
 			"drive_block": -5000,
 			"drive_punish": -10000,
@@ -1230,9 +1196,7 @@
 			"damage_scale_min": 0.4,
 			"damage_scale_counter": 1,
 			"damage_scale_punish": 1,
-			"proration": {
-				"additional": 20
-			},
+			"damage_additional": 20,
 			"drive_hit": 0,
 			"drive_block": -5000,
 			"drive_punish": -10000,
@@ -1262,12 +1226,10 @@
 				200,
 				800
 			],
+			"damage_additional": 20,
 			"damage_scale_min": 0.4,
 			"damage_scale_counter": 1,
 			"damage_scale_punish": 1,
-			"proration": {
-				"additional": 20
-			},
 			"drive_hit": 0,
 			"drive_block": -5000,
 			"drive_punish": -10000,
@@ -1294,36 +1256,24 @@
 			"damage_scale_min": 0.5,
 			"damage_scale_counter": 1,
 			"damage_scale_punish": 1,
-			"proration": {
-				"immediate_cancel": 10
-			},
+			"damage_immediate_cancel": 10,
 			"drive_hit": 0,
 			"drive_block": -7500,
 			"drive_punish": -15000,
 			"superarts": 0,
-			"overrides": [
-				{
-					"type": "damage",
-					"values": [
+			"overrides": {
+				"CA": {
+					"damage": [
 						750,
 						750,
 						750,
 						750,
 						1500
 					],
-					"critical_arts": true
-				},
-				{
-					"type": "drive_block",
-					"values": -10000,
-					"critical_arts": true
-				},
-				{
-					"type": "drive_punish",
-					"values": -20000,
-					"critical_arts": true
+					"drive_block": -10000,
+					"drive_punish": -20000
 				}
-			]
+			}
 		},
 
 		{
@@ -1338,9 +1288,7 @@
 			"damage": 1200,
 			"damage_scale_counter": 1,
 			"damage_scale_punish": 1.7,
-			"proration": {
-				"immediate": 20
-			},
+			"damage_immediate": 20,
 			"drive_hit": 2000,
 			"drive_block": 0,
 			"drive_punish": -10000,
@@ -1359,9 +1307,7 @@
 			"damage": 1200,
 			"damage_scale_counter": 1,
 			"damage_scale_punish": 1.7,
-			"proration": {
-				"immediate": 20
-			},
+			"damage_immediate": 20,
 			"drive_hit": 2000,
 			"drive_block": 0,
 			"drive_punish": -10000,
@@ -1395,9 +1341,7 @@
 			"input": "HH",
 			"input_modern": "DI",
 			"damage": 800,
-			"proration": {
-				"initial": 20
-			},
+			"damage_immediate": 20,
 			"drive_hit": 800,
 			"drive_block": -5000,
 			"drive_punish": -15000,
@@ -1409,9 +1353,6 @@
 			"input": "656MM",
 			"input_modern": "656DP",
 			"damage": 0,
-			"proration": {
-				"scaling": 0.85
-			},
 			"drive_hit": 0,
 			"drive_block": 0,
 			"drive_punish": 0,
@@ -1423,9 +1364,6 @@
 			"input": "656",
 			"input_modern": "656",
 			"damage": 0,
-			"proration": {
-				"scaling": 0.85
-			},
 			"drive_hit": 0,
 			"drive_block": 0,
 			"drive_punish": 0,
