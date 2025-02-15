@@ -4,7 +4,7 @@ import { Item } from '@react-stately/collections'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 
 import { useAppSelector } from '@/app/hooks'
-import { selectCharacters, selectCharactersById } from '@/features/parameterLoader/selectors'
+import { selectCharacterArray, selectCharacters } from '@/features/parameterLoader/selectors'
 import type { CharacterParameterState } from '@/features/parameterLoader/types'
 
 import { CSMenuButton } from '../CSPopover'
@@ -16,9 +16,9 @@ function CharacterList({
 	onChange,
 }: Readonly<CharacterListProps>) {
 	const { i18n: { locale } } = useLingui()
+	const characterArray = useAppSelector(selectCharacterArray)
 	const characters = useAppSelector(selectCharacters)
-	const charactersById = useAppSelector(selectCharactersById)
-	const [selectedKeys, setSelectedKeys] = useState(new Set([defaultSelectedKey ?? characters[0].id]))
+	const [selectedKeys, setSelectedKeys] = useState(new Set([defaultSelectedKey ?? characterArray[0].id]))
 
 	const getLocalizedName = useMemo(function() {
 		return locale === 'ja'
@@ -54,8 +54,8 @@ function CharacterList({
 	return (
 		<CSMenuButton
 			disallowEmptySelection
-			items={characters}
-			label={getLocalizedName(charactersById[selectedKey])}
+			items={characterArray}
+			label={getLocalizedName(characters[selectedKey])}
 			selectedKeys={selectedKeys}
 			selectionMode='single'
 			onSelectionChange={handleCharacterChange}

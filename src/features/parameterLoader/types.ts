@@ -41,11 +41,6 @@ export interface CharacterParameterState extends CharacterSummary {
 	param: Character | null
 }
 
-export interface ParameterState {
-	characters: CharacterParameterState[]
-	charactersById: { [key: string]: CharacterParameterState }
-}
-
 export interface MoveCategory {
 	readonly id: MoveCategoryType
 	readonly moves: readonly Move[]

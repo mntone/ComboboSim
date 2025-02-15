@@ -20,8 +20,8 @@ const fetchParam = createAppAsyncThunk(
 	},
 	{
 		condition(id, { getState }) {
-			const { param: { charactersById } } = getState()
-			const fetchStatus = charactersById[id].state
+			const { param: { entities } } = getState()
+			const fetchStatus = entities[id].state
 			return fetchStatus === 'ready'
 		},
 	},
@@ -36,17 +36,17 @@ const parameterLoaderSlice = createSlice({
 		builder
 			.addCase(fetchParam.pending, function(state, action) {
 				const key = action.meta.arg
-				state.charactersById[key].state = 'loading'
+				state.entities[key].state = 'loading'
 			})
 			.addCase(fetchParam.fulfilled, function(state, action) {
 				const key = action.meta.arg
-				const targetState = state.charactersById[key]
+				const targetState = state.entities[key]
 				targetState.state = 'complete'
 				targetState.param = action.payload
 			})
 			.addCase(fetchParam.rejected, function(state, action) {
 				const key = action.meta.arg
-				const targetState = state.charactersById[key]
+				const targetState = state.entities[key]
 				targetState.state = 'failure'
 				targetState.param = null
 			})
