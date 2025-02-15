@@ -1,14 +1,15 @@
 import { Button } from '@heroui/button'
-import { Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from '@heroui/dropdown'
 import type { SharedSelection } from '@heroui/system'
 import { Table, TableBody, TableCell, TableColumn, TableHeader, TableRow } from '@heroui/table'
 import { i18n } from '@lingui/core'
 import { msg } from '@lingui/core/macro'
 import { useLingui } from '@lingui/react/macro'
+import { Item } from '@react-stately/collections'
 import { useCallback, useMemo, useState, type JSX } from 'react'
-import { TbChevronDown, TbList, TbX } from 'react-icons/tb'
+import { TbX } from 'react-icons/tb'
 import type { ReadonlyDeep } from 'type-fest'
 
+import { CSMenuButton } from '../CSPopover'
 import MoveName from '../MoveLabel/MoveName'
 
 import {
@@ -85,40 +86,21 @@ function ComboTableView({
 
 	const toolbar = useMemo(function() {
 		return (
-			<div className='flex flex-col gap-4'>
-				<Dropdown offset={4} placement='bottom-end'>
-					<DropdownTrigger>
-						<Button
-							className='justify-between text-left'
-							endContent={(
-								<TbChevronDown className='justify-end' size={16} />
-							)}
-							startContent={(
-								<TbList size={16} />
-							)}
-						>
-							<div className='w-full'>
-								{t(msg`View Options`)}
-							</div>
-						</Button>
-					</DropdownTrigger>
-					<DropdownMenu
-						aria-label={t(msg`View Options for Combo Table`)}
-						closeOnSelect={false}
-						selectedKeys={selectedColumns}
-						selectionMode='multiple'
-						onSelectionChange={handleColumnsChange}
-					>
-						{COMBOTABLE_OPTIONAL_COLUMNS.map(function(col) {
-							return (
-								<DropdownItem key={col.id}>
-									{t(col.name)}
-								</DropdownItem>
-							)
-						})}
-					</DropdownMenu>
-				</Dropdown>
-			</div>
+			<CSMenuButton
+				items={COMBOTABLE_OPTIONAL_COLUMNS}
+				label={t(msg`View Options`)}
+				selectedKeys={selectedColumns}
+				selectionMode='multiple'
+				onSelectionChange={handleColumnsChange}
+			>
+				{function(col) {
+					return (
+						<Item key={col.id}>
+							{t(col.name)}
+						</Item>
+					)
+				}}
+			</CSMenuButton>
 		)
 	}, [selectedColumns])
 

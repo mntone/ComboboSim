@@ -1,18 +1,20 @@
 import { Button, ButtonGroup } from '@heroui/button'
-import { Listbox, ListboxItem, ListboxSection } from '@heroui/listbox'
-import { Popover, PopoverContent, PopoverTrigger } from '@heroui/popover'
 import type { SharedSelection } from '@heroui/system'
 import { msg } from '@lingui/core/macro'
 import { useLingui } from '@lingui/react/macro'
+import { Item, Section } from '@react-stately/collections'
 import { useCallback, useState } from 'react'
 import { TbPlus } from 'react-icons/tb'
 
 import { useAppDispatch, useAppSelector } from '@/app/hooks'
+import { CSMenuButton } from '@/components/CSPopover'
 import MoveName from '@/components/MoveLabel/MoveName'
 import { pushCombo } from '@/features/combo/slice'
 import { selectIsCharacterLoading, selectNormalizedMoves } from '@/features/parameterLoader/selectors'
 import { selectDynamicResource } from '@/features/resourceLoader/selectors'
 import { selectMoveNameDisplayModes } from '@/features/userSettings/selectors'
+
+import { moveListBox } from './styles.css'
 
 const categoryNames = {
 	normal: msg`Normal Moves`,
@@ -82,58 +84,41 @@ function MoveListBox() {
 			className='max-w-64'
 			fullWidth
 		>
-			<Popover
+			<CSMenuButton
 				classNames={{
-					content: 'p-0 min-w-64 overflow-clip',
+					base: moveListBox,
 				}}
+				isLoading={isLoading}
 				isOpen={isOpen}
-				offset={4}
-				placement='bottom-start'
-				triggerType='listbox'
+				items={normalizedMoves.movesByCategory}
+				label={getCurrentMoveName(selectedMoveKeys)}
+				selectedKeys={selectedMoveKeys}
+				selectionMode='single'
 				onOpenChange={setIsOpen}
+				onSelectionChange={handleMoveChange}
 			>
-				<PopoverTrigger>
-					<Button className='justify-start' isLoading={isLoading}>
-						{getCurrentMoveName(selectedMoveKeys)}
-					</Button>
-				</PopoverTrigger>
-				<PopoverContent>
-					<Listbox
-						classNames={{
-							base: 'p-0',
-							list: 'p-1 py-2 max-h-[32rem] overflow-y-auto',
-						}}
-						items={normalizedMoves.movesByCategory}
-						selectedKeys={selectedMoveKeys}
-						selectionMode='single'
-						onSelectionChange={handleMoveChange}
-					>
-						{moveItemsByCategory => (
-							<ListboxSection
-								title={t(categoryNames[moveItemsByCategory.id])}
-							>
-								{moveItemsByCategory.moves.map(function(moveItem) {
-									return (
-										<ListboxItem
-											key={moveItem.id}
-											classNames={{
-												base: 'px-3',
-											}}
-										>
-											<MoveName
-												displayModes={displayModes}
-												locale={locale}
-												move={moveItem}
-												res={res}
-											/>
-										</ListboxItem>
-									)
-								})}
-							</ListboxSection>
-						)}
-					</Listbox>
-				</PopoverContent>
-			</Popover>
+				{function(moveCategories) {
+					return (
+						<Section
+							key={moveCategories.id}
+							title={t(categoryNames[moveCategories.id])}
+						>
+							{moveCategories.moves.map(function(move) {
+								return (
+									<Item key={move.id}>
+										<MoveName
+											displayModes={displayModes}
+											locale={locale}
+											move={move}
+											res={res}
+										/>
+									</Item>
+								)
+							})}
+						</Section>
+					)
+				}}
+			</CSMenuButton>
 
 			<Button
 				aria-label='Add Move'

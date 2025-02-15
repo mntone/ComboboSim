@@ -1,13 +1,13 @@
-import { Button } from '@heroui/button'
-import { Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from '@heroui/dropdown'
 import type { SharedSelection } from '@heroui/system'
 import { useLingui } from '@lingui/react/macro'
+import { Item } from '@react-stately/collections'
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import { TbChevronDown } from 'react-icons/tb'
 
 import { useAppSelector } from '@/app/hooks'
 import { selectCharacters, selectCharactersById } from '@/features/parameterLoader/selectors'
 import type { CharacterParameterState } from '@/features/parameterLoader/types'
+
+import { CSMenuButton } from '../CSPopover'
 
 import type { CharacterListProps } from './types'
 
@@ -52,32 +52,22 @@ function CharacterList({
 	}, [])
 
 	return (
-		<Dropdown offset={4} placement='bottom-start'>
-			<DropdownTrigger>
-				<Button
-					className='justify-between text-left'
-					endContent={(
-						<TbChevronDown className='justify-end' size={16} />
-					)}
-				>
-					{getLocalizedName(charactersById[selectedKey])}
-				</Button>
-			</DropdownTrigger>
-			<DropdownMenu
-				disallowEmptySelection={true}
-				selectedKeys={selectedKeys}
-				selectionMode='single'
-				onSelectionChange={handleCharacterChange}
-			>
-				{characters.map(function(item) {
-					return (
-						<DropdownItem key={item.id}>
-							{getLocalizedName(item)}
-						</DropdownItem>
-					)
-				})}
-			</DropdownMenu>
-		</Dropdown>
+		<CSMenuButton
+			disallowEmptySelection
+			items={characters}
+			label={getLocalizedName(charactersById[selectedKey])}
+			selectedKeys={selectedKeys}
+			selectionMode='single'
+			onSelectionChange={handleCharacterChange}
+		>
+			{function(item) {
+				return (
+					<Item key={item.id}>
+						{getLocalizedName(item)}
+					</Item>
+				)
+			}}
+		</CSMenuButton>
 	)
 }
 

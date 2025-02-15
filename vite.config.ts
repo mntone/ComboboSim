@@ -1,4 +1,5 @@
 import { lingui } from '@lingui/vite-plugin'
+import { vanillaExtractPlugin as vanillaExtract } from '@vanilla-extract/vite-plugin'
 import react from '@vitejs/plugin-react'
 import csp from 'vite-plugin-csp-guard'
 import { createHtmlPlugin as html } from 'vite-plugin-html'
@@ -31,6 +32,7 @@ export default defineConfig({
 		'import.meta.env.APP_VERSION': JSON.stringify(packageJson.version),
 	},
 	plugins: [
+		vanillaExtract(),
 		react({
 			babel: {
 				plugins: ['@lingui/babel-plugin-lingui-macro'],

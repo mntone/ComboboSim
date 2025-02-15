@@ -8,8 +8,11 @@ import MoveListBox from '@/features/combo/components/MoveListBox'
 import ResultView from '@/features/combo/components/ResultView'
 import { setCharacterId } from '@/features/combo/slice'
 import { fetchResource } from '@/features/resourceLoader/slice'
+import { compactSpace } from '@/styles/index.css'
 
 import { useAppDispatch } from './hooks'
+
+import './app.css'
 
 async function dynamicActivate(locale: string) {
 	const { messages } = await import(`../locales/${locale}.po`)
@@ -27,6 +30,8 @@ function App() {
 	}, [dispatch])
 
 	useEffect(function() {
+		document.body.classList.add(compactSpace)
+
 		dynamicActivate('ja')
 		dispatch(fetchResource('abbr_ja'))
 	}, [])
