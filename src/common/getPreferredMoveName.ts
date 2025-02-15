@@ -1,8 +1,6 @@
 import type { ReadonlyDeep } from 'type-fest'
 
-import type { Move } from '@/common/types'
-
-import type { MoveNameDisplayMode } from './types'
+import type { Move, MoveNameDisplayMode, MoveNameDisplayModes } from '@/common/types'
 
 function getBaseMoveName(move: ReadonlyDeep<Move>, locale?: string): string | undefined {
 	return move.names
@@ -13,11 +11,18 @@ function getBaseMoveName(move: ReadonlyDeep<Move>, locale?: string): string | un
 }
 
 function getPreferredMoveName(
-	move: ReadonlyDeep<Move>,
-	displayMode: MoveNameDisplayMode,
+	move: ReadonlyDeep<Move> | undefined,
+	displayModes: MoveNameDisplayModes,
 	locale?: string,
 	res?: Record<string, string> | null,
-) {
+): string | undefined {
+	if (move === undefined) {
+		return undefined
+	}
+
+	const displayMode: MoveNameDisplayMode = move.category === 'common'
+		? 'movepriority'
+		: displayModes[move.category]
 	switch (displayMode) {
 	case 'moveonly': {
 		if (res == null) {
@@ -53,6 +58,5 @@ function getPreferredMoveName(
 }
 
 export {
-	getBaseMoveName,
 	getPreferredMoveName,
 }

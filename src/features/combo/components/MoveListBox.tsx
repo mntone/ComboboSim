@@ -6,9 +6,10 @@ import { Item, Section } from '@react-stately/collections'
 import { useCallback, useState } from 'react'
 import { TbPlus } from 'react-icons/tb'
 
+import { getPreferredMoveName } from '@/common/getPreferredMoveName'
+
 import { useAppDispatch, useAppSelector } from '@/app/hooks'
 import { CSMenuButton } from '@/components/CSPopover'
-import MoveName from '@/components/MoveLabel/MoveName'
 import { pushCombo } from '@/features/combo/slice'
 import { selectIsCharacterLoading, selectNormalizedMoves } from '@/features/parameterLoader/selectors'
 import { selectDynamicResource } from '@/features/resourceLoader/selectors'
@@ -43,17 +44,9 @@ function MoveListBox() {
 	const getCurrentMoveName = useCallback(function(keys: Set<string>) {
 		const selectedKey = keys.keys().next().value
 		if (selectedKey) {
-			const targetMoveItem = normalizedMoves.movesById.get(selectedKey)
-			if (targetMoveItem) {
-				return (
-					<MoveName
-						displayModes={displayModes}
-						locale={locale}
-						move={targetMoveItem}
-						res={res}
-					/>
-				)
-			}
+			const targetMove = normalizedMoves.movesById.get(selectedKey)
+			const moveName = getPreferredMoveName(targetMove, displayModes, locale, res)
+			return moveName
 		}
 
 		return <></>
@@ -106,12 +99,7 @@ function MoveListBox() {
 							{moveCategories.moves.map(function(move) {
 								return (
 									<Item key={move.id}>
-										<MoveName
-											displayModes={displayModes}
-											locale={locale}
-											move={move}
-											res={res}
-										/>
+										{getPreferredMoveName(move, displayModes, locale, res)}
 									</Item>
 								)
 							})}

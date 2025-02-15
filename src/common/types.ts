@@ -3,6 +3,20 @@ export interface MoveNames {
 	ja: string
 }
 
+export type MoveNameDisplayMode =
+	| 'moveonly'
+	| 'movepriority'
+	| 'nameonly'
+	| 'namepriority'
+
+export interface MoveNameDisplayModes {
+	normal: MoveNameDisplayMode
+	unique: MoveNameDisplayMode
+	special: MoveNameDisplayMode
+	superarts: MoveNameDisplayMode
+	throws: MoveNameDisplayMode
+}
+
 export type MoveCategoryType =
 	| 'normal'
 	| 'unique'

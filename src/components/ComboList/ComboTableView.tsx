@@ -9,8 +9,9 @@ import { useCallback, useMemo, useState, type JSX } from 'react'
 import { TbX } from 'react-icons/tb'
 import type { ReadonlyDeep } from 'type-fest'
 
+import { getPreferredMoveName } from '@/common/getPreferredMoveName'
+
 import { CSMenuButton } from '../CSPopover'
-import MoveName from '../MoveLabel/MoveName'
 
 import {
 	COMBOTABLE_COLUMNS,
@@ -42,14 +43,7 @@ function ComboTableView({
 	const renderCell = useCallback(function(item: ReadonlyDeep<Combo>, key: string): JSX.Element | string {
 		switch (key) {
 		case 'name':
-			return (
-				<MoveName
-					displayModes={displayModes}
-					locale={locale}
-					move={item.move}
-					res={res}
-				/>
-			)
+			return <>{getPreferredMoveName(item.move, displayModes, locale, res)}</>
 		case 'damage':
 		case 'comboDamage':
 			return i18n.number(item[key])

@@ -1,9 +1,7 @@
 import type { MessageDescriptor } from '@lingui/core'
 import type { ReadonlyDeep } from 'type-fest'
 
-import type { Move } from '@/common/types'
-
-import type { MoveNameBaseProps } from '@/components/MoveLabel/types'
+import type { Move, MoveNameDisplayModes } from '@/common/types'
 
 export interface Combo {
 	id: string
@@ -27,8 +25,11 @@ export interface ComboTableColumn {
 	readonly required?: true
 }
 
-export interface ComboListProps extends MoveNameBaseProps {
+export interface ComboListProps {
+	displayModes: MoveNameDisplayModes
 	items: Combo[]
+	locale: string
+	res?: Record<string, string> | null
 
 	onDelete?: (item: ReadonlyDeep<Combo>) => void
 }
