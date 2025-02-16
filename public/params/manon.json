@@ -168,6 +168,7 @@
 		{
 			"id": "manon.2HK",
 			"names": {
+				"en": "Croisee",
 				"ja": "クロワゼ"
 			},
 			"category": "normal",
@@ -800,6 +801,7 @@
 			"input": "236P~K",
 			"input_modern": "Auto+2SP~A",
 			"damage": 800,
+			"damage_additional": 20,
 			"damage_immediate": 10,
 			"drive_hit": 2500,
 			"drive_block": -5000,
@@ -816,6 +818,7 @@
 			"input": "236PP~K",
 			"input_modern": "Auto+2SP~A",
 			"damage": 800,
+			"damage_additional": 20,
 			"damage_immediate": 10,
 			"drive_hit": 2500,
 			"drive_block": -4000,

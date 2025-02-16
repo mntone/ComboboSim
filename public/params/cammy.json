@@ -1,0 +1,1110 @@
+{
+	"id": "cammy",
+	"names": {
+		"en": "Cammy",
+		"ja": "キャミィ"
+	},
+	"vitality": 10000,
+	"moves": [
+		{
+			"id": "cammy.5LP",
+			"names": {
+				"ja": "フーリガンジャブ"
+			},
+			"category": "normal",
+			"input": "5LP",
+			"input_modern": "5L",
+			"damage": 300,
+			"damage_initial": 20,
+			"drive_hit": 250,
+			"drive_block": -500,
+			"drive_punish": -2000,
+			"superarts": 300
+		},
+		{
+			"id": "cammy.5LK",
+			"names": {
+				"ja": "フーリガンローキック"
+			},
+			"category": "normal",
+			"input": "5LK",
+			"damage": 300,
+			"damage_initial": 20,
+			"drive_hit": 250,
+			"drive_block": -500,
+			"drive_punish": -2000,
+			"superarts": 300
+		},
+		{
+			"id": "cammy.5MP",
+			"names": {
+				"ja": "フーリガンストレート"
+			},
+			"category": "normal",
+			"input": "5MP",
+			"input_modern": "Auto+5M",
+			"damage": 600,
+			"drive_hit": 1500,
+			"drive_block": -3000,
+			"drive_punish": -4000,
+			"superarts": 500
+		},
+		{
+			"id": "cammy.5MK",
+			"names": {
+				"ja": "トゥースマッシュ"
+			},
+			"category": "normal",
+			"input": "5MK",
+			"input_modern": "5M",
+			"damage": 700,
+			"drive_hit": 2000,
+			"drive_block": -4000,
+			"drive_punish": -6000,
+			"superarts": 700
+		},
+		{
+			"id": "cammy.5HP",
+			"names": {
+				"ja": "スイングナックル"
+			},
+			"category": "normal",
+			"input": "5HP",
+			"input_modern": "Auto+5H",
+			"damage": 800,
+			"drive_hit": 2000,
+			"drive_block": -4000,
+			"drive_punish": -8000,
+			"superarts": 1000
+		},
+		{
+			"id": "cammy.5HK",
+			"names": {
+				"ja": "スティールスライサー"
+			},
+			"category": "normal",
+			"input": "5HK",
+			"input_modern": "5H",
+			"damage": 900,
+			"drive_hit": 3000,
+			"drive_block": -6000,
+			"drive_punish": -10000,
+			"superarts": 1200
+		},
+		{
+			"id": "cammy.2LP",
+			"names": {
+				"ja": "ラピッドショット"
+			},
+			"category": "normal",
+			"input": "2LP",
+			"input_modern": "2L~2L",
+			"damage": 300,
+			"damage_initial": 20,
+			"drive_hit": 250,
+			"drive_block": -500,
+			"drive_punish": -2000,
+			"superarts": 300
+		},
+		{
+			"id": "cammy.2LK",
+			"names": {
+				"ja": "スタンレイピア"
+			},
+			"category": "normal",
+			"input": "2LK",
+			"input_modern": "2L",
+			"damage": 200,
+			"damage_initial": 20,
+			"drive_hit": 250,
+			"drive_block": -500,
+			"drive_punish": -2000,
+			"superarts": 300
+		},
+		{
+			"id": "cammy.2MP",
+			"names": {
+				"ja": "ライトグレネード"
+			},
+			"category": "normal",
+			"input": "2MP",
+			"damage": 600,
+			"drive_hit": 1500,
+			"drive_block": -3000,
+			"drive_punish": -4000,
+			"superarts": 500
+		},
+		{
+			"id": "cammy.2MK",
+			"names": {
+				"ja": "トゥーバズソー"
+			},
+			"category": "normal",
+			"input": "2MK",
+			"input_modern": "2M",
+			"damage": 500,
+			"damage_initial": 20,
+			"drive_hit": 1000,
+			"drive_block": -2000,
+			"drive_punish": -4000,
+			"superarts": 500
+		},
+		{
+			"id": "cammy.2HP",
+			"names": {
+				"ja": "トーピードーシェル"
+			},
+			"category": "normal",
+			"input": "2HP",
+			"input_modern": "2H",
+			"damage": 700,
+			"drive_hit": 2500,
+			"drive_block": -5000,
+			"drive_punish": -8000,
+			"superarts": 1000
+		},
+		{
+			"id": "cammy.2HK",
+			"names": {
+				"en": "Grounded Sweep",
+				"ja": "グランドスイープ"
+			},
+			"category": "normal",
+			"input": "2HK",
+			"input_modern": "3H",
+			"damage": 900,
+			"drive_hit": 3000,
+			"drive_block": -4000,
+			"drive_punish": -10000,
+			"superarts": 1000
+		},
+		{
+			"id": "cammy.jLP",
+			"names": {
+				"ja": "ダガーショット"
+			},
+			"category": "normal",
+			"input": "jLP",
+			"damage": 300,
+			"drive_hit": 500,
+			"drive_block": -1500,
+			"drive_punish": -2000,
+			"superarts": 300
+		},
+		{
+			"id": "cammy.jLK",
+			"names": {
+				"ja": "レイダーニー"
+			},
+			"category": "normal",
+			"input": "jLK",
+			"input_modern": "jL",
+			"damage": 300,
+			"drive_hit": 500,
+			"drive_block": -1500,
+			"drive_punish": -2000,
+			"superarts": 300
+		},
+		{
+			"id": "cammy.jMP",
+			"names": {
+				"ja": "アラウンドブレード"
+			},
+			"category": "normal",
+			"input": "jMP",
+			"input_modern": "jM",
+			"damage": 600,
+			"drive_hit": 1200,
+			"drive_block": -2500,
+			"drive_punish": -4000,
+			"superarts": 500
+		},
+		{
+			"id": "cammy.jMK",
+			"names": {
+				"ja": "スナイピングスピア"
+			},
+			"category": "normal",
+			"input": "jMK",
+			"damage": 600,
+			"drive_hit": 1200,
+			"drive_block": -2500,
+			"drive_punish": -4000,
+			"superarts": 700
+		},
+		{
+			"id": "cammy.jHP",
+			"names": {
+				"ja": "フィストボム"
+			},
+			"category": "normal",
+			"input": "jHP",
+			"damage": 800,
+			"drive_hit": 2500,
+			"drive_block": -4000,
+			"drive_punish": -7000,
+			"superarts": 1000
+		},
+		{
+			"id": "cammy.jHK",
+			"names": {
+				"ja": "クリティカルストライク"
+			},
+			"category": "normal",
+			"input": "jHK",
+			"input_modern": "jH",
+			"damage": 800,
+			"drive_hit": 2500,
+			"drive_block": -4000,
+			"drive_punish": -7000,
+			"superarts": 1000
+		},
+
+		{
+			"id": "cammy.4MP",
+			"names": {
+				"en": "Lift Uppercut",
+				"ja": "リフトアッパー"
+			},
+			"category": "unique",
+			"input": "4MP",
+			"input_modern": "4M",
+			"damage": 500,
+			"drive_hit": 1500,
+			"drive_block": -3000,
+			"drive_punish": -4000,
+			"superarts": 500
+		},
+		{
+			"id": "cammy.6HK",
+			"names": {
+				"en": "Delayed Ripper",
+				"ja": "ディレイリーパー"
+			},
+			"category": "unique",
+			"input": "6HK",
+			"input_modern": "6H",
+			"damage": 800,
+			"damage_initial": 20,
+			"drive_hit": 3000,
+			"drive_block": -4000,
+			"drive_punish": -10000,
+			"superarts": 1000
+		},
+		{
+			"id": "cammy.4HK",
+			"names": {
+				"en": "Assault Blade",
+				"ja": "アサルトブレード"
+			},
+			"category": "unique",
+			"input": "4HK",
+			"input_modern": "4H",
+			"damage": 800,
+			"damage_initial": 20,
+			"drive_hit": 2500,
+			"drive_block": -5000,
+			"drive_punish": -10000,
+			"superarts": 1000
+		},
+		{
+			"id": "cammy.4MP~HK",
+			"names": {
+				"en": "Lift Combination",
+				"ja": "リフトコンビネーション"
+			},
+			"category": "unique",
+			"input": "4MP~HK",
+			"input_modern": "4M~M",
+			"damage": 600,
+			"drive_hit": 2000,
+			"drive_block": -3000,
+			"drive_punish": -7000,
+			"superarts": 700
+		},
+		{
+			"id": "cammy.5HP~HK",
+			"names": {
+				"en": "Swing Combination",
+				"ja": "スイングコンビネーション"
+			},
+			"category": "unique",
+			"input": "5HP~HK",
+			"input_modern": "Auto+5H~H",
+			"damage": [400, 400],
+			"damage_additional": 20,
+			"damage_immediate": 10,
+			"damage_immediate_second": 10,
+			"drive_hit": 4000,
+			"drive_block": -7000,
+			"drive_punish": -8000,
+			"superarts": 1500
+		},
+
+		{
+			"id": "cammy.236LK",
+			"names": {
+				"en": "L Spiral Arrow",
+				"ja": "弱 スパイラルアロー"
+			},
+			"category": "special",
+			"input": "236LK",
+			"input_modern": "236L",
+			"damage": 800,
+			"drive_hit": 2000,
+			"drive_block": -4000,
+			"drive_punish": -5000,
+			"superarts": 1000
+		},
+		{
+			"id": "cammy.236MK",
+			"names": {
+				"en": "M Spiral Arrow",
+				"ja": "中 スパイラルアロー"
+			},
+			"category": "special",
+			"input": "236MK",
+			"input_modern": "5SP",
+			"input_modern_alt": "236M",
+			"damage": 900,
+			"drive_hit": 2000,
+			"drive_block": -4000,
+			"drive_punish": -5000,
+			"superarts": 800
+		},
+		{
+			"id": "cammy.236HK",
+			"names": {
+				"en": "H Spiral Arrow",
+				"ja": "強 スパイラルアロー"
+			},
+			"category": "special",
+			"input": "236HK",
+			"input_modern": "236H",
+			"damage": [
+				300,
+				700
+			],
+			"drive_hit": 2600,
+			"drive_block": -5000,
+			"drive_punish": -5000,
+			"superarts": 800
+		},
+		{
+			"id": "cammy.236[HK]",
+			"names": {
+				"en": "H Spiral Arrow (Charged)",
+				"ja": "強 スパイラルアロー（ホールド）"
+			},
+			"category": "special",
+			"input": "236[HK]",
+			"input_modern": "236[H]",
+			"damage": [
+				150,
+				150,
+				150,
+				150,
+				200
+			],
+			"drive_hit": 2500,
+			"drive_block": -4000,
+			"drive_punish": -5000,
+			"superarts": 1000
+		},
+		{
+			"id": "cammy.236KK",
+			"names": {
+				"en": "OD Spiral Arrow",
+				"ja": "OD スパイラルアロー"
+			},
+			"category": "special",
+			"input": "236KK",
+			"input_modern": "Auto+5SP",
+			"input_modern_alt": "236AA",
+			"damage": [
+				150,
+				150,
+				150,
+				150,
+				200
+			],
+			"damage_additional": 15,
+			"drive_hit": 0,
+			"drive_block": -4000,
+			"drive_punish": -5000,
+			"superarts": 1000
+		},
+		{
+			"id": "cammy.623LK",
+			"names": {
+				"en": "L Cannon Spike",
+				"ja": "弱 キャノンスパイク"
+			},
+			"category": "special",
+			"input": "623LK",
+			"input_modern": "623L",
+			"damage": 900,
+			"drive_hit": 2000,
+			"drive_block": -4000,
+			"drive_punish": -5000,
+			"superarts": 1000,
+			"overrides": {
+				"FRAME>=7": {
+					"damage": 800
+				}
+			}
+		},
+		{
+			"id": "cammy.623MK",
+			"names": {
+				"en": "M Cannon Spike",
+				"ja": "中 キャノンスパイク"
+			},
+			"category": "special",
+			"input": "623MK",
+			"input_modern": "6SP",
+			"input_modern_alt": "623M",
+			"damage": 1000,
+			"drive_hit": 2000,
+			"drive_block": -4000,
+			"drive_punish": -5000,
+			"superarts": 1000,
+			"overrides": {
+				"FRAME>=8": {
+					"damage": 800
+				}
+			}
+		},
+		{
+			"id": "cammy.623HK",
+			"names": {
+				"en": "H Cannon Spike",
+				"ja": "強 キャノンスパイク"
+			},
+			"category": "special",
+			"input": "623HK",
+			"input_modern": "623H",
+			"damage": 1200,
+			"drive_hit": 2000,
+			"drive_block": -4000,
+			"drive_punish": -5000,
+			"superarts": 1000,
+			"overrides": {
+				"FRAME>=9": {
+					"damage": 800
+				}
+			}
+		},
+		{
+			"id": "cammy.623[HK]",
+			"names": {
+				"en": "H Cannon Spike (Charged)",
+				"ja": "強 キャノンスパイク（ホールド）"
+			},
+			"category": "special",
+			"input": "623[HK]",
+			"input_modern": "623[H]",
+			"damage": [
+				1100,
+				100,
+				100,
+				100,
+				100
+			],
+			"drive_hit": 2000,
+			"drive_block": -4000,
+			"drive_punish": -5000,
+			"superarts": 1000,
+			"overrides": {
+				"FRAME>=28": {
+					"damage": 900
+				}
+			}
+		},
+		{
+			"id": "cammy.623KK",
+			"names": {
+				"en": "OD Cannon Spike",
+				"ja": "OD キャノンスパイク"
+			},
+			"category": "special",
+			"input": "623KK",
+			"input_modern": "Auto+6SP",
+			"input_modern_alt": "623AA",
+			"damage": [
+				600,
+				100,
+				100,
+				100,
+				600
+			],
+			"drive_hit": 0,
+			"drive_block": -2000,
+			"drive_punish": 0,
+			"superarts": 1000,
+			"overrides": {
+				"FRAME>=10": {
+					"damage": 900
+				}
+			}
+		},
+		{
+			"id": "cammy.214LP",
+			"names": {
+				"en": "L Quick Spin Knuckle",
+				"ja": "弱 アクセルスピンナックル"
+			},
+			"category": "special",
+			"input": "214LP",
+			"input_modern": "214L",
+			"damage": 800,
+			"drive_hit": 2000,
+			"drive_block": -4000,
+			"drive_punish": -5000,
+			"superarts": 800
+		},
+		{
+			"id": "cammy.214MP",
+			"names": {
+				"en": "M Quick Spin Knuckle",
+				"ja": "中 アクセルスピンナックル"
+			},
+			"category": "special",
+			"input": "214MP",
+			"input_modern": "214M",
+			"damage": 800,
+			"damage_initial": 20,
+			"drive_hit": 2000,
+			"drive_block": -4500,
+			"drive_punish": -7000,
+			"superarts": 800
+		},
+		{
+			"id": "cammy.214HP",
+			"names": {
+				"en": "H Quick Spin Knuckle",
+				"ja": "強 アクセルスピンナックル"
+			},
+			"category": "special",
+			"input": "214HP",
+			"input_modern": "4SP",
+			"input_modern_alt": "214H",
+			"damage": 800,
+			"damage_additional": 20,
+			"damage_initial": 20,
+			"drive_hit": 2000,
+			"drive_block": -6000,
+			"drive_punish": -9000,
+			"superarts": 800
+		},
+		{
+			"id": "cammy.214PP",
+			"names": {
+				"en": "OD Quick Spin Knuckle",
+				"ja": "OD アクセルスピンナックル"
+			},
+			"category": "special",
+			"input": "214PP",
+			"input_modern": "Auto+4SP",
+			"input_modern_alt": "214AA",
+			"damage": 800,
+			"damage_additional": 20,
+			"damage_initial": 20,
+			"drive_hit": 0,
+			"drive_block": -4000,
+			"drive_punish": -7000,
+			"superarts": 800
+		},
+		{
+			"id": "cammy.j214P",
+			"names": {
+				"en": "Cannon Strike",
+				"ja": "キャノンストライク"
+			},
+			"category": "special",
+			"input": "j214P",
+			"input_modern": "jSP",
+			"input_modern_alt": "j214A",
+			"damage": 600,
+			"damage_initial": 20,
+			"drive_hit": 2500,
+			"drive_block": -2000,
+			"drive_punish": -4000,
+			"superarts": 800
+		},
+		{
+			"id": "cammy.j214PP",
+			"names": {
+				"en": "OD Cannon Strike",
+				"ja": "OD キャノンストライク"
+			},
+			"category": "special",
+			"input": "j214PP",
+			"input_modern": "Auto+jSP",
+			"input_modern_alt": "j214AA",
+			"damage": 800,
+			"damage_immediate": 10,
+			"damage_initial": 20,
+			"drive_hit": 0,
+			"drive_block": -2000,
+			"drive_punish": -4000,
+			"superarts": 800
+		},
+		{
+			"id": "cammy.236P",
+			"names": {
+				"en": "Razor's Edge Slicer",
+				"ja": "レイザーエッジスライサー"
+			},
+			"category": "special",
+			"input": "236P",
+			"input_modern": "2SP",
+			"damage": 1000,
+			"damage_initial": 20,
+			"drive_hit": 2500,
+			"drive_block": -3000,
+			"drive_punish": -7000,
+			"superarts": 1000
+		},
+		{
+			"id": "cammy.236[P]",
+			"names": {
+				"en": "Razor's Edge Slicer (Charged)",
+				"ja": "レイザーエッジスライサー（ホールド）"
+			},
+			"category": "special",
+			"input": "236[P]",
+			"input_modern": "2[SP]",
+			"damage": [
+				800,
+				400
+			],
+			"damage_initial": 20,
+			"drive_hit": 4000,
+			"drive_block": -5000,
+			"drive_punish": -7000,
+			"superarts": 1000
+		},
+		{
+			"id": "cammy.236PP",
+			"names": {
+				"en": "OD Razor's Edge Slicer",
+				"ja": "OD レイザーエッジスライサー"
+			},
+			"category": "special",
+			"input": "236PP",
+			"input_modern": "Auto+2SP",
+			"damage": [
+				800,
+				400
+			],
+			"damage_initial": 20,
+			"drive_hit": 0,
+			"drive_block": -5000,
+			"drive_punish": -7000,
+			"superarts": 1000
+		},
+		{
+			"id": "cammy.236P~K",
+			"names": {
+				"en": "Cannon Strike",
+				"ja": "キャノンストライク"
+			},
+			"category": "special",
+			"input": "236P~K",
+			"input_modern": "2SP~A",
+			"damage": 600,
+			"damage_initial": 20,
+			"drive_hit": 2500,
+			"drive_block": -2000,
+			"drive_punish": -4000,
+			"superarts": 800
+		},
+		{
+			"id": "cammy.236[P]~K",
+			"names": {
+				"en": "Cannon Strike (Charged)",
+				"ja": "キャノンストライク（ホールド）"
+			},
+			"category": "special",
+			"input": "236[P]~K",
+			"input_modern": "2[SP]~A",
+			"damage": 800,
+			"damage_immediate": 10,
+			"damage_initial": 20,
+			"drive_hit": 2500,
+			"drive_block": -2000,
+			"drive_punish": -4000,
+			"superarts": 800
+		},
+		{
+			"id": "cammy.236PP~K",
+			"names": {
+				"en": "OD Cannon Strike",
+				"ja": "OD キャノンストライク"
+			},
+			"category": "special",
+			"input": "236PP~K",
+			"input_modern": "Auto+2SP~A",
+			"damage": 800,
+			"damage_immediate": 10,
+			"damage_initial": 20,
+			"drive_hit": 0,
+			"drive_block": -2000,
+			"drive_punish": -4000,
+			"superarts": 800
+		},
+		{
+			"id": "cammy.236P~2K",
+			"names": {
+				"en": "Reverse Edge",
+				"ja": "リバースエッジ"
+			},
+			"category": "special",
+			"input": "236P~2K",
+			"input_modern": "2SP~2A",
+			"damage": 800,
+			"damage_initial": 20,
+			"drive_hit": 2500,
+			"drive_block": -4000,
+			"drive_punish": -7000,
+			"superarts": 800
+		},
+		{
+			"id": "cammy.236[P]~2K",
+			"names": {
+				"en": "Reverse Edge (Charged)",
+				"ja": "リバースエッジ（ホールド）"
+			},
+			"category": "special",
+			"input": "236[P]~K",
+			"input_modern": "2[SP]~2A",
+			"damage": [
+				600,
+				600
+			],
+			"damage_initial": 20,
+			"drive_hit": 4000,
+			"drive_block": -6000,
+			"drive_punish": -5000,
+			"superarts": 800
+		},
+		{
+			"id": "cammy.236PP~2K",
+			"names": {
+				"en": "OD Reverse Edge",
+				"ja": "OD リバースエッジ"
+			},
+			"category": "special",
+			"input": "236PP~2K",
+			"input_modern": "Auto+2SP~2A",
+			"damage": [
+				600,
+				600
+			],
+			"damage_initial": 20,
+			"drive_hit": 0,
+			"drive_block": -8000,
+			"drive_punish": -7000,
+			"superarts": 800
+		},
+		{
+			"id": "cammy.236P~LL",
+			"names": {
+				"en": "Fatal Leg Twister",
+				"ja": "フェイタルレッグツイスター"
+			},
+			"category": "special",
+			"input": "236P~LL",
+			"input_modern": "2SP~6SP",
+			"damage": 1800,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1.15,
+			"drive_hit": 3000,
+			"drive_block": 0,
+			"drive_punish": -10000,
+			"superarts": 3000
+		},
+		{
+			"id": "cammy.236[P]~LL",
+			"names": {
+				"en": "Fatal Leg Twister (Charged)",
+				"ja": "フェイタルレッグツイスター（ホールド）"
+			},
+			"category": "special",
+			"input": "236[P]~LL",
+			"input_modern": "2[SP]~6SP",
+			"damage": 1000,
+			"damage_initial": 20,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1.15,
+			"drive_hit": 3000,
+			"drive_block": 0,
+			"drive_punish": -10000,
+			"superarts": 1000
+		},
+		{
+			"id": "cammy.236PP~LL",
+			"names": {
+				"en": "OD Fatal Leg Twister",
+				"ja": "OD フェイタルレッグツイスター"
+			},
+			"category": "special",
+			"input": "236PP~LL",
+			"input_modern": "Auto+2SP~6SP",
+			"damage": 1000,
+			"damage_initial": 30,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1.15,
+			"drive_hit": 0,
+			"drive_block": 0,
+			"drive_punish": -10000,
+			"superarts": 1000
+		},
+		{
+			"id": "cammy.236P~P",
+			"names": {
+				"en": "Silent Step",
+				"ja": "サイレントステップ"
+			},
+			"category": "special",
+			"input": "236P~P",
+			"input_modern": "2SP~4SP",
+			"damage": 0,
+			"drive_hit": 0,
+			"drive_block": 0,
+			"drive_punish": 0,
+			"superarts": 0
+		},
+		{
+			"id": "cammy.236[P]~P",
+			"names": {
+				"en": "Silent Step (Charged)",
+				"ja": "サイレントステップ（ホールド）"
+			},
+			"category": "special",
+			"input": "236[P]~P",
+			"input_modern": "2[SP]~4SP",
+			"damage": 0,
+			"drive_hit": 0,
+			"drive_block": 0,
+			"drive_punish": 0,
+			"superarts": 0
+		},
+		{
+			"id": "cammy.236PP~P",
+			"names": {
+				"en": "OD Silent Step",
+				"ja": "OD サイレントステップ"
+			},
+			"category": "special",
+			"input": "236PP~P",
+			"input_modern": "Auto+2SP~4SP",
+			"damage": 0,
+			"drive_hit": 0,
+			"drive_block": 0,
+			"drive_punish": 0,
+			"superarts": 0
+		},
+
+		{
+			"id": "cammy.236236K",
+			"names": {
+				"en": "SA1 Spin Drive Smasher",
+				"ja": "SA1 スピンドライブスマッシャー"
+			},
+			"category": "superarts",
+			"input": "236236K",
+			"input_modern": "5SPH",
+			"input_modern_alt": "236236L",
+			"damage": [
+				100,
+				200,
+				200,
+				200,
+				100,
+				1000
+			],
+			"damage_scale_min": 0.3,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1,
+			"drive_hit": 0,
+			"drive_block": -2500,
+			"drive_punish": -5000,
+			"superarts": 0
+		},
+		{
+			"id": "cammy.214214P",
+			"names": {
+				"en": "SA2 Killer Bee Spin",
+				"ja": "SA2 キラービースピン"
+			},
+			"category": "superarts",
+			"input": "214214P",
+			"input_modern": "4SPH",
+			"input_modern_alt": "214214M",
+			"damage": [
+				250,
+				2700,
+				50
+			],
+			"damage_scale_min": 0.4,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1,
+			"drive_hit": 0,
+			"drive_block": -5000,
+			"drive_punish": -10000,
+			"superarts": 0
+		},
+		{
+			"id": "cammy.j214214P",
+			"names": {
+				"en": "SA2 Aerial Killer Bee Spin",
+				"ja": "SA2 エアキラービースピン"
+			},
+			"category": "superarts",
+			"input": "j214214P",
+			"input_modern": "j4SPH",
+			"input_modern_alt": "j214214M",
+			"damage": [
+				250,
+				2700,
+				50
+			],
+			"damage_scale_min": 0.4,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1,
+			"drive_hit": 0,
+			"drive_block": -5000,
+			"drive_punish": -10000,
+			"superarts": 0
+		},
+		{
+			"id": "cammy.236236P",
+			"names": {
+				"en": "SA3 Delta Red Assault",
+				"ja": "SA3 デルタレッドアサルト"
+			},
+			"category": "superarts",
+			"input": "236236P",
+			"input_modern": "4SPH",
+			"input_modern_alt": "236236H",
+			"damage": [
+				500,
+				500,
+				500,
+				500,
+				2000
+			],
+			"damage_immediate": 10,
+			"damage_scale_min": 0.5,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1,
+			"drive_hit": 0,
+			"drive_block": -7500,
+			"drive_punish": -15000,
+			"superarts": 0,
+			"overrides": {
+				"CA": {
+					"damage[4]": 2500,
+					"drive_block": -10000,
+					"drive_punish": -20000
+				}
+			}
+		},
+
+		{
+			"id": "cammy.LL",
+			"names": {
+				"en": "Rough Landing",
+				"ja": "ラフランディング"
+			},
+			"category": "throws",
+			"input": "LL",
+			"input_modern": "LM",
+			"damage": 1200,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1.7,
+			"damage_immediate": 20,
+			"drive_hit": 2000,
+			"drive_block": 0,
+			"drive_punish": -10000,
+			"superarts": 2000,
+			"superarts_punish": 4000
+		},
+		{
+			"id": "cammy.4LL",
+			"names": {
+				"en": "Delta Throw",
+				"ja": "デルタスルー"
+			},
+			"category": "throws",
+			"input": "4LL",
+			"input_modern": "4LM",
+			"damage": 1200,
+			"damage_scale_counter": 1,
+			"damage_scale_punish": 1.7,
+			"damage_immediate": 20,
+			"drive_hit": 2000,
+			"drive_block": 0,
+			"drive_punish": -10000,
+			"superarts": 2000,
+			"superarts_punish": 4000
+		},
+		{
+			"id": "cammy.jLL",
+			"names": {
+				"en": "Leg Scissors Choke",
+				"ja": "レッグシザースチョーク"
+			},
+			"category": "throws",
+			"input": "jLL",
+			"input_modern": "jLM",
+			"damage": 1200,
+			"drive_hit": 2000,
+			"drive_block": 0,
+			"drive_punish": -10000,
+			"superarts": 2000,
+			"superarts_punish": 4000
+		},
+
+		{
+			"id": "cammy.HH",
+			"names": {
+				"en": "Spin Raider",
+				"ja": "スピンレイダー"
+			},
+			"category": "common",
+			"input": "HH",
+			"input_modern": "DI",
+			"damage": 800,
+			"damage_immediate": 20,
+			"drive_hit": 0,
+			"drive_block": -5000,
+			"drive_punish": -15000,
+			"superarts": 0
+		},
+		{
+			"id": "cammy.656MM",
+			"category": "common",
+			"input": "656MM",
+			"input_modern": "656DP",
+			"damage": 0,
+			"drive_hit": 0,
+			"drive_block": 0,
+			"drive_punish": 0,
+			"superarts": 0
+		},
+		{
+			"id": "cammy.656",
+			"category": "common",
+			"input": "656",
+			"input_modern": "656",
+			"damage": 0,
+			"drive_hit": 0,
+			"drive_block": 0,
+			"drive_punish": 0,
+			"superarts": 0
+		}
+	]
+}

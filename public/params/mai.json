@@ -307,7 +307,7 @@
 			"superarts": 300
 		},
 		{
-			"id": "mai.4HP",
+			"id": "mai.4HK",
 			"names": {
 				"en": "Hoshi Kujaku (1)",
 				"ja": "星孔雀（1段目）"
@@ -993,64 +993,64 @@
 			"superarts": 1000
 		},
 		{
-			"id": "mai.214P.air",
+			"id": "mai.j214P",
 			"names": {
 				"en": "Musasabi no Mai",
 				"ja": "ムササビの舞"
 			},
 			"category": "special",
-			"input": "214P",
+			"input": "j214P",
 			"input_modern": "jSP",
 			"damage": 1000,
 			"drive_hit": 2000,
-			"drive_blocP": -4000,
+			"drive_block": -4000,
 			"drive_punish": -5000,
 			"superarts": 1000
 		},
 		{
-			"id": "mai.214P.air.boosted",
+			"id": "mai.j214P.boosted",
 			"names": {
 				"en": "[Boosted] Musasabi no Mai",
 				"ja": "[強化版] ムササビの舞"
 			},
 			"category": "special",
-			"input": "214P",
+			"input": "j214P",
 			"input_modern": "jSP",
 			"damage": 1100,
 			"drive_hit": 2000,
-			"drive_blocP": -4000,
+			"drive_block": -4000,
 			"drive_punish": -5000,
 			"superarts": 1000
 		},
 		{
-			"id": "mai.214PP.air",
+			"id": "mai.j214PP",
 			"names": {
 				"en": "OD Musasabi no Mai",
 				"ja": "OD ムササビの舞"
 			},
 			"category": "special",
-			"input": "214PP",
+			"input": "j214PP",
 			"input_modern": "Auto+jSP",
 			"damage": 1200,
 			"damage_initial": 30,
 			"drive_hit": 0,
-			"drive_blocP": -4000,
+			"drive_block": -4000,
 			"drive_punish": -5000,
 			"superarts": 1000
 		},
 		{
-			"id": "mai.214PP.air.boosted",
+			"id": "mai.j214PP.boosted",
 			"names": {
 				"en": "[Boosted] OD Musasabi no Mai",
 				"ja": "[強化版] OD ムササビの舞"
 			},
 			"category": "special",
-			"input": "214PP",
+			"input": "j214PP",
 			"input_modern": "Auto+jSP",
 			"damage": 1300,
 			"damage_initial": 30,
 			"drive_hit": 0,
-			"drive_blocP": -4000,
+			"drive_block": -4000,
 			"drive_punish": -5000,
 			"superarts": 1000
 		},
@@ -1064,7 +1064,7 @@
 			"category": "superarts",
 			"input": "236236P",
 			"input_modern": "5SPH",
-			"input_modern_alt": "236236P",
+			"input_modern_alt": "236236L",
 			"damage": [
 				250,
 				250,
@@ -1092,7 +1092,7 @@
 			"category": "superarts",
 			"input": "236236P",
 			"input_modern": "5SPH",
-			"input_modern_alt": "236236P",
+			"input_modern_alt": "236236L",
 			"damage": [
 				150,
 				150,
@@ -1124,7 +1124,7 @@
 			"category": "superarts",
 			"input": "236236K",
 			"input_modern": "4SPH",
-			"input_modern_alt": "236236K",
+			"input_modern_alt": "236236M",
 			"damage": [
 				500,
 				500,
@@ -1151,7 +1151,7 @@
 			"category": "superarts",
 			"input": "236236K",
 			"input_modern": "4SPH",
-			"input_modern_alt": "236236K",
+			"input_modern_alt": "236236M",
 			"damage": [
 				200,
 				200,
@@ -1177,15 +1177,15 @@
 			"superarts": 0
 		},
 		{
-			"id": "mai.236236K.air",
+			"id": "mai.j236236K",
 			"names": {
 				"en": "SA2 Air Chou Hissatsu Shinobi Bachi",
 				"ja": "SA2 空中超必殺忍蜂"
 			},
 			"category": "superarts",
-			"input": "236236K",
-			"input_modern": "4SPH",
-			"input_modern_alt": "236236K",
+			"input": "j236236K",
+			"input_modern": "j4SPH",
+			"input_modern_alt": "j236236M",
 			"damage": [
 				500,
 				500,
@@ -1203,15 +1203,15 @@
 			"superarts": 0
 		},
 		{
-			"id": "mai.236236K.air.boosted",
+			"id": "mai.j236236K.boosted",
 			"names": {
 				"en": "[Boosted] SA2 Air Chou Hissatsu Shinobi Bachi",
 				"ja": "[強化版] SA2 空中超必殺忍蜂"
 			},
 			"category": "superarts",
-			"input": "236236K",
-			"input_modern": "4SPH",
-			"input_modern_alt": "236236K",
+			"input": "j236236K",
+			"input_modern": "j4SPH",
+			"input_modern_alt": "j236236M",
 			"damage": [
 				200,
 				200,
@@ -1244,7 +1244,7 @@
 			"category": "superarts",
 			"input": "214214P",
 			"input_modern": "4SPH",
-			"input_modern_alt": "214214P",
+			"input_modern_alt": "214214H",
 			"damage": [
 				500,
 				500,
@@ -1342,7 +1342,7 @@
 			"input_modern": "DI",
 			"damage": 800,
 			"damage_immediate": 20,
-			"drive_hit": 800,
+			"drive_hit": 0,
 			"drive_block": -5000,
 			"drive_punish": -15000,
 			"superarts": 0

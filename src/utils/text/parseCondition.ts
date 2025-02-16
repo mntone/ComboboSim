@@ -32,6 +32,18 @@ function parseCondition(cond: string, options: CONDITION_PARSER_OPTIONS): string
 			tokens.push(cond[i] + '==')
 			mode = MODE_DECIMAL
 			++i
+		} else if (mode !== MODE_VARIABLE_FIRST && (code === 60 /* < */ || code === 62 /* > */)) {
+			if (buffer !== '') tokens.push(buffer)
+			buffer = ''
+
+			if (cond[i + 1] === '=') {
+				tokens.push(cond[i] + '=')
+				mode = MODE_DECIMAL
+				++i
+			} else {
+				tokens.push(cond[i])
+				mode = MODE_DECIMAL
+			}
 		} else if (mode !== MODE_VARIABLE_FIRST && (code === 38 /* & */ || code === 124 /* | */)) {
 			if (buffer !== '') tokens.push(buffer)
 			buffer = ''

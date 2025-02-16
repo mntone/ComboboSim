@@ -1,6 +1,13 @@
 {
 	"characters": [
 		{
+			"id": "cammy",
+			"names": {
+				"en": "Cammy",
+				"ja": "キャミィ"
+			}
+		},
+		{
 			"id": "mai",
 			"names": {
 				"en": "Mai",

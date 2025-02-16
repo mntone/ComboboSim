@@ -13,6 +13,10 @@ test('should handle simple variable name', () => {
 test('should handle variable with operator and number', () => {
 	expect(parseCondition('POINT==5', options)).toEqual(['POINT', '===', '5'])
 	expect(parseCondition('POINT == 5', options)).toEqual(['POINT', '===', '5'])
+	expect(parseCondition('FRAME<5', options)).toEqual(['FRAME', '<', '5'])
+	expect(parseCondition('FRAME<=5', options)).toEqual(['FRAME', '<=', '5'])
+	expect(parseCondition('FRAME>5', options)).toEqual(['FRAME', '>', '5'])
+	expect(parseCondition('FRAME>=5', options)).toEqual(['FRAME', '>=', '5'])
 })
 
 test('should handle complex condition with multiple operators', () => {
