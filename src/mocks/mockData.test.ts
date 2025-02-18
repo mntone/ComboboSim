@@ -1,6 +1,22 @@
 import type { MoveJson } from '@/features/parameterLoader/types'
 
-export const MOCK_MOVE1: MoveJson = {
+export const MOCK_5LP: MoveJson = {
+	id: 'jim.5LP',
+	names: {
+		ja: 'ピヨ',
+	},
+	category: 'normal',
+	input: '5LP',
+	inputModern: '5L',
+	damage: 300,
+	damageInitial: 20,
+	driveHit: 250,
+	driveBlock: -500,
+	drivePunish: -2000,
+	superarts: 300,
+}
+
+export const MOCK_5MP: MoveJson = {
 	id: 'jim.5MP',
 	names: {
 		ja: 'ワオ',
@@ -15,7 +31,7 @@ export const MOCK_MOVE1: MoveJson = {
 	superarts: 500,
 }
 
-export const MOCK_MOVE2: MoveJson = {
+export const MOCK_2MP: MoveJson = {
 	id: 'jim.2MP',
 	names: {
 		ja: 'クオ',
@@ -28,6 +44,22 @@ export const MOCK_MOVE2: MoveJson = {
 	driveBlock: -3000,
 	drivePunish: -4000,
 	superarts: 500,
+}
+
+export const MOCK_236HK: MoveJson = {
+	id: 'jim.236HK',
+	names: {
+		en: 'H Wind',
+		ja: '強 ウィンド',
+	},
+	category: 'special',
+	input: '236HK',
+	inputModern: '236H',
+	damage: [400, 400],
+	driveHit: 2000,
+	driveBlock: -4000,
+	drivePunish: -4000,
+	superarts: 1350,
 }
 
 export const MOCK_MOVE_SPECIAL: MoveJson = {

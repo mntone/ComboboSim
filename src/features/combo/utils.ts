@@ -8,35 +8,37 @@ function calcImmediate(state: ProrationState, values: MoveValues, isFirst: boole
 		return 0
 	} else if (values.damageImmediateCancel && state.special) {
 		return values.damageImmediateCancel
-	} else if (values.damageImmediate) {
-		return values.damageImmediate
 	} else {
-		return 0
+		return values.damageImmediate ?? 0
 	}
 }
 
 function patchProration(state: ProrationState, move: Move, values: MoveValues, isFirst: boolean): void {
 	if (move.input === '656' || move.input === '656MM') {
-		if (!state.rush) {
-			state.rush = true
-			state.p2 *= 0.85
+		if (state.rush !== 'active') {
+			if (isFirst) {
+				state.rush = 'active_first'
+			} else {
+				state.rush = 'active'
+				state.p2 *= 0.85
+			}
 		}
 	} else {
+		--state.count
 		state.special = move.category === 'special'
 
 		if (isFirst && values.damageInitial) {
+			state.count = 0
 			state.p1 -= values.damageInitial
-		} else if (values.damageAdditional) {
-			state.p1 -= values.damageAdditional
 		} else {
-			state.p1 -= 10
+			state.p1 -= values.damageAdditional ?? 10
 		}
 	}
 }
 
 function calcScale(state: ProrationState, move: Move, values: MoveValues, isFirst: boolean = false): number {
 	const immediate = calcImmediate(state, values, isFirst)
-	const baseScale = 0.01 * Math.floor(((state.p1 > 80 ? 100 : Math.max(10, state.p1)) - immediate) * state.p2)
+	const baseScale = 0.01 * Math.floor(((state.count <= 0 ? Math.max(10, state.p1) : 100) - immediate) * state.p2)
 	const scale = Math.max(values.damageScaleMin ?? 0, baseScale)
 	patchProration(state, move, values, isFirst)
 	return scale
@@ -85,7 +87,7 @@ function createComboItem(move: Move, prevItem?: ComboItem): ComboItem {
 		damage,
 		comboDamage: prevItem.comboDamage + damage,
 		scale,
-		drive: proration.rush ? prevItem.drive : prevItem.drive + values.driveHit,
+		drive: proration.rush === 'active' ? prevItem.drive : prevItem.drive + values.driveHit,
 		superarts: prevItem.superarts + values.superarts,
 
 		index,

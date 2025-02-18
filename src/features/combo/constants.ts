@@ -1,4 +1,4 @@
-import type { ComboState, ProrationState } from './types'
+import { type ComboState, type ProrationState } from './types'
 
 const COMBO_NAME = 'combo'
 
@@ -8,8 +8,9 @@ const COMBO_INITIAL_STATE: ComboState = {
 }
 
 const INITIAL_PRORATION: ProrationState = {
+	count: 2,
 	special: false,
-	rush: false,
+	rush: 'inactive',
 	p1: 100,
 	p2: 1,
 } as const

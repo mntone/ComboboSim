@@ -1,13 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit'
 
-import { MOCK_MOVE1 } from '@/mocks/mockData.test'
+import { MOCK_5MP } from '@/mocks/mockData.test'
 
 import { DEFAULT_CONTEXT_PARAMS } from '../parameterLoader/constants'
 import { mapMove } from '../parameterLoader/mappers'
 
 import slicer, { pushCombo, dropComboRight } from './slice'
 
-const mock = mapMove(DEFAULT_CONTEXT_PARAMS, MOCK_MOVE1)
+const mock = mapMove(DEFAULT_CONTEXT_PARAMS, MOCK_5MP)
 
 const getMockStore = () =>
 	configureStore({
