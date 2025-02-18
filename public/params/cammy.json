@@ -1083,28 +1083,6 @@
 			"drive_block": -5000,
 			"drive_punish": -15000,
 			"superarts": 0
-		},
-		{
-			"id": "cammy.656MM",
-			"category": "common",
-			"input": "656MM",
-			"input_modern": "656DP",
-			"damage": 0,
-			"drive_hit": 0,
-			"drive_block": 0,
-			"drive_punish": 0,
-			"superarts": 0
-		},
-		{
-			"id": "cammy.656",
-			"category": "common",
-			"input": "656",
-			"input_modern": "656",
-			"damage": 0,
-			"drive_hit": 0,
-			"drive_block": 0,
-			"drive_punish": 0,
-			"superarts": 0
 		}
 	]
 }

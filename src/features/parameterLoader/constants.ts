@@ -1,3 +1,5 @@
+import type { Move } from '@/common/types'
+
 import type { CONDITION_PARSER_OPTIONS } from '@/utils/text/types'
 import { isUpperAndUnderscore } from '@/utils/text/utils'
 
@@ -24,6 +26,35 @@ const CONTEXT_PARAMS: { [key: string]: Partial<ParameterContext>[] } = {
 	],
 }
 
+const COMMON_MOVES: Move[] = [
+	{
+		id: 'common.656MM',
+		category: 'common',
+		input: '656MM',
+		inputModern: '656DP',
+		values: {
+			damage: 0,
+			driveHit: 0,
+			driveBlock: 0,
+			drivePunish: 0,
+			superarts: 0,
+		},
+	},
+	{
+		id: 'common.656',
+		category: 'common',
+		input: '656',
+		inputModern: '656',
+		values: {
+			damage: 0,
+			driveHit: 0,
+			driveBlock: 0,
+			drivePunish: 0,
+			superarts: 0,
+		},
+	},
+]
+
 export {
 	PARAMETERLOADER_NAME,
 
@@ -31,4 +62,6 @@ export {
 
 	DEFAULT_CONTEXT_PARAMS,
 	CONTEXT_PARAMS,
+
+	COMMON_MOVES,
 }

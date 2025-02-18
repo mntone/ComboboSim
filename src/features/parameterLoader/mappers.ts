@@ -1,6 +1,6 @@
 import type { Character, Move, MoveValues } from '@/common/types'
 
-import { CONTEXT_PARAMS, DEFAULT_CONTEXT_PARAMS } from './constants'
+import { COMMON_MOVES, CONTEXT_PARAMS, DEFAULT_CONTEXT_PARAMS } from './constants'
 import type { CharacterExtension, CharacterJson, MoveJson, ParameterContext } from './types'
 import compileOverrides from './utils/compileOverrides'
 import copyObjectPickedByNames from './utils/copyObjectPickedByNames'
@@ -77,11 +77,14 @@ function mapCharacter(json: CharacterJson): Character {
 	const contexts = json.use ? getContexts(json.use) : DEFAULT_CONTEXT_PARAMS
 	const bindMapMove = mapMove.bind(null, contexts)
 
+	const moves = json.moves.map(bindMapMove)
+	moves.push(...COMMON_MOVES)
+
 	const character: Character = {
 		id: json.id,
 		names: json.names,
 		vitality: json.vitality,
-		moves: json.moves.map(bindMapMove),
+		moves,
 	}
 	return character as Character
 }

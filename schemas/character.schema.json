@@ -1,0 +1,291 @@
+{
+	"title": "Character Parameter Definitions",
+	"type": "object",
+	"properties": {
+		"id": {
+			"title": "Character ID",
+			"type": "string",
+			"minLength": 1,
+			"pattern": "^[a-z]+$"
+		},
+		"names": {
+			"title": "Character Names in Each Language",
+			"type": "object",
+			"properties": {
+				"en": {
+					"title": "English Character Name",
+					"type": "string",
+					"minLength": 1
+				},
+				"ja": {
+					"title": "Japanese Character Name",
+					"type": "string",
+					"minLength": 1
+				}
+			},
+			"required": [
+				"en",
+				"ja"
+			]
+		},
+		"use": {
+			"title": "Character Extensions",
+			"type": "array",
+			"minLength": 1,
+			"items": {
+				"title": "Extension",
+				"type": "string",
+				"enum": [
+					"manon_medal"
+				]
+			}
+		},
+		"vitality": {
+			"title": "Character's Vitality",
+			"type": "number",
+			"minimum": 5000,
+			"maximum": 15000
+		},
+		"moves": {
+			"title": "Array of Character's Move",
+			"type": "array",
+			"minItems": 10,
+			"items": {
+				"title": "Character's Move",
+				"type": "object",
+				"properties": {
+					"id": {
+						"title": "Character ID",
+						"type": "string",
+						"minLength": 1,
+						"pattern": "^[a-zA-Z][\\w~.\\[\\]]*\\w?$"
+					},
+					"names": {
+						"title": "Move Names in Each Language",
+						"type": "object",
+						"properties": {
+							"en": {
+								"title": "English Move Name",
+								"type": "string",
+								"minLength": 1
+							},
+							"ja": {
+								"title": "Japanese Move Name",
+								"type": "string",
+								"minLength": 1
+							}
+						},
+						"required": [
+							"ja"
+						]
+					},
+					"category": {
+						"title": "Move Category",
+						"type": "string",
+						"enum": [
+							"normal",
+							"unique",
+							"special",
+							"superarts",
+							"throws",
+							"common"
+						]
+					},
+					"input": {
+						"title": "Input",
+						"type": "string",
+						"minLength": 2,
+						"pattern": "^(?:[\\dj]|j?\\d{1,6})?(?:[LMH]?[PK]|PP|KK|LL|MM|HH|\\[(?:[LMH]?[PK]|PP|KK|LL|MM|HH)\\])(?:~\\d?(?:[LMH]?[PK]|LL|MM|HH|PP|KK)(?:~[LMH][PK])?)?$"
+					},
+					"input_modern": {
+						"$ref": "#/$defs/input_modern"
+					},
+					"input_modern_alt": {
+						"$ref": "#/$defs/input_modern"
+					},
+					"damage": {
+						"$ref": "#/$defs/damages"
+					},
+					"damage_additional": {
+						"title": "Additional Adjustment for Damage",
+						"type": "number",
+						"minimum": 0,
+						"maximum": 100
+					},
+					"damage_immediate": {
+						"title": "Immediate Adjustment for Damage",
+						"type": "number",
+						"minimum": 0,
+						"maximum": 100
+					},
+					"damage_immediate_cancel": {
+						"title": "Immediate Adjustment for Damage when Cancel",
+						"type": "number",
+						"minimum": 0,
+						"maximum": 100
+					},
+					"damage_initial": {
+						"title": "Initial Adjustment for Damage",
+						"type": "number",
+						"minimum": 0,
+						"maximum": 100
+					},
+					"damage_immediate_second": {
+						"title": "Initial Adjustment (2HIT) for Damage",
+						"type": "number",
+						"minimum": 0,
+						"maximum": 100
+					},
+					"damage_scale_min": {
+						"title": "Minimum Damage Multiplier",
+						"type": "number",
+						"minimum": 0,
+						"maximum": 10
+					},
+					"damage_scale_counter": {
+						"title": "Counter Damage Multiplier",
+						"type": "number",
+						"minimum": 0,
+						"maximum": 10
+					},
+					"damage_scale_punish": {
+						"title": "Punish Counter Damage Multiplier",
+						"type": "number",
+						"minimum": 0,
+						"maximum": 10
+					},
+					"drive_hit": {
+						"$ref": "#/$defs/drive_hit"
+					},
+					"drive_block": {
+						"$ref": "#/$defs/drive_block"
+					},
+					"drive_punish": {
+						"$ref": "#/$defs/drive_punish"
+					},
+					"superarts": {
+						"$ref": "#/$defs/superarts"
+					},
+					"superarts_punish": {
+						"$ref": "#/$defs/superarts_punish"
+					},
+					"overrides": {
+						"title": "Override Parameters",
+						"type": "object",
+						"minItems": 1,
+						"patternProperties": {
+							"^(?:CA&&)?[A-Z_]+\\s*(?:(?:==|!=|<|<=|>|>=)\\s*\\d+)?$": {
+								"title": "Override Parameters",
+								"type": "object",
+								"minItems": 1,
+								"properties": {
+									"damage": {
+										"$ref": "#/$defs/damages"
+									},
+									"drive_hit": {
+										"$ref": "#/$defs/drive_hit"
+									},
+									"drive_block": {
+										"$ref": "#/$defs/drive_block"
+									},
+									"drive_punish": {
+										"$ref": "#/$defs/drive_punish"
+									},
+									"superarts": {
+										"$ref": "#/$defs/superarts"
+									},
+									"superarts_punish": {
+										"$ref": "#/$defs/superarts_punish"
+									}
+								},
+								"patternProperties": {
+									"^damage\\[\\d+\\]$": {
+										"$ref": "#/$defs/damage"
+									}
+								},
+								"additionalProperties": false
+							}
+						},
+						"additionalProperties": false
+					}
+				},
+				"additionalProperties": false,
+				"required": [
+					"id",
+					"names",
+					"damage",
+					"drive_hit",
+					"drive_block",
+					"drive_punish",
+					"superarts"
+				]
+			}
+		}
+	},
+	"additionalProperties": false,
+	"required": [
+		"id",
+		"names",
+		"vitality",
+		"moves"
+	],
+	"$defs": {
+		"input_modern": {
+			"title": "Input",
+			"type": "string",
+			"minLength": 2,
+			"pattern": "^(?:Auto\\+)?(?:(?:[\\dj]|j?\\d{1,6})?(?:L|M|H|A|AA|LM|DP|DI|\\[(?:L|M|H|A|AA)\\])(?:~(?:Auto\\+)?\\d?(?:L|M|H|A|\\[[LMH]\\])(?:~[LMH])?)?|[\\dj]*(?:SP|\\[SP\\]|SPH)(?:~\\d?(?:A|SP))?)$"
+		},
+		"damage": {
+			"title": "Damage",
+			"type": "number",
+			"minimum": 0,
+			"maximum": 5000
+		},
+		"damages": {
+			"oneOf": [
+				{
+					"$ref": "#/$defs/damage"
+				},
+				{
+					"title": "Array of Damage",
+					"type": "array",
+					"minItems": 1,
+					"items": {
+						"$ref": "#/$defs/damage"
+					}
+				}
+			]
+		},
+		"drive_hit": {
+			"title": "Drive Guage Increase on Hit",
+			"type": "number",
+			"minimum": 0,
+			"maximum": 10000
+		},
+		"drive_block": {
+			"title": "Drive Guage Depletion on Block",
+			"type": "number",
+			"minimum": -10000,
+			"maximum": 0
+		},
+		"drive_punish": {
+			"title": "Drive Guage Depletion on Punish Counter Hit",
+			"type": "number",
+			"minimum": -20000,
+			"maximum": 0
+		},
+		"superarts": {
+			"title": "Super Arts Guage Increase",
+			"type": "number",
+			"minimum": 0,
+			"maximum": 10000
+		},
+		"superarts_punish": {
+			"title": "Super Arts Guage Increase on Punish Counter",
+			"type": "number",
+			"minimum": 0,
+			"maximum": 10000
+		}
+	}
+}
