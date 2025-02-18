@@ -6,7 +6,7 @@ import type { CSPopoverProps } from './types'
 
 function CSPopover({
 	children,
-	offset = -12,
+	offset = -14,
 	state,
 	...props
 }: CSPopoverProps) {

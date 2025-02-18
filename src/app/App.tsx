@@ -8,7 +8,7 @@ import MoveListBox from '@/features/combo/components/MoveListBox'
 import ResultView from '@/features/combo/components/ResultView'
 import { setCharacterId } from '@/features/combo/slice'
 import { fetchResource } from '@/features/resourceLoader/slice'
-import { compactSpace } from '@/styles/index.css'
+import { spaces } from '@/styles/index.css'
 
 import { useAppDispatch } from './hooks'
 
@@ -30,7 +30,7 @@ function App() {
 	}, [dispatch])
 
 	useEffect(function() {
-		document.body.classList.add(compactSpace)
+		document.body.classList.add(spaces.compact)
 
 		dynamicActivate('ja')
 		dispatch(fetchResource('abbr_ja'))

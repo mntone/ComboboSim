@@ -11,13 +11,13 @@ export const menu = style({
 
 	flexDirection: 'column',
 	justifyContent: 'space-between',
-	minWidth: 100,
+	minWidth: 123,
 	padding: 5,
 
 	color: vars.textPrimary.default,
-	fontSize: space.listFontSize,
-	fontWeight: 600,
-	lineHeight: space.listLineHeight,
+	fontSize: space.controlFontSize,
+	lineHeight: space.controlLineHeight,
+	outline: 'none',
 
 	vars: {
 		[menuPaddingStart]: '7px',
@@ -36,7 +36,7 @@ export const menuSectionHeader = style({
 	display: 'flex',
 
 	alignItems: 'center',
-	minHeight: `calc(5px + ${space.listMinHeight})`,
+	minHeight: `calc(5px + ${space.controlMinHeight})`,
 	paddingBlock: `8px 3px`,
 	paddingInline: `${menuPaddingStart} 12px`,
 
@@ -44,7 +44,7 @@ export const menuSectionHeader = style({
 
 	selectors: {
 		[`${menu} > div:first-child > &`]: {
-			minHeight: space.listMinHeight,
+			minHeight: space.controlMinHeight,
 			paddingBlockStart: 3,
 		},
 	},
@@ -58,7 +58,7 @@ export const menuItem = style({
 
 	'alignItems': 'center',
 	'gap': 2,
-	'minHeight': space.listMinHeight,
+	'minHeight': space.controlMinHeight,
 	'paddingBlock': 3,
 	'paddingInline': `${menuPaddingStart} 12px`,
 

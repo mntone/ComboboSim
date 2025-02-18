@@ -1,4 +1,3 @@
-import { Button } from '@heroui/button'
 import type { SharedSelection } from '@heroui/system'
 import { Table, TableBody, TableCell, TableColumn, TableHeader, TableRow } from '@heroui/table'
 import { i18n } from '@lingui/core'
@@ -11,6 +10,7 @@ import type { ReadonlyDeep } from 'type-fest'
 
 import { getPreferredMoveName } from '@/common/getPreferredMoveName'
 
+import { CSButton } from '../CSButton'
 import { CSMenuButton } from '../CSPopover'
 
 import {
@@ -54,14 +54,14 @@ function ComboTableView({
 			return i18n.number(0.0001 * item[key], guageFormat)
 		case 'actions':
 			return (
-				<Button
+				<CSButton
+					isDestructive
 					isIconOnly
-					size='sm'
 					variant='light'
 					onPress={() => onDelete?.call(null, item)}
 				>
 					<TbX size={16} />
-				</Button>
+				</CSButton>
 			)
 		default:
 			return ''

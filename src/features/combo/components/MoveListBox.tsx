@@ -1,4 +1,3 @@
-import { Button, ButtonGroup } from '@heroui/button'
 import type { SharedSelection } from '@heroui/system'
 import { msg } from '@lingui/core/macro'
 import { useLingui } from '@lingui/react/macro'
@@ -9,6 +8,7 @@ import { TbPlus } from 'react-icons/tb'
 import { getPreferredMoveName } from '@/common/getPreferredMoveName'
 
 import { useAppDispatch, useAppSelector } from '@/app/hooks'
+import { CSButton, CSButtonGroup } from '@/components/CSButton'
 import { CSMenuButton } from '@/components/CSPopover'
 import { pushCombo } from '@/features/combo/slice'
 import { selectIsCharacterLoading, selectNormalizedMoves } from '@/features/parameterLoader/selectors'
@@ -73,14 +73,12 @@ function MoveListBox() {
 	}, [dispatch, selectedMoveKeys, normalizedMoves.movesById, setIsOpen])
 
 	return (
-		<ButtonGroup
-			className='max-w-64'
-			fullWidth
-		>
+		<CSButtonGroup>
 			<CSMenuButton
 				classNames={{
 					base: moveListBox,
 				}}
+				isDisabled={isLoading}
 				isLoading={isLoading}
 				isOpen={isOpen}
 				items={normalizedMoves.movesByCategory}
@@ -108,15 +106,16 @@ function MoveListBox() {
 				}}
 			</CSMenuButton>
 
-			<Button
+			<CSButton
 				aria-label='Add Move'
 				isDisabled={typeof selectedMoveKeys.keys().next().value === 'undefined'}
 				isIconOnly
+				variant='primary'
 				onPress={handleAddMove}
 			>
 				<TbPlus size={16} />
-			</Button>
-		</ButtonGroup>
+			</CSButton>
+		</CSButtonGroup>
 	)
 }
 

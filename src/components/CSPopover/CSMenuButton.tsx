@@ -1,15 +1,19 @@
-import { Button } from '@heroui/button'
 import { useMenuTrigger } from '@react-aria/menu'
 import { useMenuTriggerState } from '@react-stately/menu'
+import type { DOMRefValue } from '@react-types/shared'
 import { useRef } from 'react'
 import { TbChevronDown, TbSelector } from 'react-icons/tb'
 
+import { unwrapDOMRef } from '@/utils/useDOMRef'
+
+import { CSButton } from '../CSButton'
 import { CSMenu } from '../CSMenu'
 
 import { CSPopover } from './CSPopover'
 import type { CSMenuTriggerProps } from './types'
 
 function CSMenuButton<T extends object>({
+	isDisabled,
 	isLoading,
 	label,
 	placement = 'bottom start',
@@ -20,27 +24,29 @@ function CSMenuButton<T extends object>({
 	const state = useMenuTriggerState(props)
 
 	// Get props for the button and menu elements
-	const ref = useRef(null)
-	const { menuTriggerProps, menuProps } = useMenuTrigger<T>({ trigger }, state, ref)
+	const ref = useRef<DOMRefValue<HTMLButtonElement> | null>(null)
+	const domRef = unwrapDOMRef<HTMLButtonElement>(ref)
+	const { menuTriggerProps, menuProps } = useMenuTrigger<T>({ trigger }, state, domRef)
 
 	return (
 		<>
-			<Button
+			<CSButton
 				ref={ref}
-				className='justify-between text-left'
-				endContent={props.selectionMode === 'none'
+				isDisabled={isDisabled}
+				isLoading={isLoading}
+				symbol={props.selectionMode === 'none'
 					? <TbChevronDown className='justify-end' size={16} />
 					: <TbSelector className='justify-end' size={16} />}
-				isLoading={isLoading}
 				{...menuTriggerProps}
 			>
 				{label}
-			</Button>
+			</CSButton>
 			{state.isOpen && (
 				<CSPopover
+					crossOffset={-23}
 					placement={placement}
 					state={state}
-					triggerRef={ref}
+					triggerRef={domRef}
 				>
 					<CSMenu {...props} {...menuProps} />
 				</CSPopover>

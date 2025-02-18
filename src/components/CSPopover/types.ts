@@ -11,6 +11,7 @@ export interface CSPopoverProps extends Omit<AriaPopoverProps, 'containerPadding
 }
 
 export interface CSMenuTriggerProps<T> extends CSMenuProps<T>, MenuTriggerProps {
+	isDisabled?: boolean
 	isLoading?: boolean
 	label: ReactNode
 	placement?: Placement

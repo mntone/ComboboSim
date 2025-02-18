@@ -1,36 +1,36 @@
-import { createVar, globalStyle, style } from '@vanilla-extract/css'
+import { createVar, globalStyle, styleVariants } from '@vanilla-extract/css'
 
-const listFontSize = createVar()
+const controlFontSize = createVar()
 
-const listLineHeight = createVar()
+const controlLineHeight = createVar()
 
-const listMinHeight = createVar()
+const controlMinHeight = createVar()
 
 globalStyle(':root', {
 	vars: {
-		[listFontSize]: '.8125rem',
-		[listLineHeight]: '1rem',
-		[listMinHeight]: '28px',
+		[controlFontSize]: '.8125rem',
+		[controlLineHeight]: '1rem',
+		[controlMinHeight]: '28px',
 	},
 })
 
-const compactSpace = style({
-	vars: {
-		[listMinHeight]: '22px',
+const spaces = styleVariants({
+	compact: {
+		vars: {
+			[controlMinHeight]: '22px',
+		},
 	},
-})
-
-const largeSpace = style({
-	vars: {
-		[listMinHeight]: '32px',
+	large: {
+		vars: {
+			[controlMinHeight]: '32px',
+		},
 	},
 })
 
 export {
-	listFontSize,
-	listLineHeight,
-	listMinHeight,
+	controlFontSize,
+	controlLineHeight,
+	controlMinHeight,
 
-	compactSpace,
-	largeSpace,
+	spaces,
 }
