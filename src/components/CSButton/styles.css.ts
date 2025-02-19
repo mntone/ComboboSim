@@ -35,6 +35,7 @@ const button = recipe({
 		'minHeight': space.controlMinHeight,
 		'minWidth': 100,
 
+		'border': 'none',
 		'borderRadius': 5,
 		'fontSize': space.controlFontSize,
 		'lineHeight': space.controlLineHeight,
@@ -108,6 +109,8 @@ const button = recipe({
 				},
 			},
 			light: {
+				backgroundColor: 'transparent',
+
 				selectors: {
 					'&:hover': {
 						backgroundColor: 'rgb(0 0 0 / 10%)',

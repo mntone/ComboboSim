@@ -1,9 +1,9 @@
-import type { SharedSelection } from '@heroui/system'
-import { Table, TableBody, TableCell, TableColumn, TableHeader, TableRow } from '@heroui/table'
 import { i18n } from '@lingui/core'
 import { msg } from '@lingui/core/macro'
 import { useLingui } from '@lingui/react/macro'
 import { Item } from '@react-stately/collections'
+import { Cell, Column, Row, TableBody, TableHeader } from '@react-stately/table'
+import type { Selection } from '@react-types/shared'
 import { useCallback, useMemo, useState, type JSX } from 'react'
 import { TbX } from 'react-icons/tb'
 import type { ReadonlyDeep } from 'type-fest'
@@ -12,6 +12,7 @@ import { getPreferredMoveName } from '@/common/getPreferredMoveName'
 
 import { CSButton } from '../CSButton'
 import { CSMenuButton } from '../CSPopover'
+import { CSTable } from '../CSTable'
 
 import {
 	COMBOTABLE_COLUMNS,
@@ -40,10 +41,10 @@ function ComboTableView({
 		})
 	}, [selectedColumns])
 
-	const renderCell = useCallback(function(item: ReadonlyDeep<Combo>, key: string): JSX.Element | string {
+	const renderCell = useCallback(function(item: ReadonlyDeep<Combo>, key: string): JSX.Element | string | undefined {
 		switch (key) {
 		case 'name':
-			return <>{getPreferredMoveName(item.move, displayModes, locale, res)}</>
+			return getPreferredMoveName(item.move, displayModes, locale, res)
 		case 'damage':
 		case 'comboDamage':
 			return i18n.number(item[key])
@@ -68,7 +69,7 @@ function ComboTableView({
 		}
 	}, [locale, displayModes, res, onDelete])
 
-	const handleColumnsChange = useCallback(function(keys: SharedSelection) {
+	const handleColumnsChange = useCallback(function(keys: Selection) {
 		if (import.meta.env.DEV && !(keys instanceof Set)) {
 			console.log('Expected Set<string>, but got invalid type.')
 		}
@@ -99,45 +100,38 @@ function ComboTableView({
 	}, [selectedColumns])
 
 	return (
-		<Table
-			classNames={{
-				th: ['bg-transparent', 'text-default-500', 'border-b', 'border-divider'],
-				td: ['py-0.5'],
-			}}
-			removeWrapper
-			topContent={toolbar}
-		>
-			<TableHeader columns={headerColumns}>
-				{function(col) {
-					return (
-						<TableColumn
-							key={col.id}
-							align={col.align ?? 'end'}
-						>
-							{t(col.name)}
-						</TableColumn>
-					)
-				}}
-			</TableHeader>
-			<TableBody
-				emptyContent={t(msg`No moves found`)}
-				items={items}
+		<>
+			{toolbar}
+			<CSTable
+				aria-label={t(msg`Combo Table`)}
+				empty={t(msg`No moves found`)}
 			>
-				{function(comboItem) {
-					return (
-						<TableRow key={comboItem.id}>
-							{function(key) {
-								return (
-									<TableCell>
-										{renderCell(comboItem, key as string)}
-									</TableCell>
-								)
-							}}
-						</TableRow>
-					)
-				}}
-			</TableBody>
-		</Table>
+				<TableHeader columns={headerColumns}>
+					{function({ id, name, ...col }) {
+						return (
+							<Column key={id} {...col}>
+								{t(name)}
+							</Column>
+						)
+					}}
+				</TableHeader>
+				<TableBody items={items}>
+					{function(comboItem) {
+						return (
+							<Row key={comboItem.id}>
+								{function(key) {
+									return (
+										<Cell>
+											{renderCell(comboItem, key as string)}
+										</Cell>
+									)
+								}}
+							</Row>
+						)
+					}}
+				</TableBody>
+			</CSTable>
+		</>
 	)
 }
 

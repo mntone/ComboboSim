@@ -1,4 +1,3 @@
-import { HeroUIProvider } from '@heroui/system'
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { Provider as ReduxProvider } from 'react-redux'
@@ -15,9 +14,7 @@ if (import.meta.env.DEV && !elem) {
 	root.render(
 		<React.StrictMode>
 			<ReduxProvider store={store}>
-				<HeroUIProvider>
-					<App />
-				</HeroUIProvider>
+				<App />
 			</ReduxProvider>
 		</React.StrictMode>,
 	)

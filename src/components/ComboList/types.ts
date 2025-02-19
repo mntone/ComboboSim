@@ -3,6 +3,8 @@ import type { ReadonlyDeep } from 'type-fest'
 
 import type { Move, MoveNameDisplayModes } from '@/common/types'
 
+import type { CSTableColumnAlign, CSTableColumnData } from '../CSTable'
+
 export interface Combo {
 	id: string
 	move: Move
@@ -21,7 +23,8 @@ export type ComboTableColumnKey =
 export interface ComboTableColumn {
 	readonly id: ComboTableColumnKey
 	readonly name: MessageDescriptor
-	readonly align?: 'start'
+	readonly align?: CSTableColumnAlign
+	readonly dataType?: CSTableColumnData
 	readonly required?: true
 }
 

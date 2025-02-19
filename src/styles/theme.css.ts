@@ -14,6 +14,13 @@ const vars = createGlobalThemeContract({
 		highlight: 'tx3-hgl',
 	},
 
+	separatorPrimary: {
+		default: 'sep1',
+	},
+	separatorSecondary: {
+		default: 'sep2',
+	},
+
 	materialThin: {
 		backdropFilter: 'mrl-tn-bd',
 		backgroundColor: 'mrl-tn-bg',
@@ -40,6 +47,13 @@ createGlobalTheme(':root', vars, {
 	textTertiary: {
 		default: 'light-dark(rgb(0 0 0 / 25%), rgb(255 255 255 / 25%))',
 		highlight: 'light-dark(rgb(255 255 255 / 25%), rgb(0 0 0 / 25%))',
+	},
+
+	separatorPrimary: {
+		default: 'light-dark(rgb(0 0 0 / 5%), rgb(255 255 255 / 5%))',
+	},
+	separatorSecondary: {
+		default: 'light-dark(rgb(0 0 0 / 4%), rgb(255 255 255 / 4%))',
 	},
 
 	materialThin: {
