@@ -1,3 +1,3 @@
-export * from './types.d'
+export type * from './types'
 
 export * from './CSTable'

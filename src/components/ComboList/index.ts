@@ -1,6 +1,6 @@
 import ComboTableView from './ComboTableView'
 
-export * from './types'
+export type * from './types'
 
 export {
 	ComboTableView,
