@@ -6,6 +6,7 @@ import resourceLoaderSlice from '@/features/resourceLoader/slice'
 import userSettingsSlice from '@/features/userSettings/slice'
 
 import characterIdChangeMiddleware from './middlewares/characterIdChangeMiddleware'
+import { userSettingsUpdateMiddleware } from './middlewares/userSettingsUpdateMiddleware'
 
 const store = configureStore({
 	reducer: {
@@ -17,7 +18,13 @@ const store = configureStore({
 	middleware(getDefaultMiddleware) {
 		return getDefaultMiddleware().prepend(
 			characterIdChangeMiddleware.middleware,
+			userSettingsUpdateMiddleware.middleware,
 		)
+	},
+	enhancers(getDefaultEnhancers) {
+		return getDefaultEnhancers({
+			autoBatch: { type: 'tick' },
+		})
 	},
 })
 

@@ -1,7 +1,9 @@
+import type { MoveNameDisplayModes } from '@/common/types'
+
 import type { ComboTableColumnKey } from '@/components/ComboList'
-import type { MoveNameDisplayModes } from '@/components/MoveLabel/types'
 
 export interface UserSettings {
+	isDirty: boolean
 	comboTableColumns: ComboTableColumnKey[] | null
 	resourceId: string | null
 	moveNameDisplayMode: MoveNameDisplayModes
