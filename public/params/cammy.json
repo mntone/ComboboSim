@@ -314,6 +314,7 @@
 				"ja": "リフトコンビネーション"
 			},
 			"category": "unique",
+			"dependency": "cammy.4MP",
 			"input": "4MP~HK",
 			"input_modern": "4M~M",
 			"damage": 600,
@@ -329,6 +330,7 @@
 				"ja": "スイングコンビネーション"
 			},
 			"category": "unique",
+			"dependency": "cammy.5HP",
 			"input": "5HP~HK",
 			"input_modern": "Auto+5H~H",
 			"damage": [400, 400],

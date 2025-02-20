@@ -10,6 +10,10 @@ function selectComboItems(state: Pick<RootState, 'combo'>): ComboItem[] {
 	return state.combo.combos
 }
 
+function selectLastComboItem(state: Pick<RootState, 'combo'>): ComboItem | undefined {
+	return state.combo.combos.at(-1)
+}
+
 function selectResult(state: Pick<RootState, 'combo'>) {
 	const item = state.combo.combos.at(-1)
 	if (item) {
@@ -30,5 +34,6 @@ function selectResult(state: Pick<RootState, 'combo'>) {
 export {
 	selectCharacterId,
 	selectComboItems,
+	selectLastComboItem,
 	selectResult,
 }

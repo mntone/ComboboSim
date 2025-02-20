@@ -55,7 +55,7 @@
 				"type": "object",
 				"properties": {
 					"id": {
-						"title": "Character ID",
+						"title": "Move ID",
 						"type": "string",
 						"minLength": 1,
 						"pattern": "^[a-zA-Z][\\w~.\\[\\]]*\\w?$"
@@ -90,6 +90,12 @@
 							"throws",
 							"common"
 						]
+					},
+					"dependency": {
+						"title": "Dependent Move ID",
+						"type": "string",
+						"minLength": 1,
+						"pattern": "^[a-zA-Z][\\w~.\\[\\]]*\\w?$"
 					},
 					"input": {
 						"title": "Input",

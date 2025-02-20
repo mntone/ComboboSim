@@ -5,7 +5,11 @@ import type { CharacterExtension, CharacterJson, MoveJson, ParameterContext } fr
 import compileOverrides from './utils/compileOverrides'
 import copyObjectPickedByNames from './utils/copyObjectPickedByNames'
 
-function getContexts(ext: CharacterExtension[]): ParameterContext[] {
+function getContexts(ext?: CharacterExtension[]): ParameterContext[] {
+	if (typeof ext === 'undefined' || ext.length === 0) {
+		return DEFAULT_CONTEXT_PARAMS
+	}
+
 	const contexts: Partial<ParameterContext>[][] = [
 		DEFAULT_CONTEXT_PARAMS,
 		...ext.map(function(name) {
@@ -65,6 +69,7 @@ function mapMove(contexts: ParameterContext[], json: MoveJson): Move {
 		id: json.id,
 		names: json.names,
 		category: json.category,
+		dependency: json.dependency,
 		input: json.input,
 		inputModern: json.inputModern,
 		inputModernAlt: json.inputModernAlt,
@@ -74,7 +79,7 @@ function mapMove(contexts: ParameterContext[], json: MoveJson): Move {
 }
 
 function mapCharacter(json: CharacterJson): Character {
-	const contexts = json.use ? getContexts(json.use) : DEFAULT_CONTEXT_PARAMS
+	const contexts = getContexts(json.use)
 	const bindMapMove = mapMove.bind(null, contexts)
 
 	const moves = json.moves.map(bindMapMove)

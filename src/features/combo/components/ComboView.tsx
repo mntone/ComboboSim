@@ -11,18 +11,22 @@ import { selectDynamicResource } from '@/features/resourceLoader/selectors'
 import { selectComboTableColumns, selectMoveNameDisplayModes } from '@/features/userSettings/selectors'
 import { setComboTableColumns } from '@/features/userSettings/slice'
 
-import { selectCharacterId, selectComboItems } from '../selectors'
+import { selectCharacterId, selectComboItems, selectLastComboItem } from '../selectors'
 import { dropComboRight, setCharacterId } from '../slice'
+
+import { MoveListBox } from './MoveListBox'
 
 function ComboView() {
 	const { i18n: { locale } } = useLingui()
+	const dispatch = useAppDispatch()
+
 	const characterId = useAppSelector(selectCharacterId)
 	const columns = useAppSelector(selectComboTableColumns)
 	const displayModes = useAppSelector(selectMoveNameDisplayModes)
 	const res = useAppSelector(selectDynamicResource)
 
-	const dispatch = useAppDispatch()
 	const comboItems = useAppSelector(selectComboItems)
+	const lastComboItem = useAppSelector(selectLastComboItem)
 
 	const columnSet = useMemo(function() {
 		return new Set(columns)
@@ -62,6 +66,10 @@ function ComboView() {
 				locale={locale}
 				res={res}
 				onDelete={handleDelete}
+			/>
+			<MoveListBox
+				characterKey={characterId}
+				lastMove={lastComboItem?.move}
 			/>
 		</>
 	)

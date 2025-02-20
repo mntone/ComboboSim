@@ -283,6 +283,7 @@
 				"ja": "飛燕連脚（2段目）"
 			},
 			"category": "unique",
+			"dependency": "mai.5LK",
 			"input": "5LK~LK",
 			"input_modern": "5L~L",
 			"damage": 400,
@@ -298,6 +299,7 @@
 				"ja": "飛燕連脚（3段目）"
 			},
 			"category": "unique",
+			"dependency": "mai.5LKtoLK",
 			"input": "5LK~LK~LK",
 			"input_modern": "5L~L~L",
 			"damage": 500,
@@ -328,6 +330,7 @@
 				"ja": "星孔雀（2段目）"
 			},
 			"category": "unique",
+			"dependency": "mai.4HK",
 			"input": "4HK~HK",
 			"input_modern": "4H~H",
 			"damage": [600, 600],

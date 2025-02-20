@@ -299,6 +299,7 @@
 				"ja": "ア・テール"
 			},
 			"category": "unique",
+			"dependency": "manon.5MP",
 			"input": "5MP~MK",
 			"input_modern": "5M~M",
 			"damage": 500,
@@ -329,6 +330,7 @@
 				"ja": "アン・オー（2段目）"
 			},
 			"category": "unique",
+			"dependency": "manon.4MK",
 			"input": "4MK~MK",
 			"input_modern": "4M~M",
 			"damage": 500,
@@ -344,6 +346,7 @@
 				"ja": "タン・リエ"
 			},
 			"category": "unique",
+			"dependency": "manon.5HP",
 			"input": "5HP~HP",
 			"input_modern": "5H~H",
 			"damage": 600,
@@ -359,6 +362,7 @@
 				"ja": "アロンジェ"
 			},
 			"category": "unique",
+			"dependency": "manon.2HP",
 			"input": "2HP~HP",
 			"input_modern": "2H~H",
 			"damage": 500,

@@ -8,6 +8,7 @@ export interface MoveJson extends MoveValues {
 	id: string
 	names?: MoveNames
 	category: MoveCategoryType
+	dependency?: string
 	input: string
 	inputModern?: string
 	inputModernAlt?: string
@@ -42,12 +43,11 @@ export interface CharacterParameterState extends CharacterSummary {
 }
 
 export interface MoveCategory {
-	readonly id: MoveCategoryType
-	readonly moves: readonly Move[]
+	id: MoveCategoryType
+	moves: Move[]
 }
 
 export interface NormalizedMove {
-	readonly moves: readonly Move[]
 	readonly movesById: ReadonlyMap<string, Move>
 	readonly movesByCategory: readonly MoveCategory[]
 }

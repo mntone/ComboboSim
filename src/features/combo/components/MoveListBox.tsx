@@ -2,7 +2,7 @@ import { msg } from '@lingui/core/macro'
 import { useLingui } from '@lingui/react/macro'
 import { Item, Section } from '@react-stately/collections'
 import type { Selection } from '@react-types/shared'
-import { useCallback, useState } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 import { TbPlus } from 'react-icons/tb'
 
 import { getPreferredMoveName } from '@/common/getPreferredMoveName'
@@ -12,10 +12,12 @@ import { CSButton, CSButtonGroup } from '@/components/CSButton'
 import { CSMenuButton } from '@/components/CSPopover'
 import { pushCombo } from '@/features/combo/slice'
 import { selectIsCharacterLoading, selectNormalizedMoves } from '@/features/parameterLoader/selectors'
+import type { MoveCategory } from '@/features/parameterLoader/types'
 import { selectDynamicResource } from '@/features/resourceLoader/selectors'
 import { selectMoveNameDisplayModes } from '@/features/userSettings/selectors'
 
 import { moveListBox } from './styles.css'
+import type { MoveListBoxProps } from './types'
 
 const categoryNames = {
 	normal: msg`Normal Moves`,
@@ -26,20 +28,54 @@ const categoryNames = {
 	common: msg`Common Moves`,
 }
 
-function MoveListBox() {
+function MoveListBox({ characterKey, lastMove }: MoveListBoxProps) {
 	const { i18n: { locale }, t } = useLingui()
 	const dispatch = useAppDispatch()
 	const isLoading = useAppSelector(function(state) {
-		return selectIsCharacterLoading(state, state.combo.characterId)
-	})
-	const normalizedMoves = useAppSelector(function(state) {
-		return selectNormalizedMoves(state, state.combo.characterId)
+		return selectIsCharacterLoading(state, characterKey)
 	})
 	const displayModes = useAppSelector(selectMoveNameDisplayModes)
 	const res = useAppSelector(selectDynamicResource)
 
+	const normalizedMoves = useAppSelector(function(state) {
+		return selectNormalizedMoves(state, characterKey)
+	})
+	const filteredMoves = useMemo(function() {
+		let items: MoveCategory[]
+
+		if (lastMove) {
+			items = normalizedMoves.movesByCategory.map(function(cat) {
+				return {
+					id: cat.id,
+					moves: cat.moves.filter(function(move) {
+						return typeof move.dependency === 'undefined'
+							|| lastMove.id === move.dependency
+					}),
+				}
+			})
+		} else {
+			items = normalizedMoves.movesByCategory.map(function(cat) {
+				return {
+					id: cat.id,
+					moves: cat.moves.filter(function(move) {
+						return typeof move.dependency === 'undefined'
+					}),
+				}
+			})
+		}
+
+		return items
+	}, [normalizedMoves.movesByCategory, lastMove])
+
 	const [selectedMoveKeys, setSelectedMoveKeys] = useState<Set<string>>(new Set([]))
-	const [isOpen, setIsOpen] = useState(false)
+
+	const isDisabled = useMemo(function() {
+		return isLoading || normalizedMoves.movesById.size === 0
+	}, [isLoading])
+
+	const isAddDisabled = useMemo(function() {
+		return typeof selectedMoveKeys.keys().next().value === 'undefined'
+	}, [selectedMoveKeys])
 
 	const getCurrentMoveName = useCallback(function(keys: Set<string>) {
 		const selectedKey = keys.keys().next().value
@@ -58,19 +94,17 @@ function MoveListBox() {
 		}
 
 		setSelectedMoveKeys(keys as Set<string>)
-		setIsOpen(false)
-	}, [setSelectedMoveKeys, setIsOpen])
+	}, [setSelectedMoveKeys])
 
 	const handleAddMove = useCallback(function() {
 		const selectedKey = selectedMoveKeys.keys().next().value
 		if (selectedKey) {
 			const targetMoveItem = normalizedMoves.movesById.get(selectedKey)
 			if (targetMoveItem) {
-				setIsOpen(false)
 				dispatch(pushCombo(targetMoveItem))
 			}
 		}
-	}, [dispatch, selectedMoveKeys, normalizedMoves.movesById, setIsOpen])
+	}, [dispatch, selectedMoveKeys, normalizedMoves.movesById])
 
 	return (
 		<CSButtonGroup>
@@ -78,14 +112,12 @@ function MoveListBox() {
 				classNames={{
 					base: moveListBox,
 				}}
-				isDisabled={isLoading}
+				isDisabled={isDisabled}
 				isLoading={isLoading}
-				isOpen={isOpen}
-				items={normalizedMoves.movesByCategory}
+				items={filteredMoves}
 				label={getCurrentMoveName(selectedMoveKeys)}
 				selectedKeys={selectedMoveKeys}
 				selectionMode='single'
-				onOpenChange={setIsOpen}
 				onSelectionChange={handleMoveChange}
 			>
 				{function(moveCategories) {
@@ -108,7 +140,7 @@ function MoveListBox() {
 
 			<CSButton
 				aria-label='Add Move'
-				isDisabled={typeof selectedMoveKeys.keys().next().value === 'undefined'}
+				isDisabled={isAddDisabled}
 				isIconOnly
 				variant='primary'
 				onPress={handleAddMove}
@@ -119,4 +151,6 @@ function MoveListBox() {
 	)
 }
 
-export default MoveListBox
+export {
+	MoveListBox,
+}

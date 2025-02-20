@@ -13,7 +13,7 @@ function selectCharacters(state: RootState) {
 function selectCharacterArray(state: RootState) {
 	return state.param.ids.map(function(id) {
 		return state.param.entities[id]
-	})
+		})
 }
 
 function selectMovesById(moves: Move[]): ReadonlyMap<string, Move> {
@@ -47,7 +47,6 @@ function getMovesByCategory(
 			const movesById = selectMovesById(moves)
 			const movesByCategory = selectMovesGroupedByCategory(moves)
 			return {
-				moves,
 				movesById,
 				movesByCategory,
 			}
@@ -55,7 +54,6 @@ function getMovesByCategory(
 	}
 
 	return {
-		moves: [],
 		movesById: new Map(),
 		movesByCategory: [],
 	}

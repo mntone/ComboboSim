@@ -45,6 +45,7 @@ export interface Move {
 	id: string
 	names?: MoveNames
 	category: MoveCategoryType
+	dependency?: string
 	input: string
 	inputModern?: string
 	inputModernAlt?: string
