@@ -22,19 +22,23 @@ msgstr "{0, plural, other {#} zero {None}}"
 msgid "{0, plural, other {#} zero {Zero}}"
 msgstr "{0, plural, other {#} zero {Zero}}"
 
-#: src/components/ComboList/constants.ts:44
+#: src/components/ComboList/constants.ts:48
 msgid "Actions"
 msgstr "Actions"
 
-#: src/components/ComboList/constants.ts:32
+#: src/components/ComboList/constants.ts:33
 msgid "Combo Damage"
 msgstr "Combo Damage"
+
+#: src/components/ComboList/ComboTableView.tsx:67
+msgid "Combo Table"
+msgstr "Combo Table"
 
 #: src/components/MoveForm.tsx:25
 msgid "Common Moves"
 msgstr "Common Moves"
 
-#: src/components/ComboList/constants.ts:24
+#: src/components/ComboList/constants.ts:23
 msgid "Damage"
 msgstr "Damage"
 
@@ -42,7 +46,7 @@ msgstr "Damage"
 msgid "Damage Scale"
 msgstr "Damage Scale"
 
-#: src/components/ComboList/constants.ts:36
+#: src/components/ComboList/constants.ts:38
 msgid "Drive Guage"
 msgstr "Drive Guage"
 
@@ -50,11 +54,15 @@ msgstr "Drive Guage"
 msgid "Drive Guage Increase"
 msgstr "Drive Guage Increase"
 
+#: src/components/CSProgress/CSCircularProgress.tsx:11
+msgid "Loading..."
+msgstr "Loading..."
+
 #: src/components/ComboList/constants.ts:18
 msgid "Moves"
 msgstr "Moves"
 
-#: src/components/ComboList/ComboTableView.tsx:127
+#: src/components/ComboList/ComboTableView.tsx:68
 msgid "No moves found"
 msgstr "No moves found"
 
@@ -66,7 +74,7 @@ msgstr "Normal Moves"
 msgid "Special Moves"
 msgstr "Special Moves"
 
-#: src/components/ComboList/constants.ts:40
+#: src/components/ComboList/constants.ts:43
 msgid "Super Art Guage"
 msgstr "Super Art Guage"
 
@@ -86,7 +94,7 @@ msgstr "Throws"
 msgid "Unique Attacks"
 msgstr "Unique Attacks"
 
-#: src/components/ComboList/ComboTableView.tsx:82
+#: src/components/ComboList/ComboViewOptionsButton.tsx:29
 msgid "View Options"
 msgstr "View Options"
 

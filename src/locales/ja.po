@@ -22,19 +22,23 @@ msgstr "{0, plural, other {# 本}}"
 msgid "{0, plural, other {#} zero {Zero}}"
 msgstr "{0, plural, other {#}}"
 
-#: src/components/ComboList/constants.ts:44
+#: src/components/ComboList/constants.ts:48
 msgid "Actions"
 msgstr "操作"
 
-#: src/components/ComboList/constants.ts:32
+#: src/components/ComboList/constants.ts:33
 msgid "Combo Damage"
 msgstr "コンボダメージ"
+
+#: src/components/ComboList/ComboTableView.tsx:67
+msgid "Combo Table"
+msgstr "コンボ表"
 
 #: src/components/MoveForm.tsx:25
 msgid "Common Moves"
 msgstr "共通システム"
 
-#: src/components/ComboList/constants.ts:24
+#: src/components/ComboList/constants.ts:23
 msgid "Damage"
 msgstr "ダメージ"
 
@@ -42,7 +46,7 @@ msgstr "ダメージ"
 msgid "Damage Scale"
 msgstr "ダメージ倍率"
 
-#: src/components/ComboList/constants.ts:36
+#: src/components/ComboList/constants.ts:38
 msgid "Drive Guage"
 msgstr "ドライブゲージ"
 
@@ -50,11 +54,15 @@ msgstr "ドライブゲージ"
 msgid "Drive Guage Increase"
 msgstr "ドライブゲージ増加量"
 
+#: src/components/CSProgress/CSCircularProgress.tsx:11
+msgid "Loading..."
+msgstr "読み込み中…"
+
 #: src/components/ComboList/constants.ts:18
 msgid "Moves"
 msgstr "技名"
 
-#: src/components/ComboList/ComboTableView.tsx:127
+#: src/components/ComboList/ComboTableView.tsx:68
 msgid "No moves found"
 msgstr "技がありません"
 
@@ -66,7 +74,7 @@ msgstr "通常技"
 msgid "Special Moves"
 msgstr "必殺技"
 
-#: src/components/ComboList/constants.ts:40
+#: src/components/ComboList/constants.ts:43
 msgid "Super Art Guage"
 msgstr "SAゲージ"
 
@@ -86,7 +94,7 @@ msgstr "通常投げ"
 msgid "Unique Attacks"
 msgstr "特殊技"
 
-#: src/components/ComboList/ComboTableView.tsx:82
+#: src/components/ComboList/ComboViewOptionsButton.tsx:29
 msgid "View Options"
 msgstr "表示オプション"
 
