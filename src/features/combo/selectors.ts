@@ -1,3 +1,5 @@
+import { createSelector } from '@reduxjs/toolkit'
+
 import type { RootState } from '@/app/store'
 
 import type { ComboItem } from './types'
@@ -14,22 +16,24 @@ function selectLastComboItem(state: Pick<RootState, 'combo'>): ComboItem | undef
 	return state.combo.combos.at(-1)
 }
 
-function selectResult(state: Pick<RootState, 'combo'>) {
-	const item = state.combo.combos.at(-1)
-	if (item) {
-		return {
-			comboDamage: item.comboDamage,
-			drive: 0.0001 * item.drive,
-			superarts: 0.0001 * item.superarts,
+const selectResult = createSelector(
+	selectLastComboItem,
+	function(item: ComboItem | undefined) {
+		if (item) {
+			return {
+				comboDamage: item.comboDamage,
+				drive: 0.0001 * item.drive,
+				superarts: 0.0001 * item.superarts,
+			}
+		} else {
+			return {
+				comboDamage: 0,
+				drive: 0,
+				superarts: 0,
+			}
 		}
-	} else {
-		return {
-			comboDamage: 0,
-			drive: 0,
-			superarts: 0,
-		}
-	}
-}
+	},
+)
 
 export {
 	selectCharacterId,

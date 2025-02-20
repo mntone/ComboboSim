@@ -1,4 +1,4 @@
-import { createSelector } from '@reduxjs/toolkit'
+import { createSelector, type EntityState } from '@reduxjs/toolkit'
 
 import type { Move, MoveCategoryType } from '@/common/types'
 
@@ -10,11 +10,16 @@ function selectCharacters(state: RootState) {
 	return state.param.entities
 }
 
-function selectCharacterArray(state: RootState) {
-	return state.param.ids.map(function(id) {
-		return state.param.entities[id]
+const selectCharacterArray = createSelector(
+	function(state: RootState) {
+		return state.param
+	},
+	function(param: EntityState<CharacterParameterState, string>) {
+		return param.ids.map(function(id) {
+			return param.entities[id]
 		})
-}
+	},
+)
 
 function selectMovesById(moves: Move[]): ReadonlyMap<string, Move> {
 	return new Map(moves.map(function(move) {
