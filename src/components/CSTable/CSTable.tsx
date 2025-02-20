@@ -11,14 +11,14 @@ import { CSTableRowGroup } from './CSTableRowGroup'
 import { table as tableStyle } from './styles.css'
 import type { CSTableProps } from './types'
 
-function CSTable<T extends object>({ empty, ...props }: CSTableProps<T>) {
+function CSTable<T extends object>({ children, empty, ...props }: CSTableProps<T>) {
 	// Create table state based on the incoming props
-	const state = useTableState(props)
+	const state = useTableState({ children })
 	const { collection } = state
 
 	// Get props for the table element
 	const ref = useRef<HTMLTableElement>(null)
-	const { gridProps } = useTable({}, state, ref)
+	const { gridProps } = useTable(props, state, ref)
 
 	let content
 	if (typeof empty !== 'undefined' && collection.size === 0) {

@@ -1,4 +1,5 @@
-import type { TableState, TableStateProps } from '@react-stately/table'
+import type { AriaTableProps } from '@react-aria/table'
+import type { TableBodyProps, TableHeaderProps, TableState } from '@react-stately/table'
 import type { GridNode } from '@react-types/grid'
 import type { ReactNode } from 'react'
 
@@ -39,6 +40,7 @@ export interface CSTableRowGroupProps {
 	children: ReactNode
 }
 
-export interface CSTableProps<T> extends TableStateProps<T> {
+export interface CSTableProps<T> extends AriaTableProps<T> {
+	children?: [ReactElement<TableHeaderProps<T>>, ReactElement<TableBodyProps<T>>]
 	empty?: ReactNode
 }
