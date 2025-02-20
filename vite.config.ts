@@ -47,6 +47,9 @@ export default defineConfig({
 			build: {
 				sri: true,
 			},
+			policy: {
+				'script-src': ['\'self\'', '\'unsafe-eval\''],
+			},
 		}),
 	],
 	resolve: {

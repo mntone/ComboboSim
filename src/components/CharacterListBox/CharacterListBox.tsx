@@ -1,6 +1,6 @@
-import type { SharedSelection } from '@heroui/system'
 import { useLingui } from '@lingui/react/macro'
 import { Item } from '@react-stately/collections'
+import type { Selection } from '@react-types/shared'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 
 import { useAppSelector } from '@/app/hooks'
@@ -26,7 +26,7 @@ function CharacterList({
 			: function(item: CharacterParameterState) { return item.names.en }
 	}, [locale])
 
-	const handleCharacterChange = useCallback(function(keys: SharedSelection) {
+	const handleCharacterChange = useCallback(function(keys: Selection) {
 		if (import.meta.env.DEV && !(keys instanceof Set)) {
 			console.log('Expected Set<string>, but got invalid type')
 		}

@@ -1,5 +1,6 @@
+import type { MoveNameDisplayModes } from '@/common/types'
+
 import type { RootState } from '@/app/store'
-import type { MoveNameDisplayModes } from '@/components/MoveLabel/types'
 
 function selectComboTableColumns(state: Pick<RootState, 'settings'>) {
 	return state.settings.comboTableColumns

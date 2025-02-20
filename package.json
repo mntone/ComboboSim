@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "build:clean": "tsc -b --clean && vite build",
+    "build": "tsc -p tsconfig.app.json && vite build",
+    "build:clean": "tsc -p tsconfig.app.json --clean && vite build",
     "lingui:extract": "lingui extract src/components",
     "lint": "eslint src/**/*.{ts,tsx}",
     "lint:fix": "eslint src/**/*.{ts,tsx} --fix",

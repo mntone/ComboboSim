@@ -1,7 +1,7 @@
-import type { SharedSelection } from '@heroui/system'
 import { msg } from '@lingui/core/macro'
 import { useLingui } from '@lingui/react/macro'
 import { Item, Section } from '@react-stately/collections'
+import type { Selection } from '@react-types/shared'
 import { useCallback, useState } from 'react'
 import { TbPlus } from 'react-icons/tb'
 
@@ -52,7 +52,7 @@ function MoveListBox() {
 		return <></>
 	}, [locale, displayModes, res, normalizedMoves.movesById])
 
-	const handleMoveChange = useCallback(function(keys: SharedSelection) {
+	const handleMoveChange = useCallback(function(keys: Selection) {
 		if (import.meta.env.DEV && !(keys instanceof Set)) {
 			console.log('Expected Set<string>, but got invalid type.')
 		}
