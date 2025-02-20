@@ -28,6 +28,11 @@ export interface ComboTableColumn {
 	readonly required?: true
 }
 
+export interface ComboViewOptionsButtonProps {
+	selectedColumns?: Iterable<ComboTableColumnKey>
+	onColumnsChange?: (columns: Set<ComboTableColumnKey>) => void
+}
+
 export interface ComboListProps {
 	displayModes: MoveNameDisplayModes
 	items: Combo[]
@@ -38,7 +43,5 @@ export interface ComboListProps {
 }
 
 export interface ComboTableViewProps extends ComboListProps {
-	defaultColumns?: ComboTableColumnKey[] | null
-
-	onColumnsChange?: (columns: Set<ComboTableColumnKey>) => void
+	columns: Iterable<ComboTableColumnKey>
 }

@@ -2,6 +2,10 @@ import type { RootState } from '@/app/store'
 
 import type { ComboItem } from './types'
 
+function selectCharacterId(state: Pick<RootState, 'combo'>): string | null {
+	return state.combo.characterId
+}
+
 function selectComboItems(state: Pick<RootState, 'combo'>): ComboItem[] {
 	return state.combo.combos
 }
@@ -24,6 +28,7 @@ function selectResult(state: Pick<RootState, 'combo'>) {
 }
 
 export {
+	selectCharacterId,
 	selectComboItems,
 	selectResult,
 }

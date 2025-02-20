@@ -1,7 +1,3 @@
-import ComboTableView from './ComboTableView'
-
 export type * from './types'
 
-export {
-	ComboTableView,
-}
+export * from './ComboTableView'
