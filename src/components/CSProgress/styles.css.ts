@@ -1,6 +1,6 @@
 import { keyframes, style, styleVariants } from '@vanilla-extract/css'
 
-import { accent } from '@/styles/accent.css'
+import { semanticColor } from '@/styles/theme.css'
 
 const circularAnimation = keyframes({
 	'0%': {
@@ -23,7 +23,7 @@ const base = style({
 
 	animation: `${circularAnimation} 1.5s linear infinite`,
 	fill: 'none',
-	stroke: accent,
+	stroke: semanticColor.accent,
 	strokeDasharray: '2px, 160px',
 	strokeLinecap: 'round',
 })

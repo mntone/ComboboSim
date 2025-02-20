@@ -1,19 +1,35 @@
 import { globalStyle } from '@vanilla-extract/css'
 
-import { accent, vars } from '@/styles/index.css'
+import { semanticColor, vars } from '@/styles/index.css'
+import { darkVars } from '@/styles/themeDark.css'
+import { lightVars } from '@/styles/themeLight.css'
 
-globalStyle('body', {
-	'colorScheme': 'light dark',
-
-	'accentColor': accent,
-	'backgroundColor': 'light-dark(#FFF, #25252D)',
-	'color': vars.textPrimary.default,
-	'font': '-apple-system-body',
-	'fontFamily': '-apple-system, BlinkMacSystemFont, \'Inter Variable\', \'BIZ UDGothic\', sans-serif, \'Apple Color Emoji\', \'Segoe UI Emoji\', \'Segoe UI Symbol\', \'Noto Color Emoji\'',
+globalStyle(':root', {
+	'vars': Object.assign({}, lightVars, {
+		[semanticColor.accent]: vars.color.purple,
+		[semanticColor.error]: vars.color.red,
+		[semanticColor.warning]: vars.color.yellow,
+	}),
 
 	'@media': {
-		'(min-width: 768px)': {
-			fontSize: 13,
+		'(prefers-color-scheme: dark)': {
+			vars: darkVars,
 		},
 	},
+})
+
+globalStyle('body', {
+	backgroundColor: vars.background.primary,
+	color: vars.textPrimary.default,
+	colorScheme: 'light dark',
+})
+
+globalStyle('.thm-lt', {
+	colorScheme: 'light',
+	vars: lightVars,
+})
+
+globalStyle('.thm-dk', {
+	colorScheme: 'dark',
+	vars: darkVars,
 })

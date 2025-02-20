@@ -35,8 +35,8 @@ function CSMenuButton<T extends object>({
 				isDisabled={isDisabled}
 				isLoading={isLoading}
 				symbol={props.selectionMode === 'none'
-					? <TbChevronDown className='justify-end' size={16} />
-					: <TbSelector className='justify-end' size={16} />}
+					? <TbChevronDown className='justify-end' />
+					: <TbSelector className='justify-end' />}
 				{...menuTriggerProps}
 			>
 				{label}

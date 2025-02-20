@@ -1,4 +1,4 @@
-import { createGlobalTheme, createGlobalThemeContract, styleVariants } from '@vanilla-extract/css'
+import { createGlobalThemeContract, createGlobalVar, styleVariants } from '@vanilla-extract/css'
 
 const vars = createGlobalThemeContract({
 	textPrimary: {
@@ -14,78 +14,71 @@ const vars = createGlobalThemeContract({
 		highlight: 'tx3-hgl',
 	},
 
-	separatorPrimary: {
-		default: 'sep1',
-	},
-	separatorSecondary: {
-		default: 'sep2',
+	background: {
+		primary: 'bg1',
+		secondary: 'bg2',
+		tertiary: 'bg3',
 	},
 
-	materialThin: {
-		backdropFilter: 'mrl-tn-bd',
-		backgroundColor: 'mrl-tn-bg',
+	color: {
+		red: 'red',
+		yellow: 'yel',
+		blue: 'blu',
+		purple: 'ppe',
+		pink: 'pnk',
 	},
-	materialMedium: {
-		backdropFilter: 'mrl-md-bd',
-		backgroundColor: 'mrl-md-bg',
+
+	fill: {
+		primary: 'fl1',
+		secondary: 'fl2',
+		tertiary: 'fl3',
+		quatemary: 'fl4',
 	},
-	materialThick: {
-		backdropFilter: 'mrl-tk-bd',
-		backgroundColor: 'mrl-tk-bg',
+
+	separator: {
+		default: 'sep',
+	},
+
+	material: {
+		ultraThin: 'mrl-utn',
+		thin: 'mrl-tn',
+		medium: 'mrl-md',
+		thick: 'mrl-tk',
+		ultraThick: 'mrl-utk',
 	},
 })
 
-createGlobalTheme(':root', vars, {
-	textPrimary: {
-		default: 'light-dark(rgb(0 0 0 / 85%), rgb(255 255 255 / 85%))',
-		highlight: 'light-dark(rgb(255 255 255 / 85%), rgb(0 0 0 / 85%))',
-	},
-	textSecondary: {
-		default: 'light-dark(rgb(0 0 0 / 50%), rgb(255 255 255 / 50%))',
-		highlight: 'light-dark(rgb(255 255 255 / 50%), rgb(0 0 0 / 50%))',
-	},
-	textTertiary: {
-		default: 'light-dark(rgb(0 0 0 / 25%), rgb(255 255 255 / 25%))',
-		highlight: 'light-dark(rgb(255 255 255 / 25%), rgb(0 0 0 / 25%))',
-	},
-
-	separatorPrimary: {
-		default: 'light-dark(rgb(0 0 0 / 5%), rgb(255 255 255 / 5%))',
-	},
-	separatorSecondary: {
-		default: 'light-dark(rgb(0 0 0 / 4%), rgb(255 255 255 / 4%))',
-	},
-
-	materialThin: {
-		backdropFilter: 'blur(30px)',
-		backgroundColor: 'light-dark(rgb(246 246 246 / 48%), #0003)',
-	},
-	materialMedium: {
-		backdropFilter: 'blur(30px)',
-		backgroundColor: 'light-dark(#F6F6F699, rgb(0 0 0 / 29%))',
-	},
-	materialThick: {
-		backdropFilter: 'blur(30px)',
-		backgroundColor: 'light-dark(rgb(246 246 246 / 72%), #0006)',
-	},
-})
+const semanticColor = {
+	accent: createGlobalVar('act'),
+	error: createGlobalVar('err'),
+	warning: createGlobalVar('wrn'),
+}
 
 const material = styleVariants({
+	ultraThin: {
+		backdropFilter: 'blur(30px)',
+		backgroundColor: vars.material.ultraThin,
+	},
 	thin: {
-		backdropFilter: vars.materialThin.backdropFilter,
-		backgroundColor: vars.materialThin.backgroundColor,
+		backdropFilter: 'blur(30px)',
+		backgroundColor: vars.material.thin,
 	},
 	medium: {
-		backdropFilter: vars.materialMedium.backdropFilter,
-		backgroundColor: vars.materialMedium.backgroundColor,
+		backdropFilter: 'blur(30px)',
+		backgroundColor: vars.material.medium,
 	},
 	thick: {
-		backdropFilter: vars.materialThick.backdropFilter,
-		backgroundColor: vars.materialThick.backgroundColor,
+		backdropFilter: 'blur(30px)',
+		backgroundColor: vars.material.thick,
+	},
+	ultraThick: {
+		backdropFilter: 'blur(30px)',
+		backgroundColor: vars.material.ultraThick,
 	},
 })
 
 export {
 	vars,
+	semanticColor,
 	material,
 }

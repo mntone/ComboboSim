@@ -1,3 +1,5 @@
+import './app.css'
+
 import { i18n } from '@lingui/core'
 import { I18nProvider } from '@lingui/react'
 import { useCallback, useEffect } from 'react'
@@ -11,8 +13,6 @@ import { fetchResource } from '@/features/resourceLoader/slice'
 import { spaces } from '@/styles/index.css'
 
 import { useAppDispatch } from './hooks'
-
-import './app.css'
 
 async function dynamicActivate(locale: string) {
 	const { messages } = await import(`../locales/${locale}.po`)

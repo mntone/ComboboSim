@@ -18,7 +18,7 @@ const row = style({
 })
 
 const headerRow = style([row, {
-	borderBottom: `1px solid ${vars.separatorPrimary.default}`,
+	borderBottom: `1px solid ${vars.separator.default}`,
 	color: vars.textSecondary.default,
 }])
 

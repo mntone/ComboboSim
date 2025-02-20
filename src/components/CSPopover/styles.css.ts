@@ -11,7 +11,7 @@ export const popover = style({
 	marginBlock: '16px',
 
 	backdropFilter: 'blur(80px)',
-	backgroundColor: vars.materialMedium.backgroundColor,
+	backgroundColor: vars.material.medium,
 	borderRadius: 6,
 	boxShadow: '0 0 1px 0 light-dark(#0006, #FFF6), 0 0 1.5px 0 light-dark(rgb(0 0 0 / 30%), rgb(255 255 255 / 30%)), 0 7px 22px 0 rgb(0 0 0 / 25%)',
 })

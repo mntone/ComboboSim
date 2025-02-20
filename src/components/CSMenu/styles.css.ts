@@ -1,8 +1,7 @@
 import { createVar, style } from '@vanilla-extract/css'
 
-import { accent } from '@/styles/accent.css'
 import * as space from '@/styles/space.css'
-import { vars } from '@/styles/theme.css'
+import { semanticColor, vars } from '@/styles/theme.css'
 
 const menuPaddingStart = createVar()
 
@@ -66,7 +65,7 @@ export const menuItem = style({
 	'outline': 'none',
 
 	':focus': {
-		backgroundColor: accent,
+		backgroundColor: semanticColor.accent,
 		color: vars.textPrimary.highlight,
 	},
 
