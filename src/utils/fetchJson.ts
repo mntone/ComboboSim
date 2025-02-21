@@ -11,15 +11,15 @@ async function fetchJson(input: RequestInfo | URL, signal?: AbortSignal) {
 	const options = Object.assign({ signal }, DEFAULT_REQUEST_OPTIONS)
 	const res = await fetch(input, options)
 	if (!res.ok) {
-		throw new Error(`Fetch failed: status '${res.status}'`)
+		throw new Error(`Fetch failed with status ${res.status}`)
 	}
 
 	const contentType = res.headers.get('content-type')
 	if (contentType === null) {
-		throw new Error(`Missing content type: expected JSON`)
+		throw new Error(`Missing Content-Type: expected 'application/json'`)
 	}
 	if (!contentType.includes('application/json')) {
-		throw new Error(`Unexpected content type: expected JSON, but got '${contentType}'`)
+		throw new Error(`Unexpected Content-Type: expected 'application/json', but got '${contentType}'`)
 	}
 
 	return await res.json()

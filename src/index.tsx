@@ -6,8 +6,8 @@ import App from './app/App'
 import store from './app/store'
 
 const elem = document.getElementById('app')
-if (import.meta.env.DEV && !elem) {
-	alert('Failed to find the root element')
+if (!elem) {
+	console.log('Root element not found')
 } else {
 	// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 	const root = createRoot(elem!)

@@ -37,7 +37,7 @@ test('should throw an error for non-200 response (404)', async () => {
 	fetchMock.getOnce('/api/ng-status', response, DEFAULT_OPTIONS)
 
 	await expect(fetchJson('/api/ng-status'))
-		.rejects.toThrow('Fetch failed: status \'404\'')
+		.rejects.toThrow('Fetch failed with status 404')
 })
 
 test('should throw an error if Content-Type is missing', async () => {
@@ -46,7 +46,7 @@ test('should throw an error if Content-Type is missing', async () => {
 	}
 	fetchMock.getOnce('/api/ng-notype', response, DEFAULT_OPTIONS)
 
-	await expect(fetchJson('/api/ng-notype')).rejects.toThrow('Missing content type: expected JSON')
+	await expect(fetchJson('/api/ng-notype')).rejects.toThrow('Missing Content-Type: expected \'application/json\'')
 })
 
 test('should throw an error for non-JSON content type', async () => {
@@ -57,7 +57,7 @@ test('should throw an error for non-JSON content type', async () => {
 	fetchMock.getOnce('/api/ng-json', response, DEFAULT_OPTIONS)
 
 	await expect(fetchJson('/api/ng-json'))
-		.rejects.toThrow('Unexpected content type: expected JSON, but got \'text/plain\'')
+		.rejects.toThrow('Unexpected Content-Type: expected \'application/json\', but got \'text/plain\'')
 })
 
 test('should handle network failure', async () => {
