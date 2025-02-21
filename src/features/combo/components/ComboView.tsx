@@ -5,6 +5,7 @@ import type { ReadonlyDeep } from 'type-fest'
 import { useAppDispatch, useAppSelector } from '@/app/hooks'
 import { ComboTableView, type Combo, type ComboTableColumnKey } from '@/components/ComboList'
 import { ComboViewOptionsButton } from '@/components/ComboList/ComboViewOptionsButton'
+import { COMBOTABLE_DEFAULT_COLUMNS } from '@/components/ComboList/constants'
 import { CharacterListBox } from '@/features/combo/components/CharacterListBox'
 import type { CharacterParameterState } from '@/features/parameterLoader/types'
 import { selectDynamicResource } from '@/features/resourceLoader/selectors'
@@ -29,7 +30,7 @@ function ComboView() {
 	const lastComboItem = useAppSelector(selectLastComboItem)
 
 	const columnSet = useMemo(function() {
-		return new Set(columns)
+		return new Set(columns ?? COMBOTABLE_DEFAULT_COLUMNS)
 	}, [columns])
 
 	const handleCharacterChange = useCallback(function(character: CharacterParameterState) {
