@@ -13,6 +13,13 @@ import mapKeysDeep from './utils/mapKeysDeep'
 const fetchParam = createAppAsyncThunk(
 	`${PARAMETERLOADER_NAME}/fetch`,
 	async function(id: string, { signal }) {
+		if (import.meta.env.DEV) {
+			const delay = import.meta.env.VITE_REQUEST_DELAY
+			if (typeof delay !== 'undefined' && delay >= 100) {
+				await new Promise(resolve => setTimeout(resolve, delay))
+			}
+		}
+
 		const json = await fetchJson(`/params/${id}.json`, signal)
 		const camelJson = mapKeysDeep(json, snakeToCamel) as CharacterJson
 		const character = mapCharacter(camelJson)
