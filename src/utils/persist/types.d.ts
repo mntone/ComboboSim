@@ -1,4 +1,6 @@
 export interface Persistor {
+	get disabled(): boolean
+
 	clear(): void
 	load(): string | null
 	save(str: string | null): boolean

@@ -7,6 +7,7 @@ import { useEffect } from 'react'
 import { ComboView } from '@/features/combo/components/ComboView'
 import ResultView from '@/features/combo/components/ResultView'
 import { fetchResource } from '@/features/resourceLoader/slice'
+import { setupSettingsSync } from '@/features/userSettings/sync'
 import { spaces } from '@/styles/index.css'
 
 import { useAppDispatch } from './hooks'
@@ -25,6 +26,7 @@ function App() {
 	useEffect(function() {
 		document.body.classList.add(spaces.compact)
 
+		setupSettingsSync(dispatch)
 		dynamicActivate('ja')
 		dispatch(fetchResource('abbr_ja'))
 	}, [])

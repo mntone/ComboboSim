@@ -24,6 +24,30 @@ test('should return new properties added in modified object', () => {
 	expect(extractChangedValues(initial, modified)).toEqual({ age: 30 })
 })
 
+test('should detect array changes', () => {
+	const initial = { scores: [100, 90, 80] }
+	const modified = { scores: [100, 95, 80] }
+	expect(extractChangedValues(initial, modified)).toEqual({ scores: [100, 95, 80] })
+})
+
+test('should return the entire array if it differs in any element', () => {
+	const initial = { scores: [100, 90, 80] }
+	const modified = { scores: [100, 90, 85] }
+	expect(extractChangedValues(initial, modified)).toEqual({ scores: [100, 90, 85] })
+})
+
+test('should return the entire array if the length differs', () => {
+	const initial = { scores: [100, 90, 80] }
+	const modified = { scores: [100, 90] }
+	expect(extractChangedValues(initial, modified)).toEqual({ scores: [100, 90] })
+})
+
+test('should detect newly added properties', () => {
+	const initial = { a: 1 }
+	const modified = { a: 1, b: 2 }
+	expect(extractChangedValues(initial, modified)).toEqual({ b: 2 })
+})
+
 test('should handle null values correctly', () => {
 	const initial = { name: 'Alice', age: 25 }
 	const modified = { name: 'Alice', age: null }

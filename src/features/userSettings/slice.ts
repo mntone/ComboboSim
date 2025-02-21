@@ -6,6 +6,7 @@ import type { ComboTableColumnKey } from '@/components/ComboList'
 
 import { USERSETTINGS_NAME } from './constants'
 import { initializeState, saveState } from './handleStates'
+import type { PatchableUserSettings } from './types'
 
 const userSettingsSlice = createSlice({
 	name: USERSETTINGS_NAME,
@@ -18,6 +19,9 @@ const userSettingsSlice = createSlice({
 			},
 			// eslint-disable-next-line @typescript-eslint/no-invalid-void-type
 			prepare: prepareAutoBatched<void>(),
+		},
+		patch(state, action: PayloadAction<PatchableUserSettings>) {
+			Object.assign(state, action.payload)
 		},
 
 		setComboTableColumns(state, action: PayloadAction<ComboTableColumnKey[] | null>) {
@@ -49,6 +53,8 @@ const userSettingsSlice = createSlice({
 
 export const {
 	save,
+	patch: patchSettings,
+
 	setComboTableColumns,
 	setResourceId,
 	setMoveNameDisplayMode,

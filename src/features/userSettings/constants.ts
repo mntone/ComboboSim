@@ -6,6 +6,8 @@ import type { UserSettings } from './types'
 
 const USERSETTINGS_NAME = 'settings'
 
+const USERSETTINGS_CHANNEL_NAME = '_s'
+
 const USERSETTINGS_DEFAULT_PERSISTOR: Persistor = new LocalStoragePersistor('_user')
 
 const USERSETTINGS_DEFAULT_SERIALIZER: DataSerializer = JsonDataSerializer
@@ -26,6 +28,7 @@ const USERSETTINGS_INITIAL_STATE: UserSettings = {
 
 export {
 	USERSETTINGS_NAME,
+	USERSETTINGS_CHANNEL_NAME,
 	USERSETTINGS_DEFAULT_PERSISTOR,
 	USERSETTINGS_DEFAULT_SERIALIZER,
 	USERSETTINGS_INITIAL_STATE,
