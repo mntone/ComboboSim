@@ -1,19 +1,23 @@
+import type { ReadonlyDeep } from 'type-fest'
+
 import type { Move, MoveValues } from '@/common/types'
 
 import { INITIAL_PRORATION } from './constants'
 import type { ComboItem, ProrationState } from './types'
 
-function calcImmediate(state: ProrationState, values: MoveValues, isFirst: boolean): number {
-	if (isFirst) {
-		return 0
-	} else if (values.damageImmediateCancel && state.special) {
+function calcImmediate(state: ProrationState, values: MoveValues): number {
+	if (values.damageImmediateCancel && state.special) {
 		return values.damageImmediateCancel
 	} else {
 		return values.damageImmediate ?? 0
 	}
 }
 
-function patchProration(state: ProrationState, move: Move, values: MoveValues, isFirst: boolean): void {
+function patchProrationImmediate(state: ProrationState, immediate: number): void {
+	state.p1 -= immediate
+}
+
+function patchProration(state: ProrationState, move: ReadonlyDeep<Move>, values: MoveValues, isFirst: boolean): void {
 	if (move.input === '656' || move.input === '656MM') {
 		if (state.rush !== 'active') {
 			if (isFirst) {
@@ -36,9 +40,24 @@ function patchProration(state: ProrationState, move: Move, values: MoveValues, i
 	}
 }
 
-function calcScale(state: ProrationState, move: Move, values: MoveValues, isFirst: boolean = false): number {
-	const immediate = calcImmediate(state, values, isFirst)
-	const baseScale = 0.01 * Math.floor(((state.count <= 0 ? Math.max(10, state.p1) : 100) - immediate) * state.p2)
+function calcScale(state: ProrationState, move: ReadonlyDeep<Move>, values: MoveValues, isFirst: boolean = false): number {
+	const immediate = calcImmediate(state, values)
+	patchProrationImmediate(state, immediate)
+
+	let p1
+	switch (state.count) {
+	case 2:
+		p1 = 100
+		break
+	case 1:
+		p1 = 100 - immediate
+		break
+	default:
+		p1 = Math.max(10, state.p1)
+		break
+	}
+
+	const baseScale = 0.01 * Math.floor(p1 * state.p2)
 	const scale = Math.max(values.damageScaleMin ?? 0, baseScale)
 	patchProration(state, move, values, isFirst)
 	return scale
