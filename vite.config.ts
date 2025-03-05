@@ -1,4 +1,5 @@
 import { lingui } from '@lingui/vite-plugin'
+import optimizeLocales from '@react-aria/optimize-locales-plugin'
 import { vanillaExtractPlugin as vanillaExtract } from '@vanilla-extract/vite-plugin'
 import react from '@vitejs/plugin-react'
 import csp from 'vite-plugin-csp-guard'
@@ -36,6 +37,15 @@ export default defineConfig(({ mode }) => {
 			drop: ['console'],
 		},
 		plugins: [
+			{
+				...optimizeLocales.vite({
+					locales: [
+						'en-US',
+						'ja-JP',
+					],
+				}),
+				enforce: 'pre',
+			},
 			vanillaExtract(),
 			react({
 				babel: {
