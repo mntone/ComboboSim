@@ -37,14 +37,14 @@ function ComboTableView({
 	const renderCell = useCallback(function(item: ReadonlyDeep<Combo>, key: string): JSX.Element | string | undefined {
 		switch (key) {
 		case 'name':
-			return getPreferredMoveName(item.move, displayModes, locale, res)
+			return getPreferredMoveName(displayModes, locale, res, item.move)
 		case 'damage':
-		case 'comboDamage':
+		case 'totalDamage':
 			return i18n.number(item[key])
 		case 'scale':
 			return i18n.number(item.scale, scaleFormat)
-		case 'drive':
-		case 'superarts':
+		case 'totalDrive':
+		case 'totalSuper':
 			return i18n.number(0.0001 * item[key], guageFormat)
 		case 'actions':
 			return (
@@ -79,7 +79,7 @@ function ComboTableView({
 			<TableBody items={items}>
 				{function(comboItem) {
 					return (
-						<Row key={comboItem.id}>
+						<Row key={comboItem.index}>
 							{function(key) {
 								return (
 									<Cell>

@@ -12,7 +12,7 @@ function ResultView() {
 			<dd>
 				<Plural
 					other='#'
-					value={result.comboDamage}
+					value={result.totalDamage}
 					zero='Zero'
 				/>
 			</dd>
@@ -20,7 +20,7 @@ function ResultView() {
 			<dd>
 				<Plural
 					other='#'
-					value={result.drive}
+					value={result.totalDrive}
 					zero='None'
 				/>
 			</dd>
@@ -28,7 +28,7 @@ function ResultView() {
 			<dd>
 				<Plural
 					other='#'
-					value={result.superarts}
+					value={result.totalSuper}
 					zero='None'
 				/>
 			</dd>

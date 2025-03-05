@@ -38,6 +38,10 @@ msgstr "Combo Table"
 msgid "Common Moves"
 msgstr "Common Moves"
 
+#: src/components/HitTypeList/constants.ts:10
+msgid "Counter"
+msgstr "Counter"
+
 #: src/components/ComboList/constants.ts:23
 msgid "Damage"
 msgstr "Damage"
@@ -66,9 +70,17 @@ msgstr "Moves"
 msgid "No moves found"
 msgstr "No moves found"
 
+#: src/components/HitTypeList/constants.ts:9
+msgid "Normal"
+msgstr "Normal"
+
 #: src/components/MoveForm.tsx:20
 msgid "Normal Moves"
 msgstr "Normal Moves"
+
+#: src/components/HitTypeList/constants.ts:11
+msgid "Punish Counter"
+msgstr "Punish Counter"
 
 #: src/components/MoveForm.tsx:22
 msgid "Special Moves"

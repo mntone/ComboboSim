@@ -1,119 +1,132 @@
 import type { ReadonlyDeep } from 'type-fest'
 
-import type { Move, MoveValues } from '@/common/types'
+import type { Move } from '@/common/types'
 
-import { INITIAL_PRORATION } from './constants'
-import type { ComboItem, ProrationState } from './types'
+import type { ComboItem, ComboState, HitType, PushComboData } from './types'
+import { getComboUtils } from './utils/getComboUtils'
+import { initComboState } from './utils/initComboState'
 
-function calcImmediate(state: ProrationState, values: MoveValues): number {
-	if (values.damageImmediateCancel && state.special) {
-		return values.damageImmediateCancel
-	} else {
-		return values.damageImmediate ?? 0
-	}
-}
-
-function patchProrationImmediate(state: ProrationState, immediate: number): void {
-	state.p1 -= immediate
-}
-
-function patchProration(state: ProrationState, move: ReadonlyDeep<Move>, values: MoveValues, isFirst: boolean): void {
+function applyDriveRushIfRequired(move: ReadonlyDeep<Move>, state: ComboState) {
 	if (move.input === '656' || move.input === '656MM') {
 		if (state.rush !== 'active') {
-			if (isFirst) {
+			if (state.combo === 0) {
 				state.rush = 'active_first'
 			} else {
 				state.rush = 'active'
 				state.p2 *= 0.85
 			}
 		}
-	} else {
-		--state.count
-		state.special = move.category === 'special'
-
-		if (isFirst && values.damageInitial) {
-			state.count = 0
-			state.p1 -= values.damageInitial
-		} else {
-			state.p1 -= values.damageAdditional ?? 10
-		}
+		return
 	}
 }
 
-function calcScale(state: ProrationState, move: ReadonlyDeep<Move>, values: MoveValues, isFirst: boolean = false): number {
-	const immediate = calcImmediate(state, values)
-	patchProrationImmediate(state, immediate)
+function calcScale(move: ReadonlyDeep<Move>, state: ComboState): number {
+	const immediate = move.scaleImmediateCancel && state.special
+		? move.scaleImmediateCancel
+		: move.scaleImmediate ?? 0
+	state.p1 -= immediate
 
 	let p1
-	switch (state.count) {
-	case 2:
-		p1 = 100
-		break
-	case 1:
-		p1 = 100 - immediate
-		break
-	default:
+	if (state.isScaleActive) {
 		p1 = Math.max(10, state.p1)
-		break
+	} else if (state.combo === 1) {
+		p1 = 100 - immediate
+	} else {
+		p1 = 100
 	}
 
 	const baseScale = 0.01 * Math.floor(p1 * state.p2)
-	const scale = Math.max(values.damageScaleMin ?? 0, baseScale)
-	patchProration(state, move, values, isFirst)
+	const scale = Math.max(move.scaleMinimum ?? 0.1, baseScale)
+
+	state.special = move.category === 'special'
+
+	if (state.combo === 0 && move.scaleInitial) {
+		state.isScaleActive = true
+		state.p1 -= move.scaleInitial
+	} else {
+		if (state.combo === 1) {
+			state.isScaleActive = true
+		}
+		state.p1 -= move.scaleAdditional ?? 10
+	}
+
 	return scale
 }
 
-function calcDamage(cur: readonly number[] | number, scale: number): number {
-	if (Array.isArray(cur)) {
-		return cur.reduce(function(value, item) {
-			return value + Math.floor(scale * item)
-		}, 0)
+function validInput(
+	combo: ReadonlyDeep<PushComboData>,
+	chain: ReadonlyDeep<ComboItem[]>,
+) {
+	if (chain.length === 0) {
+		if (combo.inputType === 'cancel') {
+			throw new Error('Is meaty attack only')
+		}
+	} else {
+		if (combo.hitType !== 'normal') {
+			throw new Error('Is normal hit only')
+		}
 	}
-	if (typeof cur === 'number') {
-		return Math.floor(scale * cur)
-	}
-	return 0
 }
 
-function createComboItem(move: Move, prevItem?: ComboItem): ComboItem {
-	const values = Array.isArray(move.values) ? move.values[0] : move.values
+function simulateMove(
+	move: Move,
+	chain: ReadonlyDeep<ComboItem[]>,
+	offset: number,
+	maxFrame: number,
+	hitType: HitType,
+): ComboItem {
+	const state = initComboState(move, chain.at(-1), offset, hitType)
 
-	if (!prevItem) {
-		const proration = Object.assign({}, INITIAL_PRORATION)
-		const scale = calcScale(proration, move, values, true)
-		const damage = calcDamage(values.damage, scale)
-		const newItem: ComboItem = {
-			id: '0',
-			damage,
-			comboDamage: damage,
-			scale,
-			drive: values.driveHit,
-			superarts: values.superarts,
+	// Update proration state with the current move.
+	applyDriveRushIfRequired(move, state)
 
-			index: 0,
-			move,
-			proration,
+	if (typeof move.hits !== 'undefined' && move.hits.length !== 0) {
+		// Update scale if there is a hit.
+		state.scale = calcScale(move, state)
+
+		const comboUtils = getComboUtils(state.hitType)
+		for (const hit of move.hits) {
+			if (hit.frameStart > maxFrame) {
+				break
+			}
+			++state.juggle
+
+			const baseDamage = comboUtils.getBaseDamage(hit)
+			state.damage += Math.floor(state.scale * baseDamage)
+			if (state.rush === 'inactive') {
+				state.drive += hit.driveHit
+			}
+			state.super += comboUtils.getSuper(hit)
+			state.targetFrame = comboUtils.getTargetFrame(hit)
 		}
+
+		// Update state
+		++state.combo
+		state.totalDamage += state.damage
+		state.totalDrive += state.drive
+		state.totalSuper += state.super
+	}
+
+	return state
+}
+
+function createComboItem(
+	data: PushComboData,
+	chain: ComboItem[],
+): ComboItem {
+	validInput(data, chain)
+
+	if (data.inputType === 'cancel') {
+		// Rollback
+		const prevItem = chain[length - 1]
+		chain[length - 1] = simulateMove(prevItem.move, chain.toSpliced(length - 1), 0, data.offset, prevItem.hitType)
+
+		const newItem = simulateMove(data.move, chain, 0, Infinity, data.hitType)
+		return newItem
+	} else {
+		const newItem = simulateMove(data.move, chain, data.offset, Infinity, data.hitType)
 		return newItem
 	}
-
-	const index = prevItem.index + 1
-	const proration = Object.assign({}, prevItem.proration)
-	const scale = calcScale(proration, move, values)
-	const damage = calcDamage(values.damage, scale)
-	const newItem: ComboItem = {
-		id: index.toString(),
-		damage,
-		comboDamage: prevItem.comboDamage + damage,
-		scale,
-		drive: proration.rush === 'active' ? prevItem.drive : prevItem.drive + values.driveHit,
-		superarts: prevItem.superarts + values.superarts,
-
-		index,
-		move,
-		proration,
-	}
-	return newItem
 }
 
 export {

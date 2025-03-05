@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css'
 
-export const moveListBox = style({
+export const moveList = style({
 	fontFeatureSettings: '\'tnum\'',
 })

@@ -9,7 +9,8 @@
 		],
 		"module": "esnext",
 		"paths": {
-			"@/*": ["./src/*"]
+			"@/*": ["./src/*"],
+			"@/tests/*": ["./tests/*"]
 		},
 		"types": [
 			"@lingui/core",

@@ -6,13 +6,16 @@ import type { Move, MoveNameDisplayModes } from '@/common/types'
 import type { CSTableColumnAlign, CSTableColumnData } from '../CSTable'
 
 export interface Combo {
-	id: string
+	index: number
 	move: Move
+
 	damage: number
-	comboDamage: number
-	scale: number
 	drive: number
-	superarts: number
+	scale: number
+	super: number
+	totalDamage: number
+	totalDrive: number
+	totalSuper: number
 }
 
 export type ComboTableColumnKey =

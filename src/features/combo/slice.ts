@@ -1,8 +1,7 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 
-import type { Move } from '@/common/types'
-
 import { COMBO_INITIAL_STATE, COMBO_NAME } from './constants'
+import type { PushComboData } from './types'
 import { createComboItem } from './utils'
 
 const comboSlice = createSlice({
@@ -19,12 +18,11 @@ const comboSlice = createSlice({
 			}
 		},
 
-		pushCombo(state, action: PayloadAction<Move | undefined>) {
-			const move = action.payload
-			if (move) {
-				const prevItem = state.combos.at(-1)
-				const newItem = createComboItem(move, prevItem)
-				state.combos = [...state.combos, newItem]
+		pushCombo(state, action: PayloadAction<PushComboData | undefined>) {
+			const data = action.payload
+			if (data) {
+				const newItem = createComboItem(data, state.combos)
+				state.combos.push(newItem)
 			}
 		},
 

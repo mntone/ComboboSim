@@ -29,17 +29,17 @@ export const COMBOTABLE_COLUMNS: ComboTableColumn[] = [
 		dataType: 'number',
 	},
 	{
-		id: 'comboDamage',
+		id: 'totalDamage',
 		name: msg`Combo Damage`,
 		dataType: 'number',
 	},
 	{
-		id: 'drive',
+		id: 'totalDrive',
 		name: msg`Drive Guage`,
 		dataType: 'number',
 	},
 	{
-		id: 'superarts',
+		id: 'totalSuper',
 		name: msg`Super Art Guage`,
 		dataType: 'number',
 	},
@@ -56,7 +56,7 @@ export const COMBOTABLE_OPTIONAL_COLUMNS
 	})
 
 export const COMBOTABLE_DEFAULT_COLUMNS: ComboTableColumnKey[] = [
-	'comboDamage',
-	'drive',
-	'superarts',
+	'totalDamage',
+	'totalDrive',
+	'totalSuper',
 ] as const

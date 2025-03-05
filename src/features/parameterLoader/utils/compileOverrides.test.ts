@@ -1,9 +1,8 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import type { MoveValues } from '@/common/types'
 
-import { MOCK_MOVE_SPECIAL } from '@/mocks/mockData.test'
+import { MOCK_MOVE_SPECIAL } from '@/tests/utils/mockData'
 
-import type { MoveOverrides, ParameterContext } from '../types'
+import type { MoveJson, MoveOverrides, ParameterContext } from '../types'
 
 import compileOverrides from './compileOverrides'
 
@@ -11,16 +10,18 @@ test('should correctly apply overrides based on conditions', () => {
 	const compiledFn = compileOverrides(MOCK_MOVE_SPECIAL.overrides!)
 	expect(compiledFn).not.toBeNull()
 
-	const move: MoveValues = Object.assign({}, MOCK_MOVE_SPECIAL)
-	if (Array.isArray(move.damage)) {
-		compiledFn!(move, { JIM_POINT: 2 } as unknown as ParameterContext)
-		expect(move.damage[1]).toBe(1450)
+	const move: MoveJson = Object.assign({}, MOCK_MOVE_SPECIAL)
+	compiledFn!(move, { JIM_POINT: 2 } as unknown as ParameterContext)
+	expect(move.totalFrames).toBe(155)
+	expect(move.hits![1].damage).toBe(1450)
 
-		move.damage[1] = 1300 // Reset for next test
-		compiledFn!(move, { JIM_POINT: 3 } as unknown as ParameterContext)
-		expect(move.damage[1]).toBe(1600)
-		expect(move.superarts).toBe(3150)
-	}
+	// Reset for next test
+	move.totalFrames = 155
+	move.hits![1].damage = 1300
+	compiledFn!(move, { JIM_POINT: 3 } as unknown as ParameterContext)
+	expect(move.totalFrames).toBe(201)
+	expect(move.hits![1].damage).toBe(1600)
+	expect(move.hits![1].superHit).toBe(3150)
 })
 
 test('should throw syntax error for invalid syntax', () => {

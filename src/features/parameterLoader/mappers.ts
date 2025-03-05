@@ -1,9 +1,7 @@
-import type { Character, Move, MoveValues } from '@/common/types'
+import type { Character, Move } from '@/common/types'
 
-import { COMMON_MOVES, CONTEXT_PARAMS, DEFAULT_CONTEXT_PARAMS } from './constants'
+import { CONTEXT_PARAMS, DEFAULT_CONTEXT_PARAMS } from './constants'
 import type { CharacterExtension, CharacterJson, MoveJson, ParameterContext } from './types'
-import compileOverrides from './utils/compileOverrides'
-import copyObjectPickedByNames from './utils/copyObjectPickedByNames'
 
 function getContexts(ext?: CharacterExtension[]): ParameterContext[] {
 	if (typeof ext === 'undefined' || ext.length === 0) {
@@ -36,65 +34,38 @@ function getContexts(ext?: CharacterExtension[]): ParameterContext[] {
 }
 
 function mapMove(contexts: ParameterContext[], json: MoveJson): Move {
-	const targetPropertyNames = [
-		'damage',
-		'damageAdditional',
-		'damageInitial',
-		'damageImmediate',
-		'damageImmediateCancel',
-		'damageScaleMin',
-		'damageScaleCounter',
-		'damageScalePunish',
-		'driveHit',
-		'driveBlock',
-		'drivePunish',
-		'superarts',
-		'superartsPunish',
-	]
-	const baseValue: MoveValues = copyObjectPickedByNames(json, targetPropertyNames) as MoveValues
+	void contexts
 
-	let values: MoveValues[] | MoveValues
-	if (typeof json.overrides !== 'undefined') {
-		const fn = compileOverrides(json.overrides)
-		values = contexts.map(function(context) {
-			const value = Object.assign({}, baseValue)
-			fn(value, context)
-			return value
-		})
-	} else {
-		values = baseValue
-	}
+	// let values: MoveValues[] | MoveValues
+	// if (typeof json.overrides !== 'undefined') {
+	// 	const fn = compileOverrides(json.overrides)
+	// 	values = contexts.map(function(context) {
+	// 		const value = Object.assign({}, baseValue)
+	// 		fn(value, context)
+	// 		return value
+	// 	})
+	// } else {
+	// 	values = baseValue
+	// }
 
-	const move: Move = {
-		id: json.id,
-		names: json.names,
-		category: json.category,
-		dependency: json.dependency,
-		input: json.input,
-		inputModern: json.inputModern,
-		inputModernAlt: json.inputModernAlt,
-		values,
-	}
-	return move
+	return json
 }
 
 function mapCharacter(json: CharacterJson): Character {
-	const contexts = getContexts(json.use)
-	const bindMapMove = mapMove.bind(null, contexts)
-
-	const moves = json.moves.map(bindMapMove)
-	moves.push(...COMMON_MOVES)
+	// const contexts = getContexts(json.use)
 
 	const character: Character = {
 		id: json.id,
 		names: json.names,
 		vitality: json.vitality,
-		moves,
+		moves: json.moves,
 	}
 	return character as Character
 }
 
 export {
+	getContexts,
+
 	mapMove,
 	mapCharacter,
 }

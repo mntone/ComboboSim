@@ -77,6 +77,7 @@ const config = ts.config(
 			'import/resolver': {
 				alias: {
 					map: [
+						['@/tests', './tests'],
 						['@', './src'],
 					],
 					extensions: ['.ts', '.tsx'],

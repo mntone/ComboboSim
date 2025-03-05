@@ -1,3 +1,40 @@
+export interface FrameData {
+	frameEnd: number
+	frameStart: number
+}
+
+export interface CancelData extends FrameData {
+	frameReady: number
+	targets: string[]
+}
+
+export type DamageType =
+	| 'strike'
+	| 'projectile'
+	| 'throw'
+
+export interface HitData extends FrameData {
+	id: number
+	type: DamageType
+	damage: number
+	damageCounter?: number
+	damagePunish?: number
+	driveHit: number
+	driveTargetBlock: number
+	driveTargetBlockBurnout: number
+	driveTargetHit?: number
+	driveTargetHitPunish: number
+	frameTargetBlock: number
+	frameTargetHit: number
+	frameTargetHitCounter?: number
+	frameTargetHitPunish?: number
+	superHit: number
+	superHitPunish?: number
+	superBlock?: number
+	superTargetBlock?: number
+	superTargetHit?: number
+}
+
 export interface MoveNames {
 	en?: string
 	ja: string
@@ -25,31 +62,26 @@ export type MoveCategoryType =
 	| 'throws'
 	| 'common'
 
-export interface MoveValues {
-	damage: number[] | number
-	damageAdditional?: number
-	damageInitial?: number
-	damageImmediate?: number
-	damageImmediateCancel?: number
-	damageScaleMin?: number
-	damageScaleCounter?: number
-	damageScalePunish?: number
-	driveHit: number
-	driveBlock: number
-	drivePunish: number
-	superarts: number
-	superartsPunish?: number
-}
-
 export interface Move {
 	id: string
 	names?: MoveNames
 	category: MoveCategoryType
-	dependency?: string
+
 	input: string
 	inputModern?: string
 	inputModernAlt?: string
-	values: MoveValues[] | MoveValues
+	scaleAdditional?: number
+	scaleImmediate?: number
+	scaleImmediateCancel?: number
+	scaleInitial?: number
+	scaleMinimum?: number
+	totalFrames: number
+	totalFramesBlock?: number
+	totalFramesMiss?: number
+
+	cancels?: CancelData[]
+	dependencies?: string[]
+	hits?: HitData[]
 }
 
 export interface CharacterNames {

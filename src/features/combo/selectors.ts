@@ -21,15 +21,15 @@ const selectResult = createSelector(
 	function(item: ComboItem | undefined) {
 		if (item) {
 			return {
-				comboDamage: item.comboDamage,
-				drive: 0.0001 * item.drive,
-				superarts: 0.0001 * item.superarts,
+				totalDamage: item.totalDamage,
+				totalDrive: 0.0001 * item.totalDrive,
+				totalSuper: 0.0001 * item.totalSuper,
 			}
 		} else {
 			return {
-				comboDamage: 0,
-				drive: 0,
-				superarts: 0,
+				totalDamage: 0,
+				totalDrive: 0,
+				totalSuper: 0,
 			}
 		}
 	},

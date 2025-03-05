@@ -1,11 +1,17 @@
 import { useLingui } from '@lingui/react/macro'
-import { useCallback, useMemo } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
+import { TbPlus } from 'react-icons/tb'
 import type { ReadonlyDeep } from 'type-fest'
+
+import type { Move } from '@/common/types'
 
 import { useAppDispatch, useAppSelector } from '@/app/hooks'
 import { ComboTableView, type Combo, type ComboTableColumnKey } from '@/components/ComboList'
 import { ComboViewOptionsButton } from '@/components/ComboList/ComboViewOptionsButton'
 import { COMBOTABLE_DEFAULT_COLUMNS } from '@/components/ComboList/constants'
+import { CSButton, CSButtonGroup } from '@/components/CSButton'
+import { HitTypeList } from '@/components/HitTypeList'
+import { MoveList } from '@/components/MoveList'
 import { CharacterListBox } from '@/features/combo/components/CharacterListBox'
 import type { CharacterParameterState } from '@/features/parameterLoader/types'
 import { selectDynamicResource } from '@/features/resourceLoader/selectors'
@@ -13,13 +19,28 @@ import { selectComboTableColumns, selectMoveNameDisplayModes } from '@/features/
 import { setComboTableColumns } from '@/features/userSettings/slice'
 
 import { selectCharacterId, selectComboItems, selectLastComboItem } from '../selectors'
-import { dropComboRight, setCharacterId } from '../slice'
+import { dropComboRight, pushCombo, setCharacterId } from '../slice'
+import type { HitType } from '../types'
 
-import { MoveListBox } from './MoveListBox'
+function hasItem<T>(collection: T[] | undefined): collection is T[] {
+	return typeof collection !== 'undefined' && collection.length !== 0
+}
+
+function isDependent(targetMove: Move, prevMoveId: string): boolean {
+	// No dependent data
+	if (!hasItem(targetMove.dependencies)) {
+		return false
+	}
+
+	return !targetMove.dependencies.includes(prevMoveId)
+}
 
 function ComboView() {
 	const { i18n: { locale } } = useLingui()
 	const dispatch = useAppDispatch()
+
+	const [move, setMove] = useState<Move>()
+	const [hitType, setHitType] = useState<HitType>('normal')
 
 	const characterId = useAppSelector(selectCharacterId)
 	const columns = useAppSelector(selectComboTableColumns)
@@ -32,6 +53,19 @@ function ComboView() {
 	const columnSet = useMemo(function() {
 		return new Set(columns ?? COMBOTABLE_DEFAULT_COLUMNS)
 	}, [columns])
+
+	const filterMove = useMemo(function() {
+		if (lastComboItem) {
+			const lastMoveId = lastComboItem.move.id
+			return function(move: Move): boolean {
+				return !isDependent(move, lastMoveId)
+			}
+		} else {
+			return function(move: Move): boolean {
+				return typeof move.dependencies === 'undefined'
+			}
+		}
+	}, [lastComboItem])
 
 	const handleCharacterChange = useCallback(function(character: CharacterParameterState) {
 		dispatch(setCharacterId(character.id))
@@ -49,6 +83,22 @@ function ComboView() {
 			dispatch(dropComboRight(index))
 		}
 	}, [dispatch, comboItems])
+
+	const handleAdd = useCallback(function() {
+		if (move) {
+			dispatch(pushCombo({
+				hitType,
+				inputType: 'meaty',
+				offset: 0,
+				move,
+			}))
+		}
+	}, [dispatch, hitType, move])
+
+	useEffect(function() {
+		setMove(undefined)
+		setHitType('normal')
+	}, [lastComboItem])
 
 	return (
 		<>
@@ -68,10 +118,32 @@ function ComboView() {
 				res={res}
 				onDelete={handleDelete}
 			/>
-			<MoveListBox
-				characterKey={characterId}
-				lastMove={lastComboItem?.move}
-			/>
+
+			<CSButtonGroup>
+				<MoveList
+					characterKey={characterId}
+					filter={filterMove}
+					selectedMove={move}
+					onMoveChange={setMove}
+				/>
+
+				{typeof lastComboItem === 'undefined' && (
+					<HitTypeList
+						selectedHitType={hitType}
+						onHitTypeChange={setHitType}
+					/>
+				)}
+
+				<CSButton
+					aria-label='Add Move'
+					isDisabled={typeof move === 'undefined'}
+					isIconOnly
+					variant='primary'
+					onPress={handleAdd}
+				>
+					<TbPlus size={16} />
+				</CSButton>
+			</CSButtonGroup>
 		</>
 	)
 }

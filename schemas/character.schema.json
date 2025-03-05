@@ -2,6 +2,12 @@
 	"title": "Character Parameter Definitions",
 	"type": "object",
 	"properties": {
+		"version": {
+			"title": "Definition Version",
+			"type": "number",
+			"minimum": 1,
+			"maximum": 2
+		},
 		"id": {
 			"title": "Character ID",
 			"type": "string",
@@ -91,17 +97,11 @@
 							"common"
 						]
 					},
-					"dependency": {
-						"title": "Dependent Move ID",
-						"type": "string",
-						"minLength": 1,
-						"pattern": "^[a-zA-Z][\\w~.\\[\\]]*\\w?$"
-					},
 					"input": {
 						"title": "Input",
 						"type": "string",
 						"minLength": 2,
-						"pattern": "^(?:[\\dj]|j?\\d{1,6})?(?:[LMH]?[PK]|PP|KK|LL|MM|HH|\\[(?:[LMH]?[PK]|PP|KK|LL|MM|HH)\\])(?:~\\d?(?:[LMH]?[PK]|LL|MM|HH|PP|KK)(?:~[LMH][PK])?)?$"
+						"pattern": "^(?:[\\dj]|j?\\d{1,6})?(?:[LMH]?[PK]|PP|KK|LL|MM|HH|\\[(?:[LMH]?[PK]|PP|KK|LL|MM|HH)\\])?(?:~\\d?(?:N|[LMH]?[PK]|LL|MM|HH|PP|KK)(?:~[LMH][PK])?)?$"
 					},
 					"input_modern": {
 						"$ref": "#/$defs/input_modern"
@@ -109,28 +109,25 @@
 					"input_modern_alt": {
 						"$ref": "#/$defs/input_modern"
 					},
-					"damage": {
-						"$ref": "#/$defs/damages"
-					},
-					"damage_additional": {
+					"scale_additional": {
 						"title": "Additional Adjustment for Damage",
 						"type": "number",
 						"minimum": 0,
 						"maximum": 100
 					},
-					"damage_immediate": {
+					"scale_immediate": {
 						"title": "Immediate Adjustment for Damage",
 						"type": "number",
 						"minimum": 0,
 						"maximum": 100
 					},
-					"damage_immediate_cancel": {
+					"scale_immediate_cancel": {
 						"title": "Immediate Adjustment for Damage when Cancel",
 						"type": "number",
 						"minimum": 0,
 						"maximum": 100
 					},
-					"damage_initial": {
+					"scale_initial": {
 						"title": "Initial Adjustment for Damage",
 						"type": "number",
 						"minimum": 0,
@@ -142,38 +139,199 @@
 						"minimum": 0,
 						"maximum": 100
 					},
-					"damage_scale_min": {
+					"scale_minimum": {
 						"title": "Minimum Damage Multiplier",
 						"type": "number",
 						"minimum": 0,
 						"maximum": 10
 					},
-					"damage_scale_counter": {
-						"title": "Counter Damage Multiplier",
-						"type": "number",
-						"minimum": 0,
-						"maximum": 10
+					"total_frames": {
+						"title": "Total Frames",
+						"$ref": "#/$defs/base_frame"
 					},
-					"damage_scale_punish": {
-						"title": "Punish Counter Damage Multiplier",
-						"type": "number",
-						"minimum": 0,
-						"maximum": 10
+					"total_frames_block": {
+						"title": "Total Frames on Block",
+						"$ref": "#/$defs/base_frame"
 					},
-					"drive_hit": {
-						"$ref": "#/$defs/drive_hit"
+					"total_frames_miss": {
+						"title": "Total Frames when Attack Misses",
+						"$ref": "#/$defs/base_frame"
 					},
-					"drive_block": {
-						"$ref": "#/$defs/drive_block"
+					"cancels": {
+						"title": "Array of Cancel Data",
+						"type": "array",
+						"minItems": 1,
+						"items": {
+							"title": "Cancel Data",
+							"type": "object",
+							"properties": {
+								"frame_end": {
+									"title": "End Frame",
+									"$ref": "#/$defs/base_frame"
+								},
+								"frame_start": {
+									"title": "Start Frame",
+									"$ref": "#/$defs/base_frame"
+								},
+								"frame_ready": {
+									"title": "Ready Frame",
+									"$ref": "#/$defs/base_frame"
+								},
+								"targets": {
+									"title": "Array of Target Move ID",
+									"type": "array",
+									"minItems": 1,
+									"items": {
+										"title": "Target Move ID",
+										"$ref": "#/$defs/base_move_id"
+									}
+								}
+							},
+							"additionalProperties": false,
+							"required": [
+								"frame_end",
+								"frame_start",
+								"frame_ready",
+								"targets"
+							]
+						}
 					},
-					"drive_punish": {
-						"$ref": "#/$defs/drive_punish"
+					"dependencies": {
+						"title": "Array of Dependent Move ID",
+						"type": "array",
+						"minItems": 1,
+						"items": {
+							"title": "Dependent Move ID",
+							"$ref": "#/$defs/base_move_id"
+						}
 					},
-					"superarts": {
-						"$ref": "#/$defs/superarts"
-					},
-					"superarts_punish": {
-						"$ref": "#/$defs/superarts_punish"
+					"hits": {
+						"title": "Array of Hit Parameters",
+						"type": "array",
+						"minItems": 1,
+						"items": {
+							"title": "Hit Parameters",
+							"type": "object",
+							"minItems": 1,
+							"properties": {
+								"id": {
+									"title": "Hit ID",
+									"type": "number",
+									"minimum": 0,
+									"maximum": 10
+								},
+								"type": {
+									"title": "Damage Type",
+									"type": "string",
+									"enum": [
+										"strike",
+										"projectile",
+										"throw"
+									]
+								},
+								"damage": {
+									"title": "Damage",
+									"$ref": "#/$defs/base_damage"
+								},
+								"damage_counter": {
+									"title": "Damage on Counter Hit",
+									"$ref": "#/$defs/base_damage"
+								},
+								"damage_punish": {
+									"title": "Damage on Punish Counter Hit",
+									"$ref": "#/$defs/base_damage"
+								},
+								"drive_hit": {
+									"title": "Drive Guage Increase on Hit",
+									"type": "number",
+									"minimum": 0,
+									"maximum": 10000
+								},
+								"drive_target_block": {
+									"title": "Enemy Drive Guage Depletion on Block",
+									"type": "number",
+									"minimum": -10000,
+									"maximum": 0
+								},
+								"drive_target_block_burnout": {
+									"title": "Enemy Drive Guage Increase on Block during Burned Out",
+									"type": "number",
+									"minimum": 0,
+									"maximum": 10000
+								},
+								"drive_target_hit": {
+									"title": "Enemy Drive Guage Depletion",
+									"type": "number",
+									"minimum": -20000,
+									"maximum": 0
+								},
+								"drive_target_hit_punish": {
+									"title": "Enemy Drive Guage Depletion on Punish Counter Hit",
+									"type": "number",
+									"minimum": -20000,
+									"maximum": 0
+								},
+								"frame_end": {
+									"title": "End Frame",
+									"$ref": "#/$defs/base_frame"
+								},
+								"frame_start": {
+									"title": "Start Frame",
+									"$ref": "#/$defs/base_frame"
+								},
+								"frame_target_block": {
+									"title": "Frame on Block",
+									"$ref": "#/$defs/base_frame"
+								},
+								"frame_target_hit": {
+									"title": "Frame on Hit",
+									"$ref": "#/$defs/base_frame"
+								},
+								"frame_target_hit_counter": {
+									"title": "Frame on Counter Hit",
+									"$ref": "#/$defs/base_super"
+								},
+								"frame_target_hit_punish": {
+									"title": "Frame on Punish Counter Hit",
+									"$ref": "#/$defs/base_super"
+								},
+								"super_hit": {
+									"title": "Super Arts Guage Increase on Hit",
+									"$ref": "#/$defs/base_super"
+								},
+								"super_hit_punish": {
+									"title": "Super Arts Guage Increase on Punish Counter Hit",
+									"$ref": "#/$defs/base_super"
+								},
+								"super_block": {
+									"title": "Super Arts Guage Increase on Block",
+									"$ref": "#/$defs/base_super"
+								},
+								"super_target_block": {
+									"title": "Enemy Super Arts Guage Increase on Block",
+									"$ref": "#/$defs/base_super"
+								},
+								"super_target_hit": {
+									"title": "Enemy Super Arts Guage Increase on Hit",
+									"$ref": "#/$defs/base_super"
+								}
+							},
+							"additionalProperties": false,
+							"required": [
+								"id",
+								"type",
+								"damage",
+								"drive_hit",
+								"drive_target_block",
+								"drive_target_block_burnout",
+								"drive_target_hit_punish",
+								"frame_end",
+								"frame_start",
+								"frame_target_block",
+								"frame_target_hit",
+								"super_hit"
+							]
+						}
 					},
 					"overrides": {
 						"title": "Override Parameters",
@@ -185,28 +343,63 @@
 								"type": "object",
 								"minItems": 1,
 								"properties": {
-									"damage": {
-										"$ref": "#/$defs/damages"
-									},
-									"drive_hit": {
-										"$ref": "#/$defs/drive_hit"
-									},
-									"drive_block": {
-										"$ref": "#/$defs/drive_block"
-									},
-									"drive_punish": {
-										"$ref": "#/$defs/drive_punish"
-									},
-									"superarts": {
-										"$ref": "#/$defs/superarts"
-									},
-									"superarts_punish": {
-										"$ref": "#/$defs/superarts_punish"
+									"total_frames": {
+										"title": "Total Frames",
+										"$ref": "#/$defs/base_frame"
 									}
 								},
 								"patternProperties": {
-									"^damage\\[\\d+\\]$": {
-										"$ref": "#/$defs/damage"
+									"^hits\\[\\d+\\].damage$": {
+										"title": "Damage",
+										"$ref": "#/$defs/base_damage"
+									},
+									"^hits\\[\\d+\\].damage_counter$": {
+										"title": "Damage on Counter Hit",
+										"$ref": "#/$defs/base_damage"
+									},
+									"^hits\\[\\d+\\].damage_punish$": {
+										"title": "Damage on Punish Counter Hit",
+										"$ref": "#/$defs/base_damage"
+									},
+									"^hits\\[\\d+\\].drive_target_block$": {
+										"title": "Enemy Drive Guage Depletion on Block",
+										"type": "number",
+										"minimum": -10000,
+										"maximum": 0
+									},
+									"^hits\\[\\d+\\].drive_target_block_burnout$": {
+										"title": "Enemy Drive Guage Increase on Block during Burned Out",
+										"type": "number",
+										"minimum": 0,
+										"maximum": 10000
+									},
+									"^hits\\[\\d+\\].drive_target_hit$": {
+										"title": "Enemy Drive Guage Depletion",
+										"type": "number",
+										"minimum": -20000,
+										"maximum": 0
+									},
+									"drive_target_hit_punish": {
+										"title": "Enemy Drive Guage Depletion on Punish Counter Hit",
+										"type": "number",
+										"minimum": -20000,
+										"maximum": 0
+									},
+									"^hits\\[\\d+\\].frame_end$": {
+										"title": "End Frame",
+										"$ref": "#/$defs/base_frame"
+									},
+									"^hits\\[\\d+\\].frame_start$": {
+										"title": "Start Frame",
+										"$ref": "#/$defs/base_frame"
+									},
+									"^hits\\[\\d+\\].super_hit$": {
+										"title": "Super Arts Guage Increase on Hit",
+										"$ref": "#/$defs/base_super"
+									},
+									"^hits\\[\\d+\\].super_hit_punish$": {
+										"title": "Super Arts Guage Increase on Punish Counter Hit",
+										"$ref": "#/$defs/base_super"
 									}
 								},
 								"additionalProperties": false
@@ -218,12 +411,8 @@
 				"additionalProperties": false,
 				"required": [
 					"id",
-					"names",
-					"damage",
-					"drive_hit",
-					"drive_block",
-					"drive_punish",
-					"superarts"
+					"category",
+					"input"
 				]
 			}
 		}
@@ -236,56 +425,31 @@
 		"moves"
 	],
 	"$defs": {
+		"base_damage": {
+			"type": "number",
+			"minimum": 0,
+			"maximum": 11000
+		},
+		"base_frame": {
+			"type": "number",
+			"minimum": 0,
+			"maximum": 1000
+		},
+		"base_super": {
+			"type": "number",
+			"minimum": 0,
+			"maximum": 30000
+		},
+		"base_move_id": {
+			"type": "string",
+			"minLength": 1,
+			"pattern": "^[a-zA-Z][\\w~.\\[\\]]*\\w?$"
+		},
 		"input_modern": {
 			"title": "Input",
 			"type": "string",
 			"minLength": 2,
-			"pattern": "^(?:Auto\\+)?(?:(?:[\\dj]|j?\\d{1,6})?(?:L|M|H|A|AA|LM|DP|DI|\\[(?:L|M|H|A|AA)\\])(?:~(?:Auto\\+)?\\d?(?:L|M|H|A|\\[[LMH]\\])(?:~[LMH])?)?|[\\dj]*(?:SP|\\[SP\\]|SPH)(?:~\\d?(?:A|SP))?)$"
-		},
-		"damage": {
-			"title": "Damage",
-			"type": "number",
-			"minimum": 0,
-			"maximum": 5000
-		},
-		"damages": {
-			"oneOf": [
-				{
-					"$ref": "#/$defs/damage"
-				},
-				{
-					"title": "Array of Damage",
-					"type": "array",
-					"minItems": 1,
-					"items": {
-						"$ref": "#/$defs/damage"
-					}
-				}
-			]
-		},
-		"drive_hit": {
-			"title": "Drive Guage Increase on Hit",
-			"type": "number",
-			"minimum": 0,
-			"maximum": 10000
-		},
-		"drive_block": {
-			"title": "Drive Guage Depletion on Block",
-			"type": "number",
-			"minimum": -10000,
-			"maximum": 0
-		},
-		"drive_punish": {
-			"title": "Drive Guage Depletion on Punish Counter Hit",
-			"type": "number",
-			"minimum": -20000,
-			"maximum": 0
-		},
-		"superarts": {
-			"title": "Super Arts Guage Increase",
-			"type": "number",
-			"minimum": 0,
-			"maximum": 10000
+			"pattern": "^(?:Auto\\+)?(?:(?:[\\dj]|j?\\d{1,6})?(?:L|M|H|A|AA|LM|DP|DI|\\[(?:L|M|H|A|AA)\\])?(?:~(?:Auto\\+)?\\d?(?:N|L|M|H|A|\\[[LMH]\\])(?:~[LMH])?)?|[\\dj]*(?:SP|\\[SP\\]|SPH)(?:~\\d?(?:N|A|SP))?)$"
 		},
 		"superarts_punish": {
 			"title": "Super Arts Guage Increase on Punish Counter",

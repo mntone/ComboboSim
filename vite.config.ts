@@ -45,9 +45,6 @@ export default defineConfig(({ mode }) => {
 			lingui(),
 			html({ minify: true }),
 			csp({
-				dev: {
-					outlierSupport: ['tailwind'],
-				},
 				build: {
 					sri: true,
 				},
@@ -57,7 +54,10 @@ export default defineConfig(({ mode }) => {
 			}),
 		],
 		resolve: {
-			alias: [{ find: '@', replacement: '/src' }],
+			alias: [
+				{ find: '@', replacement: '/src' },
+				{ find: '@/tests', replacement: '/tests' },
+			],
 		},
 		test: {
 			environment: 'jsdom',

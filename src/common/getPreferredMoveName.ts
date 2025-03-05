@@ -11,10 +11,10 @@ function getBaseMoveName(move: ReadonlyDeep<Move>, locale?: string): string | un
 }
 
 function getPreferredMoveName(
-	move: ReadonlyDeep<Move> | undefined,
 	displayModes: MoveNameDisplayModes,
 	locale?: string,
 	res?: Record<string, string> | null,
+	move?: ReadonlyDeep<Move> | undefined,
 ): string | undefined {
 	if (move === undefined) {
 		return undefined

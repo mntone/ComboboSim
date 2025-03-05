@@ -1,4 +1,5 @@
 {
+	"version": 2,
 	"id": "cammy",
 	"names": {
 		"en": "Cammy",
@@ -14,12 +15,67 @@
 			"category": "normal",
 			"input": "5LP",
 			"input_modern": "5L",
-			"damage": 300,
-			"damage_initial": 20,
-			"drive_hit": 250,
-			"drive_block": -500,
-			"drive_punish": -2000,
-			"superarts": 300
+			"scale_initial": 20,
+			"total_frames": 13,
+			"cancels": [
+				{
+					"frame_end": 6,
+					"frame_start": 3,
+					"frame_ready": 1,
+					"targets": [
+						"cammy.236LK",
+						"cammy.236MK",
+						"cammy.236[HK]",
+						"cammy.236KK",
+						"cammy.623LK",
+						"cammy.623MK",
+						"cammy.623[HK]",
+						"cammy.623KK",
+						"cammy.214LP",
+						"cammy.214MP",
+						"cammy.214HP",
+						"cammy.214PP",
+						"cammy.236236K",
+						"cammy.214214P",
+						"cammy.236236P",
+						"cammy.HH"
+					]
+				},
+				{
+					"frame_end": 8,
+					"frame_start": 6,
+					"frame_ready": 1,
+					"targets": [
+						"cammy.656"
+					]
+				},
+				{
+					"frame_end": 9,
+					"frame_start": 8,
+					"frame_ready": 3,
+					"targets": [
+						"cammy.5LP",
+						"cammy.2LP",
+						"cammy.2LK"
+					]
+				}
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 300,
+					"drive_hit": 250,
+					"drive_target_block": -500,
+					"drive_target_block_burnout": 250,
+					"drive_target_hit_punish": -2000,
+					"frame_end": 6,
+					"frame_start": 3,
+					"frame_target_block": 8,
+					"frame_target_hit": 15,
+					"super_hit": 300
+				}
+			]
 		},
 		{
 			"id": "cammy.5LK",
@@ -28,12 +84,57 @@
 			},
 			"category": "normal",
 			"input": "5LK",
-			"damage": 300,
-			"damage_initial": 20,
-			"drive_hit": 250,
-			"drive_block": -500,
-			"drive_punish": -2000,
-			"superarts": 300
+			"scale_initial": 20,
+			"total_frames": 17,
+			"cancels": [
+				{
+					"frame_end": 7,
+					"frame_start": 6,
+					"frame_ready": 1,
+					"targets": [
+						"cammy.236LK",
+						"cammy.236MK",
+						"cammy.236[HK]",
+						"cammy.236KK",
+						"cammy.623LK",
+						"cammy.623MK",
+						"cammy.623[HK]",
+						"cammy.623KK",
+						"cammy.214LP",
+						"cammy.214MP",
+						"cammy.214HP",
+						"cammy.214PP",
+						"cammy.236236K",
+						"cammy.214214P",
+						"cammy.236236P",
+						"cammy.HH"
+					]
+				},
+				{
+					"frame_end": 12,
+					"frame_start": 7,
+					"frame_ready": 1,
+					"targets": [
+						"cammy.656"
+					]
+				}
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 300,
+					"drive_hit": 250,
+					"drive_target_block": -500,
+					"drive_target_block_burnout": 250,
+					"drive_target_hit_punish": -2000,
+					"frame_end": 7,
+					"frame_start": 4,
+					"frame_target_block": 10,
+					"frame_target_hit": 15,
+					"super_hit": 300
+				}
+			]
 		},
 		{
 			"id": "cammy.5MP",
@@ -43,11 +144,23 @@
 			"category": "normal",
 			"input": "5MP",
 			"input_modern": "Auto+5M",
-			"damage": 600,
-			"drive_hit": 1500,
-			"drive_block": -3000,
-			"drive_punish": -4000,
-			"superarts": 500
+			"total_frames": 22,
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 600,
+					"drive_hit": 1500,
+					"drive_target_block": -3000,
+					"drive_target_block_burnout": 1500,
+					"drive_target_hit_punish": -4000,
+					"frame_end": 9,
+					"frame_start": 5,
+					"frame_target_block": 16,
+					"frame_target_hit": 23,
+					"super_hit": 500
+				}
+			]
 		},
 		{
 			"id": "cammy.5MK",
@@ -57,11 +170,23 @@
 			"category": "normal",
 			"input": "5MK",
 			"input_modern": "5M",
-			"damage": 700,
-			"drive_hit": 2000,
-			"drive_block": -4000,
-			"drive_punish": -6000,
-			"superarts": 700
+			"total_frames": 28,
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 700,
+					"drive_hit": 2000,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 2000,
+					"drive_target_hit_punish": -6000,
+					"frame_end": 10,
+					"frame_start": 7,
+					"frame_target_block": 17,
+					"frame_target_hit": 24,
+					"super_hit": 700
+				}
+			]
 		},
 		{
 			"id": "cammy.5HP",
@@ -71,11 +196,57 @@
 			"category": "normal",
 			"input": "5HP",
 			"input_modern": "Auto+5H",
-			"damage": 800,
-			"drive_hit": 2000,
-			"drive_block": -4000,
-			"drive_punish": -8000,
-			"superarts": 1000
+			"total_frames": 30,
+			"cancels": [
+				{
+					"frame_end": 10,
+					"frame_start": 7,
+					"frame_ready": 3,
+					"targets": [
+						"cammy.236LK",
+						"cammy.236MK",
+						"cammy.236[HK]",
+						"cammy.236KK",
+						"cammy.623LK",
+						"cammy.623MK",
+						"cammy.623[HK]",
+						"cammy.623KK",
+						"cammy.214LP",
+						"cammy.214MP",
+						"cammy.214HP",
+						"cammy.214PP",
+						"cammy.236236K",
+						"cammy.214214P",
+						"cammy.236236P",
+						"cammy.HH",
+						"cammy.656"
+					]
+				},
+				{
+					"frame_end": 12,
+					"frame_start": 7,
+					"frame_ready": 3,
+					"targets": [
+						"cammy.5HPtoHK.0"
+					]
+				}
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 800,
+					"drive_hit": 2000,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 2000,
+					"drive_target_hit_punish": -8000,
+					"frame_end": 10,
+					"frame_start": 7,
+					"frame_target_block": 20,
+					"frame_target_hit": 25,
+					"super_hit": 1000
+				}
+			]
 		},
 		{
 			"id": "cammy.5HK",
@@ -85,11 +256,24 @@
 			"category": "normal",
 			"input": "5HK",
 			"input_modern": "5H",
-			"damage": 900,
-			"drive_hit": 3000,
-			"drive_block": -6000,
-			"drive_punish": -10000,
-			"superarts": 1200
+			"total_frames": 32,
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 900,
+					"drive_hit": 3000,
+					"drive_target_block": -6000,
+					"drive_target_block_burnout": 3000,
+					"drive_target_hit_punish": -10000,
+					"frame_end": 13,
+					"frame_start": 10,
+					"frame_target_block": 19,
+					"frame_target_hit": 24,
+					"frame_target_hit_punish": 22,
+					"super_hit": 1200
+				}
+			]
 		},
 		{
 			"id": "cammy.2LP",
@@ -99,12 +283,67 @@
 			"category": "normal",
 			"input": "2LP",
 			"input_modern": "2L~2L",
-			"damage": 300,
-			"damage_initial": 20,
-			"drive_hit": 250,
-			"drive_block": -500,
-			"drive_punish": -2000,
-			"superarts": 300
+			"scale_initial": 20,
+			"total_frames": 13,
+			"cancels": [
+				{
+					"frame_end": 5,
+					"frame_start": 3,
+					"frame_ready": 1,
+					"targets": [
+						"cammy.236LK",
+						"cammy.236MK",
+						"cammy.236[HK]",
+						"cammy.236KK",
+						"cammy.623LK",
+						"cammy.623MK",
+						"cammy.623[HK]",
+						"cammy.623KK",
+						"cammy.214LP",
+						"cammy.214MP",
+						"cammy.214HP",
+						"cammy.214PP",
+						"cammy.236236K",
+						"cammy.214214P",
+						"cammy.236236P",
+						"cammy.HH"
+					]
+				},
+				{
+					"frame_end": 8,
+					"frame_start": 5,
+					"frame_ready": 1,
+					"targets": [
+						"cammy.656"
+					]
+				},
+				{
+					"frame_end": 9,
+					"frame_start": 8,
+					"frame_ready": 3,
+					"targets": [
+						"cammy.5LP",
+						"cammy.2LP",
+						"cammy.2LK"
+					]
+				}
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 300,
+					"drive_hit": 250,
+					"drive_target_block": -500,
+					"drive_target_block_burnout": 250,
+					"drive_target_hit_punish": -2000,
+					"frame_end": 5,
+					"frame_start": 3,
+					"frame_target_block": 8,
+					"frame_target_hit": 15,
+					"super_hit": 300
+				}
+			]
 		},
 		{
 			"id": "cammy.2LK",
@@ -114,12 +353,36 @@
 			"category": "normal",
 			"input": "2LK",
 			"input_modern": "2L",
-			"damage": 200,
-			"damage_initial": 20,
-			"drive_hit": 250,
-			"drive_block": -500,
-			"drive_punish": -2000,
-			"superarts": 300
+			"scale_initial": 20,
+			"total_frames": 14,
+			"cancels": [
+				{
+					"frame_end": 10,
+					"frame_start": 9,
+					"frame_ready": 3,
+					"targets": [
+						"cammy.5LP",
+						"cammy.2LP",
+						"cammy.2LK"
+					]
+				}
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 200,
+					"drive_hit": 250,
+					"drive_target_block": -500,
+					"drive_target_block_burnout": 500,
+					"drive_target_hit_punish": -2000,
+					"frame_end": 7,
+					"frame_start": 4,
+					"frame_target_block": 8,
+					"frame_target_hit": 13,
+					"super_hit": 300
+				}
+			]
 		},
 		{
 			"id": "cammy.2MP",
@@ -128,11 +391,50 @@
 			},
 			"category": "normal",
 			"input": "2MP",
-			"damage": 600,
-			"drive_hit": 1500,
-			"drive_block": -3000,
-			"drive_punish": -4000,
-			"superarts": 500
+			"total_frames": 23,
+			"total_frames_miss": 26,
+			"cancels": [
+				{
+					"frame_end": 9,
+					"frame_start": 6,
+					"frame_ready": 1,
+					"targets": [
+						"cammy.236LK",
+						"cammy.236MK",
+						"cammy.236[HK]",
+						"cammy.236KK",
+						"cammy.623LK",
+						"cammy.623MK",
+						"cammy.623[HK]",
+						"cammy.623KK",
+						"cammy.214LP",
+						"cammy.214MP",
+						"cammy.214HP",
+						"cammy.214PP",
+						"cammy.236236K",
+						"cammy.214214P",
+						"cammy.236236P",
+						"cammy.HH",
+						"cammy.656"
+					]
+				}
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 600,
+					"drive_hit": 1500,
+					"drive_target_block": -3000,
+					"drive_target_block_burnout": 1500,
+					"drive_target_hit_punish": -4000,
+					"frame_end": 9,
+					"frame_start": 6,
+					"frame_target_block": 15,
+					"frame_target_hit": 22,
+					"super_hit": 500
+				}
+			]
 		},
 		{
 			"id": "cammy.2MK",
@@ -142,12 +444,50 @@
 			"category": "normal",
 			"input": "2MK",
 			"input_modern": "2M",
-			"damage": 500,
-			"damage_initial": 20,
-			"drive_hit": 1000,
-			"drive_block": -2000,
-			"drive_punish": -4000,
-			"superarts": 500
+			"scale_initial": 20,
+			"total_frames": 28,
+			"cancels": [
+				{
+					"frame_end": 10,
+					"frame_start": 9,
+					"frame_ready": 1,
+					"targets": [
+						"cammy.236LK",
+						"cammy.236MK",
+						"cammy.236[HK]",
+						"cammy.236KK",
+						"cammy.623LK",
+						"cammy.623MK",
+						"cammy.623[HK]",
+						"cammy.623KK",
+						"cammy.214LP",
+						"cammy.214MP",
+						"cammy.214HP",
+						"cammy.214PP",
+						"cammy.236236K",
+						"cammy.214214P",
+						"cammy.236236P",
+						"cammy.HH",
+						"cammy.656"
+					]
+				}
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 500,
+					"drive_hit": 1000,
+					"drive_target_block": -2000,
+					"drive_target_block_burnout": 2000,
+					"drive_target_hit_punish": -4000,
+					"frame_end": 10,
+					"frame_start": 7,
+					"frame_target_block": 16,
+					"frame_target_hit": 22,
+					"super_hit": 500
+				}
+			]
 		},
 		{
 			"id": "cammy.2HP",
@@ -157,11 +497,23 @@
 			"category": "normal",
 			"input": "2HP",
 			"input_modern": "2H",
-			"damage": 700,
-			"drive_hit": 2500,
-			"drive_block": -5000,
-			"drive_punish": -8000,
-			"superarts": 1000
+			"total_frames": 28,
+			"hits": [
+				{
+					"id": 1,
+					"type": "strike",
+					"damage": 700,
+					"drive_hit": 2500,
+					"drive_target_block": -5000,
+					"drive_target_block_burnout": 2500,
+					"drive_target_hit_punish": -8000,
+					"frame_end": 13,
+					"frame_start": 9,
+					"frame_target_block": 20,
+					"frame_target_hit": 26,
+					"super_hit": 1000
+				}
+			]
 		},
 		{
 			"id": "cammy.2HK",
@@ -172,11 +524,25 @@
 			"category": "normal",
 			"input": "2HK",
 			"input_modern": "3H",
-			"damage": 900,
-			"drive_hit": 3000,
-			"drive_block": -4000,
-			"drive_punish": -10000,
-			"superarts": 1000
+			"total_frames": 35,
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 900,
+					"drive_hit": 3000,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 4000,
+					"drive_target_hit_punish": -10000,
+					"frame_end": 11,
+					"frame_start": 8,
+					"frame_target_block": 17,
+					"frame_target_hit": 19,
+					"frame_target_hit_counter": 19,
+					"frame_target_hit_punish": 19,
+					"super_hit": 1000
+				}
+			]
 		},
 		{
 			"id": "cammy.jLP",
@@ -185,11 +551,22 @@
 			},
 			"category": "normal",
 			"input": "jLP",
-			"damage": 300,
-			"drive_hit": 500,
-			"drive_block": -1500,
-			"drive_punish": -2000,
-			"superarts": 300
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 300,
+					"drive_hit": 500,
+					"drive_target_block": -1500,
+					"drive_target_block_burnout": 1500,
+					"drive_target_hit_punish": -2000,
+					"frame_end": 13,
+					"frame_start": 3,
+					"frame_target_block": 9,
+					"frame_target_hit": 13,
+					"super_hit": 300
+				}
+			]
 		},
 		{
 			"id": "cammy.jLK",
@@ -199,11 +576,22 @@
 			"category": "normal",
 			"input": "jLK",
 			"input_modern": "jL",
-			"damage": 300,
-			"drive_hit": 500,
-			"drive_block": -1500,
-			"drive_punish": -2000,
-			"superarts": 300
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 300,
+					"drive_hit": 500,
+					"drive_target_block": -1500,
+					"drive_target_block_burnout": 1500,
+					"drive_target_hit_punish": -2000,
+					"frame_end": 13,
+					"frame_start": 3,
+					"frame_target_block": 10,
+					"frame_target_hit": 14,
+					"super_hit": 300
+				}
+			]
 		},
 		{
 			"id": "cammy.jMP",
@@ -213,11 +601,34 @@
 			"category": "normal",
 			"input": "jMP",
 			"input_modern": "jM",
-			"damage": 600,
-			"drive_hit": 1200,
-			"drive_block": -2500,
-			"drive_punish": -4000,
-			"superarts": 500
+			"cancels": [
+				{
+					"frame_end": 18,
+					"frame_start": 7,
+					"frame_ready": 1,
+					"targets": [
+						"cammy.j214P",
+						"cammy.j214PP",
+						"cammy.j214214P"
+					]
+				}
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 600,
+					"drive_hit": 1200,
+					"drive_target_block": -2500,
+					"drive_target_block_burnout": 2500,
+					"drive_target_hit_punish": -4000,
+					"frame_end": 13,
+					"frame_start": 5,
+					"frame_target_block": 8,
+					"frame_target_hit": 17,
+					"super_hit": 500
+				}
+			]
 		},
 		{
 			"id": "cammy.jMK",
@@ -226,11 +637,34 @@
 			},
 			"category": "normal",
 			"input": "jMK",
-			"damage": 600,
-			"drive_hit": 1200,
-			"drive_block": -2500,
-			"drive_punish": -4000,
-			"superarts": 700
+			"cancels": [
+				{
+					"frame_end": 18,
+					"frame_start": 7,
+					"frame_ready": 1,
+					"targets": [
+						"cammy.j214P",
+						"cammy.j214PP",
+						"cammy.j214214P"
+					]
+				}
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 600,
+					"drive_hit": 1200,
+					"drive_target_block": -2500,
+					"drive_target_block_burnout": 2500,
+					"drive_target_hit_punish": -4000,
+					"frame_end": 13,
+					"frame_start": 5,
+					"frame_target_block": 8,
+					"frame_target_hit": 17,
+					"super_hit": 500
+				}
+			]
 		},
 		{
 			"id": "cammy.jHP",
@@ -239,11 +673,22 @@
 			},
 			"category": "normal",
 			"input": "jHP",
-			"damage": 800,
-			"drive_hit": 2500,
-			"drive_block": -4000,
-			"drive_punish": -7000,
-			"superarts": 1000
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 800,
+					"drive_hit": 2500,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 4000,
+					"drive_target_hit_punish": -7000,
+					"frame_end": 12,
+					"frame_start": 7,
+					"frame_target_block": 15,
+					"frame_target_hit": 19,
+					"super_hit": 1000
+				}
+			]
 		},
 		{
 			"id": "cammy.jHK",
@@ -253,11 +698,22 @@
 			"category": "normal",
 			"input": "jHK",
 			"input_modern": "jH",
-			"damage": 800,
-			"drive_hit": 2500,
-			"drive_block": -4000,
-			"drive_punish": -7000,
-			"superarts": 1000
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 800,
+					"drive_hit": 2500,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 4000,
+					"drive_target_hit_punish": -7000,
+					"frame_end": 15,
+					"frame_start": 9,
+					"frame_target_block": 15,
+					"frame_target_hit": 19,
+					"super_hit": 1000
+				}
+			]
 		},
 
 		{
@@ -269,11 +725,57 @@
 			"category": "unique",
 			"input": "4MP",
 			"input_modern": "4M",
-			"damage": 500,
-			"drive_hit": 1500,
-			"drive_block": -3000,
-			"drive_punish": -4000,
-			"superarts": 500
+			"total_frames": 34,
+			"cancels": [
+				{
+					"frame_end": 9,
+					"frame_start": 4,
+					"frame_ready": 3,
+					"targets": [
+						"cammy.236LK",
+						"cammy.236MK",
+						"cammy.236[HK]",
+						"cammy.236KK",
+						"cammy.623LK",
+						"cammy.623MK",
+						"cammy.623[HK]",
+						"cammy.623KK",
+						"cammy.214LP",
+						"cammy.214MP",
+						"cammy.214HP",
+						"cammy.214PP",
+						"cammy.236236K",
+						"cammy.214214P",
+						"cammy.236236P",
+						"cammy.HH",
+						"cammy.656"
+					]
+				},
+				{
+					"frame_end": 9,
+					"frame_start": 4,
+					"frame_ready": 1,
+					"targets": [
+						"cammy.4MPtoHK"
+					]
+				}
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 500,
+					"drive_hit": 1500,
+					"drive_target_block": -3000,
+					"drive_target_block_burnout": 1500,
+					"drive_target_hit_punish": -4000,
+					"frame_end": 9,
+					"frame_start": 4,
+					"frame_target_block": 16,
+					"frame_target_hit": 21,
+					"super_hit": 500
+				}
+			]
 		},
 		{
 			"id": "cammy.6HK",
@@ -284,12 +786,59 @@
 			"category": "unique",
 			"input": "6HK",
 			"input_modern": "6H",
-			"damage": 800,
-			"damage_initial": 20,
-			"drive_hit": 3000,
-			"drive_block": -4000,
-			"drive_punish": -10000,
-			"superarts": 1000
+			"scale_initial": 20,
+			"total_frames": 45,
+			"cancels": [
+				{
+					"frame_end": 22,
+					"frame_start": 21,
+					"frame_ready": 3,
+					"targets": [
+						"cammy.236LK",
+						"cammy.236MK",
+						"cammy.236[HK]",
+						"cammy.236KK",
+						"cammy.623LK",
+						"cammy.623MK",
+						"cammy.623[HK]",
+						"cammy.623KK",
+						"cammy.214LP",
+						"cammy.214MP",
+						"cammy.214HP",
+						"cammy.214PP",
+						"cammy.236236K",
+						"cammy.214214P",
+						"cammy.236236P",
+						"cammy.HH"
+					]
+				},
+				{
+					"frame_end": 22,
+					"frame_start": 19,
+					"frame_ready": 3,
+					"targets": [
+						"cammy.656"
+					]
+				}
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 800,
+					"drive_hit": 3000,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 2000,
+					"drive_target_hit_punish": -10000,
+					"frame_end": 20,
+					"frame_start": 17,
+					"frame_target_block": 16,
+					"frame_target_hit": 15,
+					"frame_target_hit_counter": 15,
+					"frame_target_hit_punish": 32,
+					"super_hit": 1000
+				}
+			]
 		},
 		{
 			"id": "cammy.4HK",
@@ -300,47 +849,213 @@
 			"category": "unique",
 			"input": "4HK",
 			"input_modern": "4H",
-			"damage": 800,
-			"damage_initial": 20,
-			"drive_hit": 2500,
-			"drive_block": -5000,
-			"drive_punish": -10000,
-			"superarts": 1000
+			"scale_initial": 20,
+			"total_frames": 29,
+			"cancels": [
+				{
+					"frame_end": 11,
+					"frame_start": 8,
+					"frame_ready": 3,
+					"targets": [
+						"cammy.236LK",
+						"cammy.236MK",
+						"cammy.236[HK]",
+						"cammy.236KK",
+						"cammy.623LK",
+						"cammy.623MK",
+						"cammy.623[HK]",
+						"cammy.623KK",
+						"cammy.214LP",
+						"cammy.214MP",
+						"cammy.214HP",
+						"cammy.214PP",
+						"cammy.236236K",
+						"cammy.214214P",
+						"cammy.236236P",
+						"cammy.HH",
+						"cammy.656"
+					]
+				}
+			],
+			"hits": [
+				{
+					"id": 1,
+					"type": "strike",
+					"damage": 800,
+					"drive_hit": 2500,
+					"drive_target_block": -5000,
+					"drive_target_block_burnout": 2500,
+					"drive_target_hit_punish": -10000,
+					"frame_end": 11,
+					"frame_start": 8,
+					"frame_target_block": 14,
+					"frame_target_hit": 39,
+					"frame_target_hit_counter": 39,
+					"frame_target_hit_punish": 39,
+					"super_hit": 1000
+				}
+			]
 		},
 		{
-			"id": "cammy.4MP~HK",
+			"id": "cammy.4MPtoHK",
 			"names": {
 				"en": "Lift Combination",
 				"ja": "リフトコンビネーション"
 			},
 			"category": "unique",
-			"dependency": "cammy.4MP",
 			"input": "4MP~HK",
 			"input_modern": "4M~M",
-			"damage": 600,
-			"drive_hit": 2000,
-			"drive_block": -3000,
-			"drive_punish": -7000,
-			"superarts": 700
+			"total_frames": 34,
+			"cancels": [
+				{
+					"frame_end": 11,
+					"frame_start": 8,
+					"frame_ready": 1,
+					"targets": [
+						"cammy.236LK",
+						"cammy.236MK",
+						"cammy.236[HK]",
+						"cammy.236KK",
+						"cammy.623LK",
+						"cammy.623MK",
+						"cammy.623[HK]",
+						"cammy.623KK",
+						"cammy.214LP",
+						"cammy.214MP",
+						"cammy.214HP",
+						"cammy.214PP",
+						"cammy.236236K",
+						"cammy.214214P",
+						"cammy.236236P",
+						"cammy.HH",
+						"cammy.656"
+					]
+				}
+			],
+			"dependencies": [
+				"cammy.4MP"
+			],
+			"hits": [
+				{
+					"id": 1,
+					"type": "strike",
+					"damage": 600,
+					"drive_hit": 2000,
+					"drive_target_block": -3000,
+					"drive_target_block_burnout": 1500,
+					"drive_target_hit_punish": -7000,
+					"frame_end": 11,
+					"frame_start": 8,
+					"frame_target_block": 14,
+					"frame_target_hit": 39,
+					"frame_target_hit_counter": 39,
+					"frame_target_hit_punish": 39,
+					"super_hit": 700
+				}
+			]
 		},
 		{
-			"id": "cammy.5HP~HK",
+			"id": "cammy.5HPtoHK.0",
 			"names": {
-				"en": "Swing Combination",
-				"ja": "スイングコンビネーション"
+				"en": "Swing Combination (1st)",
+				"ja": "スイングコンビネーション（前半）"
 			},
 			"category": "unique",
-			"dependency": "cammy.5HP",
 			"input": "5HP~HK",
 			"input_modern": "Auto+5H~H",
-			"damage": [400, 400],
-			"damage_additional": 20,
-			"damage_immediate": 10,
-			"damage_immediate_second": 10,
-			"drive_hit": 4000,
-			"drive_block": -7000,
-			"drive_punish": -8000,
-			"superarts": 1500
+			"total_frames": 16,
+			"cancels": [
+				{
+					"frame_end": 16,
+					"frame_start": 15,
+					"frame_ready": 4,
+					"targets": [
+						"cammy.j214P",
+						"cammy.j214PP",
+						"cammy.j214214P"
+					]
+				}
+			],
+			"dependencies": [
+				"cammy.5HP"
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 400,
+					"drive_hit": 1500,
+					"drive_target_block": -3000,
+					"drive_target_block_burnout": 1500,
+					"drive_target_hit_punish": -1000,
+					"frame_end": 16,
+					"frame_start": 12,
+					"frame_target_block": 8,
+					"frame_target_hit": 20,
+					"frame_target_hit_counter": 20,
+					"frame_target_hit_punish": 20,
+					"super_hit": 500
+				}
+			]
+		},
+		{
+			"id": "cammy.5HPtoHK.1",
+			"names": {
+				"en": "Swing Combination (2nd)",
+				"ja": "スイングコンビネーション（後半）"
+			},
+			"category": "unique",
+			"input": "5HP~HK",
+			"input_modern": "Auto+5H~H",
+			"scale_additional": 20,
+			"total_frames": 44,
+			"cancels": [
+				{
+					"frame_end": 20,
+					"frame_start": 19,
+					"frame_ready": 8,
+					"targets": [
+						"cammy.236LK",
+						"cammy.236MK",
+						"cammy.236[HK]",
+						"cammy.236KK",
+						"cammy.623LK",
+						"cammy.623MK",
+						"cammy.623[HK]",
+						"cammy.623KK",
+						"cammy.214LP",
+						"cammy.214MP",
+						"cammy.214HP",
+						"cammy.214PP",
+						"cammy.236236K",
+						"cammy.214214P",
+						"cammy.236236P",
+						"cammy.HH",
+						"cammy.656"
+					]
+				}
+			],
+			"dependencies": [
+				"cammy.5HPtoHK.0"
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 400,
+					"drive_hit": 2500,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 2000,
+					"drive_target_hit_punish": -7000,
+					"frame_end": 15,
+					"frame_start": 12,
+					"frame_target_block": 20,
+					"frame_target_hit": 20,
+					"frame_target_hit_counter": 20,
+					"frame_target_hit_punish": 20,
+					"super_hit": 1000
+				}
+			]
 		},
 
 		{
@@ -352,11 +1067,41 @@
 			"category": "special",
 			"input": "236LK",
 			"input_modern": "236L",
-			"damage": 800,
-			"drive_hit": 2000,
-			"drive_block": -4000,
-			"drive_punish": -5000,
-			"superarts": 1000
+			"total_frames": 42,
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 800,
+					"drive_hit": 2000,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 2000,
+					"drive_target_hit_punish": -5000,
+					"frame_end": 17,
+					"frame_start": 8,
+					"frame_target_block": 22,
+					"frame_target_hit": 23,
+					"frame_target_hit_counter": 23,
+					"frame_target_hit_punish": 23,
+					"super_hit": 1000
+				},
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 800,
+					"drive_hit": 2000,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 2000,
+					"drive_target_hit_punish": -5000,
+					"frame_end": 21,
+					"frame_start": 17,
+					"frame_target_block": 22,
+					"frame_target_hit": 26,
+					"frame_target_hit_counter": 26,
+					"frame_target_hit_punish": 26,
+					"super_hit": 1000
+				}
+			]
 		},
 		{
 			"id": "cammy.236MK",
@@ -368,11 +1113,41 @@
 			"input": "236MK",
 			"input_modern": "5SP",
 			"input_modern_alt": "236M",
-			"damage": 900,
-			"drive_hit": 2000,
-			"drive_block": -4000,
-			"drive_punish": -5000,
-			"superarts": 800
+			"total_frames": 44,
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 900,
+					"drive_hit": 2000,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 2000,
+					"drive_target_hit_punish": -5000,
+					"frame_end": 19,
+					"frame_start": 8,
+					"frame_target_block": 22,
+					"frame_target_hit": 25,
+					"frame_target_hit_counter": 25,
+					"frame_target_hit_punish": 25,
+					"super_hit": 800
+				},
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 900,
+					"drive_hit": 2000,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 2000,
+					"drive_target_hit_punish": -5000,
+					"frame_end": 23,
+					"frame_start": 19,
+					"frame_target_block": 22,
+					"frame_target_hit": 26,
+					"frame_target_hit_counter": 26,
+					"frame_target_hit_punish": 26,
+					"super_hit": 800
+				}
+			]
 		},
 		{
 			"id": "cammy.236HK",
@@ -383,14 +1158,65 @@
 			"category": "special",
 			"input": "236HK",
 			"input_modern": "236H",
-			"damage": [
-				300,
-				700
+			"total_frames": 51,
+			"cancels": [
+				{
+					"frame_end": 17,
+					"frame_start": 14,
+					"frame_ready": 1,
+					"targets": [
+						"cammy.236236P"
+					]
+				}
 			],
-			"drive_hit": 2600,
-			"drive_block": -5000,
-			"drive_punish": -5000,
-			"superarts": 800
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 300,
+					"drive_hit": 600,
+					"drive_target_block": -1000,
+					"drive_target_block_burnout": 500,
+					"drive_target_hit_punish": -2500,
+					"frame_end": 17,
+					"frame_start": 14,
+					"frame_target_block": 11,
+					"frame_target_hit": 18,
+					"super_hit": 200
+				},
+				{
+					"id": 1,
+					"type": "strike",
+					"damage": 700,
+					"drive_hit": 2000,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 2000,
+					"drive_target_hit_punish": -2500,
+					"frame_end": 26,
+					"frame_start": 18,
+					"frame_target_block": 21,
+					"frame_target_hit": 25,
+					"frame_target_hit_counter": 25,
+					"frame_target_hit_punish": 25,
+					"super_hit": 600
+				},
+				{
+					"id": 1,
+					"type": "strike",
+					"damage": 700,
+					"drive_hit": 2000,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 2000,
+					"drive_target_hit_punish": -2500,
+					"frame_end": 30,
+					"frame_start": 26,
+					"frame_target_block": 21,
+					"frame_target_hit": 26,
+					"frame_target_hit_counter": 26,
+					"frame_target_hit_punish": 26,
+					"super_hit": 600
+				}
+			]
 		},
 		{
 			"id": "cammy.236[HK]",
@@ -401,17 +1227,91 @@
 			"category": "special",
 			"input": "236[HK]",
 			"input_modern": "236[H]",
-			"damage": [
-				150,
-				150,
-				150,
-				150,
-				200
+			"total_frames": 62,
+			"cancels": [
+				{
+					"frame_end": 39,
+					"frame_start": 36,
+					"frame_ready": 10,
+					"targets": [
+						"cammy.236236P"
+					]
+				}
 			],
-			"drive_hit": 2500,
-			"drive_block": -4000,
-			"drive_punish": -5000,
-			"superarts": 1000
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 150,
+					"drive_hit": 150,
+					"drive_target_block": -300,
+					"drive_target_block_burnout": 150,
+					"drive_target_hit_punish": -1000,
+					"frame_end": 29,
+					"frame_start": 26,
+					"frame_target_block": 11,
+					"frame_target_hit": 18,
+					"super_hit": 200
+				},
+				{
+					"id": 1,
+					"type": "strike",
+					"damage": 150,
+					"drive_hit": 150,
+					"drive_target_block": -300,
+					"drive_target_block_burnout": 150,
+					"drive_target_hit_punish": -1000,
+					"frame_end": 33,
+					"frame_start": 30,
+					"frame_target_block": 11,
+					"frame_target_hit": 18,
+					"super_hit": 200
+				},
+				{
+					"id": 2,
+					"type": "strike",
+					"damage": 150,
+					"drive_hit": 150,
+					"drive_target_block": -300,
+					"drive_target_block_burnout": 150,
+					"drive_target_hit_punish": -1000,
+					"frame_end": 36,
+					"frame_start": 33,
+					"frame_target_block": 11,
+					"frame_target_hit": 18,
+					"super_hit": 200
+				},
+				{
+					"id": 3,
+					"type": "strike",
+					"damage": 150,
+					"drive_hit": 150,
+					"drive_target_block": -300,
+					"drive_target_block_burnout": 150,
+					"drive_target_hit_punish": -1000,
+					"frame_end": 39,
+					"frame_start": 36,
+					"frame_target_block": 11,
+					"frame_target_hit": 18,
+					"super_hit": 200
+				},
+				{
+					"id": 4,
+					"type": "strike",
+					"damage": 200,
+					"drive_hit": 1900,
+					"drive_target_block": -2800,
+					"drive_target_block_burnout": 1400,
+					"drive_target_hit_punish": -1000,
+					"frame_end": 42,
+					"frame_start": 39,
+					"frame_target_block": 11,
+					"frame_target_hit": 29,
+					"frame_target_hit_counter": 29,
+					"frame_target_hit_punish": 29,
+					"super_hit": 200
+				}
+			]
 		},
 		{
 			"id": "cammy.236KK",
@@ -423,18 +1323,93 @@
 			"input": "236KK",
 			"input_modern": "Auto+5SP",
 			"input_modern_alt": "236AA",
-			"damage": [
-				150,
-				150,
-				150,
-				150,
-				200
+			"scale_additional": 15,
+			"total_frames": 48,
+			"cancels": [
+				{
+					"frame_end": 25,
+					"frame_start": 22,
+					"frame_ready": 1,
+					"targets": [
+						"cammy.214214P",
+						"cammy.236236P"
+					]
+				}
 			],
-			"damage_additional": 15,
-			"drive_hit": 0,
-			"drive_block": -4000,
-			"drive_punish": -5000,
-			"superarts": 1000
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 150,
+					"drive_hit": 0,
+					"drive_target_block": -300,
+					"drive_target_block_burnout": 150,
+					"drive_target_hit_punish": -1000,
+					"frame_end": 15,
+					"frame_start": 12,
+					"frame_target_block": 11,
+					"frame_target_hit": 18,
+					"super_hit": 200
+				},
+				{
+					"id": 1,
+					"type": "strike",
+					"damage": 150,
+					"drive_hit": 0,
+					"drive_target_block": -300,
+					"drive_target_block_burnout": 150,
+					"drive_target_hit_punish": -1000,
+					"frame_end": 19,
+					"frame_start": 16,
+					"frame_target_block": 11,
+					"frame_target_hit": 18,
+					"super_hit": 200
+				},
+				{
+					"id": 2,
+					"type": "strike",
+					"damage": 150,
+					"drive_hit": 0,
+					"drive_target_block": -300,
+					"drive_target_block_burnout": 150,
+					"drive_target_hit_punish": -1000,
+					"frame_end": 22,
+					"frame_start": 19,
+					"frame_target_block": 11,
+					"frame_target_hit": 18,
+					"super_hit": 200
+				},
+				{
+					"id": 3,
+					"type": "strike",
+					"damage": 150,
+					"drive_hit": 0,
+					"drive_target_block": -300,
+					"drive_target_block_burnout": 150,
+					"drive_target_hit_punish": -1000,
+					"frame_end": 25,
+					"frame_start": 22,
+					"frame_target_block": 11,
+					"frame_target_hit": 18,
+					"super_hit": 200
+				},
+				{
+					"id": 4,
+					"type": "strike",
+					"damage": 200,
+					"drive_hit": 0,
+					"drive_target_block": -2800,
+					"drive_target_block_burnout": 1400,
+					"drive_target_hit_punish": -1000,
+					"frame_end": 28,
+					"frame_start": 25,
+					"frame_target_block": 11,
+					"frame_target_hit": 29,
+					"frame_target_hit_counter": 29,
+					"frame_target_hit_punish": 29,
+					"super_hit": 200
+				}
+			]
 		},
 		{
 			"id": "cammy.623LK",
@@ -445,16 +1420,50 @@
 			"category": "special",
 			"input": "623LK",
 			"input_modern": "623L",
-			"damage": 900,
-			"drive_hit": 2000,
-			"drive_block": -4000,
-			"drive_punish": -5000,
-			"superarts": 1000,
-			"overrides": {
-				"FRAME>=7": {
-					"damage": 800
+			"cancels": [
+				{
+					"frame_end": 6,
+					"frame_start": 4,
+					"frame_ready": 1,
+					"targets": [
+						"cammy.236236P"
+					]
 				}
-			}
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 900,
+					"drive_hit": 2000,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 2000,
+					"drive_target_hit_punish": -5000,
+					"frame_end": 6,
+					"frame_start": 4,
+					"frame_target_block": 16,
+					"frame_target_hit": 31,
+					"frame_target_hit_counter": 31,
+					"frame_target_hit_punish": 31,
+					"super_hit": 1000
+				},
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 800,
+					"drive_hit": 2000,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 2000,
+					"drive_target_hit_punish": -5000,
+					"frame_end": 16,
+					"frame_start": 6,
+					"frame_target_block": 14,
+					"frame_target_hit": 31,
+					"frame_target_hit_counter": 31,
+					"frame_target_hit_punish": 31,
+					"super_hit": 800
+				}
+			]
 		},
 		{
 			"id": "cammy.623MK",
@@ -466,16 +1475,50 @@
 			"input": "623MK",
 			"input_modern": "6SP",
 			"input_modern_alt": "623M",
-			"damage": 1000,
-			"drive_hit": 2000,
-			"drive_block": -4000,
-			"drive_punish": -5000,
-			"superarts": 1000,
-			"overrides": {
-				"FRAME>=8": {
-					"damage": 800
+			"cancels": [
+				{
+					"frame_end": 7,
+					"frame_start": 5,
+					"frame_ready": 1,
+					"targets": [
+						"cammy.236236P"
+					]
 				}
-			}
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 1000,
+					"drive_hit": 2000,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 2000,
+					"drive_target_hit_punish": -5000,
+					"frame_end": 7,
+					"frame_start": 5,
+					"frame_target_block": 16,
+					"frame_target_hit": 32,
+					"frame_target_hit_counter": 32,
+					"frame_target_hit_punish": 32,
+					"super_hit": 1000
+				},
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 800,
+					"drive_hit": 2000,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 2000,
+					"drive_target_hit_punish": -5000,
+					"frame_end": 17,
+					"frame_start": 7,
+					"frame_target_block": 14,
+					"frame_target_hit": 31,
+					"frame_target_hit_counter": 31,
+					"frame_target_hit_punish": 31,
+					"super_hit": 800
+				}
+			]
 		},
 		{
 			"id": "cammy.623HK",
@@ -486,16 +1529,50 @@
 			"category": "special",
 			"input": "623HK",
 			"input_modern": "623H",
-			"damage": 1200,
-			"drive_hit": 2000,
-			"drive_block": -4000,
-			"drive_punish": -5000,
-			"superarts": 1000,
-			"overrides": {
-				"FRAME>=9": {
-					"damage": 800
+			"cancels": [
+				{
+					"frame_end": 8,
+					"frame_start": 6,
+					"frame_ready": 1,
+					"targets": [
+						"cammy.236236P"
+					]
 				}
-			}
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 1200,
+					"drive_hit": 2000,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 2000,
+					"drive_target_hit_punish": -5000,
+					"frame_end": 8,
+					"frame_start": 6,
+					"frame_target_block": 16,
+					"frame_target_hit": 33,
+					"frame_target_hit_counter": 33,
+					"frame_target_hit_punish": 33,
+					"super_hit": 1000
+				},
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 800,
+					"drive_hit": 2000,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 2000,
+					"drive_target_hit_punish": -5000,
+					"frame_end": 18,
+					"frame_start": 8,
+					"frame_target_block": 14,
+					"frame_target_hit": 31,
+					"frame_target_hit_counter": 31,
+					"frame_target_hit_punish": 31,
+					"super_hit": 800
+				}
+			]
 		},
 		{
 			"id": "cammy.623[HK]",
@@ -506,22 +1583,152 @@
 			"category": "special",
 			"input": "623[HK]",
 			"input_modern": "623[H]",
-			"damage": [
-				1100,
-				100,
-				100,
-				100,
-				100
-			],
-			"drive_hit": 2000,
-			"drive_block": -4000,
-			"drive_punish": -5000,
-			"superarts": 1000,
-			"overrides": {
-				"FRAME>=28": {
-					"damage": 900
+			"cancels": [
+				{
+					"frame_end": 25,
+					"frame_start": 23,
+					"frame_ready": 17,
+					"targets": [
+						"cammy.236236P"
+					]
 				}
-			}
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 1100,
+					"drive_hit": 700,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 2000,
+					"drive_target_hit_punish": -5000,
+					"frame_end": 25,
+					"frame_start": 23,
+					"frame_target_block": 16,
+					"frame_target_hit": 18,
+					"frame_target_hit_counter": 18,
+					"frame_target_hit_punish": 18,
+					"super_hit": 600
+				},
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 1100,
+					"drive_hit": 700,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 2000,
+					"drive_target_hit_punish": 0,
+					"frame_end": 27,
+					"frame_start": 25,
+					"frame_target_block": 11,
+					"frame_target_hit": 18,
+					"frame_target_hit_counter": 18,
+					"frame_target_hit_punish": 18,
+					"super_hit": 600
+				},
+				{
+					"id": 1,
+					"type": "strike",
+					"damage": 100,
+					"drive_hit": 200,
+					"drive_target_block": 0,
+					"drive_target_block_burnout": 0,
+					"drive_target_hit_punish": 0,
+					"frame_end": 5,
+					"frame_start": 3,
+					"frame_target_block": 18,
+					"frame_target_hit": 8,
+					"frame_target_hit_counter": 8,
+					"frame_target_hit_punish": 8,
+					"super_hit": 100
+				},
+				{
+					"id": 2,
+					"type": "strike",
+					"damage": 100,
+					"drive_hit": 200,
+					"drive_target_block": 0,
+					"drive_target_block_burnout": 0,
+					"drive_target_hit_punish": 0,
+					"frame_end": 7,
+					"frame_start": 5,
+					"frame_target_block": 18,
+					"frame_target_hit": 8,
+					"frame_target_hit_counter": 8,
+					"frame_target_hit_punish": 8,
+					"super_hit": 100
+				},
+				{
+					"id": 3,
+					"type": "strike",
+					"damage": 100,
+					"drive_hit": 200,
+					"drive_target_block": 0,
+					"drive_target_block_burnout": 0,
+					"drive_target_hit_punish": 0,
+					"frame_end": 9,
+					"frame_start": 7,
+					"frame_target_block": 18,
+					"frame_target_hit": 8,
+					"frame_target_hit_counter": 8,
+					"frame_target_hit_punish": 8,
+					"super_hit": 100
+				},
+				{
+					"id": 4,
+					"type": "strike",
+					"damage": 100,
+					"drive_hit": 700,
+					"drive_target_block": 0,
+					"drive_target_block_burnout": 0,
+					"drive_target_hit_punish": 0,
+					"frame_end": 11,
+					"frame_start": 9,
+					"frame_target_block": 18,
+					"frame_target_hit": 32,
+					"frame_target_hit_counter": 32,
+					"frame_target_hit_punish": 32,
+					"super_hit": 100
+				}
+			]
+		},
+		{
+			"id": "cammy.623[HK]",
+			"names": {
+				"en": "H Cannon Spike (Charged, 1HIT)",
+				"ja": "強 キャノンスパイク（ホールド、1HIT）"
+			},
+			"category": "special",
+			"input": "623[HK]",
+			"input_modern": "623[H]",
+			"cancels": [
+				{
+					"frame_end": 25,
+					"frame_start": 23,
+					"frame_ready": 17,
+					"targets": [
+						"cammy.236236P"
+					]
+				}
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 900,
+					"drive_hit": 2000,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 2000,
+					"drive_target_hit_punish": -5000,
+					"frame_end": 35,
+					"frame_start": 27,
+					"frame_target_block": 14,
+					"frame_target_hit": 32,
+					"frame_target_hit_counter": 32,
+					"frame_target_hit_punish": 32,
+					"super_hit": 800
+				}
+			]
 		},
 		{
 			"id": "cammy.623KK",
@@ -533,22 +1740,145 @@
 			"input": "623KK",
 			"input_modern": "Auto+6SP",
 			"input_modern_alt": "623AA",
-			"damage": [
-				600,
-				100,
-				100,
-				100,
-				600
-			],
-			"drive_hit": 0,
-			"drive_block": -2000,
-			"drive_punish": 0,
-			"superarts": 1000,
-			"overrides": {
-				"FRAME>=10": {
-					"damage": 900
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 600,
+					"drive_hit": 0,
+					"drive_target_block": -2000,
+					"drive_target_block_burnout": 1000,
+					"drive_target_hit_punish": 0,
+					"frame_end": 6,
+					"frame_start": 5,
+					"frame_target_block": 16,
+					"frame_target_hit": 18,
+					"frame_target_hit_counter": 18,
+					"frame_target_hit_punish": 18,
+					"super_block": 300,
+					"super_hit": 400,
+					"super_target_block": 150
+				},
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 600,
+					"drive_hit": 0,
+					"drive_target_block": -2000,
+					"drive_target_block_burnout": 1000,
+					"drive_target_hit_punish": 0,
+					"frame_end": 8,
+					"frame_start": 6,
+					"frame_target_block": 11,
+					"frame_target_hit": 18,
+					"frame_target_hit_counter": 18,
+					"frame_target_hit_punish": 18,
+					"super_block": 300,
+					"super_hit": 400,
+					"super_target_block": 150
+				},
+				{
+					"id": 1,
+					"type": "strike",
+					"damage": 100,
+					"drive_hit": 0,
+					"drive_target_block": 0,
+					"drive_target_block_burnout": 0,
+					"drive_target_hit_punish": 0,
+					"frame_end": 10,
+					"frame_start": 9,
+					"frame_target_block": 14,
+					"frame_target_hit": 32,
+					"frame_target_hit_counter": 32,
+					"frame_target_hit_punish": 32,
+					"super_block": 400,
+					"super_hit": 100,
+					"super_target_block": 200
+				},
+				{
+					"id": 2,
+					"type": "strike",
+					"damage": 100,
+					"drive_hit": 0,
+					"drive_target_block": 0,
+					"drive_target_block_burnout": 0,
+					"drive_target_hit_punish": 0,
+					"frame_end": 12,
+					"frame_start": 10,
+					"frame_target_block": 14,
+					"frame_target_hit": 32,
+					"frame_target_hit_counter": 32,
+					"frame_target_hit_punish": 32,
+					"super_block": 400,
+					"super_hit": 100,
+					"super_target_block": 200
+				},
+				{
+					"id": 3,
+					"type": "strike",
+					"damage": 100,
+					"drive_hit": 0,
+					"drive_target_block": 0,
+					"drive_target_block_burnout": 0,
+					"drive_target_hit_punish": 0,
+					"frame_end": 14,
+					"frame_start": 12,
+					"frame_target_block": 14,
+					"frame_target_hit": 32,
+					"frame_target_hit_counter": 32,
+					"frame_target_hit_punish": 32,
+					"super_block": 400,
+					"super_hit": 100,
+					"super_target_block": 200
+				},
+				{
+					"id": 4,
+					"type": "strike",
+					"damage": 600,
+					"drive_hit": 0,
+					"drive_target_block": 0,
+					"drive_target_block_burnout": 0,
+					"drive_target_hit_punish": 0,
+					"frame_end": 17,
+					"frame_start": 14,
+					"frame_target_block": 14,
+					"frame_target_hit": 32,
+					"frame_target_hit_counter": 32,
+					"frame_target_hit_punish": 32,
+					"super_block": 400,
+					"super_hit": 300,
+					"super_target_block": 200
 				}
-			}
+			]
+		},
+		{
+			"id": "cammy.623KK.single",
+			"names": {
+				"en": "OD Cannon Spike (1HIT)",
+				"ja": "OD キャノンスパイク（1HIT）"
+			},
+			"category": "special",
+			"input": "623KK",
+			"input_modern": "Auto+6SP",
+			"input_modern_alt": "623AA",
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 900,
+					"drive_hit": 0,
+					"drive_target_block": -5000,
+					"drive_target_block_burnout": 2500,
+					"drive_target_hit_punish": 0,
+					"frame_end": 17,
+					"frame_start": 8,
+					"frame_target_block": 14,
+					"frame_target_hit": 32,
+					"frame_target_hit_counter": 32,
+					"frame_target_hit_punish": 32,
+					"super_hit": 800
+				}
+			]
 		},
 		{
 			"id": "cammy.214LP",
@@ -559,11 +1889,33 @@
 			"category": "special",
 			"input": "214LP",
 			"input_modern": "214L",
-			"damage": 800,
-			"drive_hit": 2000,
-			"drive_block": -4000,
-			"drive_punish": -5000,
-			"superarts": 800
+			"total_frames": 40,
+			"cancels": [
+				{
+					"frame_end": 24,
+					"frame_start": 20,
+					"frame_ready": 1,
+					"targets": [
+						"cammy.236236P"
+					]
+				}
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 800,
+					"drive_hit": 2000,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 2000,
+					"drive_target_hit_punish": -5000,
+					"frame_end": 24,
+					"frame_start": 20,
+					"frame_target_block": 17,
+					"frame_target_hit": 22,
+					"super_hit": 800
+				}
+			]
 		},
 		{
 			"id": "cammy.214MP",
@@ -574,12 +1926,34 @@
 			"category": "special",
 			"input": "214MP",
 			"input_modern": "214M",
-			"damage": 800,
-			"damage_initial": 20,
-			"drive_hit": 2000,
-			"drive_block": -4500,
-			"drive_punish": -7000,
-			"superarts": 800
+			"scale_initial": 20,
+			"total_frames": 43,
+			"cancels": [
+				{
+					"frame_end": 27,
+					"frame_start": 23,
+					"frame_ready": 8,
+					"targets": [
+						"cammy.236236P"
+					]
+				}
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 800,
+					"drive_hit": 2000,
+					"drive_target_block": -4500,
+					"drive_target_block_burnout": 2250,
+					"drive_target_hit_punish": -7000,
+					"frame_end": 27,
+					"frame_start": 23,
+					"frame_target_block": 18,
+					"frame_target_hit": 23,
+					"super_hit": 800
+				}
+			]
 		},
 		{
 			"id": "cammy.214HP",
@@ -591,31 +1965,117 @@
 			"input": "214HP",
 			"input_modern": "4SP",
 			"input_modern_alt": "214H",
-			"damage": 800,
-			"damage_additional": 20,
-			"damage_initial": 20,
-			"drive_hit": 2000,
-			"drive_block": -6000,
-			"drive_punish": -9000,
-			"superarts": 800
+			"scale_additional": 20,
+			"scale_initial": 20,
+			"total_frames": 48,
+			"cancels": [
+				{
+					"frame_end": 31,
+					"frame_start": 27,
+					"frame_ready": 12,
+					"targets": [
+						"cammy.236236P"
+					]
+				}
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 800,
+					"drive_hit": 2000,
+					"drive_target_block": -6000,
+					"drive_target_block_burnout": 3000,
+					"drive_target_hit_punish": -9000,
+					"frame_end": 31,
+					"frame_start": 27,
+					"frame_target_block": 24,
+					"frame_target_hit": 26,
+					"super_hit": 800
+				}
+			]
 		},
 		{
-			"id": "cammy.214PP",
+			"id": "cammy.214PP.near",
 			"names": {
-				"en": "OD Quick Spin Knuckle",
-				"ja": "OD アクセルスピンナックル"
+				"en": "OD Quick Spin Knuckle (Near)",
+				"ja": "OD アクセルスピンナックル（近距離）"
 			},
 			"category": "special",
 			"input": "214PP",
 			"input_modern": "Auto+4SP",
 			"input_modern_alt": "214AA",
-			"damage": 800,
-			"damage_additional": 20,
-			"damage_initial": 20,
-			"drive_hit": 0,
-			"drive_block": -4000,
-			"drive_punish": -7000,
-			"superarts": 800
+			"scale_additional": 20,
+			"scale_initial": 20,
+			"total_frames": 48,
+			"cancels": [
+				{
+					"frame_end": 31,
+					"frame_start": 27,
+					"frame_ready": 12,
+					"targets": [
+						"cammy.214214P",
+						"cammy.236236P"
+					]
+				}
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 800,
+					"drive_hit": 0,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 2000,
+					"drive_target_hit_punish": -7000,
+					"frame_end": 31,
+					"frame_start": 27,
+					"frame_target_block": 19,
+					"frame_target_hit": 28,
+					"super_hit": 800
+				}
+			]
+		},
+		{
+			"id": "cammy.214PP.far",
+			"names": {
+				"en": "OD Quick Spin Knuckle (Far)",
+				"ja": "OD アクセルスピンナックル（遠距離）"
+			},
+			"category": "special",
+			"input": "214PP",
+			"input_modern": "Auto+4SP",
+			"input_modern_alt": "214AA",
+			"scale_additional": 20,
+			"scale_initial": 20,
+			"total_frames": 45,
+			"cancels": [
+				{
+					"frame_end": 28,
+					"frame_start": 24,
+					"frame_ready": 12,
+					"targets": [
+						"cammy.214214P",
+						"cammy.236236P"
+					]
+				}
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 800,
+					"drive_hit": 0,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 2000,
+					"drive_target_hit_punish": -7000,
+					"frame_end": 28,
+					"frame_start": 24,
+					"frame_target_block": 19,
+					"frame_target_hit": 28,
+					"super_hit": 800
+				}
+			]
 		},
 		{
 			"id": "cammy.j214P",
@@ -627,12 +2087,23 @@
 			"input": "j214P",
 			"input_modern": "jSP",
 			"input_modern_alt": "j214A",
-			"damage": 600,
-			"damage_initial": 20,
-			"drive_hit": 2500,
-			"drive_block": -2000,
-			"drive_punish": -4000,
-			"superarts": 800
+			"scale_initial": 20,
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 600,
+					"drive_hit": 2500,
+					"drive_target_block": -2000,
+					"drive_target_block_burnout": 1000,
+					"drive_target_hit_punish": -4000,
+					"frame_end": 23,
+					"frame_start": 12,
+					"frame_target_block": 16,
+					"frame_target_hit": 22,
+					"super_hit": 800
+				}
+			]
 		},
 		{
 			"id": "cammy.j214PP",
@@ -644,67 +2115,258 @@
 			"input": "j214PP",
 			"input_modern": "Auto+jSP",
 			"input_modern_alt": "j214AA",
-			"damage": 800,
-			"damage_immediate": 10,
-			"damage_initial": 20,
-			"drive_hit": 0,
-			"drive_block": -2000,
-			"drive_punish": -4000,
-			"superarts": 800
+			"scale_immediate": 10,
+			"scale_initial": 20,
+			"cancels": [
+				{
+					"frame_end": 22,
+					"frame_start": 12,
+					"frame_ready": 1,
+					"targets": [
+						"cammy.j214214P"
+					]
+				}
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 800,
+					"drive_hit": 0,
+					"drive_target_block": -2000,
+					"drive_target_block_burnout": 1000,
+					"drive_target_hit_punish": -4000,
+					"frame_end": 22,
+					"frame_start": 12,
+					"frame_target_block": 18,
+					"frame_target_hit": 22,
+					"super_hit": 800
+				}
+			]
 		},
 		{
 			"id": "cammy.236P",
+			"names": {
+				"en": "Hooligan Combination",
+				"ja": "フーリガンコンビネーション"
+			},
+			"category": "special",
+			"input": "236P",
+			"input_modern": "2SP",
+			"cancels": [
+				{
+					"frame_end": 50,
+					"frame_start": 19,
+					"frame_ready": 5,
+					"targets": [
+						"cammy.236P~K",
+						"cammy.236P~2K",
+						"cammy.236P~P"
+					]
+				}
+			]
+		},
+		{
+			"id": "cammy.236[HP]",
+			"names": {
+				"en": "Hooligan Combination (Charged)",
+				"ja": "フーリガンコンビネーション（ホールド）"
+			},
+			"category": "special",
+			"input": "236[HP]",
+			"input_modern": "2[SP]",
+			"cancels": [
+				{
+					"frame_end": 70,
+					"frame_start": 39,
+					"frame_ready": 25,
+					"targets": [
+						"cammy.236[HP]~K",
+						"cammy.236[HP]~2K",
+						"cammy.236[HP]~P"
+					]
+				}
+			]
+		},
+		{
+			"id": "cammy.236PP",
+			"names": {
+				"en": "OD Hooligan Combination",
+				"ja": "OD フーリガンコンビネーション"
+			},
+			"category": "special",
+			"input": "236PP",
+			"input_modern": "Auto+2SP",
+			"cancels": [
+				{
+					"frame_end": 50,
+					"frame_start": 19,
+					"frame_ready": 5,
+					"targets": [
+						"cammy.236PP~K",
+						"cammy.236PP~2K",
+						"cammy.236PP~P"
+					]
+				}
+			]
+		},
+		{
+			"id": "cammy.236P~N",
 			"names": {
 				"en": "Razor's Edge Slicer",
 				"ja": "レイザーエッジスライサー"
 			},
 			"category": "special",
-			"input": "236P",
-			"input_modern": "2SP",
-			"damage": 1000,
-			"damage_initial": 20,
-			"drive_hit": 2500,
-			"drive_block": -3000,
-			"drive_punish": -7000,
-			"superarts": 1000
+			"input": "236P~N",
+			"input_modern": "2SP~N",
+			"scale_initial": 20,
+			"total_frames": 31,
+			"cancels": [
+				{
+					"frame_end": 18,
+					"frame_start": 9,
+					"frame_ready": 1,
+					"targets": [
+						"cammy.236236P"
+					]
+				}
+			],
+			"dependencies": [
+				"cammy.236P"
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 1000,
+					"drive_hit": 2500,
+					"drive_target_block": -3000,
+					"drive_target_block_burnout": 3000,
+					"drive_target_hit_punish": -7000,
+					"frame_end": 18,
+					"frame_start": 9,
+					"frame_target_block": 24,
+					"frame_target_hit": 23,
+					"frame_target_hit_counter": 23,
+					"frame_target_hit_punish": 23,
+					"super_hit": 1000
+				}
+			]
 		},
 		{
-			"id": "cammy.236[P]",
+			"id": "cammy.236[HP]~N",
 			"names": {
 				"en": "Razor's Edge Slicer (Charged)",
 				"ja": "レイザーエッジスライサー（ホールド）"
 			},
 			"category": "special",
-			"input": "236[P]",
-			"input_modern": "2[SP]",
-			"damage": [
-				800,
-				400
+			"input": "236[HP]~N",
+			"input_modern": "2[SP]~N",
+			"scale_initial": 20,
+			"total_frames": 50,
+			"cancels": [
+				{
+					"frame_end": 33,
+					"frame_start": 28,
+					"frame_ready": 1,
+					"targets": [
+						"cammy.236236P"
+					]
+				}
 			],
-			"damage_initial": 20,
-			"drive_hit": 4000,
-			"drive_block": -5000,
-			"drive_punish": -7000,
-			"superarts": 1000
+			"dependencies": [
+				"cammy.236[HP]"
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 800,
+					"drive_hit": 2500,
+					"drive_target_block": -3000,
+					"drive_target_block_burnout": 3000,
+					"drive_target_hit_punish": -3500,
+					"frame_end": 18,
+					"frame_start": 9,
+					"frame_target_block": 20,
+					"frame_target_hit": 24,
+					"super_hit": 500
+				},
+				{
+					"id": 1,
+					"type": "strike",
+					"damage": 400,
+					"drive_hit": 1500,
+					"drive_target_block": -2000,
+					"drive_target_block_burnout": 2000,
+					"drive_target_hit_punish": -3500,
+					"frame_end": 33,
+					"frame_start": 28,
+					"frame_target_block": 24,
+					"frame_target_hit": 24,
+					"frame_target_hit_counter": 24,
+					"frame_target_hit_punish": 24,
+					"super_hit": 500
+				}
+			]
 		},
 		{
-			"id": "cammy.236PP",
+			"id": "cammy.236PP~N",
 			"names": {
 				"en": "OD Razor's Edge Slicer",
 				"ja": "OD レイザーエッジスライサー"
 			},
 			"category": "special",
-			"input": "236PP",
-			"input_modern": "Auto+2SP",
-			"damage": [
-				800,
-				400
+			"input": "236PP~N",
+			"input_modern": "Auto+2SP~N",
+			"scale_initial": 20,
+			"total_frames": 50,
+			"cancels": [
+				{
+					"frame_end": 33,
+					"frame_start": 28,
+					"frame_ready": 1,
+					"targets": [
+						"cammy.214214P",
+						"cammy.236236P"
+					]
+				}
 			],
-			"damage_initial": 20,
-			"drive_hit": 0,
-			"drive_block": -5000,
-			"drive_punish": -7000,
-			"superarts": 1000
+			"dependencies": [
+				"cammy.236PP"
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 800,
+					"drive_hit": 0,
+					"drive_target_block": -3000,
+					"drive_target_block_burnout": 3000,
+					"drive_target_hit_punish": -3500,
+					"frame_end": 18,
+					"frame_start": 9,
+					"frame_target_block": 20,
+					"frame_target_hit": 24,
+					"super_hit": 500
+				},
+				{
+					"id": 1,
+					"type": "strike",
+					"damage": 400,
+					"drive_hit": 0,
+					"drive_target_block": -2000,
+					"drive_target_block_burnout": 2000,
+					"drive_target_hit_punish": -3500,
+					"frame_end": 33,
+					"frame_start": 28,
+					"frame_target_block": 24,
+					"frame_target_hit": 24,
+					"frame_target_hit_counter": 24,
+					"frame_target_hit_punish": 24,
+					"super_hit": 500
+				}
+			]
 		},
 		{
 			"id": "cammy.236P~K",
@@ -715,29 +2377,57 @@
 			"category": "special",
 			"input": "236P~K",
 			"input_modern": "2SP~A",
-			"damage": 600,
-			"damage_initial": 20,
-			"drive_hit": 2500,
-			"drive_block": -2000,
-			"drive_punish": -4000,
-			"superarts": 800
+			"dependencies": [
+				"cammy.236P"
+			],
+			"scale_initial": 20,
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 600,
+					"drive_hit": 2500,
+					"drive_target_block": -2000,
+					"drive_target_block_burnout": 1000,
+					"drive_target_hit_punish": -4000,
+					"frame_end": 23,
+					"frame_start": 12,
+					"frame_target_block": 16,
+					"frame_target_hit": 22,
+					"super_hit": 800
+				}
+			]
 		},
 		{
-			"id": "cammy.236[P]~K",
+			"id": "cammy.236[HP]~K",
 			"names": {
 				"en": "Cannon Strike (Charged)",
 				"ja": "キャノンストライク（ホールド）"
 			},
 			"category": "special",
-			"input": "236[P]~K",
+			"input": "236[HP]~K",
 			"input_modern": "2[SP]~A",
-			"damage": 800,
-			"damage_immediate": 10,
-			"damage_initial": 20,
-			"drive_hit": 2500,
-			"drive_block": -2000,
-			"drive_punish": -4000,
-			"superarts": 800
+			"dependencies": [
+				"cammy.236[HP]"
+			],
+			"scale_immediate": 10,
+			"scale_initial": 20,
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 800,
+					"drive_hit": 2500,
+					"drive_target_block": -2000,
+					"drive_target_block_burnout": 1000,
+					"drive_target_hit_punish": -4000,
+					"frame_end": 22,
+					"frame_start": 12,
+					"frame_target_block": 18,
+					"frame_target_hit": 22,
+					"super_hit": 800
+				}
+			]
 		},
 		{
 			"id": "cammy.236PP~K",
@@ -748,13 +2438,37 @@
 			"category": "special",
 			"input": "236PP~K",
 			"input_modern": "Auto+2SP~A",
-			"damage": 800,
-			"damage_immediate": 10,
-			"damage_initial": 20,
-			"drive_hit": 0,
-			"drive_block": -2000,
-			"drive_punish": -4000,
-			"superarts": 800
+			"dependencies": [
+				"cammy.236PP"
+			],
+			"scale_immediate": 10,
+			"scale_initial": 20,
+			"cancels": [
+				{
+					"frame_end": 22,
+					"frame_start": 12,
+					"frame_ready": 1,
+					"targets": [
+						"cammy.j214214P"
+					]
+				}
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 800,
+					"drive_hit": 0,
+					"drive_target_block": -2000,
+					"drive_target_block_burnout": 1000,
+					"drive_target_hit_punish": -4000,
+					"frame_end": 22,
+					"frame_start": 12,
+					"frame_target_block": 18,
+					"frame_target_hit": 22,
+					"super_hit": 800
+				}
+			]
 		},
 		{
 			"id": "cammy.236P~2K",
@@ -765,31 +2479,70 @@
 			"category": "special",
 			"input": "236P~2K",
 			"input_modern": "2SP~2A",
-			"damage": 800,
-			"damage_initial": 20,
-			"drive_hit": 2500,
-			"drive_block": -4000,
-			"drive_punish": -7000,
-			"superarts": 800
+			"scale_initial": 20,
+			"dependencies": [
+				"cammy.236P"
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 800,
+					"drive_hit": 2500,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 4000,
+					"drive_target_hit_punish": -7000,
+					"frame_end": 21,
+					"frame_start": 17,
+					"frame_target_block": 15,
+					"frame_target_hit": 25,
+					"super_hit": 800
+				}
+			]
 		},
 		{
-			"id": "cammy.236[P]~2K",
+			"id": "cammy.236[HP]~2K",
 			"names": {
 				"en": "Reverse Edge (Charged)",
 				"ja": "リバースエッジ（ホールド）"
 			},
 			"category": "special",
-			"input": "236[P]~K",
+			"input": "236[HP]~K",
 			"input_modern": "2[SP]~2A",
-			"damage": [
-				600,
-				600
+			"scale_initial": 20,
+			"dependencies": [
+				"cammy.236[HP]"
 			],
-			"damage_initial": 20,
-			"drive_hit": 4000,
-			"drive_block": -6000,
-			"drive_punish": -5000,
-			"superarts": 800
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 600,
+					"drive_hit": 2000,
+					"drive_target_block": -3000,
+					"drive_target_block_burnout": 3000,
+					"drive_target_hit_punish": -2500,
+					"frame_end": 21,
+					"frame_start": 17,
+					"frame_target_block": 21,
+					"frame_target_hit": 25,
+					"super_hit": 400
+				},
+				{
+					"id": 1,
+					"type": "strike",
+					"damage": 600,
+					"drive_hit": 2000,
+					"drive_target_block": -3000,
+					"drive_target_block_burnout": 3000,
+					"drive_target_hit_punish": -2500,
+					"frame_end": 39,
+					"frame_start": 35,
+					"frame_target_block": 15,
+					"frame_target_hit": 25,
+					"super_hit": 400
+				}
+			]
 		},
 		{
 			"id": "cammy.236PP~2K",
@@ -800,15 +2553,50 @@
 			"category": "special",
 			"input": "236PP~2K",
 			"input_modern": "Auto+2SP~2A",
-			"damage": [
-				600,
-				600
+			"scale_initial": 20,
+			"cancels": [
+				{
+					"frame_end": 39,
+					"frame_start": 35,
+					"frame_ready": 5,
+					"targets": [
+						"cammy.j214214P"
+					]
+				}
 			],
-			"damage_initial": 20,
-			"drive_hit": 0,
-			"drive_block": -8000,
-			"drive_punish": -7000,
-			"superarts": 800
+			"dependencies": [
+				"cammy.236PP"
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 600,
+					"drive_hit": 0,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 4000,
+					"drive_target_hit_punish": -3500,
+					"frame_end": 21,
+					"frame_start": 17,
+					"frame_target_block": 21,
+					"frame_target_hit": 25,
+					"super_hit": 400
+				},
+				{
+					"id": 1,
+					"type": "strike",
+					"damage": 600,
+					"drive_hit": 0,
+					"drive_target_block": -4000,
+					"drive_target_block_burnout": 4000,
+					"drive_target_hit_punish": -3500,
+					"frame_end": 39,
+					"frame_start": 35,
+					"frame_target_block": 15,
+					"frame_target_hit": 25,
+					"super_hit": 400
+				}
+			]
 		},
 		{
 			"id": "cammy.236P~LL",
@@ -819,31 +2607,63 @@
 			"category": "special",
 			"input": "236P~LL",
 			"input_modern": "2SP~6SP",
-			"damage": 1800,
-			"damage_scale_counter": 1,
-			"damage_scale_punish": 1.15,
-			"drive_hit": 3000,
-			"drive_block": 0,
-			"drive_punish": -10000,
-			"superarts": 3000
+			"total_frames": 76,
+			"dependencies": [
+				"cammy.236P"
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "throw",
+					"damage": 1800,
+					"damage_punish": 2070,
+					"drive_hit": 3000,
+					"drive_target_block": 0,
+					"drive_target_block_burnout": 0,
+					"drive_target_hit_punish": -10000,
+					"frame_end": 34,
+					"frame_start": 33,
+					"frame_target_block": 6,
+					"frame_target_hit": 10,
+					"frame_target_hit_counter": 10,
+					"frame_target_hit_punish": 10,
+					"super_hit": 3000
+				}
+			]
 		},
 		{
-			"id": "cammy.236[P]~LL",
+			"id": "cammy.236[HP]~LL",
 			"names": {
 				"en": "Fatal Leg Twister (Charged)",
 				"ja": "フェイタルレッグツイスター（ホールド）"
 			},
 			"category": "special",
-			"input": "236[P]~LL",
+			"input": "236[HP]~LL",
 			"input_modern": "2[SP]~6SP",
-			"damage": 1000,
-			"damage_initial": 20,
-			"damage_scale_counter": 1,
-			"damage_scale_punish": 1.15,
-			"drive_hit": 3000,
-			"drive_block": 0,
-			"drive_punish": -10000,
-			"superarts": 1000
+			"scale_initial": 20,
+			"total_frames": 54,
+			"dependencies": [
+				"cammy.236[HP]"
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "throw",
+					"damage": 1000,
+					"damage_punish": 1150,
+					"drive_hit": 3000,
+					"drive_target_block": 0,
+					"drive_target_block_burnout": 0,
+					"drive_target_hit_punish": -10000,
+					"frame_end": 32,
+					"frame_start": 31,
+					"frame_target_block": 48,
+					"frame_target_hit": 52,
+					"frame_target_hit_counter": 52,
+					"frame_target_hit_punish": 52,
+					"super_hit": 1000
+				}
+			]
 		},
 		{
 			"id": "cammy.236PP~LL",
@@ -854,14 +2674,30 @@
 			"category": "special",
 			"input": "236PP~LL",
 			"input_modern": "Auto+2SP~6SP",
-			"damage": 1000,
-			"damage_initial": 30,
-			"damage_scale_counter": 1,
-			"damage_scale_punish": 1.15,
-			"drive_hit": 0,
-			"drive_block": 0,
-			"drive_punish": -10000,
-			"superarts": 1000
+			"scale_initial": 30,
+			"total_frames": 54,
+			"dependencies": [
+				"cammy.236PP"
+			],
+			"hits": [
+				{
+					"id": 0,
+					"type": "throw",
+					"damage": 1000,
+					"damage_punish": 1150,
+					"drive_hit": 0,
+					"drive_target_block": 0,
+					"drive_target_block_burnout": 0,
+					"drive_target_hit_punish": -10000,
+					"frame_end": 32,
+					"frame_start": 31,
+					"frame_target_block": 48,
+					"frame_target_hit": 52,
+					"frame_target_hit_counter": 52,
+					"frame_target_hit_punish": 52,
+					"super_hit": 1000
+				}
+			]
 		},
 		{
 			"id": "cammy.236P~P",
@@ -872,26 +2708,22 @@
 			"category": "special",
 			"input": "236P~P",
 			"input_modern": "2SP~4SP",
-			"damage": 0,
-			"drive_hit": 0,
-			"drive_block": 0,
-			"drive_punish": 0,
-			"superarts": 0
+			"dependencies": [
+				"cammy.236P"
+			]
 		},
 		{
-			"id": "cammy.236[P]~P",
+			"id": "cammy.236[HP]~P",
 			"names": {
 				"en": "Silent Step (Charged)",
 				"ja": "サイレントステップ（ホールド）"
 			},
 			"category": "special",
-			"input": "236[P]~P",
+			"input": "236[HP]~P",
 			"input_modern": "2[SP]~4SP",
-			"damage": 0,
-			"drive_hit": 0,
-			"drive_block": 0,
-			"drive_punish": 0,
-			"superarts": 0
+			"dependencies": [
+				"cammy.236[HP]"
+			]
 		},
 		{
 			"id": "cammy.236PP~P",
@@ -902,11 +2734,9 @@
 			"category": "special",
 			"input": "236PP~P",
 			"input_modern": "Auto+2SP~4SP",
-			"damage": 0,
-			"drive_hit": 0,
-			"drive_block": 0,
-			"drive_punish": 0,
-			"superarts": 0
+			"dependencies": [
+				"cammy.236PP"
+			]
 		},
 
 		{
@@ -919,21 +2749,144 @@
 			"input": "236236K",
 			"input_modern": "5SPH",
 			"input_modern_alt": "236236L",
-			"damage": [
-				100,
-				200,
-				200,
-				200,
-				100,
-				1000
+			"scale_minimum": 0.3,
+			"total_frames": 126,
+			"total_frames_miss": 62,
+			"cancels": [
+				{
+					"frame_end": 39,
+					"frame_start": 36,
+					"frame_ready": 10,
+					"targets": [
+						"cammy.236236P"
+					]
+				}
 			],
-			"damage_scale_min": 0.3,
-			"damage_scale_counter": 1,
-			"damage_scale_punish": 1,
-			"drive_hit": 0,
-			"drive_block": -2500,
-			"drive_punish": -5000,
-			"superarts": 0
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 100,
+					"damage_counter": 100,
+					"damage_punish": 100,
+					"drive_hit": 0,
+					"drive_target_block": -500,
+					"drive_target_block_burnout": 250,
+					"drive_target_hit": -500,
+					"drive_target_hit_punish": -500,
+					"frame_end": 11,
+					"frame_start": 8,
+					"frame_target_block": 11,
+					"frame_target_hit": 18,
+					"super_hit": 0
+				},
+				{
+					"id": 1,
+					"type": "strike",
+					"damage": 200,
+					"damage_counter": 200,
+					"damage_punish": 200,
+					"drive_hit": 0,
+					"drive_target_block": -500,
+					"drive_target_block_burnout": 250,
+					"drive_target_hit": -500,
+					"drive_target_hit_punish": -500,
+					"frame_end": 15,
+					"frame_start": 12,
+					"frame_target_block": 11,
+					"frame_target_hit": 15,
+					"super_hit": 0
+				},
+				{
+					"id": 2,
+					"type": "strike",
+					"damage": 200,
+					"damage_counter": 200,
+					"damage_punish": 200,
+					"drive_hit": 0,
+					"drive_target_block": -500,
+					"drive_target_block_burnout": 250,
+					"drive_target_hit": -500,
+					"drive_target_hit_punish": -500,
+					"frame_end": 18,
+					"frame_start": 15,
+					"frame_target_block": 11,
+					"frame_target_hit": 15,
+					"super_hit": 0
+				},
+				{
+					"id": 3,
+					"type": "strike",
+					"damage": 200,
+					"damage_counter": 200,
+					"damage_punish": 200,
+					"drive_hit": 0,
+					"drive_target_block": -500,
+					"drive_target_block_burnout": 250,
+					"drive_target_hit": -500,
+					"drive_target_hit_punish": -500,
+					"frame_end": 21,
+					"frame_start": 18,
+					"frame_target_block": 11,
+					"frame_target_hit": 15,
+					"super_hit": 0
+				},
+				{
+					"id": 4,
+					"type": "strike",
+					"damage": 100,
+					"damage_counter": 100,
+					"damage_punish": 100,
+					"drive_hit": 0,
+					"drive_target_block": -500,
+					"drive_target_block_burnout": 250,
+					"drive_target_hit": -500,
+					"drive_target_hit_punish": -500,
+					"frame_end": 24,
+					"frame_start": 21,
+					"frame_target_block": 17,
+					"frame_target_hit": 26,
+					"super_hit": 0
+				},
+				{
+					"id": 5,
+					"type": "strike",
+					"damage": 200,
+					"damage_counter": 200,
+					"damage_punish": 200,
+					"drive_hit": 0,
+					"drive_target_block": 0,
+					"drive_target_block_burnout": 0,
+					"drive_target_hit": -500,
+					"drive_target_hit_punish": -500,
+					"frame_end": 41,
+					"frame_start": 39,
+					"frame_target_block": 11,
+					"frame_target_hit": 34,
+					"frame_target_hit_counter": 34,
+					"frame_target_hit_punish": 34,
+					"super_hit": 0
+				},
+				{
+					"id": 6,
+					"type": "strike",
+					"damage": 1000,
+					"damage_counter": 1000,
+					"damage_punish": 1000,
+					"drive_hit": 0,
+					"drive_target_block": 0,
+					"drive_target_block_burnout": 0,
+					"drive_target_hit": -2000,
+					"drive_target_hit_punish": -2000,
+					"frame_end": 62,
+					"frame_start": 59,
+					"frame_target_block": 11,
+					"frame_target_hit": 35,
+					"frame_target_hit_counter": 35,
+					"frame_target_hit_punish": 35,
+					"super_hit": 0
+				}
+			]
 		},
 		{
 			"id": "cammy.214214P",
@@ -945,18 +2898,61 @@
 			"input": "214214P",
 			"input_modern": "4SPH",
 			"input_modern_alt": "214214M",
-			"damage": [
-				250,
-				2700,
-				50
-			],
-			"damage_scale_min": 0.4,
-			"damage_scale_counter": 1,
-			"damage_scale_punish": 1,
-			"drive_hit": 0,
-			"drive_block": -5000,
-			"drive_punish": -10000,
-			"superarts": 0
+			"scale_minimum": 0.4,
+			"total_frames": 95,
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 250,
+					"damage_counter": 250,
+					"damage_punish": 250,
+					"drive_hit": 0,
+					"drive_target_block": -5000,
+					"drive_target_block_burnout": 2500,
+					"drive_target_hit": -1000,
+					"drive_target_hit_punish": -1000,
+					"frame_end": 40,
+					"frame_start": 12,
+					"frame_target_block": 20,
+					"frame_target_hit": 20,
+					"super_hit": 0
+				},
+				{
+					"id": 1,
+					"type": "strike",
+					"damage": 2700,
+					"drive_hit": 0,
+					"drive_target_block": 0,
+					"drive_target_block_burnout": 0,
+					"drive_target_hit": -7000,
+					"drive_target_hit_punish": -7000,
+					"frame_end": 155,
+					"frame_start": 154,
+					"frame_target_block": 6,
+					"frame_target_hit": 10,
+					"frame_target_hit_counter": 10,
+					"frame_target_hit_punish": 10,
+					"super_hit": 0
+				},
+				{
+					"id": 2,
+					"type": "strike",
+					"damage": 50,
+					"drive_hit": 0,
+					"drive_target_block": 0,
+					"drive_target_block_burnout": 0,
+					"drive_target_hit": -2000,
+					"drive_target_hit_punish": -2000,
+					"frame_end": 218,
+					"frame_start": 217,
+					"frame_target_block": 6,
+					"frame_target_hit": 10,
+					"frame_target_hit_counter": 10,
+					"frame_target_hit_punish": 10,
+					"super_hit": 0
+				}
+			]
 		},
 		{
 			"id": "cammy.j214214P",
@@ -968,18 +2964,61 @@
 			"input": "j214214P",
 			"input_modern": "j4SPH",
 			"input_modern_alt": "j214214M",
-			"damage": [
-				250,
-				2700,
-				50
-			],
-			"damage_scale_min": 0.4,
-			"damage_scale_counter": 1,
-			"damage_scale_punish": 1,
-			"drive_hit": 0,
-			"drive_block": -5000,
-			"drive_punish": -10000,
-			"superarts": 0
+			"scale_minimum": 0.4,
+			"total_frames": 95,
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 250,
+					"damage_counter": 250,
+					"damage_punish": 250,
+					"drive_hit": 0,
+					"drive_target_block": -5000,
+					"drive_target_block_burnout": 2500,
+					"drive_target_hit": -1000,
+					"drive_target_hit_punish": -1000,
+					"frame_end": 40,
+					"frame_start": 12,
+					"frame_target_block": 20,
+					"frame_target_hit": 20,
+					"super_hit": 0
+				},
+				{
+					"id": 1,
+					"type": "strike",
+					"damage": 2700,
+					"drive_hit": 0,
+					"drive_target_block": 0,
+					"drive_target_block_burnout": 0,
+					"drive_target_hit": -7000,
+					"drive_target_hit_punish": -7000,
+					"frame_end": 155,
+					"frame_start": 154,
+					"frame_target_block": 6,
+					"frame_target_hit": 10,
+					"frame_target_hit_counter": 10,
+					"frame_target_hit_punish": 10,
+					"super_hit": 0
+				},
+				{
+					"id": 2,
+					"type": "strike",
+					"damage": 50,
+					"drive_hit": 0,
+					"drive_target_block": 0,
+					"drive_target_block_burnout": 0,
+					"drive_target_hit": -2000,
+					"drive_target_hit_punish": -2000,
+					"frame_end": 218,
+					"frame_start": 217,
+					"frame_target_block": 6,
+					"frame_target_hit": 10,
+					"frame_target_hit_counter": 10,
+					"frame_target_hit_punish": 10,
+					"super_hit": 0
+				}
+			]
 		},
 		{
 			"id": "cammy.236236P",
@@ -991,26 +3030,107 @@
 			"input": "236236P",
 			"input_modern": "4SPH",
 			"input_modern_alt": "236236H",
-			"damage": [
-				500,
-				500,
-				500,
-				500,
-				2000
+			"scale_immediate": 10,
+			"scale_minimum": 0.5,
+			"total_frames": 37,
+			"total_frames_miss": 61,
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 500,
+					"damage_counter": 500,
+					"damage_punish": 500,
+					"drive_hit": 0,
+					"drive_target_block": -7500,
+					"drive_target_block_burnout": 3750,
+					"drive_target_hit": -1875,
+					"drive_target_hit_punish": -1875,
+					"frame_end": 9,
+					"frame_start": 8,
+					"frame_target_block": 20,
+					"frame_target_hit": 24,
+					"frame_target_hit_counter": 24,
+					"frame_target_hit_punish": 24,
+					"super_hit": 0
+				},
+				{
+					"id": 1,
+					"type": "strike",
+					"damage": 500,
+					"drive_hit": 0,
+					"drive_target_block": 0,
+					"drive_target_block_burnout": 0,
+					"drive_target_hit": -1875,
+					"drive_target_hit_punish": -1875,
+					"frame_end": 9,
+					"frame_start": 8,
+					"frame_target_block": 6,
+					"frame_target_hit": 10,
+					"frame_target_hit_counter": 10,
+					"frame_target_hit_punish": 10,
+					"super_hit": 0
+				},
+				{
+					"id": 2,
+					"type": "strike",
+					"damage": 500,
+					"drive_hit": 0,
+					"drive_target_block": 0,
+					"drive_target_block_burnout": 0,
+					"drive_target_hit": -1875,
+					"drive_target_hit_punish": -1875,
+					"frame_end": 9,
+					"frame_start": 8,
+					"frame_target_block": 6,
+					"frame_target_hit": 10,
+					"frame_target_hit_counter": 10,
+					"frame_target_hit_punish": 10,
+					"super_hit": 0
+				},
+				{
+					"id": 3,
+					"type": "strike",
+					"damage": 500,
+					"drive_hit": 0,
+					"drive_target_block": 0,
+					"drive_target_block_burnout": 0,
+					"drive_target_hit": -1875,
+					"drive_target_hit_punish": -1875,
+					"frame_end": 9,
+					"frame_start": 8,
+					"frame_target_block": 6,
+					"frame_target_hit": 10,
+					"frame_target_hit_counter": 10,
+					"frame_target_hit_punish": 10,
+					"super_hit": 0
+				},
+				{
+					"id": 4,
+					"type": "strike",
+					"damage": 2000,
+					"drive_hit": 0,
+					"drive_target_block": 0,
+					"drive_target_block_burnout": 0,
+					"drive_target_hit": -7500,
+					"drive_target_hit_punish": -7500,
+					"frame_end": 9,
+					"frame_start": 8,
+					"frame_target_block": 6,
+					"frame_target_hit": 10,
+					"frame_target_hit_counter": 10,
+					"frame_target_hit_punish": 10,
+					"super_hit": 0
+				}
 			],
-			"damage_immediate": 10,
-			"damage_scale_min": 0.5,
-			"damage_scale_counter": 1,
-			"damage_scale_punish": 1,
-			"drive_hit": 0,
-			"drive_block": -7500,
-			"drive_punish": -15000,
-			"superarts": 0,
 			"overrides": {
 				"CA": {
-					"damage[4]": 2500,
-					"drive_block": -10000,
-					"drive_punish": -20000
+					"total_frames": 41,
+					"hits[0].drive_target_block": -10000,
+					"hits[0].drive_target_block_burnout": 5000,
+					"hits[4].damage": 2500,
+					"hits[4].drive_target_hit": -12500,
+					"hits[4].drive_target_hit_punish": -12500
 				}
 			}
 		},
@@ -1024,15 +3144,28 @@
 			"category": "throws",
 			"input": "LL",
 			"input_modern": "LM",
-			"damage": 1200,
-			"damage_scale_counter": 1,
-			"damage_scale_punish": 1.7,
-			"damage_immediate": 20,
-			"drive_hit": 2000,
-			"drive_block": 0,
-			"drive_punish": -10000,
-			"superarts": 2000,
-			"superarts_punish": 4000
+			"total_frames": 140,
+			"hits": [
+				{
+					"id": 0,
+					"type": "throw",
+					"damage": 1200,
+					"damage_counter": 1200,
+					"damage_punish": 2040,
+					"drive_hit": 2000,
+					"drive_target_block": 0,
+					"drive_target_block_burnout": 0,
+					"drive_target_hit_punish": -10000,
+					"frame_end": 7,
+					"frame_start": 4,
+					"frame_target_block": 0,
+					"frame_target_hit": 153,
+					"frame_target_hit_counter": 153,
+					"frame_target_hit_punish": 153,
+					"super_hit": 2000,
+					"super_hit_punish": 4000
+				}
+			]
 		},
 		{
 			"id": "cammy.4LL",
@@ -1043,15 +3176,29 @@
 			"category": "throws",
 			"input": "4LL",
 			"input_modern": "4LM",
-			"damage": 1200,
-			"damage_scale_counter": 1,
-			"damage_scale_punish": 1.7,
-			"damage_immediate": 20,
-			"drive_hit": 2000,
-			"drive_block": 0,
-			"drive_punish": -10000,
-			"superarts": 2000,
-			"superarts_punish": 4000
+			"scale_immediate": 20,
+			"total_frames": 123,
+			"hits": [
+				{
+					"id": 0,
+					"type": "throw",
+					"damage": 1200,
+					"damage_counter": 1200,
+					"damage_punish": 2040,
+					"drive_hit": 2000,
+					"drive_target_block": 0,
+					"drive_target_block_burnout": 0,
+					"drive_target_hit_punish": -10000,
+					"frame_end": 7,
+					"frame_start": 4,
+					"frame_target_block": 0,
+					"frame_target_hit": 133,
+					"frame_target_hit_counter": 133,
+					"frame_target_hit_punish": 133,
+					"super_hit": 2000,
+					"super_hit_punish": 4000
+				}
+			]
 		},
 		{
 			"id": "cammy.jLL",
@@ -1062,12 +3209,28 @@
 			"category": "throws",
 			"input": "jLL",
 			"input_modern": "jLM",
-			"damage": 1200,
-			"drive_hit": 2000,
-			"drive_block": 0,
-			"drive_punish": -10000,
-			"superarts": 2000,
-			"superarts_punish": 4000
+			"total_frames": 56,
+			"hits": [
+				{
+					"id": 0,
+					"type": "throw",
+					"damage": 1200,
+					"damage_counter": 1200,
+					"damage_punish": 2040,
+					"drive_hit": 2000,
+					"drive_target_block": 0,
+					"drive_target_block_burnout": 0,
+					"drive_target_hit_punish": -10000,
+					"frame_end": 1,
+					"frame_start": 0,
+					"frame_target_block": 6,
+					"frame_target_hit": 10,
+					"frame_target_hit_counter": 10,
+					"frame_target_hit_punish": 10,
+					"super_hit": 2000,
+					"super_hit_punish": 4000
+				}
+			]
 		},
 
 		{
@@ -1079,12 +3242,135 @@
 			"category": "common",
 			"input": "HH",
 			"input_modern": "DI",
-			"damage": 800,
-			"damage_immediate": 20,
-			"drive_hit": 0,
-			"drive_block": -5000,
-			"drive_punish": -15000,
-			"superarts": 0
+			"scale_initial": 20,
+			"total_frames": 62,
+			"hits": [
+				{
+					"id": 0,
+					"type": "strike",
+					"damage": 800,
+					"drive_hit": 0,
+					"drive_target_block": -5000,
+					"drive_target_block_burnout": 0,
+					"drive_target_hit": -10000,
+					"drive_target_hit_punish": -15000,
+					"frame_end": 27,
+					"frame_start": 25,
+					"frame_target_block": 34,
+					"frame_target_hit": 24,
+					"frame_target_hit_counter": 24,
+					"frame_target_hit_punish": 20,
+					"super_hit": 0,
+					"super_hit_punish": 3000
+				}
+			]
+		},
+		{
+			"id": "cammy.656MM",
+			"category": "common",
+			"input": "656MM",
+			"input_modern": "656DP",
+			"total_frames": 45,
+			"cancels": [
+				{
+					"frame_end": 45,
+					"frame_start": 7,
+					"frame_ready": 1,
+					"targets": [
+						"cammy.5LP",
+						"cammy.5LK",
+						"cammy.5MP",
+						"cammy.5MK",
+						"cammy.5HP",
+						"cammy.5HK",
+						"cammy.2LP",
+						"cammy.2LK",
+						"cammy.2MP",
+						"cammy.2MK",
+						"cammy.2HP",
+						"cammy.2HK",
+						"cammy.4MP",
+						"cammy.6HK",
+						"cammy.4HK",
+						"cammy.214LP",
+						"cammy.214MP",
+						"cammy.214HP",
+						"cammy.214PP",
+						"cammy.236LK",
+						"cammy.236MK",
+						"cammy.236[HK]",
+						"cammy.236KK",
+						"cammy.623LK",
+						"cammy.623MK",
+						"cammy.623[HK]",
+						"cammy.623KK",
+						"cammy.236236K",
+						"cammy.214214P",
+						"cammy.236236P",
+						"cammy.HH"
+					]
+				}
+			]
+		},
+		{
+			"id": "cammy.656",
+			"category": "common",
+			"input": "656",
+			"input_modern": "656",
+			"total_frames": 46,
+			"cancels": [
+				{
+					"frame_end": 46,
+					"frame_start": 8,
+					"frame_ready": 1,
+					"targets": [
+						"cammy.5LP",
+						"cammy.5LK",
+						"cammy.5MP",
+						"cammy.5MK",
+						"cammy.5HP",
+						"cammy.5HK",
+						"cammy.2LP",
+						"cammy.2LK",
+						"cammy.2MP",
+						"cammy.2MK",
+						"cammy.2HP",
+						"cammy.2HK",
+						"cammy.4MP",
+						"cammy.6HK",
+						"cammy.4HK",
+						"cammy.214LP",
+						"cammy.214MP",
+						"cammy.214HP",
+						"cammy.214PP",
+						"cammy.236LK",
+						"cammy.236MK",
+						"cammy.236[HK]",
+						"cammy.236KK",
+						"cammy.236236K",
+						"cammy.623LK",
+						"cammy.623MK",
+						"cammy.623[HK]",
+						"cammy.623KK",
+						"cammy.214214P",
+						"cammy.236236P",
+						"cammy.HH"
+					]
+				}
+			],
+			"dependencies": [
+				"cammy.5LP",
+				"cammy.5LK",
+				"cammy.5HP",
+				"manon.2LP",
+				"manon.2MP",
+				"manon.2MK",
+				"manon.4MP",
+				"manon.6HK",
+				"manon.4HK",
+				"manon.4MPtoHK",
+				"manon.5HPtoHK"
+			]
 		}
 	]
 }

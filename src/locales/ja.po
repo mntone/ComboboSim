@@ -38,6 +38,10 @@ msgstr "コンボ表"
 msgid "Common Moves"
 msgstr "共通システム"
 
+#: src/components/HitTypeList/constants.ts:10
+msgid "Counter"
+msgstr "カウンター"
+
 #: src/components/ComboList/constants.ts:23
 msgid "Damage"
 msgstr "ダメージ"
@@ -66,9 +70,17 @@ msgstr "技名"
 msgid "No moves found"
 msgstr "技がありません"
 
+#: src/components/HitTypeList/constants.ts:9
+msgid "Normal"
+msgstr "通常"
+
 #: src/components/MoveForm.tsx:20
 msgid "Normal Moves"
 msgstr "通常技"
+
+#: src/components/HitTypeList/constants.ts:11
+msgid "Punish Counter"
+msgstr "パニッシュカウンター"
 
 #: src/components/MoveForm.tsx:22
 msgid "Special Moves"

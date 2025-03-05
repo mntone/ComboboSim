@@ -4,8 +4,8 @@ test('should handle simple property name', () => {
 	expect(parsePath('damage')).toEqual(['damage'])
 })
 
-test('should handle property name with upper character', () => {
-	expect(parsePath('driveHit')).toEqual(['driveHit'])
+test('should convert underscore to camelCase', () => {
+	expect(parsePath('drive_hit')).toEqual(['driveHit'])
 })
 
 test('should handle property name with indexer', () => {
@@ -21,4 +21,8 @@ test('should throw syntax error for invalid syntax', () => {
 		.toThrowError('Unexpected token \'damage[abc]\' at column 8')  // invalid index
 	expect(() => parsePath('invalid-path!!'))
 		.toThrowError('Unexpected token \'invalid-path!!\' at column 8')  // invalid characters
+	expect(() => parsePath('[abc]'))
+		.toThrowError('Unexpected token \'[abc]\' at column 1')  // invalid indexer
+	expect(() => parsePath('.abc'))
+		.toThrowError('Unexpected token \'.abc\' at column 1')  // invalid member access
 })
