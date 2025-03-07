@@ -29,8 +29,8 @@ const userSettingsSlice = createSlice({
 			state.isDirty = true
 		},
 
-		setResourceId(state, action: PayloadAction<string>) {
-			state.resourceId = action.payload
+		setResourceId(state, action: PayloadAction<string | null>) {
+			state.res = action.payload
 			state.isDirty = true
 		},
 

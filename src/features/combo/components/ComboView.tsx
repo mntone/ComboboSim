@@ -23,7 +23,7 @@ import { dropComboRight, pushCombo, setCharacterId } from '../slice'
 import type { HitType } from '../types'
 
 function hasItem<T>(collection: T[] | undefined): collection is T[] {
-	return typeof collection !== 'undefined' && collection.length !== 0
+	return collection !== undefined && collection.length !== 0
 }
 
 function isDependent(targetMove: Move, prevMoveId: string): boolean {
@@ -62,7 +62,7 @@ function ComboView() {
 			}
 		} else {
 			return function(move: Move): boolean {
-				return typeof move.dependencies === 'undefined'
+				return move.dependencies == null
 			}
 		}
 	}, [lastComboItem])
@@ -127,7 +127,7 @@ function ComboView() {
 					onMoveChange={setMove}
 				/>
 
-				{typeof lastComboItem === 'undefined' && (
+				{lastComboItem == null && (
 					<HitTypeList
 						selectedHitType={hitType}
 						onHitTypeChange={setHitType}
@@ -136,7 +136,7 @@ function ComboView() {
 
 				<CSButton
 					aria-label='Add Move'
-					isDisabled={typeof move === 'undefined'}
+					isDisabled={move == null}
 					isIconOnly
 					variant='primary'
 					onPress={handleAdd}

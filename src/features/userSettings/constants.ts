@@ -15,7 +15,7 @@ const USERSETTINGS_DEFAULT_SERIALIZER: DataSerializer = JsonDataSerializer
 const USERSETTINGS_INITIAL_STATE: UserSettings = {
 	isDirty: false,
 	comboTableColumns: null,
-	resourceId: null,
+	res: null,
 	moveNameDisplayMode: {
 		normal: 'movepriority',
 		unique: 'nameonly',

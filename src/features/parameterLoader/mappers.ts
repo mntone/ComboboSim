@@ -4,7 +4,7 @@ import { CONTEXT_PARAMS, DEFAULT_CONTEXT_PARAMS } from './constants'
 import type { CharacterExtension, CharacterJson, MoveJson, ParameterContext } from './types'
 
 function getContexts(ext?: CharacterExtension[]): ParameterContext[] {
-	if (typeof ext === 'undefined' || ext.length === 0) {
+	if (ext == null || ext.length === 0) {
 		return DEFAULT_CONTEXT_PARAMS
 	}
 
@@ -37,7 +37,7 @@ function mapMove(contexts: ParameterContext[], json: MoveJson): Move {
 	void contexts
 
 	// let values: MoveValues[] | MoveValues
-	// if (typeof json.overrides !== 'undefined') {
+	// if (json.overrides) {
 	// 	const fn = compileOverrides(json.overrides)
 	// 	values = contexts.map(function(context) {
 	// 		const value = Object.assign({}, baseValue)

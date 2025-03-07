@@ -87,4 +87,6 @@ function parseCondition(cond: string, options: CONDITION_PARSER_OPTIONS): string
 	return tokens
 }
 
-export default parseCondition
+export {
+	parseCondition,
+}

@@ -11,7 +11,7 @@ function initComboState(
 	offset: number,
 	hitType: HitType,
 ): ComboItem {
-	if (typeof prevItem !== 'undefined') {
+	if (prevItem) {
 		const state = copyObjectOmittedByNames(prevItem, ['move']) as ComboItem
 
 		// Update state

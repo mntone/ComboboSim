@@ -5,7 +5,14 @@ import { useMap, useReadonlyMap } from './useMap'
 describe('useMap', () => {
 	test('should return an empty Map when input is undefined', () => {
 		const { result } = renderHook(() => useMap(undefined))
-		expect(result.current).toEqual(new Map())
+		expect(result.current).toBeInstanceOf(Map)
+		expect(result.current.size).toBe(0)
+	})
+
+	test('should return an empty Map when input is null', () => {
+		const { result } = renderHook(() => useMap(null))
+		expect(result.current).toBeInstanceOf(Map)
+		expect(result.current.size).toBe(0)
 	})
 
 	test('should convert array to Map using id as key', () => {
@@ -35,6 +42,12 @@ describe('useMap', () => {
 describe('useReadonlyMap', () => {
 	test('should return the predefined empty Map when input is undefined', () => {
 		const { result } = renderHook(() => useReadonlyMap(undefined))
+		expect(result.current).toBeInstanceOf(Map)
+		expect(result.current.size).toBe(0)
+	})
+
+	test('should return the predefined empty Map when input is null', () => {
+		const { result } = renderHook(() => useReadonlyMap(null))
 		expect(result.current).toBeInstanceOf(Map)
 		expect(result.current.size).toBe(0)
 	})

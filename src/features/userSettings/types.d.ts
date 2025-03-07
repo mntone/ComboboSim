@@ -6,8 +6,9 @@ import type { ComboTableColumnKey } from '@/components/ComboList'
 
 export interface UserSettings {
 	isDirty: boolean
+	lang: string | null
 	comboTableColumns: ComboTableColumnKey[] | null
-	resourceId: string | null
+	res: string | null
 	moveNameDisplayMode: MoveNameDisplayModes
 	skipComboDeletionAlert: boolean
 }

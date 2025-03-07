@@ -5,7 +5,7 @@ import parameterLoaderSlice from '@/features/parameterLoader/slice'
 import resourceLoaderSlice from '@/features/resourceLoader/slice'
 import userSettingsSlice from '@/features/userSettings/slice'
 
-import characterIdChangeMiddleware from './middlewares/characterIdChangeMiddleware'
+import { characterIdChangeMiddleware } from './middlewares/characterIdChangeMiddleware'
 import { userSettingsUpdateMiddleware } from './middlewares/userSettingsUpdateMiddleware'
 
 const store = configureStore({
@@ -37,4 +37,6 @@ export type AppStore = typeof store
 // Infer the `AppDispatch` types from the store itself
 export type AppDispatch = AppStore['dispatch']
 
-export default store
+export {
+	store,
+}

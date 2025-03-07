@@ -80,7 +80,7 @@ function simulateMove(
 	// Update proration state with the current move.
 	applyDriveRushIfRequired(move, state)
 
-	if (typeof move.hits !== 'undefined' && move.hits.length !== 0) {
+	if (move.hits && move.hits.length !== 0) {
 		// Update scale if there is a hit.
 		state.scale = calcScale(move, state)
 

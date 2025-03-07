@@ -8,17 +8,18 @@ import type { RootState } from '../store'
 const characterIdChangeMiddleware = createListenerMiddleware()
 
 characterIdChangeMiddleware.startListening({
-	actionCreator: setCharacterId,
-	effect: async function(_, listener) {
-		const prevState = listener.getOriginalState() as RootState
+	predicate(action, currentState, originalState) {
+		return setCharacterId.match(action)
+			&& (currentState as RootState).combo.characterId != null
+			&& (currentState as RootState).combo.characterId !== (originalState as RootState).combo.characterId
+	},
+	async effect(_, listener) {
 		const nextState = listener.getState() as RootState
-
-		const newCharacterId = nextState.combo.characterId
-		if (newCharacterId !== null
-			&& prevState.combo.characterId !== nextState.combo.characterId) {
-			listener.dispatch(fetchParam(newCharacterId) as unknown as UnknownAction)
-		}
+		const newCharacterId = nextState.combo.characterId as string
+		listener.dispatch(fetchParam(newCharacterId) as unknown as UnknownAction)
 	},
 })
 
-export default characterIdChangeMiddleware
+export {
+	characterIdChangeMiddleware,
+}

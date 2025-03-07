@@ -1,7 +1,7 @@
 import { isUpper } from '@/utils/text/utils'
 
-import parseCondition from '../../../utils/text/parseCondition'
-import parsePath from '../../../utils/text/parsePath'
+import { parseCondition } from '../../../utils/text/parseCondition'
+import { parsePath } from '../../../utils/text/parsePath'
 import { DEFAULT_CONDITION_PARSER_OPTIONS } from '../constants'
 import type { MoveOverride, MoveOverrideConditionFunctionType, MoveOverrides } from '../types'
 
@@ -36,4 +36,6 @@ function compileOverrides(overrides: MoveOverrides): MoveOverrideConditionFuncti
 	return func
 }
 
-export default compileOverrides
+export {
+	compileOverrides,
+}

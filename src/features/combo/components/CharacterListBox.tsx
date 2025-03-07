@@ -17,10 +17,7 @@ function CharacterListBox({
 	const { i18n: { locale } } = useLingui()
 	const characterArray = useAppSelector(selectCharacterArray)
 	const characters = useAppSelector(selectCharacters)
-
-	const characterKeySet = useMemo(function() {
-		return new Set(characterKey ? [characterKey] : [])
-	}, [characterKey])
+	const characterKeySet = new Set(characterKey ? [characterKey] : [])
 
 	const getLocalizedName = useMemo(function() {
 		return locale === 'ja'
@@ -35,7 +32,7 @@ function CharacterListBox({
 		}
 
 		const characterKey = (keys as Set<string>).keys().next().value
-		if (import.meta.env.DEV && typeof characterKey === 'undefined') {
+		if (import.meta.env.DEV && characterKey == null) {
 			console.log('Failed to get character id')
 			return
 		}

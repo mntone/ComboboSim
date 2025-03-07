@@ -71,4 +71,6 @@ function parsePath(path: string): string[] {
 	return tokens
 }
 
-export default parsePath
+export {
+	parsePath,
+}

@@ -8,7 +8,7 @@ class LocalStoragePersistor implements Persistor {
 		this.#key = key
 
 		try {
-			if (typeof window.localStorage === 'undefined') {
+			if (window.localStorage == null) {
 				console.log('LocalStorage is unavailable')
 
 				this.#disabled = true

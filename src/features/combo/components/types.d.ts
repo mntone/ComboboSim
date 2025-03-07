@@ -1,6 +1,6 @@
 import type { CharacterParameterState } from '../types'
 
 export interface CharacterListProps {
-	characterKey?: string | null
+	characterKey: string | null
 	onCharacterChange?: (character: CharacterParameterState) => void
 }

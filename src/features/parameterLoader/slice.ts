@@ -1,21 +1,21 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 import { createAppAsyncThunk } from '@/app/hooks'
-import fetchJson from '@/utils/fetchJson'
+import { fetchJson } from '@/utils/fetchJson'
 
 import { PARAMETERLOADER_NAME } from './constants'
 import { initializeParameterState } from './initializeParameterState'
 import { mapCharacter } from './mappers'
 import type { CharacterJson } from './types'
 import { snakeToCamel } from './utils/caseConversion'
-import mapKeysDeep from './utils/mapKeysDeep'
+import { mapKeysDeep } from './utils/mapKeysDeep'
 
 const fetchParam = createAppAsyncThunk(
 	`${PARAMETERLOADER_NAME}/fetch`,
 	async function(id: string, { signal }) {
 		if (import.meta.env.DEV) {
 			const delay = import.meta.env.VITE_REQUEST_DELAY
-			if (typeof delay !== 'undefined' && delay >= 100) {
+			if (delay && delay >= 100) {
 				await new Promise(resolve => setTimeout(resolve, delay))
 			}
 		}

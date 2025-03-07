@@ -8,7 +8,7 @@ test('should return the initial state when passed an empty action', () => {
 
 test('should handle setResourceId action', () => {
 	const newState = slice(USERSETTINGS_INITIAL_STATE, setResourceId('capcom_ja'))
-	expect(newState.resourceId).toBe('capcom_ja')
+	expect(newState.res).toBe('capcom_ja')
 })
 
 test('should handle skipComboDeletionAlert action', () => {

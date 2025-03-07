@@ -25,4 +25,6 @@ async function fetchJson(input: RequestInfo | URL, signal?: AbortSignal) {
 	return await res.json()
 }
 
-export default fetchJson
+export {
+	fetchJson,
+}

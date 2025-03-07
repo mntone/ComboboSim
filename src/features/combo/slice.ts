@@ -10,12 +10,12 @@ const comboSlice = createSlice({
 	reducers: {
 		setCharacterId(state, action: PayloadAction<string>) {
 			const id = action.payload
-			if (id !== null) {
+			if (id) {
 				if (state.combos.length !== 0) {
 					state.combos = []
 				}
-				state.characterId = id
 			}
+			state.characterId = id
 		},
 
 		pushCombo(state, action: PayloadAction<PushComboData | undefined>) {

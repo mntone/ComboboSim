@@ -21,7 +21,7 @@ function CSTable<T extends object>({ children, empty, ...props }: CSTableProps<T
 	const { gridProps } = useTable(props, state, ref)
 
 	let content
-	if (typeof empty !== 'undefined' && collection.size === 0) {
+	if (empty && collection.size === 0) {
 		content = (
 			<CSTableColumnEmpty columnCount={collection.columnCount}>
 				{empty}

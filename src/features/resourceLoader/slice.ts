@@ -1,7 +1,7 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
 
 import { createAppAsyncThunk } from '@/app/hooks'
-import fetchJson from '@/utils/fetchJson'
+import { fetchJson } from '@/utils/fetchJson'
 
 import { RESOURCELOADER_INITIAL_STATE, RESOURCELOADER_NAME } from './constants'
 import type { DynamicResource } from './types'

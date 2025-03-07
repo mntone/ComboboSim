@@ -27,25 +27,25 @@ const selectMoves = createSelector(
 	getCharacterId,
 	selectCharacters,
 	function(characterId, params) {
-		if (characterId === null) {
+		if (characterId) {
+			const moves = params[characterId].param?.moves
+			return moves
+		} else {
 			return undefined
 		}
-
-		const moves = params[characterId].param?.moves
-		return moves
 	},
 )
 
 const selectIsCharacterLoading = createSelector(
-	function(_: RootState, characterId: string | null): string | null {
-		return characterId
-	},
+	getCharacterId,
 	selectCharacters,
 	function(characterId: string | null, params: { [key: string]: CharacterParameterState }): boolean {
-		if (characterId === null) {
+		if (characterId) {
+			const state = params[characterId].state
+			return state === 'loading'
+		} else {
 			return false
 		}
-		return params[characterId].state === 'loading'
 	},
 )
 

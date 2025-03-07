@@ -30,7 +30,7 @@ function MoveList({ characterKey, filter, selectedMove, onMoveChange }: MoveList
 	})
 	const movesById = useReadonlyMap(moves)
 	const movesByCategory = useMemo(function() {
-		if (typeof moves === 'undefined') {
+		if (moves == null) {
 			return []
 		}
 
@@ -50,7 +50,7 @@ function MoveList({ characterKey, filter, selectedMove, onMoveChange }: MoveList
 			}
 
 			const moveId = (keys as Set<string>).keys().next().value
-			if (typeof moveId !== 'undefined') {
+			if (moveId) {
 				const move = movesById.get(moveId)
 				onMoveChange(move)
 			} else {

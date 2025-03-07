@@ -20,7 +20,7 @@ function ComboViewOptionsButton({
 		}
 
 		const columns = keys as Set<ComboTableColumnKey>
-		onColumnsChange?.call(null, columns)
+		onColumnsChange?.(columns)
 	}, [onColumnsChange])
 
 	return (

@@ -16,7 +16,6 @@ const config = ts.config(
 	react.configs.flat['jsx-runtime'],
 	jsxA11y.flatConfigs.recommended,
 	stylistic.configs.customize({
-		flat: true,
 		braceStyle: '1tbs',
 		indent: 'tab',
 	}),
@@ -24,6 +23,7 @@ const config = ts.config(
 	// Project rules:
 	{
 		rules: {
+			'import/no-default-export': SEVERAL_ERROR,
 			'import/no-mutable-exports': SEVERAL_ERROR,
 			'import/exports-last': SEVERAL_ERROR,
 			'import/order': [SEVERAL_WARN, {
@@ -86,6 +86,19 @@ const config = ts.config(
 					alwaysTryTypes: true,
 				},
 			},
+		},
+	},
+	{
+		files: ['*.config.ts'],
+		rules: {
+			'import/no-default-export': SEVERAL_OFF,
+		},
+	},
+	{
+		files: ['src/features/*/slice.ts'],
+		rules: {
+			'no-param-reassign': [SEVERAL_ERROR, { props: false }],
+			'import/no-default-export': SEVERAL_OFF,
 		},
 	},
 )

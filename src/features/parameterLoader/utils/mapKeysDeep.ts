@@ -19,4 +19,6 @@ function mapKeysDeep(obj: unknown, mapper: (key: string) => string): unknown {
 	return obj
 }
 
-export default mapKeysDeep
+export {
+	mapKeysDeep,
+}

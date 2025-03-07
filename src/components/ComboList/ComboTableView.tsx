@@ -52,7 +52,7 @@ function ComboTableView({
 					isDestructive
 					isIconOnly
 					variant='light'
-					onPress={() => onDelete?.call(null, item)}
+					onPress={() => onDelete?.(item)}
 				>
 					<TbX size={16} />
 				</CSButton>
