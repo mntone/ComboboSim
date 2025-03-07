@@ -1,10 +1,11 @@
 import { useLingui } from '@lingui/react/macro'
 import { Item, Section } from '@react-stately/collections'
-import type { Selection } from '@react-types/shared'
-import { useCallback, useMemo } from 'react'
+import { useMemo } from 'react'
 
 import { getPreferredMoveName } from '@/common/getPreferredMoveName'
 import { useReadonlyMap } from '@/common/hooks/useMap'
+import { useSetToSingleValue } from '@/common/hooks/useSetToSingleValue'
+import type { Move } from '@/common/types'
 import { groupBy } from '@/common/utils/groupBy'
 
 import { useAppSelector } from '@/app/hooks'
@@ -43,21 +44,18 @@ function MoveList({ characterKey, filter, selectedMove, onMoveChange }: MoveList
 
 	const getMoveName = getPreferredMoveName.bind(null, displayModes, locale, res)
 
-	const handleMoveChange = useCallback(function(keys: Selection) {
-		if (typeof onMoveChange === 'function') {
-			if (import.meta.env.DEV && !(keys instanceof Set)) {
-				console.log('Expected Set<string>, but got invalid type.')
-			}
-
-			const moveId = (keys as Set<string>).keys().next().value
+	const handleMoveChange = useSetToSingleValue(
+		onMoveChange,
+		function(moveId: string | undefined): Move | undefined {
 			if (moveId) {
 				const move = movesById.get(moveId)
-				onMoveChange(move)
+				return move
 			} else {
-				onMoveChange(undefined)
+				return undefined
 			}
-		}
-	}, [onMoveChange, movesById])
+		},
+		[onMoveChange, movesById],
+	)
 
 	return (
 		<CSMenuButton

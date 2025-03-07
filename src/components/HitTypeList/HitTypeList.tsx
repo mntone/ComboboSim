@@ -1,7 +1,7 @@
 import { useLingui } from '@lingui/react/macro'
 import { Item } from '@react-stately/collections'
-import type { Selection } from '@react-types/shared'
-import { useCallback } from 'react'
+
+import { useSetToSingleValue } from '@/common/hooks/useSetToSingleValue'
 
 import type { HitType } from '@/features/combo/types'
 
@@ -13,17 +13,13 @@ import type { HitTypeListProps, HitTypeNamesKey } from './types'
 function HitTypeList({ selectedHitType, onHitTypeChange }: HitTypeListProps) {
 	const { t } = useLingui()
 
-	const handleHitTypeChange = useCallback(function(keys: Selection) {
-		if (typeof onHitTypeChange === 'function') {
-			if (import.meta.env.DEV && !(keys instanceof Set)) {
-				console.log('Expected Set<string>, but got invalid type')
-				return
-			}
-
-			const hitTypeKey = (keys as Set<string>).keys().next().value as HitType
-			onHitTypeChange(hitTypeKey)
-		}
-	}, [onHitTypeChange])
+	const handleHitTypeChange = useSetToSingleValue(
+		onHitTypeChange,
+		function(hitType: string | undefined): HitType {
+			return hitType as HitType
+		},
+		[onHitTypeChange],
+	)
 
 	return (
 		<CSMenuButton

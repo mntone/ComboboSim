@@ -1,7 +1,7 @@
 import { useLingui } from '@lingui/react/macro'
 import { Item } from '@react-stately/collections'
-import type { Selection } from '@react-types/shared'
-import { useCallback, useMemo } from 'react'
+
+import { useSetToSingleValue } from '@/common/hooks/useSetToSingleValue'
 
 import { useAppSelector } from '@/app/hooks'
 import { CSMenuButton } from '@/components/CSPopover'
@@ -25,22 +25,15 @@ function CharacterListBox({
 			: function(item: CharacterParameterState) { return item.names.en }
 	}, [locale])
 
-	const handleCharacterChange = useCallback(function(keys: Selection) {
-		if (import.meta.env.DEV && !(keys instanceof Set)) {
-			console.log('Expected Set<string>, but got invalid type')
-			return
-		}
-
-		const characterKey = (keys as Set<string>).keys().next().value
-		if (import.meta.env.DEV && characterKey == null) {
-			console.log('Failed to get character id')
-			return
-		}
-
-		// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-		const character = characters[characterKey!]
-		onCharacterChange?.call(null, character)
-	}, [onCharacterChange])
+	const handleCharacterChange = useSetToSingleValue(
+		onCharacterChange,
+		function(id: string | undefined): CharacterParameterState {
+			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+			const character = characters[id!]
+				return character
+		},
+		[onCharacterChange, characters],
+	)
 
 	return (
 		<CSMenuButton
