@@ -36,8 +36,8 @@ export interface HitData extends FrameData {
 }
 
 export interface MoveNames {
-	en?: string
 	ja: string
+	[lang: string]: string
 }
 
 export type MoveNameDisplayMode =
@@ -87,6 +87,7 @@ export interface Move {
 export interface CharacterNames {
 	en: string
 	ja: string
+	[lang: string]: string
 }
 
 export interface Character {
@@ -94,13 +95,4 @@ export interface Character {
 	names: CharacterNames
 	vitality: number
 	moves: Move[]
-}
-
-export interface CharacterSummary {
-	id: string
-	names: CharacterNames
-}
-
-export interface ParameterIndex {
-	characters: CharacterSummary[]
 }

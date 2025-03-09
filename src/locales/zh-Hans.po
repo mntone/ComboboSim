@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2025-02-04 12:21+0900\n"
+"POT-Creation-Date: 2025-03-07 00:01+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
-"Language: en\n"
+"Language: zh-Hans\n"
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "PO-Revision-Date: \n"
@@ -18,118 +18,118 @@ msgstr ""
 #: src/features/combo/components/ResultView.tsx:21
 #: src/features/combo/components/ResultView.tsx:29
 msgid "{0, plural, other {#} zero {None}}"
-msgstr "{0, plural, other {#} zero {None}}"
+msgstr "{0, plural, other {#}}"
 
 #. placeholder {0}: result.totalDamage
 #: src/features/combo/components/ResultView.tsx:13
 msgid "{0, plural, other {#} zero {Zero}}"
-msgstr "{0, plural, other {#} zero {Zero}}"
+msgstr "{0, plural, other {#}}"
 
 #: src/common/getPreferredMoveName.ts:41
 msgid "{moveName}: {name}"
-msgstr "{moveName}: {name}"
+msgstr "{moveName}（{name}）"
 
 #: src/common/getPreferredMoveName.ts:54
 msgid "{name} ({moveName})"
-msgstr "{name} ({moveName})"
+msgstr "{name}（{moveName}）"
 
 #: src/components/ComboList/constants.ts:48
 msgid "Actions"
-msgstr "Actions"
+msgstr "操作"
 
 #: src/features/parameterLoader/constants.ts:11
 msgid "Cammy"
-msgstr "Cammy"
+msgstr "嘉米"
 
 #: src/components/ComboList/constants.ts:33
 msgid "Combo Damage"
-msgstr "Combo Damage"
+msgstr "连招伤害"
 
 #: src/components/ComboList/ComboTableView.tsx:67
 msgid "Combo Table"
-msgstr "Combo Table"
+msgstr "连招表"
 
 #: src/components/MoveList/constants.ts:9
 msgid "Common Moves"
-msgstr "Common Moves"
+msgstr "通用动作"
 
 #: src/components/HitTypeList/constants.ts:10
 msgid "Counter"
-msgstr "Counter"
+msgstr "打康"
 
 #: src/features/combo/components/ResultView.tsx:11
 #: src/components/ComboList/constants.ts:23
 msgid "Damage"
-msgstr "Damage"
+msgstr "伤害"
 
 #: src/components/ComboList/constants.ts:28
 msgid "Damage Scale"
-msgstr "Damage Scale"
+msgstr "伤害比例"
 
 #: src/components/ComboList/constants.ts:38
 msgid "Drive Guage"
-msgstr "Drive Guage"
+msgstr "斗气槽"
 
 #: src/features/combo/components/ResultView.tsx:19
 msgid "Drive Guage Increase"
-msgstr "Drive Guage Increase"
+msgstr "斗气槽增加"
 
 #: src/components/CSProgress/CSCircularProgress.tsx:11
 msgid "Loading..."
-msgstr "Loading..."
+msgstr "正在载入…"
 
 #: src/features/parameterLoader/constants.ts:12
 msgid "Manon"
-msgstr "Manon"
+msgstr "曼侬"
 
 #: src/components/ComboList/constants.ts:18
 msgid "Moves"
-msgstr "Moves"
+msgstr "动作名称"
 
 #: src/components/ComboList/ComboTableView.tsx:68
 msgid "No moves found"
-msgstr "No moves found"
+msgstr "找不到动作"
 
 #: src/components/HitTypeList/constants.ts:9
 msgid "Normal"
-msgstr "Normal"
+msgstr "标准"
 
 #: src/components/MoveList/constants.ts:4
 msgid "Normal Moves"
-msgstr "Normal Moves"
+msgstr "普通技"
 
 #: src/components/HitTypeList/constants.ts:11
 msgid "Punish Counter"
-msgstr "Punish Counter"
+msgstr "打确反康"
 
 #: src/components/MoveList/constants.ts:6
 msgid "Special Moves"
-msgstr "Special Moves"
+msgstr "必杀技"
 
 #: src/components/ComboList/constants.ts:43
 msgid "Super Art Guage"
-msgstr "Super Art Guage"
+msgstr "超级必杀槽"
 
 #: src/features/combo/components/ResultView.tsx:27
 msgid "Super Art Guage Increase"
-msgstr "Super Art Guage Increase"
+msgstr "超级必杀槽增加"
 
 #: src/components/MoveList/constants.ts:7
 msgid "Super Arts"
-msgstr "Super Arts"
+msgstr "超级必杀技"
 
 #: src/components/MoveList/constants.ts:8
 msgid "Throws"
-msgstr "Throws"
+msgstr "摔投"
 
 #: src/components/MoveList/constants.ts:5
 msgid "Unique Attacks"
-msgstr "Unique Attacks"
+msgstr "特殊技"
 
 #: src/components/ComboList/ComboViewOptionsButton.tsx:29
 msgid "View Options"
-msgstr "View Options"
+msgstr "显示选项"
 
 #: src/components/ComboList/ComboTableView.tsx:86
 msgid "View Options for Combo Table"
-msgstr "View Options for Combo Table"
+msgstr "连招表的显示选项"

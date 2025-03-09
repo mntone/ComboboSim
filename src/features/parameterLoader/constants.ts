@@ -1,9 +1,16 @@
+import { msg } from '@lingui/core/macro'
+
 import type { CONDITION_PARSER_OPTIONS } from '@/utils/text/types'
 import { isUpperAndUnderscore } from '@/utils/text/utils'
 
 import type { ParameterContext } from './types'
 
 const PARAMETERLOADER_NAME = 'param'
+
+const CHARACTER_NAMES = {
+	cammy: msg`Cammy`,
+	manon: msg`Manon`,
+}
 
 const DEFAULT_CONDITION_PARSER_OPTIONS: CONDITION_PARSER_OPTIONS = {
 	isKeyCharacter: isUpperAndUnderscore,
@@ -26,6 +33,7 @@ const CONTEXT_PARAMS: { [key: string]: Partial<ParameterContext>[] } = {
 
 export {
 	PARAMETERLOADER_NAME,
+	CHARACTER_NAMES,
 
 	DEFAULT_CONDITION_PARSER_OPTIONS,
 

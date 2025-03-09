@@ -5,6 +5,7 @@ import { useSetToSingleValue } from '@/common/hooks/useSetToSingleValue'
 
 import { useAppSelector } from '@/app/hooks'
 import { CSMenuButton } from '@/components/CSPopover'
+import { CHARACTER_NAMES } from '@/features/parameterLoader/constants'
 import { selectCharacterArray, selectCharacters } from '@/features/parameterLoader/selectors'
 import type { CharacterParameterState } from '@/features/parameterLoader/types'
 
@@ -14,23 +15,18 @@ function CharacterListBox({
 	characterKey,
 	onCharacterChange,
 }: Readonly<CharacterListProps>) {
-	const { i18n: { locale } } = useLingui()
+	const { t } = useLingui()
+
 	const characterArray = useAppSelector(selectCharacterArray)
 	const characters = useAppSelector(selectCharacters)
 	const characterKeySet = new Set(characterKey ? [characterKey] : [])
-
-	const getLocalizedName = useMemo(function() {
-		return locale === 'ja'
-			? function(item: CharacterParameterState) { return item.names.ja }
-			: function(item: CharacterParameterState) { return item.names.en }
-	}, [locale])
 
 	const handleCharacterChange = useSetToSingleValue(
 		onCharacterChange,
 		function(id: string | undefined): CharacterParameterState {
 			// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 			const character = characters[id!]
-				return character
+			return character
 		},
 		[onCharacterChange, characters],
 	)
@@ -39,7 +35,7 @@ function CharacterListBox({
 		<CSMenuButton
 			disallowEmptySelection
 			items={characterArray}
-			label={characterKey ? getLocalizedName(characters[characterKey]) : ''}
+			label={characterKey ? t(CHARACTER_NAMES[characterKey as keyof typeof CHARACTER_NAMES]) : ''}
 			selectedKeys={characterKeySet}
 			selectionMode='single'
 			onSelectionChange={handleCharacterChange}
@@ -47,7 +43,7 @@ function CharacterListBox({
 			{function(item) {
 				return (
 					<Item key={item.id}>
-						{getLocalizedName(item)}
+						{t(CHARACTER_NAMES[item.id as keyof typeof CHARACTER_NAMES])}
 					</Item>
 				)
 			}}

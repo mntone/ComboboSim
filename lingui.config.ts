@@ -11,7 +11,15 @@ const config: LinguiConfig = {
 	locales: [
 		'en',
 		'ja',
+		'zh-Hans',
+		'zh-Hant',
 	],
+	fallbackLocales: {
+		'ja': 'en',
+		'zh-Hans': ['zh', 'en'],
+		'zh-Hant': ['zh', 'en'],
+		'default': 'en',
+	},
 	compileNamespace: 'json',
 }
 

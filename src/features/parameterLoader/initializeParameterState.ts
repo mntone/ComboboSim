@@ -1,19 +1,16 @@
-import type { ParameterIndex } from '@/common/types'
-
-import indexJson from '@/params/index.json'
-
 import { parameterLoaderAdapter } from './adapter'
+import { CHARACTER_NAMES } from './constants'
 import type { CharacterParameterState } from './types'
 
 function initializeParameterState() {
-	const typedJson = indexJson as ParameterIndex
-	const charactersById = Object.fromEntries(typedJson.characters.map(function(character): [string, CharacterParameterState] {
+	const charactersById = Object.fromEntries(Object.entries(CHARACTER_NAMES).map(function([id, name]): [string, CharacterParameterState] {
 		return [
-			character.id,
+			id,
 			{
+				id,
+				name,
 				state: 'ready',
 				param: null,
-				...character,
 			},
 		]
 	}))

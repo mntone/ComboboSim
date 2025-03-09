@@ -1,5 +1,6 @@
-import type { Character, CharacterSummary, Move, MoveValues } from '@/common/types'
+import type { MessageDescriptor } from '@lingui/core'
 
+import type { Character, Move, MoveValues } from '@/common/types'
 export type MoveOverride = Record<string, number[] | number>
 
 export type MoveOverrides = { [cond: string]: MoveOverride }
@@ -28,7 +29,9 @@ export type ParameterStateType =
 	| 'complete'
 	| 'failure'
 
-export interface CharacterParameterState extends CharacterSummary {
+export interface CharacterParameterState {
+	id: string
+	name: MessageDescriptor
 	state: ParameterStateType
 	param: Character | null
 }

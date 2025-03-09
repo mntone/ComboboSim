@@ -16,7 +16,45 @@ body {
 		-apple-system,
 		BlinkMacSystemFont,
 		'Inter Variable',
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji',
+		'Segoe UI Symbol',
+		'Noto Color Emoji';
+}
+
+html:lang(ja) body {
+	font-family:
+		-apple-system,
+		BlinkMacSystemFont,
+		'Inter Variable',
 		'BIZ UDGothic',
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji',
+		'Segoe UI Symbol',
+		'Noto Color Emoji';
+}
+
+html:lang(zh-Hans) body {
+	font-family:
+		-apple-system,
+		BlinkMacSystemFont,
+		'Inter Variable',
+		'Microsoft YaHei',
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji',
+		'Segoe UI Symbol',
+		'Noto Color Emoji';
+}
+
+html:lang(zh-Hant) body {
+	font-family:
+		-apple-system,
+		BlinkMacSystemFont,
+		'Inter Variable',
+		'Microsoft JhengHei',
 		sans-serif,
 		'Apple Color Emoji',
 		'Segoe UI Emoji',

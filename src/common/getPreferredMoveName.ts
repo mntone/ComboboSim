@@ -1,12 +1,11 @@
+import { t } from '@lingui/core/macro'
 import type { ReadonlyDeep } from 'type-fest'
 
 import type { Move, MoveNameDisplayMode, MoveNameDisplayModes } from '@/common/types'
 
 function getBaseMoveName(move: ReadonlyDeep<Move>, locale?: string): string | undefined {
-	return move.names
-		? locale === 'ja'
-			? move.names.ja
-			: move.names.en
+	return move.names && locale
+		? move.names[locale] ?? move.names.en
 		: undefined
 }
 
@@ -16,7 +15,7 @@ function getPreferredMoveName(
 	res?: Record<string, string> | null,
 	move?: ReadonlyDeep<Move> | undefined,
 ): string | undefined {
-	if (move === undefined) {
+	if (move == null) {
 		return undefined
 	}
 
@@ -39,7 +38,7 @@ function getPreferredMoveName(
 
 		const moveName = res[`cmd_${move.input}`]
 		const name = getBaseMoveName(move, locale)
-		return name ? `${moveName} (${name})` : moveName
+		return name ? t`${moveName}: ${name}` : moveName
 	}
 	case 'nameonly': {
 		const name = getBaseMoveName(move, locale)
@@ -52,7 +51,7 @@ function getPreferredMoveName(
 		}
 
 		const moveName = res[`cmd_${move.input}`]
-		return `${name} (${moveName})`
+		return name ? t`${name} (${moveName})` : moveName
 	}
 	}
 }

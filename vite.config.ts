@@ -42,6 +42,8 @@ export default defineConfig(({ mode }) => {
 					locales: [
 						'en-US',
 						'ja-JP',
+						'zh-CN',
+						'zh-TW',
 					],
 				}),
 				enforce: 'pre',

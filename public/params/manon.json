@@ -1,10 +1,6 @@
 {
 	"version": 2,
 	"id": "manon",
-	"names": {
-		"en": "Manon",
-		"ja": "マノン"
-	},
 	"use": [
 		"manon_medal"
 	],
@@ -565,7 +561,9 @@
 			"id": "manon.2HK",
 			"names": {
 				"en": "Croisee",
-				"ja": "クロワゼ"
+				"ja": "クロワゼ",
+				"zh-Hans": "交叉舞姿",
+				"zh-Hant": "交叉位"
 			},
 			"category": "normal",
 			"input": "2HK",
@@ -743,7 +741,9 @@
 			"id": "manon.4HP",
 			"names": {
 				"en": "Révérence",
-				"ja": "レベランス"
+				"ja": "レベランス",
+				"zh-Hans": "屈膝礼",
+				"zh-Hant": "行禮"
 			},
 			"category": "unique",
 			"input": "4HP",
@@ -796,7 +796,9 @@
 			"id": "manon.3HK",
 			"names": {
 				"en": "Tomoe Derrière",
-				"ja": "トモエ・デリエール"
+				"ja": "トモエ・デリエール",
+				"zh-Hans": "巴后位",
+				"zh-Hant": "巴投"
 			},
 			"category": "unique",
 			"input": "3HK",
@@ -838,7 +840,9 @@
 			"id": "manon.3HK.sidesw",
 			"names": {
 				"en": "Tomoe Derrière (Side Switch)",
-				"ja": "トモエ・デリエール（入れ替え）"
+				"ja": "トモエ・デリエール（入れ替え）",
+				"zh-Hans": "巴后位（侧边开关）",
+				"zh-Hant": "巴投（側邊開關）"
 			},
 			"category": "unique",
 			"input": "3HK",
@@ -880,7 +884,9 @@
 			"id": "manon.5MPtoMK",
 			"names": {
 				"en": "À Terre",
-				"ja": "ア・テール"
+				"ja": "ア・テール",
+				"zh-Hans": "地面运作",
+				"zh-Hant": "貼地"
 			},
 			"category": "unique",
 			"input": "5MP~MK",
@@ -910,7 +916,9 @@
 			"id": "manon.4MK",
 			"names": {
 				"en": "En Haut (1)",
-				"ja": "アン・オー（1段目）"
+				"ja": "アン・オー（1段目）",
+				"zh-Hans": "高位舞歩（第一排）",
+				"zh-Hant": "高位（第一排）"
 			},
 			"category": "unique",
 			"input": "4MK",
@@ -947,7 +955,9 @@
 			"id": "manon.4MKtoMK",
 			"names": {
 				"en": "En Haut (2)",
-				"ja": "アン・オー（2段目）"
+				"ja": "アン・オー（2段目）",
+				"zh-Hans": "高位舞歩（第二排）",
+				"zh-Hant": "高位（第二排）"
 			},
 			"category": "unique",
 			"input": "4MK~MK",
@@ -1003,7 +1013,9 @@
 			"id": "manon.5HPtoHP",
 			"names": {
 				"en": "Temps Lié",
-				"ja": "タン・リエ"
+				"ja": "タン・リエ",
+				"zh-Hans": "重心转移",
+				"zh-Hant": "重心轉移"
 			},
 			"category": "unique",
 			"input": "5HP~HP",
@@ -1034,7 +1046,9 @@
 			"id": "manon.2HPtoHP",
 			"names": {
 				"en": "Allongé",
-				"ja": "アロンジェ"
+				"ja": "アロンジェ",
+				"zh-Hans": "阿隆热动作",
+				"zh-Hant": "延伸"
 			},
 			"category": "unique",
 			"input": "2HP~HP",
@@ -1065,7 +1079,9 @@
 			"id": "manon.63214LP",
 			"names": {
 				"en": "L Manège Doré",
-				"ja": "弱 マネージュ・ドレ"
+				"ja": "弱 マネージュ・ドレ",
+				"zh-Hans": "轻 金色圆旋转",
+				"zh-Hant": "輕 金色旋轉木馬"
 			},
 			"category": "special",
 			"input": "63214LP",
@@ -1126,7 +1142,9 @@
 			"id": "manon.63214MP",
 			"names": {
 				"en": "M Manège Doré",
-				"ja": "中 マネージュ・ドレ"
+				"ja": "中 マネージュ・ドレ",
+				"zh-Hans": "中 金色圆旋转",
+				"zh-Hant": "中 金色旋轉木馬"
 			},
 			"category": "special",
 			"input": "63214MP",
@@ -1187,7 +1205,9 @@
 			"id": "manon.63214HP",
 			"names": {
 				"en": "H Manège Doré",
-				"ja": "強 マネージュ・ドレ"
+				"ja": "強 マネージュ・ドレ",
+				"zh-Hans": "重 金色圆旋转",
+				"zh-Hant": "重 金色旋轉木馬"
 			},
 			"category": "special",
 			"input": "63214HP",
@@ -1249,7 +1269,9 @@
 			"id": "manon.63214PP",
 			"names": {
 				"en": "OD Manège Doré",
-				"ja": "OD マネージュ・ドレ"
+				"ja": "OD マネージュ・ドレ",
+				"zh-Hans": "斗爆 金色圆旋转",
+				"zh-Hant": "OD 金色旋轉木馬"
 			},
 			"category": "special",
 			"input": "63214PP",
@@ -1312,7 +1334,9 @@
 			"id": "manon.236LK",
 			"names": {
 				"en": "L Rond-point",
-				"ja": "弱 ロン・ポワン"
+				"ja": "弱 ロン・ポワン",
+				"zh-Hans": "轻 环岛点",
+				"zh-Hant": "輕 畫圈"
 			},
 			"category": "special",
 			"input": "236LK",
@@ -1367,7 +1391,9 @@
 			"id": "manon.236MK",
 			"names": {
 				"en": "M Rond-point",
-				"ja": "中 ロン・ポワン"
+				"ja": "中 ロン・ポワン",
+				"zh-Hans": "中 环岛点",
+				"zh-Hant": "中 畫圈"
 			},
 			"category": "special",
 			"input": "236MK",
@@ -1423,7 +1449,9 @@
 			"id": "manon.236HK",
 			"names": {
 				"en": "H Rond-point",
-				"ja": "強 ロン・ポワン"
+				"ja": "強 ロン・ポワン",
+				"zh-Hans": "重 环岛点",
+				"zh-Hant": "重 畫圈"
 			},
 			"category": "special",
 			"input": "236HK",
@@ -1503,7 +1531,9 @@
 			"id": "manon.236KK",
 			"names": {
 				"en": "OD Rond-point",
-				"ja": "OD ロン・ポワン"
+				"ja": "OD ロン・ポワン",
+				"zh-Hans": "斗爆 环岛点",
+				"zh-Hant": "OD 畫圈"
 			},
 			"category": "special",
 			"input": "236KK",
@@ -1585,7 +1615,9 @@
 			"id": "manon.236KK.single",
 			"names": {
 				"en": "OD Rond-point (1HIT)",
-				"ja": "OD ロン・ポワン（1HIT）"
+				"ja": "OD ロン・ポワン（1HIT）",
+				"zh-Hans": "斗爆 环岛点（1击）",
+				"zh-Hant": "OD 畫圈（1HIT）"
 			},
 			"category": "special",
 			"input": "236KK",
@@ -1654,7 +1686,9 @@
 			"id": "manon.214LK",
 			"names": {
 				"en": "L Dégagé",
-				"ja": "弱 デガジェ"
+				"ja": "弱 デガジェ",
+				"zh-Hans": "轻 代嘎热动作",
+				"zh-Hant": "輕 解離"
 			},
 			"category": "special",
 			"input": "214LK",
@@ -1698,7 +1732,9 @@
 			"id": "manon.214MK",
 			"names": {
 				"en": "M Dégagé",
-				"ja": "中 デガジェ"
+				"ja": "中 デガジェ",
+				"zh-Hans": "中 代嘎热动作",
+				"zh-Hant": "中 解離"
 			},
 			"category": "special",
 			"input": "214MK",
@@ -1741,7 +1777,9 @@
 			"id": "manon.214HK",
 			"names": {
 				"en": "H Dégagé",
-				"ja": "強 デガジェ"
+				"ja": "強 デガジェ",
+				"zh-Hans": "重 代嘎热动作",
+				"zh-Hant": "重 解離"
 			},
 			"category": "special",
 			"input": "214HK",
@@ -1768,7 +1806,9 @@
 			"id": "manon.214KK",
 			"names": {
 				"en": "OD Dégagé",
-				"ja": "OD デガジェ"
+				"ja": "OD デガジェ",
+				"zh-Hans": "斗爆 代嘎热动作",
+				"zh-Hant": "OD 解離"
 			},
 			"category": "special",
 			"input": "214KK",
@@ -1812,7 +1852,9 @@
 			"id": "manon.236LP",
 			"names": {
 				"en": "L Renversé",
-				"ja": "弱 ランヴェルセ"
+				"ja": "弱 ランヴェルセ",
+				"zh-Hans": "轻 芭蕾回旋",
+				"zh-Hant": "輕 顛倒迴旋"
 			},
 			"category": "special",
 			"input": "236LP",
@@ -1894,7 +1936,9 @@
 			"id": "manon.236MP",
 			"names": {
 				"en": "M Renversé",
-				"ja": "中 ランヴェルセ"
+				"ja": "中 ランヴェルセ",
+				"zh-Hans": "中 芭蕾回旋",
+				"zh-Hant": "中 顛倒迴旋"
 			},
 			"category": "special",
 			"input": "236MP",
@@ -1975,7 +2019,9 @@
 			"id": "manon.236HP",
 			"names": {
 				"en": "H Renversé",
-				"ja": "強 ランヴェルセ"
+				"ja": "強 ランヴェルセ",
+				"zh-Hans": "重 芭蕾回旋",
+				"zh-Hant": "重 顛倒迴旋"
 			},
 			"category": "special",
 			"input": "236HP",
@@ -2055,7 +2101,9 @@
 			"id": "manon.236PP",
 			"names": {
 				"en": "OD Renversé",
-				"ja": "OD ランヴェルセ"
+				"ja": "OD ランヴェルセ",
+				"zh-Hans": "斗爆 芭蕾回旋",
+				"zh-Hant": "OD 顛倒迴旋"
 			},
 			"category": "special",
 			"input": "236PP",
@@ -2130,7 +2178,9 @@
 			"id": "manon.236PtoK",
 			"names": {
 				"en": "Grand Fouetté",
-				"ja": "グラン・フェッテ"
+				"ja": "グラン・フェッテ",
+				"zh-Hans": "32圏挥鞭转",
+				"zh-Hant": "大鞭旋"
 			},
 			"category": "special",
 			"input": "236P~K",
@@ -2175,7 +2225,9 @@
 			"id": "manon.236PPtoK",
 			"names": {
 				"en": "OD Grand Fouetté",
-				"ja": "OD グラン・フェッテ"
+				"ja": "OD グラン・フェッテ",
+				"zh-Hans": "斗爆 32圏挥鞭转",
+				"zh-Hant": "OD 大鞭旋"
 			},
 			"category": "special",
 			"input": "236PP~K",
@@ -2220,7 +2272,9 @@
 			"id": "manon.236236K",
 			"names": {
 				"en": "SA1 Arabesque",
-				"ja": "SA1 アラベスク"
+				"ja": "SA1 アラベスク",
+				"zh-Hans": "SA1 阿拉贝斯克舞姿",
+				"zh-Hant": "SA1 阿拉伯斯卡舞姿"
 			},
 			"category": "superarts",
 			"input": "236236K",
@@ -2254,7 +2308,9 @@
 			"id": "manon.214214K",
 			"names": {
 				"en": "SA2 Étoile",
-				"ja": "SA2 エトワール"
+				"ja": "SA2 エトワール",
+				"zh-Hans": "SA2 明星舞者",
+				"zh-Hant": "SA2 明星"
 			},
 			"category": "superarts",
 			"input": "214214K",
@@ -2364,7 +2420,9 @@
 			"id": "manon.236236P",
 			"names": {
 				"en": "SA3 Pas de Deux",
-				"ja": "SA3 パ・ド・ドゥ"
+				"ja": "SA3 パ・ド・ドゥ",
+				"zh-Hans": "SA3 双人舞",
+				"zh-Hant": "SA3 雙人舞"
 			},
 			"category": "superarts",
 			"input": "236236P",
@@ -2529,7 +2587,9 @@
 			"id": "manon.LL",
 			"names": {
 				"en": "Ouchi Gari",
-				"ja": "オーウチガリ"
+				"ja": "オーウチガリ",
+				"zh-Hans": "大内刈",
+				"zh-Hant": "大內刈"
 			},
 			"category": "throws",
 			"input": "LL",
@@ -2562,7 +2622,9 @@
 			"id": "manon.4LL",
 			"names": {
 				"en": "Uchi Mata",
-				"ja": "ウチマタ"
+				"ja": "ウチマタ",
+				"zh-Hans": "内股",
+				"zh-Hant": "內股"
 			},
 			"category": "throws",
 			"input": "4LL",
@@ -2596,7 +2658,9 @@
 			"id": "manon.HH",
 			"names": {
 				"en": "Glissade",
-				"ja": "グリッサード"
+				"ja": "グリッサード",
+				"zh-Hans": "芭蕾滑歩",
+				"zh-Hant": "滑行"
 			},
 			"category": "common",
 			"input": "HH",

@@ -2,7 +2,7 @@
 	"json.schemas": [
 		{
 			"fileMatch": [
-				"/params/*.json"
+				"/public/params/*.json"
 			],
 			"url": "./schemas/character.schema.json"
 		}

@@ -1,10 +1,6 @@
 {
 	"version": 2,
 	"id": "cammy",
-	"names": {
-		"en": "Cammy",
-		"ja": "キャミィ"
-	},
 	"vitality": 10000,
 	"moves": [
 		{
@@ -519,7 +515,9 @@
 			"id": "cammy.2HK",
 			"names": {
 				"en": "Grounded Sweep",
-				"ja": "グランドスイープ"
+				"ja": "グランドスイープ",
+				"zh-Hans": "掠面扫腿",
+				"zh-Hant": "掃地腳"
 			},
 			"category": "normal",
 			"input": "2HK",
@@ -720,7 +718,9 @@
 			"id": "cammy.4MP",
 			"names": {
 				"en": "Lift Uppercut",
-				"ja": "リフトアッパー"
+				"ja": "リフトアッパー",
+				"zh-Hans": "上袭勾挙",
+				"zh-Hant": "上勾挙"
 			},
 			"category": "unique",
 			"input": "4MP",
@@ -781,7 +781,9 @@
 			"id": "cammy.6HK",
 			"names": {
 				"en": "Delayed Ripper",
-				"ja": "ディレイリーパー"
+				"ja": "ディレイリーパー",
+				"zh-Hans": "延时死神",
+				"zh-Hant": "延遲撕裂"
 			},
 			"category": "unique",
 			"input": "6HK",
@@ -844,7 +846,9 @@
 			"id": "cammy.4HK",
 			"names": {
 				"en": "Assault Blade",
-				"ja": "アサルトブレード"
+				"ja": "アサルトブレード",
+				"zh-Hans": "强袭利刃",
+				"zh-Hant": "突擊刃"
 			},
 			"category": "unique",
 			"input": "4HK",
@@ -900,7 +904,9 @@
 			"id": "cammy.4MPtoHK",
 			"names": {
 				"en": "Lift Combination",
-				"ja": "リフトコンビネーション"
+				"ja": "リフトコンビネーション",
+				"zh-Hans": "上袭组合技",
+				"zh-Hant": "上勾組合"
 			},
 			"category": "unique",
 			"input": "4MP~HK",
@@ -958,7 +964,9 @@
 			"id": "cammy.5HPtoHK.0",
 			"names": {
 				"en": "Swing Combination (1st)",
-				"ja": "スイングコンビネーション（前半）"
+				"ja": "スイングコンビネーション（前半）",
+				"zh-Hans": "摇摆组合技（第一组）",
+				"zh-Hant": "擺挙組合（第一組）"
 			},
 			"category": "unique",
 			"input": "5HP~HK",
@@ -1002,7 +1010,9 @@
 			"id": "cammy.5HPtoHK.1",
 			"names": {
 				"en": "Swing Combination (2nd)",
-				"ja": "スイングコンビネーション（後半）"
+				"ja": "スイングコンビネーション（後半）",
+				"zh-Hans": "摇摆组合技（第二组）",
+				"zh-Hant": "擺挙組合（第二組）"
 			},
 			"category": "unique",
 			"input": "5HP~HK",
@@ -1062,7 +1072,9 @@
 			"id": "cammy.236LK",
 			"names": {
 				"en": "L Spiral Arrow",
-				"ja": "弱 スパイラルアロー"
+				"ja": "弱 スパイラルアロー",
+				"zh-Hans": "轻 螺旋飞箭",
+				"zh-Hant": "輕 螺旋飛箭"
 			},
 			"category": "special",
 			"input": "236LK",
@@ -1107,7 +1119,9 @@
 			"id": "cammy.236MK",
 			"names": {
 				"en": "M Spiral Arrow",
-				"ja": "中 スパイラルアロー"
+				"ja": "中 スパイラルアロー",
+				"zh-Hans": "中 螺旋飞箭",
+				"zh-Hant": "中 螺旋飛箭"
 			},
 			"category": "special",
 			"input": "236MK",
@@ -1153,7 +1167,9 @@
 			"id": "cammy.236HK",
 			"names": {
 				"en": "H Spiral Arrow",
-				"ja": "強 スパイラルアロー"
+				"ja": "強 スパイラルアロー",
+				"zh-Hans": "重 螺旋飞箭",
+				"zh-Hant": "重 螺旋飛箭"
 			},
 			"category": "special",
 			"input": "236HK",
@@ -1222,7 +1238,9 @@
 			"id": "cammy.236[HK]",
 			"names": {
 				"en": "H Spiral Arrow (Charged)",
-				"ja": "強 スパイラルアロー（ホールド）"
+				"ja": "強 スパイラルアロー（ホールド）",
+				"zh-Hans": "重 螺旋飞箭（按住）",
+				"zh-Hant": "重 螺旋飛箭（長按）"
 			},
 			"category": "special",
 			"input": "236[HK]",
@@ -1317,7 +1335,9 @@
 			"id": "cammy.236KK",
 			"names": {
 				"en": "OD Spiral Arrow",
-				"ja": "OD スパイラルアロー"
+				"ja": "OD スパイラルアロー",
+				"zh-Hans": "斗爆 螺旋飞箭",
+				"zh-Hant": "OD 螺旋飛箭"
 			},
 			"category": "special",
 			"input": "236KK",
@@ -1415,7 +1435,9 @@
 			"id": "cammy.623LK",
 			"names": {
 				"en": "L Cannon Spike",
-				"ja": "弱 キャノンスパイク"
+				"ja": "弱 キャノンスパイク",
+				"zh-Hans": "轻 神枪机兵",
+				"zh-Hant": "輕 神槍砲"
 			},
 			"category": "special",
 			"input": "623LK",
@@ -1469,7 +1491,9 @@
 			"id": "cammy.623MK",
 			"names": {
 				"en": "M Cannon Spike",
-				"ja": "中 キャノンスパイク"
+				"ja": "中 キャノンスパイク",
+				"zh-Hans": "中 神枪机兵",
+				"zh-Hant": "中 神槍砲"
 			},
 			"category": "special",
 			"input": "623MK",
@@ -1524,7 +1548,9 @@
 			"id": "cammy.623HK",
 			"names": {
 				"en": "H Cannon Spike",
-				"ja": "強 キャノンスパイク"
+				"ja": "強 キャノンスパイク",
+				"zh-Hans": "重 神枪机兵",
+				"zh-Hant": "重 神槍砲"
 			},
 			"category": "special",
 			"input": "623HK",
@@ -1578,7 +1604,9 @@
 			"id": "cammy.623[HK]",
 			"names": {
 				"en": "H Cannon Spike (Charged)",
-				"ja": "強 キャノンスパイク（ホールド）"
+				"ja": "強 キャノンスパイク（ホールド）",
+				"zh-Hans": "重 神枪机兵（按住）",
+				"zh-Hant": "重 神槍砲（長按）"
 			},
 			"category": "special",
 			"input": "623[HK]",
@@ -1693,10 +1721,12 @@
 			]
 		},
 		{
-			"id": "cammy.623[HK]",
+			"id": "cammy.623[HK].single",
 			"names": {
 				"en": "H Cannon Spike (Charged, 1HIT)",
-				"ja": "強 キャノンスパイク（ホールド、1HIT）"
+				"ja": "強 キャノンスパイク（ホールド、1HIT）",
+				"zh-Hans": "重 神枪机兵（按住，1击）",
+				"zh-Hant": "重 神槍砲（長按，1HIT）"
 			},
 			"category": "special",
 			"input": "623[HK]",
@@ -1734,7 +1764,9 @@
 			"id": "cammy.623KK",
 			"names": {
 				"en": "OD Cannon Spike",
-				"ja": "OD キャノンスパイク"
+				"ja": "OD キャノンスパイク",
+				"zh-Hans": "斗爆 神枪机兵",
+				"zh-Hant": "OD 神槍砲"
 			},
 			"category": "special",
 			"input": "623KK",
@@ -1855,7 +1887,9 @@
 			"id": "cammy.623KK.single",
 			"names": {
 				"en": "OD Cannon Spike (1HIT)",
-				"ja": "OD キャノンスパイク（1HIT）"
+				"ja": "OD キャノンスパイク（1HIT）",
+				"zh-Hans": "斗爆 神枪机兵（1击）",
+				"zh-Hant": "OD 神槍砲（1HIT）"
 			},
 			"category": "special",
 			"input": "623KK",
@@ -1884,7 +1918,9 @@
 			"id": "cammy.214LP",
 			"names": {
 				"en": "L Quick Spin Knuckle",
-				"ja": "弱 アクセルスピンナックル"
+				"ja": "弱 アクセルスピンナックル",
+				"zh-Hans": "轻 快旋反手挙",
+				"zh-Hant": "輕 前衝反手挙"
 			},
 			"category": "special",
 			"input": "214LP",
@@ -1921,7 +1957,9 @@
 			"id": "cammy.214MP",
 			"names": {
 				"en": "M Quick Spin Knuckle",
-				"ja": "中 アクセルスピンナックル"
+				"ja": "中 アクセルスピンナックル",
+				"zh-Hans": "中 快旋反手挙",
+				"zh-Hant": "中 前衝反手挙"
 			},
 			"category": "special",
 			"input": "214MP",
@@ -1959,7 +1997,9 @@
 			"id": "cammy.214HP",
 			"names": {
 				"en": "H Quick Spin Knuckle",
-				"ja": "強 アクセルスピンナックル"
+				"ja": "強 アクセルスピンナックル",
+				"zh-Hans": "重 快旋反手挙",
+				"zh-Hant": "重 前衝反手挙"
 			},
 			"category": "special",
 			"input": "214HP",
@@ -1999,7 +2039,9 @@
 			"id": "cammy.214PP.near",
 			"names": {
 				"en": "OD Quick Spin Knuckle (Near)",
-				"ja": "OD アクセルスピンナックル（近距離）"
+				"ja": "OD アクセルスピンナックル（近距離）",
+				"zh-Hans": "斗爆 快旋反手挙（近距离）",
+				"zh-Hant": "OD 前衝反手挙（近距離）"
 			},
 			"category": "special",
 			"input": "214PP",
@@ -2040,7 +2082,9 @@
 			"id": "cammy.214PP.far",
 			"names": {
 				"en": "OD Quick Spin Knuckle (Far)",
-				"ja": "OD アクセルスピンナックル（遠距離）"
+				"ja": "OD アクセルスピンナックル（遠距離）",
+				"zh-Hans": "斗爆 快旋反手挙（长距离）",
+				"zh-Hant": "OD 前衝反手挙（長距離）"
 			},
 			"category": "special",
 			"input": "214PP",
@@ -2081,7 +2125,9 @@
 			"id": "cammy.j214P",
 			"names": {
 				"en": "Cannon Strike",
-				"ja": "キャノンストライク"
+				"ja": "キャノンストライク",
+				"zh-Hans": "机兵突击",
+				"zh-Hant": "對地神槍砲"
 			},
 			"category": "special",
 			"input": "j214P",
@@ -2109,7 +2155,9 @@
 			"id": "cammy.j214PP",
 			"names": {
 				"en": "OD Cannon Strike",
-				"ja": "OD キャノンストライク"
+				"ja": "OD キャノンストライク",
+				"zh-Hans": "斗爆 机兵突击",
+				"zh-Hant": "OD 對地神槍砲"
 			},
 			"category": "special",
 			"input": "j214PP",
@@ -2148,7 +2196,9 @@
 			"id": "cammy.236P",
 			"names": {
 				"en": "Hooligan Combination",
-				"ja": "フーリガンコンビネーション"
+				"ja": "フーリガンコンビネーション",
+				"zh-Hans": "流氓组合技",
+				"zh-Hant": "流氓組合"
 			},
 			"category": "special",
 			"input": "236P",
@@ -2170,7 +2220,9 @@
 			"id": "cammy.236[HP]",
 			"names": {
 				"en": "Hooligan Combination (Charged)",
-				"ja": "フーリガンコンビネーション（ホールド）"
+				"ja": "フーリガンコンビネーション（ホールド）",
+				"zh-Hans": "流氓组合技（按住）",
+				"zh-Hant": "流氓組合（長按）"
 			},
 			"category": "special",
 			"input": "236[HP]",
@@ -2192,7 +2244,9 @@
 			"id": "cammy.236PP",
 			"names": {
 				"en": "OD Hooligan Combination",
-				"ja": "OD フーリガンコンビネーション"
+				"ja": "OD フーリガンコンビネーション",
+				"zh-Hans": "斗爆 流氓组合技",
+				"zh-Hant": "OD 流氓組合"
 			},
 			"category": "special",
 			"input": "236PP",
@@ -2214,7 +2268,9 @@
 			"id": "cammy.236P~N",
 			"names": {
 				"en": "Razor's Edge Slicer",
-				"ja": "レイザーエッジスライサー"
+				"ja": "レイザーエッジスライサー",
+				"zh-Hans": "下铲刀锋腿",
+				"zh-Hant": "剃刀"
 			},
 			"category": "special",
 			"input": "236P~N",
@@ -2257,7 +2313,9 @@
 			"id": "cammy.236[HP]~N",
 			"names": {
 				"en": "Razor's Edge Slicer (Charged)",
-				"ja": "レイザーエッジスライサー（ホールド）"
+				"ja": "レイザーエッジスライサー（ホールド）",
+				"zh-Hans": "下铲刀锋腿（按住）",
+				"zh-Hant": "剃刀（長按）"
 			},
 			"category": "special",
 			"input": "236[HP]~N",
@@ -2314,7 +2372,9 @@
 			"id": "cammy.236PP~N",
 			"names": {
 				"en": "OD Razor's Edge Slicer",
-				"ja": "OD レイザーエッジスライサー"
+				"ja": "OD レイザーエッジスライサー",
+				"zh-Hans": "斗爆 下铲刀锋腿",
+				"zh-Hant": "OD 剃刀"
 			},
 			"category": "special",
 			"input": "236PP~N",
@@ -2372,7 +2432,9 @@
 			"id": "cammy.236P~K",
 			"names": {
 				"en": "Cannon Strike",
-				"ja": "キャノンストライク"
+				"ja": "キャノンストライク",
+				"zh-Hans": "机兵突击",
+				"zh-Hant": "對地神槍砲"
 			},
 			"category": "special",
 			"input": "236P~K",
@@ -2402,7 +2464,9 @@
 			"id": "cammy.236[HP]~K",
 			"names": {
 				"en": "Cannon Strike (Charged)",
-				"ja": "キャノンストライク（ホールド）"
+				"ja": "キャノンストライク（ホールド）",
+				"zh-Hans": "机兵突击（按住）",
+				"zh-Hant": "對地神槍砲（長按）"
 			},
 			"category": "special",
 			"input": "236[HP]~K",
@@ -2433,7 +2497,9 @@
 			"id": "cammy.236PP~K",
 			"names": {
 				"en": "OD Cannon Strike",
-				"ja": "OD キャノンストライク"
+				"ja": "OD キャノンストライク",
+				"zh-Hans": "斗爆 机兵突击",
+				"zh-Hant": "OD 對地神槍砲"
 			},
 			"category": "special",
 			"input": "236PP~K",
@@ -2474,7 +2540,9 @@
 			"id": "cammy.236P~2K",
 			"names": {
 				"en": "Reverse Edge",
-				"ja": "リバースエッジ"
+				"ja": "リバースエッジ",
+				"zh-Hans": "倒翻刀锋腿",
+				"zh-Hant": "反刃腳"
 			},
 			"category": "special",
 			"input": "236P~2K",
@@ -2504,7 +2572,9 @@
 			"id": "cammy.236[HP]~2K",
 			"names": {
 				"en": "Reverse Edge (Charged)",
-				"ja": "リバースエッジ（ホールド）"
+				"ja": "リバースエッジ（ホールド）",
+				"zh-Hans": "倒翻刀锋腿（按住）",
+				"zh-Hant": "反刃腳（長按）"
 			},
 			"category": "special",
 			"input": "236[HP]~K",
@@ -2548,7 +2618,9 @@
 			"id": "cammy.236PP~2K",
 			"names": {
 				"en": "OD Reverse Edge",
-				"ja": "OD リバースエッジ"
+				"ja": "OD リバースエッジ",
+				"zh-Hans": "斗爆 倒翻刀锋腿",
+				"zh-Hant": "OD 反刃腳"
 			},
 			"category": "special",
 			"input": "236PP~2K",
@@ -2602,7 +2674,9 @@
 			"id": "cammy.236P~LL",
 			"names": {
 				"en": "Fatal Leg Twister",
-				"ja": "フェイタルレッグツイスター"
+				"ja": "フェイタルレッグツイスター",
+				"zh-Hans": "夺命旋风腿",
+				"zh-Hant": "奪命旋風摔"
 			},
 			"category": "special",
 			"input": "236P~LL",
@@ -2635,7 +2709,9 @@
 			"id": "cammy.236[HP]~LL",
 			"names": {
 				"en": "Fatal Leg Twister (Charged)",
-				"ja": "フェイタルレッグツイスター（ホールド）"
+				"ja": "フェイタルレッグツイスター（ホールド）",
+				"zh-Hans": "夺命旋风腿（按住）",
+				"zh-Hant": "奪命旋風摔（長按）"
 			},
 			"category": "special",
 			"input": "236[HP]~LL",
@@ -2669,7 +2745,9 @@
 			"id": "cammy.236PP~LL",
 			"names": {
 				"en": "OD Fatal Leg Twister",
-				"ja": "OD フェイタルレッグツイスター"
+				"ja": "OD フェイタルレッグツイスター",
+				"zh-Hans": "斗爆 夺命旋风腿",
+				"zh-Hant": "OD 奪命旋風摔"
 			},
 			"category": "special",
 			"input": "236PP~LL",
@@ -2703,7 +2781,9 @@
 			"id": "cammy.236P~P",
 			"names": {
 				"en": "Silent Step",
-				"ja": "サイレントステップ"
+				"ja": "サイレントステップ",
+				"zh-Hans": "暗中佯动",
+				"zh-Hant": "無音步法"
 			},
 			"category": "special",
 			"input": "236P~P",
@@ -2716,7 +2796,9 @@
 			"id": "cammy.236[HP]~P",
 			"names": {
 				"en": "Silent Step (Charged)",
-				"ja": "サイレントステップ（ホールド）"
+				"ja": "サイレントステップ（ホールド）",
+				"zh-Hans": "暗中佯动（按住）",
+				"zh-Hant": "無音步法（長按）"
 			},
 			"category": "special",
 			"input": "236[HP]~P",
@@ -2729,7 +2811,9 @@
 			"id": "cammy.236PP~P",
 			"names": {
 				"en": "OD Silent Step",
-				"ja": "OD サイレントステップ"
+				"ja": "OD サイレントステップ",
+				"zh-Hans": "斗爆 暗中佯动",
+				"zh-Hant": "OD 無音步法"
 			},
 			"category": "special",
 			"input": "236PP~P",
@@ -2743,7 +2827,9 @@
 			"id": "cammy.236236K",
 			"names": {
 				"en": "SA1 Spin Drive Smasher",
-				"ja": "SA1 スピンドライブスマッシャー"
+				"ja": "SA1 スピンドライブスマッシャー",
+				"zh-Hans": "SA1 旋转驱动碎",
+				"zh-Hant": "SA1 螺旋神槍"
 			},
 			"category": "superarts",
 			"input": "236236K",
@@ -2892,7 +2978,9 @@
 			"id": "cammy.214214P",
 			"names": {
 				"en": "SA2 Killer Bee Spin",
-				"ja": "SA2 キラービースピン"
+				"ja": "SA2 キラービースピン",
+				"zh-Hans": "SA2 杀人蜂回旋",
+				"zh-Hant": "SA2 旋轉蜂迴旋"
 			},
 			"category": "superarts",
 			"input": "214214P",
@@ -2958,7 +3046,9 @@
 			"id": "cammy.j214214P",
 			"names": {
 				"en": "SA2 Aerial Killer Bee Spin",
-				"ja": "SA2 エアキラービースピン"
+				"ja": "SA2 エアキラービースピン",
+				"zh-Hans": "SA2 空中杀人蜂回旋",
+				"zh-Hant": "SA2 空中旋轉蜂迴旋"
 			},
 			"category": "superarts",
 			"input": "j214214P",
@@ -3024,7 +3114,9 @@
 			"id": "cammy.236236P",
 			"names": {
 				"en": "SA3 Delta Red Assault",
-				"ja": "SA3 デルタレッドアサルト"
+				"ja": "SA3 デルタレッドアサルト",
+				"zh-Hans": "SA3 红色三角洲强袭",
+				"zh-Hant": "SA3 紅三角強襲"
 			},
 			"category": "superarts",
 			"input": "236236P",
@@ -3139,7 +3231,9 @@
 			"id": "cammy.LL",
 			"names": {
 				"en": "Rough Landing",
-				"ja": "ラフランディング"
+				"ja": "ラフランディング",
+				"zh-Hans": "粗暴摔地",
+				"zh-Hant": "強行著陸"
 			},
 			"category": "throws",
 			"input": "LL",
@@ -3171,7 +3265,9 @@
 			"id": "cammy.4LL",
 			"names": {
 				"en": "Delta Throw",
-				"ja": "デルタスルー"
+				"ja": "デルタスルー",
+				"zh-Hans": "三角洲绞颈摔",
+				"zh-Hant": "三角腳摔"
 			},
 			"category": "throws",
 			"input": "4LL",
@@ -3204,7 +3300,9 @@
 			"id": "cammy.jLL",
 			"names": {
 				"en": "Leg Scissors Choke",
-				"ja": "レッグシザースチョーク"
+				"ja": "レッグシザースチョーク",
+				"zh-Hans": "双腿剪刀绞",
+				"zh-Hant": "鎖喉剪刀腳"
 			},
 			"category": "throws",
 			"input": "jLL",
@@ -3237,7 +3335,9 @@
 			"id": "cammy.HH",
 			"names": {
 				"en": "Spin Raider",
-				"ja": "スピンレイダー"
+				"ja": "スピンレイダー",
+				"zh-Hans": "旋转袭击者",
+				"zh-Hant": "旋轉突襲"
 			},
 			"category": "common",
 			"input": "HH",

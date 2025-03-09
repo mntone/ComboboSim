@@ -2,6 +2,7 @@ import js from '@eslint/js'
 import stylistic from '@stylistic/eslint-plugin'
 import import_ from 'eslint-plugin-import'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
+import pluginLingui from 'eslint-plugin-lingui'
 import react from 'eslint-plugin-react'
 import ts from 'typescript-eslint'
 
@@ -15,6 +16,7 @@ const config = ts.config(
 	import_.flatConfigs.recommended,
 	react.configs.flat['jsx-runtime'],
 	jsxA11y.flatConfigs.recommended,
+	pluginLingui.configs['flat/recommended'],
 	stylistic.configs.customize({
 		braceStyle: '1tbs',
 		indent: 'tab',

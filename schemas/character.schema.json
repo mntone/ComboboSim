@@ -14,26 +14,6 @@
 			"minLength": 1,
 			"pattern": "^[a-z]+$"
 		},
-		"names": {
-			"title": "Character Names in Each Language",
-			"type": "object",
-			"properties": {
-				"en": {
-					"title": "English Character Name",
-					"type": "string",
-					"minLength": 1
-				},
-				"ja": {
-					"title": "Japanese Character Name",
-					"type": "string",
-					"minLength": 1
-				}
-			},
-			"required": [
-				"en",
-				"ja"
-			]
-		},
 		"use": {
 			"title": "Character Extensions",
 			"type": "array",
@@ -420,7 +400,6 @@
 	"additionalProperties": false,
 	"required": [
 		"id",
-		"names",
 		"vitality",
 		"moves"
 	],
