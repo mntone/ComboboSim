@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+import { fetchJson } from '@/common/utils/fetchJson'
+
 import { createAppAsyncThunk } from '@/app/hooks'
-import { fetchJson } from '@/utils/fetchJson'
 
 import { PARAMETERLOADER_NAME } from './constants'
 import { initializeParameterState } from './initializeParameterState'

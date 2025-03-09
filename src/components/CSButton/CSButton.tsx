@@ -3,7 +3,7 @@ import { useFocusRing } from '@react-aria/focus'
 import type { DOMRef } from '@react-types/shared'
 import { forwardRef, useMemo, type ReactElement } from 'react'
 
-import { useDOMRef } from '@/utils/useDOMRef'
+import { useDOMRef } from '@/common/hooks/useDOMRef'
 
 import { CSCircularProgress } from '../CSProgress'
 

@@ -1,6 +1,6 @@
 import fetchMock, { type RouteResponse, type UserRouteConfig } from 'fetch-mock'
 
-import fetchJson from './fetchJson'
+import { fetchJson } from './fetchJson'
 
 const DEFAULT_RESPONSE: RouteResponse = {
 	status: 200,

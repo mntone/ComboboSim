@@ -1,5 +1,5 @@
 import { snakeToCamel } from './caseConversion'
-import mapKeysDeep from './mapKeysDeep'
+import { mapKeysDeep } from './mapKeysDeep'
 
 test('should map all keys in a flat object', () => {
 	const obj = { snake_case_key: 'value' }

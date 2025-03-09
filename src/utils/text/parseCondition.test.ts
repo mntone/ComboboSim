@@ -1,4 +1,4 @@
-import parseCondition from './parseCondition'
+import { parseCondition } from './parseCondition'
 import type { CONDITION_PARSER_OPTIONS } from './types'
 import { isUpperAndUnderscore } from './utils'
 

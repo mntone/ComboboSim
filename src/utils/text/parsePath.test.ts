@@ -1,4 +1,4 @@
-import parsePath from './parsePath'
+import { parsePath } from './parsePath'
 
 test('should handle simple property name', () => {
 	expect(parsePath('damage')).toEqual(['damage'])

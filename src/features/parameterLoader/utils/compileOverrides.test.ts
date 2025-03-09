@@ -4,7 +4,7 @@ import { MOCK_MOVE_SPECIAL } from '@/tests/utils/mockData'
 
 import type { MoveJson, MoveOverrides, ParameterContext } from '../types'
 
-import compileOverrides from './compileOverrides'
+import { compileOverrides } from './compileOverrides'
 
 test('should correctly apply overrides based on conditions', () => {
 	const compiledFn = compileOverrides(MOCK_MOVE_SPECIAL.overrides!)

@@ -4,7 +4,7 @@ import type { DOMRefValue } from '@react-types/shared'
 import { useRef } from 'react'
 import { TbChevronDown, TbSelector } from 'react-icons/tb'
 
-import { unwrapDOMRef } from '@/utils/useDOMRef'
+import { unwrapDOMRef } from '@/common/hooks/useDOMRef'
 
 import { CSButton } from '../CSButton'
 import { CSMenu } from '../CSMenu'
